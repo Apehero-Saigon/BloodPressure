@@ -27,6 +27,7 @@ class LanguageSettingFragment : BaseFragment<BaseViewModel, FragmentLanguageSett
     }
 
     override fun initListener() {
+        super.initListener()
         binding.btnBack.clickWithDebounce {
             findNavController().navigateUp()
         }

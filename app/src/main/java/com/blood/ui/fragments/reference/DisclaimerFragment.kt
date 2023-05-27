@@ -22,6 +22,7 @@ class DisclaimerFragment : BaseFragment<BaseViewModel, FragmentDisclaimerBinding
     }
 
     override fun initListener() {
+        super.initListener()
         binding.btnBack.clickWithDebounce {
             findNavController().navigateUp()
         }

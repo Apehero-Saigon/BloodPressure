@@ -1,10 +1,19 @@
 package com.blood.db.dao
 
 import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.blood.db.entity.BloodPressureEntity
 
 @Dao
 interface BloodPressureDAO {
     @Query("SELECT COUNT(*) FROM table_blood_pressure WHERE table_blood_pressure.profileId LIKE :profileId")
     suspend fun countBloodPressureByProfileID(profileId: Long): Int
+
+    @Query("SELECT * FROM table_blood_pressure WHERE id =:id")
+    suspend fun getBloodPressureByID(id: Long): BloodPressureEntity
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertBloodPressure(bloodPressureEntity: BloodPressureEntity): Long
 }

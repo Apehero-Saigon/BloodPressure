@@ -27,6 +27,7 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
     }
 
     override fun initListener() {
+        super.initListener()
         binding.ivConfirmLanguage.clickWithDebounce {
             val chooseLang = adapter.getSelectedLanguage()
             if (chooseLang != null) {

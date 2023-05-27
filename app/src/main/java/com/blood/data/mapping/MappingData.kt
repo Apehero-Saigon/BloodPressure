@@ -20,7 +20,7 @@ object MappingData {
         })
     }
 
-    fun BloodPressureEntity.toProfile() = with(::BloodPressure) {
+    fun BloodPressureEntity.toBloodPressure() = with(::BloodPressure) {
         val propertiesByName = BloodPressureEntity::class.memberProperties.associateBy { it.name }
         callBy(parameters.associate { parameter ->
             parameter to when (parameter.name) {
@@ -30,7 +30,7 @@ object MappingData {
                 BloodPressureEntity::diastole.name -> diastole
                 BloodPressureEntity::pulse.name -> pulse
                 BloodPressureEntity::createAt.name -> createAt
-                else -> propertiesByName[parameter.name]?.get(this@toProfile)
+                else -> propertiesByName[parameter.name]?.get(this@toBloodPressure)
             }
         })
     }

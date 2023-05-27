@@ -27,6 +27,7 @@ class InfoDetailFragment : BaseFragment<BaseViewModel, FragmentInfoDetailBinding
     }
 
     override fun initListener() {
+        super.initListener()
         binding.btnBack.clickWithDebounce {
             findNavController().navigateUp()
         }

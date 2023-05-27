@@ -45,6 +45,7 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
     }
 
     override fun initListener() {
+        super.initListener()
         binding.viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
                 position: Int, positionOffset: Float, positionOffsetPixels: Int

@@ -429,4 +429,6 @@
     <string name="sys_mmhg">SYS (mmHg)</string>
     <string name="dia_mmhg">DIA (mmHg)</string>
     <string name="note">Note</string>
+    <string name="cannot_add_blood_pressure">Cannot add blood pressure</string>
+    <string name="doing">Doing</string>
 </resources>

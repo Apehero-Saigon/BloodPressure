@@ -17,11 +17,11 @@ import com.blood.utils.PrefUtils
 import dagger.android.AndroidInjection
 import dagger.android.support.DaggerFragment
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import javax.inject.Inject
 
 open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constructor(
-    @LayoutRes
-    val layout: Int, viewModelClass: Class<VM>
+    @LayoutRes val layout: Int, viewModelClass: Class<VM>
 ) : DaggerFragment(), IBaseUI {
 
     private val TAG = this::class.java.name
@@ -46,7 +46,15 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
 
     open fun initAds() {}
 
-    open fun initListener() {}
+    open fun initListener() {
+        viewModel.isLoading.observe(this.viewLifecycleOwner) {
+            if (it) {
+                showLoading(getString(R.string.doing))
+            } else {
+                hideLoading()
+            }
+        }
+    }
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory

@@ -53,5 +53,5 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "Blood Sugar"
+rootProject.name = "Blood Pressure"
 include ':app'

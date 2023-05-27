@@ -3,6 +3,7 @@ package com.blood.base
 import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ViewModel
 import com.blood.utils.PrefUtils
@@ -17,6 +18,8 @@ import kotlin.coroutines.CoroutineContext
 
 open class BaseViewModel @Inject internal constructor() : ViewModel(), LifecycleObserver,
     CoroutineScope {
+
+    val isLoading = MutableLiveData<Boolean>().apply { value = false }
 
     @Suppress("unused")
     protected var viewModelJob = Job()

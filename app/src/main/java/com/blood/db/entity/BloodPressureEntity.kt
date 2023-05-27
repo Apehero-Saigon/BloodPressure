@@ -16,7 +16,8 @@ class BloodPressureEntity(
     @ColumnInfo(name = "systole") val systole: Int,
     @ColumnInfo(name = "diastole") val diastole: Int,
     @ColumnInfo(name = "pulse") val pulse: Int,
-    @ColumnInfo(name = "createdAt") var createAt: Date
+    @ColumnInfo(name = "createdAt") var createAt: Date?,
+    @ColumnInfo(name = "note") var note: String,
 ) : Parcelable {
     companion object {
         fun fromBloodPressure(bloodPressure: BloodPressure): BloodPressureEntity {
@@ -26,7 +27,8 @@ class BloodPressureEntity(
                 bloodPressure.systole,
                 bloodPressure.diastole,
                 bloodPressure.pulse,
-                bloodPressure.createAt
+                bloodPressure.createAt,
+                bloodPressure.note
             )
         }
     }

@@ -37,6 +37,7 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
     }
 
     override fun initListener() {
+        super.initListener()
         binding.tvMale.setOnClickListener {
             binding.tvMale.isSelected = true
             binding.tvFemale.isSelected = false
