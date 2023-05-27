@@ -1,14 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Dash Board" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:background="@drawable/bg_fff5f8_radius_10"
+                android:orientation="vertical"
+                android:padding="@dimen/_12sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="center"
+                    android:text="@string/add_your_record"
+                    android:textColor="@color/colorAds"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/date"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_white_radius_10"
+                            android:drawablePadding="10dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="center|start"
+                            android:lines="1"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingStart="15dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:drawableStartCompat="@drawable/ic_timer"
+                            app:layout_constraintTop_toBottomOf="@id/tvGender"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="21:05" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="@string/time"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_white_radius_10"
+                            android:drawablePadding="10dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingStart="15dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:drawableStartCompat="@drawable/ic_timer"
+                            app:layout_constraintTop_toBottomOf="@id/tvGender"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="21:05" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/sys_mmhg"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.shawnlin.numberpicker.NumberPicker
+                    android:id="@+id/pickSys"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_f9f9f9f_radius_10"
+                    android:gravity="center|start"
+                    app:np_dividerColor="@android:color/transparent"
+                    app:np_fadingEdgeEnabled="false"
+                    app:np_max="250"
+                    app:np_min="70"
+                    app:np_orientation="horizontal"
+                    app:np_selectedTextColor="@color/colorAds"
+                    app:np_textColor="@color/color_hint"
+                    app:np_value="150"
+                    app:np_wheelItemCount="5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/dia_mmhg"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.shawnlin.numberpicker.NumberPicker
+                    android:id="@+id/pickDia"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_f9f9f9f_radius_10"
+                    android:gravity="center|start"
+                    app:np_dividerColor="@android:color/transparent"
+                    app:np_fadingEdgeEnabled="false"
+                    app:np_max="120"
+                    app:np_min="30"
+                    app:np_orientation="horizontal"
+                    app:np_selectedTextColor="@color/colorAds"
+                    app:np_textColor="@color/color_hint"
+                    app:np_value="70"
+                    app:np_wheelItemCount="5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/note"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_white_radius_10"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="@string/note"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/color_hint"
+                    app:np_fadingEdgeEnabled="false" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </layout>

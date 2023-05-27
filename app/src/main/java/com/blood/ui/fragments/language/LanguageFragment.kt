@@ -48,7 +48,7 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
     }
 
     private fun checkShowNativeLanguage() {
-        if (prefUtils.isShowNativeLanguage) {
+        if (isNetworkConnected() && prefUtils.isShowNativeLanguage) {
             adsUtils.nativeLanguage.showAds(
                 requireActivity(),
                 BuildConfig.native_language,

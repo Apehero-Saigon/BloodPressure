@@ -10,7 +10,6 @@ object MappingEntity {
         callBy(parameters.associate { parameter ->
             parameter to when (parameter.name) {
                 Profile::id.name -> name
-                Profile::name.name -> name
                 Profile::birthYear.name -> birthYear
                 Profile::height.name -> height
                 Profile::weight.name -> weight

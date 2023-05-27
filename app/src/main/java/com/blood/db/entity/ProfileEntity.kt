@@ -11,7 +11,6 @@ import kotlinx.parcelize.Parcelize
 @Entity(tableName = "table_profile")
 class ProfileEntity(
     @PrimaryKey(autoGenerate = true) var id: Long = 0,
-    @ColumnInfo(name = "name") val name: String?,
     @ColumnInfo(name = "birthYear") val birthYear: Int?,
     @ColumnInfo(name = "gender") val gender: Int?,
     @ColumnInfo(name = "height") val height: Int?,
@@ -21,7 +20,6 @@ class ProfileEntity(
         fun fromProfile(profile: Profile): ProfileEntity {
             return ProfileEntity(
                 profile.id,
-                profile.name,
                 profile.birthYear,
                 profile.gender,
                 profile.height,

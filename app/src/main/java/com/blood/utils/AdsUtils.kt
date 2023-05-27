@@ -332,7 +332,7 @@ class AdsUtils {
         }
 
         private fun canShowAds(): Boolean {
-            if (interAdsPriorityLoaded() || interAdsNormalLoaded()) {
+            if ((interAdsPriorityLoaded() && isShowHighAds) || (interAdsNormalLoaded() && isShowNormalAds)) {
                 return true
             }
             return false

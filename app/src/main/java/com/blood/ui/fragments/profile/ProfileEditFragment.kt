@@ -1,6 +1,6 @@
 package com.blood.ui.fragments.profile
 
-import android.widget.ArrayAdapter
+import android.graphics.Typeface
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
@@ -9,11 +9,6 @@ import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.DateUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.gone
-import com.blood.utils.ViewUtils.intNumber
-import com.blood.utils.ViewUtils.isBlank
-import com.blood.utils.ViewUtils.mustRemoveZeroFirst
-import com.blood.utils.ViewUtils.textSelected
-import com.blood.utils.ViewUtils.textTrim
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentProfileEditBinding
@@ -33,37 +28,27 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
     }
 
     override fun initView() {
-        // gender
-        val genderArray: ArrayList<String> = ArrayList()
-        genderArray.add(getString(R.string.male))
-        genderArray.add(getString(R.string.female))
-        val adapterGender = ArrayAdapter(
-            requireContext(), R.layout.spinner_selected, genderArray
-        )
-        adapterGender.setDropDownViewResource(R.layout.spinner_dropdown)
-        binding.sprGender.adapter = adapterGender
+        binding.pickBirthDay.typeface = Typeface.create("montserrat_semibold", Typeface.NORMAL)
+        binding.pickBirthDay.setFormatter(R.string.number_picker_formatter)
+        binding.pickBirthDay.maxValue = DateUtils.getCurrentYear()
+        binding.pickBirthDay.value = 1990
 
-        // birthday
-        val yearArray: ArrayList<String> = ArrayList()
-        for (element in DateUtils.getCurrentYear() downTo 1900) {
-            val year = element.toString()
-            yearArray.add(year)
-        }
-        val adapterBirthday = ArrayAdapter(
-            requireContext(), R.layout.spinner_selected, yearArray
-        )
-        adapterBirthday.setDropDownViewResource(R.layout.spinner_dropdown)
-        binding.sprYearOfBirth.adapter = adapterBirthday
-
-        binding.edtHeight.mustRemoveZeroFirst()
-        binding.edtWeight.mustRemoveZeroFirst()
+        binding.tvMale.isSelected = true
     }
 
     override fun initListener() {
+        binding.tvMale.setOnClickListener {
+            binding.tvMale.isSelected = true
+            binding.tvFemale.isSelected = false
+        }
+
+        binding.tvFemale.setOnClickListener {
+            binding.tvMale.isSelected = false
+            binding.tvFemale.isSelected = true
+        }
+
         binding.btnSave.clickWithDebounce {
-            if (validData()) {
-                createProfile()
-            }
+            createProfile()
         }
 
         viewModel.insertProfileObserver.observe(this.viewLifecycleOwner) { profile ->
@@ -81,21 +66,13 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
     }
 
     private fun createProfile() {
-        val valueName = binding.edtName.textTrim()
-        val valueBirthYear = binding.sprYearOfBirth.intNumber()
-        val valueGender = when (binding.sprGender.textSelected()) {
-            getString(R.string.male) -> 1
-            getString(R.string.female) -> 2
-            else -> {
-                0
-            }
-        }
-        val valueWeight = binding.edtWeight.intNumber()
-        val valueHeight = binding.edtHeight.intNumber()
+        val valueGender = if (binding.tvMale.isSelected) 1 else 2
+        val valueWeight = binding.pickWeight.value
+        val valueHeight = binding.pickHeight.value
+        val valueBirthYear = binding.pickBirthDay.value
 
         val newProfile = Profile(
             if (args.editMode) 0 else 1,
-            valueName,
             valueBirthYear,
             valueGender,
             valueHeight,
@@ -103,13 +80,5 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
         )
 
         viewModel.insertProfile(newProfile)
-    }
-
-    private fun validData(): Boolean {
-        if (binding.edtName.isBlank() || binding.edtHeight.isBlank() || binding.edtWeight.isBlank()) {
-            toast(getString(R.string.missing_required_information))
-            return false
-        }
-        return true
     }
 }
