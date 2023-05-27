@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969029934830",
+    "project_id": "apero-sg-blood-pressure",
+    "storage_bucket": "apero-sg-blood-pressure.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969029934830:android:2137cd835921c7c6179dff",
+        "android_client_info": {
+          "package_name": "com.bloodpressure.pressuremonitor.bloodpressuretracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969029934830-8ijjmstvkqbv6lhlepg0s6cmh1fn1pvs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAehaL_HdOJTqEOyxbBMjL59NajkpYp98M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969029934830-8ijjmstvkqbv6lhlepg0s6cmh1fn1pvs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

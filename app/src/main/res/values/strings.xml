@@ -1,0 +1,425 @@
+<resources>
+    <string name="app_name">Heart Rate &amp; Blood Pressure Monitor</string>
+    <string name="heart_rate_blood_pressure_monitor"><![CDATA[Heart Rate & Blood Pressure Monitor]]></string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Next</string>
+    <string name="create_new_profile">Create new profile</string>
+    <string name="image">Image</string>
+    <string name="info">Info</string>
+    <string name="insights">Insights</string>
+    <string name="enter_your_weight_kg">Enter your weight (kg)</string>
+    <string name="enter_your_height_cm">Enter your height (cm)</string>
+    <string name="not_known">Not Known</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="save">Save</string>
+    <string name="update_profile">Update profile</string>
+    <string name="greeting">Hello, Phong</string>
+    <string name="icon">Icon</string>
+    <string name="heart_rate">Heart rate</string>
+    <string name="manually">Manually</string>
+    <string name="create_a_user">Create a user</string>
+    <string name="let_create_first_user">Let\'s create first user to \n explore some amazing functions \n on this application</string>
+    <string name="heart_rate_content">Measure your pulse rate with real-time information about your heart\'s performance.</string>
+    <string name="heart_rate_button_content">Measure Now</string>
+    <string name="default_height">170</string>
+    <string name="default_weight">60</string>
+    <string name="name">Name</string>
+    <string name="year_of_birth">Year of Birth</string>
+    <string name="year_of_birth_2">Year of Birth: </string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="height_cm">Height (cm)</string>
+    <string name="gender">Gender</string>
+    <string name="photo">Photo</string>
+    <string name="dashboard">Dashboard</string>
+
+
+    <string name="intro_title_1">Measure your \n Heart rate</string>
+    <string name="intro_title_2">Track your \n blood pressure</string>
+    <string name="intro_title_3">Calculate your \n Weight &amp; BMI</string>
+    <string name="intro_content_1">Measure your pulse rate and provide you with real-time information about your heart\'s performance.</string>
+    <string name="intro_content_2">Keep track of your blood pressure readings over time and provide insights to you.</string>
+    <string name="intro_content_3">Enables you to keep track of your weight and monitor your progress towards achieving your goals.</string>
+    <string name="start">Start</string>
+    <string name="welcome">Welcome!</string>
+    <string name="measure_your_pulse_rate_with_real_time_information_about_your_heart_s_performance">Measure your pulse rate with real-time information about your heart\'s performance.</string>
+    <string name="measure_now">Measure Now</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="blood_pressure_content">Keep track of your blood pressure readings over time and provide insights to you.</string>
+    <string name="blood_pressure_button_content">Track Now</string>
+    <string name="weight_and_bmi">Weight &amp; BMI</string>
+    <string name="weight_and_bmi_content">Keep track of your weight and monitor your progress towards achieving your goals.</string>
+    <string name="weight_and_bmi_button_content">Calculate Now</string>
+    <string name="button">Button</string>
+    <string name="systole">SYS</string>
+    <string name="ex_170">Ex: 170</string>
+    <string name="ex_60">Ex: 60</string>
+    <string name="ex_85">Ex: 85</string>
+    <string name="diastole">DIA</string>
+
+    <string name="pulse">PULSE</string>
+    <string name="measure">Measure</string>
+    <string name="result">Result</string>
+    <string name="_120_80">120/80</string>
+    <string name="_80">80</string>
+    <string name="measured_at_17_00pm_21_04_2023">Measured at 17:00PM 21.04.2023</string>
+    <string name="year_of_birth_2000">Year of Birth: 2000</string>
+    <string name="height_170">Height: 170cm\n</string>
+    <string name="weight_75">Weight: 75kg</string>
+    <string name="hypertension_stage_1">Hypertension Stage 1</string>
+    <string name="systole_range_elevated">(120 – 129)</string>
+    <string name="systole_range_normal">(&lt; 120)</string>
+    <string name="systole_range_hypertension_stage_1">(120 – 139)</string>
+    <string name="systole_range_hypertension_stage_2">(140 – 179)</string>
+    <string name="systole_range_emergency_care_needed">(>180)</string>
+    <string name="diastole_range_normal_and_elevated">(&lt; 80)</string>
+    <string name="diastole_range_hypertension_stage_1">(80 – 89)</string>
+    <string name="diastole_range_hypertension_stage_2">(90 – 100)</string>
+    <string name="diastole_range_emergency_care_needed">(>100)</string>
+    <string name="recommendations">RECOMMENDATIONS</string>
+    <string name="weight">"Weight: "</string>
+    <string name="kg">kg</string>
+    <string name="height">"Height: "</string>
+    <string name="cm">cm</string>
+    <string name="diastole_warning">It should be between 30 and 120, which is the diastolic range used by this tool.</string>
+    <string name="systole_warning">It should be between 70 and 250, which is the systolic range used by this tool.</string>
+    <string name="systole_lower_diastole">Check both your numbers. Systolic must higher than diastolic.</string>
+    <string name="normal">Normal</string>
+    <string name="elevated">Elevated</string>
+    <string name="hypertension_stage_2">Hypertension Stage 2</string>
+    <string name="emergency_care_needed">Emergeny care needed</string>
+    <string name="recommendations_hypertension_stage_1">Many people with high blood pressure can lower their blood pressure into a healthy range or keep their numbers in a healthy range by making lifestyle changes.Here is some suggestion: \n• Getting at least 150 minutes of physical activity each week (about 30 minutes a day, 5 days a week) \n• Not smoking \n• Eating a healthy diet, including limiting sodium (salt) and alcohol \n• Keeping a healthy weight \n• Managing stress \n
+    </string>
+    <string name="recommendations_normal">Here are some tips to improve your blood pressure.\n • Drink more water. Dehydration can cause temporary drop in blood pressure.\n• Follow a healthy diet. Increase salt content in food if you have Low blood pressure.\n• If the pressure is low and you are taking any medication – check their side effects.\n• Eat small low carb meals.\n• Avoid alcohol consumption or have it only in moderation.\n• Include some form of exercise in your daily routine. Exercises such as brisk walking and swimming can help in circulation of blood. Besides it keeps you young both in your mind and body and is a great de-stressor.</string>
+    <string name="recommendations_hypertension_stage_2">Here are some tips to reduce your blood pressure.\n • Quit smoking. Besides damaging your lungs smoking constricts blood vessels and increases your blood pressure making it hard for your heart to beat.\n• Avoid alcohol consumption or have it only in moderation. Alcohol increases your blood pressure to unhealthy levels.\n• Follow a healthy diet. Avoid too much salt in food.\n• Lose weight. Obese people are more likely to suffer from high blood pressure.\n• Exercise regularly. It helps prevent High blood pressure and Diabetes. Besides it keeps you young both in your mind and body and is a great de-stressor.\n• Drink enough water daily.\n• Avoid stress.</string>
+    <string name="recommendations_emergency_care_needed">Here are some tips to reduce your blood pressure.\n • Quit smoking. Besides damaging your lungs smoking constricts blood vessels and increases your blood pressure making it hard for your heart to beat.\n• Avoid alcohol consumption or have it only in moderation. Alcohol increases your blood pressure to unhealthy levels.\n• Follow a healthy diet. Avoid too much salt in food.\n• Lose weight. Obese people are more likely to suffer from high blood pressure.\n• Exercise regularly. It helps prevent High blood pressure and Diabetes. Besides it keeps you young both in your mind and body and is a great de-stressor.\n• Drink enough water daily.\n• Avoid stress.</string>
+    <string name="measured_at">Measured at</string>
+    <string name="good_morning">Good morning !</string>
+    <string name="good_afternoon">Good afternoon !</string>
+    <string name="good_evening">Good evening !</string>
+    <string name="dashboard_intro_fragment">Dashboard Intro Fragment</string>
+    <string name="your_recently_action">Your recently action</string>
+    <string name="more_detail">More detail</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="default_suggestion">Mr.Phong need to record a Blood Pressure right now!</string>
+    <string name="action">Action</string>
+    <string name="profile_select">Profile select</string>
+    <string name="user_management">User management</string>
+    <string name="insights_blood_pressure_fragment">Insights Blood Pressure Fragment</string>
+    <string name="search">Search</string>
+    <string name="your_health_condition">Your health condition</string>
+    <string name="your_heart_rate_is_so_hight">Your heart rate is so high. You should sit down to keep calm. Regular exercise, such as brisk walking, jogging, cycling, or swimming, can help to improve your cardiovascular health.</string>
+    <string name="totals">Totals</string>
+    <string name="view_result">View result</string>
+    <string name="information_knowledge"><![CDATA[Information & Knowledge]]></string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="edit_your_information">Edit your information</string>
+    <string name="update">Update</string>
+    <string name="blood_pressure_edit_fragment">Blood Pressure Edit Fragment</string>
+    <string name="oops_there_is_an_error_try_again">Oops, there is an error happening. Try again later!</string>
+    <string name="this_result_will_be_deleted_forever_are_you_sure">This result will be deleted forever. Are you sure?</string>
+    <string name="a_normal_blood_pressure">A normal blood pressure level is less than 120/80 mmHg. No matter your age, you can take steps each day to keep your blood pressure in a healthy range.</string>
+    <string name="blood_pressure_advice">Blood pressure advice</string>
+    <string name="how_to_improve_weight_better">How to improve weight better</string>
+    <string name="example_info_detail">Exercise is an important part of disease prevention – and that includes cancer prevention, too. But not all exercise is created equal. It’s essential that some of your exercise makes your heart beat faster than it does when you’re resting.\n\n Getting your heart to beat faster trains your body to move oxygen and blood to your muscles more efficiently, helps you burn more calories and lowers your cholesterol. All of this can help you stay healthy and lower your cancer risk.\n\n Getting your heart to beat faster trains your body to move oxygen and blood to your muscles more efficiently, helps you burn more calories and lowers your cholesterol. All of this can help you stay healthy and lower your cancer risk.\n
+    </string>
+    <string name="related_posts">Related posts</string>
+    <string name="info_detail_fragment">Info Detail Fragment</string>
+    <string name="language">Language</string>
+    <string name="privacy">Privacy</string>
+    <string name="rate_us">Rate us</string>
+    <string name="facebook_app_id" translatable="false">facebook_app_id</string>
+    <string-array name="gender">
+        <item>@string/male</item>
+        <item>@string/female</item>
+        <item>@string/not_known</item>
+    </string-array>
+
+    <string name="japanese">Japanse</string>
+    <string name="korean">Korean</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="setting_language_fragment">Setting Language Fragment</string>
+    <string name="english">English</string>
+    <string name="german">German</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <string name="portugal">Portugal</string>
+    <string name="change_default_language_successfully">Change default language successfully !</string>
+
+    <string name="post_01_title">10 ways to control high blood pressure without medication</string>
+    <string name="post_01_content">By making these 10 lifestyle changes, you can lower your blood pressure and reduce your risk of heart disease.\n\nIf you have high blood pressure, you may wonder if medication is necessary to bring the numbers down. But lifestyle plays a vital role in treating high blood pressure. Controlling blood pressure with a healthy lifestyle might prevent, delay or reduce the need for medication.\n\nHere are 10 lifestyle changes that can lower blood pressure and keep it down.\n\n<font size="16"><b>1. Lose extra pounds and watch your waistline</b></font>\nBlood pressure often increases as weight increases. Being overweight also can cause disrupted breathing while you sleep (sleep apnea), which further raises blood pressure.\n\nWeight loss is one of the most effective lifestyle changes for controlling blood pressure. If you\'re overweight or have obesity, losing even a small amount of weight can help reduce blood pressure. In general, blood pressure might go down by about 1 millimeter of mercury (mm Hg)
+        with each kilogram (about 2.2 pounds) of weight lost.\n\nAlso, the size of the waistline is important. Carrying too much weight around the waist can increase the risk of high blood pressure.\n\nIn general:\n\n • Men are at risk if their waist measurement is greater than 40 inches (102 centimeters).\n • Women are at risk if their waist measurement is greater than 35 inches (89 centimeters).\nThese numbers vary among ethnic groups. Ask your health care provider about a healthy waist measurement for you.\n\n<font size="16"><b>2. Exercise regularly</b></font>\nRegular physical activity can lower high blood pressure by about 5 to 8 mm Hg. It\'s important to keep exercising to keep blood pressure from rising again. As a general goal, aim for at least 30 minutes of moderate physical activity every day.\n\nExercise can also help keep elevated blood pressure from turning into high blood pressure (hypertension). For those who have hypertension, regular physical activity can bring blood pressure down to safer levels.\n\nSome examples of aerobic exercise that can help lower blood pressure include walking, jogging, cycling, swimming or dancing. Another possibility is high-intensity interval training. This type of training involves alternating short bursts of intense activity with periods of lighter activity.\n\nStrength training also can help reduce blood pressure. Aim to include strength training exercises at least two days a week. Talk to a health care provider about developing an exercise program.\n\n<font size="16"><b>3. Eat a healthy diet</b></font>\nEating a diet rich in whole grains, fruits, vegetables and low-fat dairy products and low in saturated fat and cholesterol can lower high blood pressure by up to 11 mm Hg. Examples of eating plans that can help control blood pressure are the Dietary Approaches to Stop Hypertension (DASH) diet and the Mediterranean diet.\n\nPotassium in the diet can lessen the effects of salt (sodium) on blood pressure. The best sources of potassium are foods, such as fruits and vegetables, rather than supplements. Aim for 3,500 to 5,000 mg a day, which might lower blood pressure 4 to 5 mm Hg. Ask your care provider how much potassium you should have.\n\n<font size="16"><b>4. Reduce salt (sodium) in your diet</b></font>\nEven a small reduction of sodium in the diet can improve heart health and reduce high blood pressure by about 5 to 6 mm Hg.\n\nThe effect of sodium intake on blood pressure varies among groups of people. In general, limit sodium to 2,300 milligrams (mg) a day or less. However, a lower sodium intake — 1,500 mg a day or less — is ideal for most adults.\n\nTo reduce sodium in the diet:\n\n<b>Read food labels.</b> Look for low-sodium versions of foods and beverages.\n<b>Eat fewer processed foods</b>. Only a small amount of sodium occurs naturally in foods. Most sodium is added during processing.\n<b>Don\'t add salt</b>. Use herbs or spices to add flavor to food.\n<b>Cook</b>. Cooking lets you control the amount of sodium in the food.\n<font size="16"><b>\n5. Limit alcohol</b></font>\nLimiting alcohol to less than one drink a day for women or two drinks a day for men can help lower blood pressure by about 4 mm Hg. One drink equals 12 ounces of beer, 5 ounces of wine or 1.5 ounces of 80-proof liquor.\n\nBut drinking too much alcohol can raise blood pressure by several points. It can also reduce the effectiveness of blood pressure medications.\n\n<font size="16"><b>6. Quit smoking</b></font>\nSmoking increases blood pressure. Stopping smoking helps lower blood pressure. It can also reduce the risk of heart disease and improve overall health, possibly leading to a longer life.\n\n
+        <font size="16"><b>7. Get a good night\'s sleep</b></font>\nPoor sleep quality — getting fewer than six hours of sleep every night for several weeks — can contribute to hypertension. A number of issues can disrupt sleep, including sleep apnea, restless leg syndrome and general sleeplessness (insomnia).\n\nLet your health care provider know if you often have trouble sleeping. Finding and treating the cause can help improve sleep. However, if you don\'t have sleep apnea or restless leg syndrome, follow these simple tips for getting more restful sleep.\n\nStick to a sleep schedule. Go to bed and wake up the same time each day. Try to keep the same schedule on weeknights and on weekends.\nCreate a restful space. That means keeping the sleeping space cool, quiet and dark. Do something relaxing in the hour before bedtime. That might include taking a warm bath or doing relaxation exercises. Avoid bright light, such as from a TV or computer screen.\nWatch what you eat and drink. Don\'t go to bed hungry or stuffed. Avoid large meals close to bedtime. Limit or avoid nicotine, caffeine and alcohol close to bedtime, as well.\nLimit naps. For those who find napping during the day helpful, limiting naps to 30 minutes earlier in the day might help nighttime sleep.\n\n
+        <font size="16"><b>8. Reduce stress</b></font>\nLong-term (chronic) emotional stress may contribute to high blood pressure. More research is needed on the effects of stress reduction techniques to find out whether they can reduce blood pressure.\n\nHowever, it can\'t hurt to determine what causes stress, such as work, family, finances or illness, and find ways to reduce stress. Try the following:\n\nAvoid trying to do too much. Plan your day and focus on your priorities. Learn to say no. Allow enough time to get done what needs to be done.\nFocus on issues you can control and make plans to solve them. For an issue at work, talk to a supervisor. For conflict with kids or spouse, find ways to resolve it.\nAvoid stress triggers. For example, if rush-hour traffic causes stress, travel at a different time or take public transportation. Avoid people who cause stress if possible.\nMake time to relax. Take time each day to sit quietly and breathe deeply. Make time for enjoyable activities or hobbies, such as taking a walk, cooking or volunteering.\nPractice gratitude. Expressing gratitude to others can help reduce stress.\n\n
+        <font size="16"><b>9. Monitor your blood pressure at home and get regular checkups</b></font>\nHome monitoring can help you keep tabs on your blood pressure. It can make certain your medications and lifestyle changes are working.\n\nHome blood pressure monitors are available widely and without a prescription. Talk to a health care provider about home monitoring before you get started.\n\nRegular visits with a provider are also key to controlling blood pressure. If your blood pressure is well controlled, ask your provider how often you need to check it. You might be able to check it only once a day or less often.\n\n
+        <font size="16"><b>10. Get support</b></font>\nSupportive family and friends are important to good health. They may encourage you to take care of yourself, drive you to the care provider\'s office or start an exercise program with you to keep your blood pressure low.\n\nIf you find you need support beyond your family and friends, consider joining a support group. This may put you in touch with people who can give you an emotional or morale boost and who can offer practical tips to cope with your condition.\n\nSource: https://www.mayoclinic.org/</string>
+
+    <string name="post_03_title">Blood Pressure Medicines</string>
+    <string name="post_03_content">Many people need to take medicine in addition to making lifestyle changes to help keep their blood pressure at healthy levels. Read more about blood pressure medicines.
+
+    \n\n<font size="16"><b>How do blood pressure medicines work?</b></font>\n
+    Blood pressure medicines can work several different ways. Blood pressure medicines can keep blood pressure at a healthy level by1:
+
+    \n• Causing your body to get rid of water, which decreases the amount of water and salt in your body to a healthy level
+    \n• Relaxing your blood vessels
+    \n• Making your heart beat with less force
+    \n• Blocking nerve activity that can restrict your blood vessels
+    \n• Talk with your health care team about the best type of treatment for you. You may need to take more than one type of medicine to control your blood pressure. You can also talk to your health care team about how long it should take your blood pressure medicine to work.
+
+    It is important to take your blood pressure medicine exactly as your doctor tells you to. Do not stop taking your current medicine without talking to your doctor or pharmacist first. Stopping your blood pressure medicine without first talking to your health care team could lead to serious health consequences.
+
+    \n\n<font size="16"><b>What are the benefits and risks of blood pressure medicines?</b></font>\n
+    The benefits of blood pressure medicines are clear: Blood pressure medicines can help you keep your blood pressure at healthy levels and therefore greatly reduce your risk of heart disease, heart attack, and stroke.
+
+    In general, the risks of taking blood pressure medicines are low. However, all medicines have risks. Talk with your doctor or health care professional about the risks of high blood pressure medicines.
+
+    Do not stop taking your current medicine without talking to your doctor or health care professional first.
+    \n\n<font size="16"><b>What are the side effects of blood pressure medicines?</b></font>\n
+    Most of the time, blood pressure medicines do not cause side effects. Some people have mild side effects, including dizziness, headaches, swelling in the legs or feet, or stomach problems.2
+
+    Some over-the-counter medicines, such as nasal decongestants, can also raise blood pressure and interact with blood pressure medicines.3 Tell your doctor about any medicines or supplements you are already taking.
+
+    All medicines have risks. Talk with your doctor about the best blood pressure medicines for you, their benefits, risks, and side effects, and any other health problems you may have.
+
+    \n\n<font size="16"><b>How do I know if I need medicine for high blood pressure?</b></font>\n
+    Your health care team will tell you if you need medicine for high blood pressure, based on your blood pressure readings over a period of time. If you use a home blood pressure monitor, record or write down your readings.
+
+    Share your readings with your health care team so that you can make the best decision to manage your blood pressure together.
+
+    \n\n<font size="16"><b>What are other ways I can lower my blood pressure?</b></font>\n
+    In addition to taking medicine to control your blood pressure, you can take other steps to help keep your blood pressure levels healthy.\n
+
+    \n• <b>Get regular physical activity</b>. Staying physically active is one of the best things you can do for your health. Physical activity helps keep your heart and blood vessels strong. It also can help you keep a healthy weight.
+    \n• <b>Do not smoke</b>. Smoking damages your blood vessels and greatly increases your risk of not only high blood pressure but also heart disease, heart attack, and stroke.
+    \n• <b>Eat healthy foods</b>. Choosing healthy meal and snack options can help you avoid high blood pressure and its complications. Be sure to eat plenty of fresh fruits and vegetables.
+    \n• <b>Keep a healthy weight</b>. Having overweight or obesity means your heart must work harder to pump blood and oxygen around the body. Staying at a healthy weight reduces the stress on your heart and reduces your risk for heart disease, heart attack, and stroke.
+
+        \n\nSource: https://www.cdc.gov/
+    </string>
+    <string name="post_04_title">High Blood Pressure Symptoms and Causes</string>
+    <string name="post_04_content">
+        \n\n<font size="16"><b>How do I know if I have high blood pressure?</b></font>\n
+        There’s only one way to know if you have high blood pressure: Have a doctor or other health professional measure it. Measuring your blood pressure is quick and painless.
+
+        Talk with your health care team about regularly measuring your blood pressure at home, also called self-measured blood pressure (SMBP) monitoring.
+
+        High blood pressure is called the “silent killer” because it usually has no warning signs or symptoms, and many people do not know they have it.
+
+        Symptoms
+        Most people with high blood pressure have no symptoms, even if blood pressure readings reach dangerously high levels. You can have high blood pressure for years without any symptoms.
+
+        A few people with high blood pressure may have:
+
+        \n• Headaches
+        \n• Shortness of breath
+        \n• Nosebleeds
+        \n• However, these symptoms aren\'t specific. They usually don\'t occur until high blood pressure has reached a severe or life-threatening stage.
+
+        \n\n<font size="16"><b>When to see a doctor</b></font>\n
+        Blood pressure screening is an important part of general health care. How often you should get your blood pressure checked depends on your age and overall health.
+
+        Ask your provider for a blood pressure reading at least every two years starting at age 18. If you\'re age 40 or older, or you\'re 18 to 39 with a high risk of high blood pressure, ask for a blood pressure check every year.
+
+        Your care provider will likely recommend more-frequent readings if have high blood pressure or other risk factors for heart disease.
+
+        Children age 3 and older may have blood pressure measured as a part of their yearly checkups.
+
+        If you don\'t regularly see a care provider, you may be able to get a free blood pressure screening at a health resource fair or other locations in your community. Free blood pressure machines are also available in some stores and pharmacies. The accuracy of these machines depends on several things, such as a correct cuff size and proper use of the machines. Ask your health care provider for advice on using public blood pressure machines.
+
+        \n\n<font size="16"><b>Causes</b></font>\n
+        Blood pressure is determined by two things: the amount of blood the heart pumps and how hard it is for the blood to move through the arteries. The more blood the heart pumps and the narrower the arteries, the higher the blood pressure.
+
+        There are two main types of high blood pressure.
+
+        Primary hypertension, also called essential hypertension
+        For most adults, there\'s no identifiable cause of high blood pressure. This type of high blood pressure is called primary hypertension or essential hypertension. It tends to develop gradually over many years. Plaque buildup in the arteries, called atherosclerosis, increases the risk of high blood pressure.
+
+        Secondary hypertension
+        This type of high blood pressure is caused by an underlying condition. It tends to appear suddenly and cause higher blood pressure than does primary hypertension. Conditions and medicines that can lead to secondary hypertension include:
+
+        \n• Adrenal gland tumors
+        \n• Blood vessel problems present at birth, also called congenital heart defects
+        \n• Cough and cold medicines, some pain relievers, birth control pills, and other prescription drugs
+        \n• Illegal drugs, such as cocaine and amphetamines
+        \n• Kidney disease
+        \n• Obstructive sleep apnea
+        \n• Thyroid problems
+        Sometimes just getting a health checkup causes blood pressure to increase. This is called white-coat hypertension.
+
+        \n\nSource: https://www.mayoclinic.org/
+    </string>
+    <string name="post_06_title">How to Treat the Different Stages of Hypertension?</string>
+    <string name="post_06_content">
+        The American Heart Association released an updated hypertension guideline in 2017 that discussed new blood pressure targets and treatment recommendations for patients with high blood pressure.
+        In the new hypertension guideline, the definition of hypertension was altered to reflect new targets for systolic and diastolic blood pressure measurements. These blood pressure targets help guide clinical decision making by categorizing hypertension: normal BP, elevated BP, stage 1, and stage 2.1
+        Previously, high blood pressure was defined as a systolic blood pressure measurement of 140 mmHg or higher or a diastolic blood pressure measurement of 90 mmHg or higher.1 The updated guideline redefined hypertension as a systolic blood pressure measurement of 130 mmHg and greater or diastolic blood pressure measurement of 80 mmHg and beyond.1 As a result, patients with systolic BP measurements greater than or equal to 140/90 mmHg are now considered to have stage 2 hypertension.1
+        There are more hypertensive patients than ever before—this widespread condition is projected to increase 8% between 2013 and 2030.2 Therefore, the hypertension guideline provided new treatment recommendations that included both lifestyle changes and pharmacological strategies to help manage this condition.1 It is key for healthcare providers to have a comprehensive understanding of how to effectively treat the various stages of hypertension to help prevent its dangerous effects.
+
+        \n\n<font size="16"><b>Normal Blood Pressure</b></font>\n
+        Normal blood pressure is defined as a systolic blood pressure measurement of &lt; 120 mmHg and diastolic blood pressure (BP) measurement of &lt; 80 mmHg.1 Patients with normal blood pressure levels are encouraged to continue leading a healthy lifestyle to maintain their normal BP levels and prevent the development of hypertension. Patients with normal BP measurements can have their levels evaluated annually.
+
+        \n\n<font size="16"><b>Elevated Blood Pressure</b></font>\n
+        Elevated blood pressure was previously called “prehypertension.” It is classified as a systolic BP measurement of 120-129 mmHg and a diastolic BP measurement of less than 80 mmHg.1 To help prevent hypertension from progressing, it is recommended the patient implement lifestyle changes and have their blood pressure levels reassessed in 3-6 months.1 Healthy lifestyle changes include:1
+
+        Following the DASH diet, which is rich in fruits, vegetables, whole grains and low-fat dairy products
+        Exercising on a regular basis
+        Reducing sodium intake
+        Maintaining a healthy weight
+        Managing stress levels
+        Limiting alcohol intake
+        Avoid smoking
+        Obtain quality sleep
+        Nonpharmacological therapy alone is an effective treatment strategy in adults with elevated BP levels3, 4 as it can reduce systolic BP by approximately 4-11 mmHg.1
+
+        \n\n<font size="16"><b>Stage 1 Hypertension</b></font>\n
+        Stage 1 hypertension is defined as a systolic BP of 130-139 and a diastolic BP of 80-89 mmHg.1 The patient’s 10-year risk for heart disease and stroke should be assessed using the atherosclerotic cardiovascular disease (ASCVD) risk calculator to determine the appropriate treatment and follow-up schedule.1
+
+        ASCVD risk less than 10%:
+        It is recommended the patient employ healthy lifestyle changes alone if their ASCVD risk is less than 10%. The patient’s BP level should be assessed in 3-6 months.1
+
+        ASCVD greater than 10%:
+        Healthy lifestyle changes combined with a BP-lowering medication (single agent) is the recommended treatment if the patient’s ASCVD risk is greater than 10% or if the patient has a clinical cardiovascular disease, diabetes mellitus or chronic kidney disease. After starting treatment, the patient’s BP level should be reassessed in one month.1 If the patient’s BP goal is met after one month, the patient can be reassessed again in 3-6 months.1 If BP goal is not met after one month, a different medication or titration should be considered.1 The patient should continue to follow up with their physician monthly until BP level is controlled.1
+
+        \n\n<font size="16"><b>Stage 2 Hypertension</b></font>\n
+        Stage 2 hypertension is defined as a systolic BP of ≥140 mmHg and a diastolic BP of ≥90 mmHg.1 A combination of healthy lifestyle changes and BP-lowering medication (two first-line agents of different classes) is the recommended care plan for patients with stage 2 hypertension.1 If patient’s BP goal is met after one month of treatment, they can be reassessed in 3-6 months.1 If BP goal has not been achieved after one month of treatment, a different medication or titration should be considered along with monthly follow-ups with their physician until BP is controlled.1
+
+        \n\n<font size="16"><b>Hypertensive Urgency vs Emergency</b></font>\n
+        If the patient has severe BP elevation (systolic BP greater than 180 mmHg or diastolic BP greater than 120 mmHg) and does not have signs or symptoms indicating target organ damage or dysfunction they are considered a hypertensive urgency.1 Antihypertensive drug therapy should be increased in these patients.1
+
+        If the patient’s severe BP elevation is accompanied by new or worsening target organ damage it is considered a hypertensive emergency. 1 Patients who have a hypertensive emergency should be admitted into an intensive care unit. An agent should be administered to reduce BP levels, and the patient’s BP should be continuously monitored.1 If left untreated, the median survival rate is 10.4 months.5
+
+        \n\n<font size="16"><b>Key Takeaway</b></font>\n
+        There is a strong correlation between blood pressure levels and CVD risk—the higher the BP, the greater the CVD risk.1 Therefore, it is important for healthcare providers to know how to treat the different stages of hypertension. Integrating both nonpharmacological and pharmacological treatment strategies can help manage the patient’s risk for experiencing the dangerous effects of hypertension including vision loss, heart attack or failure, stroke and kidney damage.6
+
+        Be sure to download our eBook to learn more about how to treat the different stages of hypertension and the benefits automated solutions can provide in detecting, diagnosing and managing this condition inside the clinic and beyond.
+
+        \n\nSource: hillrom.com
+    </string>
+    <string name="post_07_title">What is DASH eating plan?</string>
+    <string name="post_07_content">
+        Blood pressure can be unhealthy even if it stays only slightly above the normal level of less than 120/80 mmHg. The more your blood pressure rises above normal, the greater the health risk. Their findings\nshowed that blood pressures were reduced with an eating plan that is low in saturated fat, cholesterol, and total fat and that emphasizes fruits, vegetables, and fat-free or low-fat milk and milk products. This eating plan—known as the DASH eating plan—also includes whole grain products, fish, poultry, and nuts. It is reduced in lean red meat, sweets, added sugars, and sugar-containing beverages compared to the typical American diet. It is rich in potassium, magnesium, and calcium, as well as protein and fiber. (See box 2 for the DASH studies’ daily nutrient goals.)
+        \n\nThe DASH eating plan follows heart healthy guidelines to limit saturated fat and cholesterol. It focuses on increasing intake of foods rich in nutrients that are expected to lower blood pressure, mainly minerals (like potassium, calcium, and magnesium), protein, and fiber. It includes nutrient-rich foods so that it meets other nutrient requirements as recommended by the Institute of Medicine. The first DASH study involved 459 adults with systolic blood pressures of less than 160 mmHg and diastolic pressures of 80–95 mmHg. About 27 percent of the participants had high blood pressure. About 50 percent were women and 60 percent were African Americans. It compared three eating plans: a plan that includes foods similar to what many Americans regularly eat; a plan that includes foods similar to what many Americans regularly eat plus more fruits and vegetables; and the DASH eating plan. All three plans included about 3,000 milligrams of sodium daily. None of the plans was vegetarian or used specialty foods. Results were dramatic. Participants who followed both the plan that included more fruits and vegetables and the DASH eating plan had reduced blood pressure. But the DASH eating plan had the greatest effect, especially for those with high blood pressure. Furthermore, the blood pressure reductions came fast—within 2 weeks of starting the plan.
+        \n\nThe second DASH study looked at the effect on blood pressure of a reduced dietary sodium intake as participants followed either the DASH eating plan or an eating plan typical of what many Americans consume. This second study involved 412 participants. Participants were randomly assigned to one of the two eating plans and then followed for a month at each of the three sodium levels. The three sodium levels were a higher intake of about 3,300 milligrams per day (the level consumed by many Americans), an intermediate intake of about 2,300 milligrams per day, and a lower intake of about 1,500 milligrams per day. Results showed that reducing dietary sodium lowered blood pressure for both eating plans. At each sodium level, blood pressure was lower on the DASH eating plan than on the other eating plan. The greatest blood pressure reductions were for the DASH eating plan at the sodium intake of 1,500 milligrams per day. Those with high blood pressure saw the greatest reductions, but those with prehypertension also had large decreases. Together these studies show the importance of lowering sodium intake—whatever your eating plan. For a true winning combination, follow the DASH eating plan and lower your intake of salt and sodium.
+        \n\nSource: YOUR GUIDE TO Lowering Your Blood Pressure With DASH - National Institutes of Health National Heart, Lung, and Blood Institute.
+    </string>
+    <string name="post_09_title">Understanding Blood Pressure Readings</string>
+    <string name="post_09_content">
+        \n\n<font size="16"><b>What do your blood pressure numbers mean?</b></font>\n
+        \nThe only way to know if you have high blood pressure (HBP, or hypertension) is to have your blood pressure tested. Understanding your results is key to controlling high blood pressure.
+        \n\nHealthy and unhealthy blood pressure ranges
+        \nLearn what is considered normal, as recommended by the American Heart Association.
+        Blood pressure categories
+        The five blood pressure (BP) ranges as recognized by the American Heart Association are:
+
+        \n\n<font size="16"><b>Normal</b></font>\n
+        Blood pressure numbers of less than 120/80 mm Hg are considered within the normal range. If your results fall into this category, stick with heart-healthy habits like following a balanced diet and getting regular exercise.
+
+        \n\n<font size="16"><b>Elevated</b></font>\n
+        Elevated blood pressure is when readings consistently range from 120-129 systolic and less than 80 mm Hg diastolic. People with elevated blood pressure are likely to develop high blood pressure unless steps are taken to control the condition.
+
+        \n\n<font size="16"><b>Hypertension Stage 1</b></font>\n
+        Hypertension Stage 1 is when blood pressure consistently ranges from 130-139 systolic or 80-89 mm Hg diastolic. At this stage of high blood pressure, doctors are likely to prescribe lifestyle changes and may consider adding blood pressure medication based on your risk of atherosclerotic cardiovascular disease (ASCVD), such as heart attack or stroke.
+
+        \n\n<font size="16"><b>Hypertension Stage 2</b></font>\n
+        Hypertension Stage 2 is when blood pressure consistently ranges at 140/90 mm Hg or higher. At this stage of high blood pressure, doctors are likely to prescribe a combination of blood pressure medications and lifestyle changes.
+
+        \n\n<font size="16"><b>Hypertensive crisis</b></font>\n
+        This stage of high blood pressure requires medical attention. If your blood pressure readings suddenly exceed 180/120 mm Hg, wait five minutes and then test your blood pressure again. If your readings are still unusually high, contact your doctor immediately. You could be experiencing a hypertensive crisis.
+
+        If your blood pressure is higher than 180/120 mm Hg and you are experiencing signs of possible organ damage such as chest pain, shortness of breath, back pain, numbness/weakness, change in vision or difficulty speaking, do not wait to see if your pressure comes down on its own.
+
+        \n\n<font size="16"><b>Your blood pressure numbers and what they mean</b></font>\n
+        Your blood pressure is recorded as two numbers:
+
+        Systolic blood pressure (the first number) – indicates how much pressure your blood is exerting against your artery walls when the heart beats.
+        Diastolic blood pressure (the second number) – indicates how much pressure your blood is exerting against your artery walls while the heart is resting between beats.
+
+        \n\n<font size="16"><b>Which number is more important?</b></font>\n
+        Typically, more attention is given to systolic blood pressure (the first number) as a major risk factor for cardiovascular disease for people over 50. In most people, systolic blood pressure rises steadily with age due to the increasing stiffness of large arteries, long-term buildup of plaque and an increased incidence of cardiac and vascular disease.
+
+        However, either an elevated systolic or an elevated diastolic blood pressure reading may be used to make a diagnosis of high blood pressure. According to recent studies, the risk of death from ischemic heart disease and stroke doubles with every 20 mm Hg systolic or 10 mm Hg diastolic increase among people from age 40 to 89.
+
+        \n\n<font size="16"><b>Why blood pressure is measured in mm Hg</b></font>\n
+        The abbreviation mm Hg means millimeters of mercury. Mercury was used in the first accurate pressure gauges and is still used in medicine today as the standard unit of measurement for pressure.
+
+        \n\nSource: https://www.heart.org/
+    </string>
+    <string name="post_10_title">Low Blood Pressure Symptoms and Causes</string>
+    <string name="post_10_content">
+        Low blood pressure occurs when blood flows through your blood vessels at lower than normal pressures. The medical term for low blood pressure is hypotension.\n\nBlood pressure is the force of blood pushing against the walls of your arteries as the heart pumps blood. It is usually described as two numbers: systolic and diastolic. The numbers record blood pressure in millimeters of mercury (mm Hg), with systolic listed above diastolic.\n\nFor most adults, a normal blood pressure is usually less than 120/80 mm Hg. Low blood pressure is blood pressure that is lower than 90/60 mm Hg.\n\nSome people have low blood pressure all the time, and it is normal for them. Other people experience a sudden drop in blood pressure or have low blood pressure that may be linked to a health problem. This can be dangerous, as it could mean your heart, brain, or other vital organs are not getting enough blood flow and you are at risk for a heart attack or stroke.
+        \n\n<font size="16"><b>What causes low blood pressure?</b></font>\n
+        Many systems of the body, including organs, hormones, and nerves, regulate blood pressure. For example, the autonomic nervous system sends the “fight-or-flight” signal that, depending on the situation, tells the heart and other systems in the body to increase or decrease blood pressure. Problems with the autonomic nervous system, such as in Parkinson’s disease, can cause low blood pressure.\n\nOther causes of low blood pressure include:\n\nBlood loss from an injury that causes a sudden drop in blood pressure\nDehydration\nDiabetes\nHeart problems such as arrhythmias (irregular heartbeat)\nMedicines to treat high blood pressure, depression, or Parkinson’s\nPregnancy\nOlder adults also have a higher risk for symptoms of low blood pressure, such as falling, fainting, or dizziness upon standing up or after a meal. Older adults are more likely to develop low blood pressure as a side effect of medicines taken to control high blood pressure.
+        \n\n<font size="16"><b>What are the symptoms?</b></font>\n
+        For many people, low blood pressure goes unnoticed. Others may feel symptoms such as:
+        \n\n• Confusion
+        \n• Dizziness or lightheadedness
+        \n• Fainting
+        \n• Feeling tired or weak
+        \n• Blurry vision
+        \n• Headache
+        \n• Neck or back pain
+        \n• Nausea
+        \n• Heart palpitations, or feelings that your heart is skipping a beat, fluttering, or beating too hard or too fast
+        \n\n<font size="16"><b>What should you do if you have symptoms?</b></font>\n
+        Sitting down may relieve the symptoms. If your blood pressure drops too low, your body’s vital organs do not get enough oxygen and nutrients. When this happens, low blood pressure can lead to shock, which requires immediate medical attention. Signs of shock include cold and sweaty skin, rapid breathing, a blue skin tone, or a weak and rapid pulse. Go to the hospital, if you notice signs of shock in yourself or someone else.\n\nTalk to your doctor about your symptoms. Your doctor will use a blood pressure test to diagnose low blood pressure. Other tests may include blood, urine, or imaging tests and a tilt table test if you faint often.
+        \n\n<font size="16"><b>How is it treated?</b></font>\nYou may not need treatment for low blood pressure. Depending on your symptoms, treatment may include drinking more fluids to prevent dehydration, taking medicines to raise your blood pressure, or adjusting medicines that cause low blood pressure.\n\nYour doctor may talk to you about lifestyle changes, including changing what and how you eat and how you sit and stand up. Your doctor may also recommend compression stockings if you stand for long periods.\n\nSource: https://www.nhlbi.nih.gov/
+    </string>
+    <string name="post_11_title">Blood pressure up? COVID-19 pandemic could be to blame</string>
+    <string name="post_11_content">
+        It’s a fact few can dispute: The COVID–19 pandemic has been devastating on Americans. It has caused high rates of death and illness, disrupted nearly every aspect of daily life, and been linked to increased heart disease, lung disease, obesity, and sleep problems.\n\nNow, NHLBI-funded researchers say the virus and related stress can also be blamed for an increase in blood pressure among Americans.\n\nA large observational study, recently published in the journal Circulation, reviewed health data from more than half a million Americans from 50 states and the District of Columbia. It found a small, but consequential, rise in average blood pressure during the early peak of the pandemic.\n\nAll the study’s participants were enrolled in an employer-sponsored wellness program that required them to have their blood pressure measured by trained personnel every year during the three-year period analyzed, 2018-2020.\n\nThe study found that the average systolic blood pressure – the top number in the blood pressure reading – increased by about 2 millimeters of mercury (mm Hg) from April 2020 to December 2020 – considered the peak of the pandemic. The average diastolic pressure – the bottom number – also rose slightly. Normal blood pressure is less than 120/80 mm Hg.\n\nBy contrast, no changes were reported in average blood pressure readings in the 15-month pre-pandemic period between January 2019 and the start of the peak pandemic period (from April 2020 to December 2020). The later period saw widespread stay-at-home orders and lockdowns.\n\n“That’s concerning,” said Luke Laffin, M.D., the study’s lead author and co-director of the Center for Blood Pressure Disorders at the Cleveland Clinic. “On the individual level, that [2 mm Hg increase] doesn’t seem like a lot. But we know that a small increase in blood pressure can cause a significant increase in strokes and heart attacks across the population”— which, in turn, can lead to death, he added. High blood pressure, or hypertension, can also raise the risk of more severe complications from COVID-19 disease.\n\nAlready in the United States, about half of adults have hypertension, but only about one in four (24%) have it under control.
+        \n\n\n\nLaffin said multiple factors were behind the nationwide increase, starting with a reduction in ongoing medical care during the pandemic. People with hypertension were not seeing their doctors regularly, Laffin explained, and that meant many were not filling their prescriptions for antihypertensive medications. During the pandemic, an estimated 40 percent of U.S. adults reported avoiding medical care because of concerns related to COVID-19, according to a 2020 report external link from the Centers for Disease Control and Prevention.\n\n\n\nIn people without hypertension, Laffin said, the increase was “perhaps related to changes in dietary patterns.”  Specifically, the researcher points to excess sodium or salt intake. “We know that the biggest driver with respect to dietary patterns of blood pressure is excess sodium, so people were likely eating saltier foods during the pandemic.”\n\nStress, which has long been known to increase blood pressure, likely played a significant role in this study population, as well. “We know that if people don’t handle stress well, that impacts their lifestyle choices,” Laffin said. “They don’t eat right, they drink more alcohol, they don’t get sufficient sleep.”\n\nThe findings are supported by at least two other nationwide blood pressure tracking studies that show jumps in pressure readings during this period. Laffin ruled out other explanations for the increase, including obesity, virus-induced hypertension, and vaccines themselves. The evidence in this study did not support those factors, he said.\n\nThe greatest increase was experienced by women, who made up half of the study’s participants.
+        \n\n“We know from other literature that pandemics tend to put an undue burden on women,” Laffin said. That includes taking care of children, paying bills, and, in the case of COVID-19, coordinating virtual learning. “That can result in less time to make the lifestyle changes that they need to control cardiovascular risk factors, including blood pressure.”\n\nAnother factor may have been at play, too: medications people were taking for other conditions that unintentionally raised blood pressure. According to a study reported recently in JAMA Internal Medicineexternal link, one in five people with hypertension may be taking such medications. The most common includes antidepressants, prescription strength nonsteroidal anti-inflammatory drugs (NSAIDs), steroids, and estrogens, that study found. Patients should check with their doctor or pharmacist about this possibility, the researchers said, to see if they can replace these drugs with safer alternatives.\n\nAnd everybody, Laffin said, should focus on good self-care, as it is critical to keeping hypertension under control, or preventing it in the first place. Eating heart-healthy foods, moving more, getting enough sleep, and better stress management all can make a huge difference, he said. \n\nAlso, “It’s important to know your blood pressure numbers,” he said, whether you have hypertension or not.  People can easily find out what those are by visiting a blood pressure check station at their local supermarket or drugstore or using arm-cuff style monitors to check their pressure at home, he said.\n\nRegular activities like these, Laffin noted, save lives. “Don’t just get so focused on COVID that you neglect other preventive measures or self-care issues,” he said. “We have to prevent COVID infection and spread, but we also have to prevent strokes and heart attacks.”\n\nLawrence Fine, M.D., Dr.P.H., senior advisor of NHLBI’s Clinical Applications and Prevention Branch, agreed. “Reversing blood pressure increases during the pandemic and beyond is important to the future cardiovascular health of millions of Americans and less than half of Americans with hypertension have achieved adequate control of their hypertension. This study suggests the pandemic possibly made this problem somewhat worse,” he said.
+        \n\n“While this study contributes to knowledge about the impact of the pandemic on blood pressure and the value of self-care, it’s important to see your health care provider and follow lifestyle and medication recommendations if you already have hypertension,” Fine added.
+        \n\nSource: https://www.nhlbi.nih.gov/</string>
+    <string name="post_12_title">Living With High Blood Pressure</string>
+    <string name="post_12_content">It is important to have regular blood pressure readings taken and to know your numbers, because high blood pressure usually does not cause symptoms until it has caused serious problems.
+        \n\n<font size="16"><b>Tips for managing high blood pressure at home</b></font>\n
+        If you have been diagnosed with high blood pressure, it is important that you continue your treatment plan. You will need regular follow-up care and should learn how to monitor your condition at home. Your provider may need to change or add medicines to your treatment plan over time.\n\nLet your healthcare provider know if you are planning to become pregnant.
+        \n\n<font size="16"><b>Manage your condition</b></font>\n
+        Keep up your treatment plan, including healthy lifestyle changes, to help control your blood pressure and prevent heart disease. Making lifestyle changes and remembering your medicine every day can be hard, but there are some tools to help you.\n\nAsk your provider or pharmacist about apps for monitoring and tracking your blood pressure. They also may know how to get texts to remind you to take your medicine every day and notify you when it’s time to fill your prescription.\nGet support from loved ones and others in your community. \nHave regular medical checkups and tests, as advised by your provider. Ask questions and discuss your progress. Tell your provider about any new conditions or if you have been taking new medicines since your last appointment.\nYour healthcare provider may want you to check your blood pressure at home or at other locations that have blood pressure equipment. Diagnosis offers reminders on how to prepare for blood pressure testing and how to take your blood pressure yourself.\nThe Blood Pressure Wallet Card can be printed out and used to keep a written log of all your results. Take the log to your health care provider appointments. You may be able to send the readings to your provider’s office electronically.
+        \n\n<font size="16"><b>Know when to call for help for complications</b></font>\n
+        Readings above 180/120 mm HG are dangerously high and require immediate medical attention. Blood pressure this high can damage your organs. Call emergency, if you experience:\n\nA sudden, severe headache\nDifficulty breathing\nSudden, severe pain in your abdomen, chest, or back\nHigh blood pressure can also lead to heart attack, stroke, or other dangerous symptoms and conditions.
+        \n\n<font size="16"><b>HEART ATTACK</b></font>\n
+        Nausea, vomiting, light-headedness or fainting, or breaking out in a cold sweat are symptoms of a heart attack that are more common in women.\nProlonged or severe chest pain or discomfort not relieved by rest or nitroglycerin may be another symptom of heart attack. Uncomfortable pressure, squeezing, fullness, or pain in the center or left side of the chest can be mild or strong. This pain or discomfort often lasts more than a few minutes or goes away and comes back.\nShortness of breath may accompany chest discomfort or happen before it.\nUpper body discomfort can be felt in one or both arms, the back, neck, jaw, or upper part of the stomach.
+        \n\n<font size="16"><b>STROKE</b></font>\n
+        If you think someone may be having a stroke, act F.A.S.T.
+        \n\n<b>F — Face</b>: Ask the person to smile. Does one side of the face droop?
+        \n<b>A — Arms</b>: Ask the person to raise both arms. Does one arm drift downward?
+        \n<b>S — Speech</b>: Ask the person to repeat a simple phrase. Is their speech slurred or strange?
+        \n<b>T — Time</b>: If you observe any of these signs, call for help immediately. Early treatment is essential.
+        \n\nSource: https://www.nhlbi.nih.gov/</string>
+    <string name="low">Low</string>
+    <string name="systole_range_low"><![CDATA[< 90]]></string>
+    <string name="diastole_range_low"><![CDATA[(<60)]]></string>
+
+    <string name="you_need_to_measure_blood_pressure_at_8_pm_everyday">You need to measure blood pressure at 8 pm everyday</string>
+    <string name="you_need_to_measure_weight_and_bmi_to_manage_weight_better">You need to measure weight and BMI to manage weight better.</string>
+    <string name="term_of_service">Term of Service</string>
+    <string name="no_data_chart">No data chart</string>
+    <string name="this_action_can_contain_ads">(This action can contain ads)</string>
+    <string name="ads">Ad</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="hint_input_height">Ex: 170</string>
+    <string name="hint_input_weight">Ex: 60</string>
+    <string name="create">Create</string>
+    <string name="soon">Soon</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="title_no_data">There’s no data here!</string>
+    <string name="content_no_data">Let\'s measure your  Heart Rate right now!</string>
+    <string name="dashboard_tip">The type of medicine used to treat hypertension depends on your overall health and how high your blood pressure is. Two or more blood pressure drugs often work better than one.</string>
+    <string name="delete_result">Delete result</string>
+    <string name="ad_upper_first" translatable="false">Ad</string>
+    <string name="missing_required_information">Missing required information !</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="disclaimer_italic"><u>Disclaimer</u></string>
+    <string name="disclaimer_content">Our healthcare application offers input and tracking functionalities exclusively. We provide results and recommendations based on reliable and trustworthy sources that are clearly sourced in our platform. We aim to provide our users with a dependable and user-friendly experience. However, please note that we are not a healthcare service, and for the most accurate results, we strongly advise reaching out to your nearest hospital, infirmary, or doctor. Thank you once again for using our application, and we sincerely wish you good health.</string>
+    <string name="click_here_for_reference"><u>Click here for reference</u></string>
+    <string name="reference">Reference</string>
+    <string name="install">Install</string>
+    <string name="loading">Loading</string>
+    <string name="cannot_add_profile">Cannot add profile</string>
+</resources>

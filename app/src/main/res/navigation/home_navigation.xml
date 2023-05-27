@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation.xml"
+    app:startDestination="@id/dashBoardFragment">
+
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.blood.ui.fragments.dashboard.DashBoardFragment"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/insightFragment"
+        android:name="com.blood.ui.fragments.insight.InsightFragment"
+        tools:layout="@layout/fragment_insight" />
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.blood.ui.fragments.info.InfoFragment"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.blood.ui.fragments.setting.SettingFragment"
+        tools:layout="@layout/fragment_setting" />
+</navigation>

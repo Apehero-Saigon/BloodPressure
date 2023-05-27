@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.blood.ui.fragments.home.HomeFragment" />
+
+        <variable
+            name="viewModel"
+            type="com.blood.ui.fragments.home.HomeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/home_navigation" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_bottom_navigation_view"
+            android:paddingVertical="10dp"
+            app:itemBackground="@android:color/transparent"
+            app:itemIconTint="@drawable/text_bottom_navigation_view_selector"
+            app:itemTextColor="@drawable/text_bottom_navigation_view_selector"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toTopOf="@id/frAds"
+            app:menu="@menu/home_menu_bottom_navigation" />
+
+        <FrameLayout
+            android:id="@+id/flBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_banner_control" />
+        </FrameLayout>
+    </LinearLayout>
+</layout>

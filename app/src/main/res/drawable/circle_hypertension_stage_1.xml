@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <stroke
+        android:width="14dp"
+        android:color="@color/color_conclusion_hypertension_stage_1"/>
+</shape>

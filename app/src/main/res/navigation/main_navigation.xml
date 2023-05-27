@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.blood.ui.fragments.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_languageFragment"
+            app:destination="@id/languageFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.blood.ui.fragments.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_disclaimerFragment"
+            app:destination="@id/disclaimerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_languageSettingFragment"
+            app:destination="@id/languageSettingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.blood.ui.fragments.language.LanguageFragment"
+        tools:layout="@layout/fragment_language">
+        <action
+            android:id="@+id/action_languageFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.blood.ui.fragments.onboarding.OnBoardingFragment"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onBoardingFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onBoardingPageFragment"
+        android:name="com.blood.ui.fragments.onboarding.OnBoardingPageFragment"
+        tools:layout="@layout/fragment_onboarding_page" />
+
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.blood.ui.fragments.profile.ProfileEditFragment"
+        tools:layout="@layout/fragment_profile_edit">
+
+        <argument
+            android:name="allowBack"
+            android:defaultValue="true"
+            app:argType="boolean" />
+
+        <argument
+            android:name="editMode"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+        <action
+            android:id="@+id/action_profileEditFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/disclaimerFragment"
+        android:name="com.blood.ui.fragments.reference.DisclaimerFragment"
+        tools:layout="@layout/fragment_disclaimer" />
+
+    <fragment
+        android:id="@+id/languageSettingFragment"
+        android:name="com.blood.ui.fragments.language.LanguageSettingFragment"
+        tools:layout="@layout/fragment_language_setting" />
+</navigation>
