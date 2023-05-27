@@ -165,6 +165,32 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_18sdp"
                     android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/pulse"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.shawnlin.numberpicker.NumberPicker
+                    android:id="@+id/pickPurse"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_46sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/bg_f9f9f9f_radius_10"
+                    android:gravity="center|start"
+                    app:np_dividerColor="@android:color/transparent"
+                    app:np_fadingEdgeEnabled="false"
+                    app:np_max="180"
+                    app:np_min="30"
+                    app:np_orientation="horizontal"
+                    app:np_selectedTextColor="@color/colorAds"
+                    app:np_textColor="@color/color_hint"
+                    app:np_value="88"
+                    app:np_wheelItemCount="5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:text="@string/note"
                     android:textColor="@color/black"
                     android:textSize="16sp" />

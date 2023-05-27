@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_homeFragment_to_infoDetailFragment"
             app:destination="@id/infoDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bloodPressureDetailFragment"
+            app:destination="@id/bloodPressureDetailFragment" />
     </fragment>
 
     <fragment
@@ -115,6 +118,24 @@
         <argument
             android:name="infoKnowledge"
             app:argType="com.blood.data.InfoKnowledge"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bloodPressureDetailFragment"
+        android:name="com.blood.ui.fragments.bloodpressure.BloodPressureDetailFragment"
+        tools:layout="@layout/fragment_blood_pressure_detail">
+
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <argument
+            android:name="mode"
+            android:defaultValue="0"
+            app:argType="integer"
             app:nullable="false" />
     </fragment>
 </navigation>

@@ -7,7 +7,9 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.Fragme
 import com.blood.base.BaseFragment
 import com.blood.common.Constant
 import com.blood.data.BloodPressure
+import com.blood.ui.dialog.SaveBloodPressurePopup
 import com.blood.ui.fragments.home.HomeFragment
+import com.blood.ui.fragments.home.HomeFragmentDirections
 import com.blood.ui.fragments.home.HomeViewModel
 import com.blood.ui.fragments.home.IHomeUi
 import com.blood.ui.fragments.profile.ProfileEditFragmentDirections
@@ -39,9 +41,7 @@ class DashBoardFragment : BaseFragment<HomeViewModel, FragmentDashboardBinding>(
         viewModel.insertBloodPressureObserver.observe(this.viewLifecycleOwner) { profile ->
             if (profile != null) {
                 adsUtils.interMeasure.showInterAdsBeforeNavigate(requireContext(), true) {
-                    val action =
-                        ProfileEditFragmentDirections.actionProfileEditFragmentToHomeFragment()
-                    findNavController().navigate(action)
+                    iHomeUi?.navigateTo(HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment())
                 }
             } else {
                 toast(getString(R.string.cannot_add_blood_pressure))
@@ -56,11 +56,19 @@ class DashBoardFragment : BaseFragment<HomeViewModel, FragmentDashboardBinding>(
                 profileId = prefUtils.profile!!.id,
                 systole = binding.pickSys.value,
                 diastole = binding.pickDia.value,
+                pulse = binding.pickPurse.value,
                 note = binding.edtNote.textTrim(),
                 createAt = date
             )
 
-            viewModel.insertBloodPressure(bloodPressure)
+            SaveBloodPressurePopup.showPopup(
+                childFragmentManager,
+                bloodPressure.systole,
+                bloodPressure.diastole,
+                bloodPressure.pulse
+            ) {
+                viewModel.insertBloodPressure(bloodPressure)
+            }
         }
     }
 }

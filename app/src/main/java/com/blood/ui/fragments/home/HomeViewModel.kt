@@ -5,6 +5,7 @@ import com.blood.base.BaseViewModel
 import com.blood.data.BloodPressure
 import com.blood.data.Profile
 import com.blood.data.repository.BloodPressureRepository
+import com.blood.utils.listener.SingleLiveEvent
 import kotlinx.coroutines.delay
 import javax.inject.Inject
 
@@ -13,7 +14,7 @@ class HomeViewModel @Inject constructor() : BaseViewModel() {
     @Inject
     lateinit var bloodPressureRepository: BloodPressureRepository
 
-    val insertBloodPressureObserver = MutableLiveData<BloodPressure?>()
+    val insertBloodPressureObserver = SingleLiveEvent<BloodPressure?>()
 
     fun insertBloodPressure(bloodPressure: BloodPressure) {
         isLoading.postValue(true)

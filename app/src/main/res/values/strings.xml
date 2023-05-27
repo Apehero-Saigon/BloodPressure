@@ -431,4 +431,8 @@
     <string name="note">Note</string>
     <string name="cannot_add_blood_pressure">Cannot add blood pressure</string>
     <string name="doing">Doing</string>
+    <string name="save_your_record">Save your record</string>
+    <string name="sys">SYS</string>
+    <string name="mmhg">(mmHg)</string>
+    <string name="dia">DIA</string>
 </resources>

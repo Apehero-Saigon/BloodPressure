@@ -1,5 +1,6 @@
 package com.blood.di.module
 
+import com.blood.ui.fragments.bloodpressure.BloodPressureDetailFragment
 import com.blood.ui.fragments.dashboard.DashBoardFragment
 import com.blood.ui.fragments.home.HomeFragment
 import com.blood.ui.fragments.info.InfoDetailFragment
@@ -56,4 +57,7 @@ abstract class FragmentModule {
 
     @ContributesAndroidInjector
     abstract fun languageSettingFragment(): LanguageSettingFragment
+
+    @ContributesAndroidInjector
+    abstract fun bloodPressureDetailFragment(): BloodPressureDetailFragment
 }
