@@ -1,12 +1,12 @@
 package com.blood.data.repository
 
-import com.blood.db.datasource.interfacedatasource.IGlucoseDataSource
+import com.blood.db.datasource.interfacedatasource.IBloodPressureDataSource
 import javax.inject.Inject
 
-class GlucoseRepository @Inject constructor(
-    var iGlucoseDataSource: IGlucoseDataSource
+class BloodPressureRepository @Inject constructor(
+    var iBloodPressureDataSource: IBloodPressureDataSource
 ) {
-    suspend fun countBloodSugarByProfileID(profileId: Long): Int {
-        return iGlucoseDataSource.countBloodSugarByProfileID(profileId)
+    suspend fun countBloodPressureByProfileID(profileId: Long): Int {
+        return iBloodPressureDataSource.countBloodPressureByProfileID(profileId)
     }
 }

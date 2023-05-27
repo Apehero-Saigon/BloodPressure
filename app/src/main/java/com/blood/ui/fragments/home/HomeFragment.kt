@@ -19,6 +19,14 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
             requireActivity(), BuildConfig.banner_home, prefUtils.isShowBannerHome
         )
 
+        adsUtils.interMeasure.isShowHighAds = prefUtils.isShowInterMeasureHigh
+        adsUtils.interMeasure.isShowNormalAds = prefUtils.isShowInterMeasure
+        adsUtils.interMeasure.loadInterPrioritySameTime(
+            requireContext(),
+            BuildConfig.inter_measure_high,
+            BuildConfig.inter_measure
+        )
+
         adsUtils.interInfo.isShowHighAds = prefUtils.isShowInterInfoHigh
         adsUtils.interInfo.isShowNormalAds = prefUtils.isShowInterInfo
         adsUtils.interInfo.loadInterPrioritySameTime(

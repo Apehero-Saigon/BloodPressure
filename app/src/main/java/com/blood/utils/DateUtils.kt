@@ -3,6 +3,10 @@ package com.blood.utils
 import android.text.format.DateFormat
 import java.text.ParseException
 import java.text.SimpleDateFormat
+import java.time.Instant
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 object DateUtils {
@@ -35,10 +39,19 @@ object DateUtils {
         return format.format(Date())
     }
 
-    fun getDate(milliSeconds: Long, dateFormat: String): String? {
+    fun getDateStr(milliSeconds: Long, dateFormat: String): String? {
         val formatter = SimpleDateFormat(dateFormat, Locale.getDefault())
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = milliSeconds
         return formatter.format(calendar.time)
+    }
+
+    fun format(dateStr: String, dateFormat: String): Date? {
+        return try {
+            val formatter = SimpleDateFormat(dateFormat, Locale.getDefault())
+            formatter.parse(dateStr)
+        } catch (ex: Exception) {
+            null
+        }
     }
 }

@@ -3,8 +3,9 @@ package com.blood.db.converter
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import java.util.Date
 
-object StringConverters {
+object Converters {
     @TypeConverter
     fun fromString(value: String?): List<String> {
         val listType = object : TypeToken<List<String?>?>() {}.type
@@ -15,5 +16,15 @@ object StringConverters {
     fun fromList(list: List<String?>?): String {
         val gson = Gson()
         return gson.toJson(list)
+    }
+
+    @TypeConverter
+    fun toDate(dateLong: Long?): Date? {
+        return dateLong?.let { Date(it) }
+    }
+
+    @TypeConverter
+    fun fromDate(date: Date?): Long? {
+        return date?.time
     }
 }

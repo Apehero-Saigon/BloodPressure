@@ -12,6 +12,7 @@ object Constant {
     const val LANGUAGE_VI = "vi"/*vietnamese*/
 
     // format
+    const val FORMAT_DATETIME = "dd/MM/yyyy hh:mm"
     const val FORMAT_DATE = "dd/MM/yyyy"
     const val FORMAT_TIME = "hh:mm"
 

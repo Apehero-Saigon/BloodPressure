@@ -9,6 +9,7 @@ import com.blood.ui.fragments.home.HomeFragment
 import com.blood.ui.fragments.home.HomeViewModel
 import com.blood.ui.fragments.home.IHomeUi
 import com.blood.utils.DateUtils
+import com.blood.utils.ViewUtils.clickWithDebounce
 
 class DashBoardFragment : BaseFragment<HomeViewModel, FragmentDashboardBinding>(
     R.layout.fragment_dashboard, HomeViewModel::class.java
@@ -24,8 +25,17 @@ class DashBoardFragment : BaseFragment<HomeViewModel, FragmentDashboardBinding>(
 
     override fun initView() {
         with(binding) {
-            tvDate.text = DateUtils.getDate(System.currentTimeMillis(), Constant.FORMAT_DATE)
-            tvTime.text = DateUtils.getDate(System.currentTimeMillis(), Constant.FORMAT_TIME)
+            tvDate.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_DATE)
+            tvTime.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_TIME)
+        }
+    }
+
+    override fun initListener() {
+        binding.btnSave.clickWithDebounce {
+            val dateStr = "${binding.tvDate.text} ${binding.tvDate.text}"
+            val date = DateUtils.format(dateStr, Constant.FORMAT_DATETIME)
+
+//            val record = BloodPressureEntity(profileId, systole, diastole, pulse, time)
         }
     }
 }

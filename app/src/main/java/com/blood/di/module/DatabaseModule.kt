@@ -3,11 +3,11 @@ package com.blood.di.module
 import android.content.Context
 import androidx.room.Room
 import com.blood.db.AppDatabase
-import com.blood.db.dao.GlucoseDAO
+import com.blood.db.dao.BloodPressureDAO
 import com.blood.db.dao.ProfileDao
-import com.blood.db.datasource.GlucoseDataSource
+import com.blood.db.datasource.BloodPressureDataSource
 import com.blood.db.datasource.ProfileDataSource
-import com.blood.db.datasource.interfacedatasource.IGlucoseDataSource
+import com.blood.db.datasource.interfacedatasource.IBloodPressureDataSource
 import com.blood.db.datasource.interfacedatasource.IProfileDataSource
 import dagger.Module
 import dagger.Provides
@@ -52,13 +52,13 @@ class DatabaseModule {
 
     @Singleton
     @Provides
-    fun provideGlucoseDAO(db: AppDatabase): GlucoseDAO {
-        return db.glucoseDAO()
+    fun provideBloodPressureDAO(db: AppDatabase): BloodPressureDAO {
+        return db.bloodPressureDAO()
     }
 
     @Singleton
     @Provides
-    fun provideGlucoseDataSource(glucoseDAO: GlucoseDAO): IGlucoseDataSource {
-        return GlucoseDataSource(glucoseDAO)
+    fun provideBloodPressureDataSource(bloodPressureDAO: BloodPressureDAO): IBloodPressureDataSource {
+        return BloodPressureDataSource(bloodPressureDAO)
     }
 }
