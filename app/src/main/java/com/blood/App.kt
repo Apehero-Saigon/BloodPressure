@@ -53,7 +53,7 @@ class App : AdsMultiDexApplication(), HasAndroidInjector {
         Admob.getInstance().setOpenActivityAfterShowInterAds(true)
 
         //Firebase analytics
-        FirebaseUtils.init(this)
+//        FirebaseUtils.init(this)
     }
 
     @Inject

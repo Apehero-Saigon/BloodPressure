@@ -3,7 +3,6 @@ package com.blood.ui.fragments.profile
 import android.widget.ArrayAdapter
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.ads.control.ads.AperoAd
 import com.blood.base.BaseFragment
 import com.blood.data.Profile
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner

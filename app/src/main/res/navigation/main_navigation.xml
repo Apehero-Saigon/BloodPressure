@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_homeFragment_to_languageSettingFragment"
             app:destination="@id/languageSettingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_infoDetailFragment"
+            app:destination="@id/infoDetailFragment" />
     </fragment>
 
     <fragment
@@ -103,4 +106,15 @@
         android:id="@+id/languageSettingFragment"
         android:name="com.blood.ui.fragments.language.LanguageSettingFragment"
         tools:layout="@layout/fragment_language_setting" />
+
+    <fragment
+        android:id="@+id/infoDetailFragment"
+        android:name="com.blood.ui.fragments.info.InfoDetailFragment"
+        tools:layout="@layout/fragment_info_detail">
+
+        <argument
+            android:name="infoKnowledge"
+            app:argType="com.blood.data.InfoKnowledge"
+            app:nullable="false" />
+    </fragment>
 </navigation>

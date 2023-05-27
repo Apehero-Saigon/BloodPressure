@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.info.InfoFragment">
+
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Info" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="30dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/information_knowledge"
+            android:textColor="@color/color_text_special"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:background="@drawable/background_dashboard_menu_layout"
+                android:shadowColor="@android:color/transparent"
+                android:textSize="14sp"
+                app:defaultQueryHint="@string/search"
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/search"
+                app:searchHintIcon="@drawable/ic_search"
+                app:searchIcon="@drawable/ic_search" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/blood_pressure"
+            android:textColor="@color/color_text_normal"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp" />
+
+    </LinearLayout>
 </layout>
