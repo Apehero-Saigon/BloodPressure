@@ -18,6 +18,14 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
         binding.flBanner.loadBanner(
             requireActivity(), BuildConfig.banner_home, prefUtils.isShowBannerHome
         )
+
+        adsUtils.interInfo.isShowHighAds = prefUtils.isShowInterInfoHigh
+        adsUtils.interInfo.isShowNormalAds = prefUtils.isShowInterInfo
+        adsUtils.interInfo.loadInterPrioritySameTime(
+            requireContext(),
+            BuildConfig.inter_info_high,
+            BuildConfig.inter_info
+        )
     }
 
     override fun initView() {

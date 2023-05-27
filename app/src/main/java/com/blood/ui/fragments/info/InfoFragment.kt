@@ -25,10 +25,8 @@ class InfoFragment : BaseFragment<HomeViewModel, FragmentInfoBinding>(
     }
 
     override fun initView() {
-        val manager = GridLayoutManager(requireContext(), 3)
-
         binding.rcvInfo.adapter = BloodPressureInfoKnowledgeAdapter(getListBloodPressure(), this)
-        binding.rcvInfo.layoutManager = manager
+        binding.rcvInfo.layoutManager = GridLayoutManager(requireContext(), 3)
     }
 
     private fun getListBloodPressure() = mutableListOf(
@@ -54,10 +52,12 @@ class InfoFragment : BaseFragment<HomeViewModel, FragmentInfoBinding>(
     )
 
     override fun onInfoKnowLedgeClicked(infoKnowledge: InfoKnowledge) {
-        iHomeUi?.navigateTo(
-            HomeFragmentDirections.actionHomeFragmentToInfoDetailFragment(
-                infoKnowledge
+        adsUtils.interInfo.showInterAdsBeforeNavigate(requireContext(), true) {
+            iHomeUi?.navigateTo(
+                HomeFragmentDirections.actionHomeFragmentToInfoDetailFragment(
+                    infoKnowledge
+                )
             )
-        )
+        }
     }
 }

@@ -26,7 +26,9 @@ class AdsUtils {
     // inter
     val interBloodDetails: InterPriority = InterPriority()
     val interMeasure: InterPriority = InterPriority()
-    val interInfo: InterPriority = InterPriority()
+    val interInfo: InterPriority = InterPriority().apply {
+        showAfterClick = 1
+    }
     val interSaveProfile: InterPriority = InterPriority()
 
     // native
@@ -38,7 +40,7 @@ class AdsUtils {
     val nativeRecentAction = NativeAds()
 
     enum class Status {
-        LOADING, NONE, FAIL, FAIL_PRIORITY, FAIL_NORMAL, SUCCESS, SHOWN
+        LOADING, NONE, FAIL, SUCCESS, SHOWN
     }
 
     class NativeAds {
@@ -288,6 +290,9 @@ class AdsUtils {
         var idAdsPriority: String? = null
         var idAdsNormal: String? = null
 
+        var showAfterClick: Int = 0
+        var countShown: Int = 0
+
         companion object {
             var lastShowInter: Long = 0L
             private var intervalTime: Long = 0L
@@ -299,18 +304,11 @@ class AdsUtils {
             }
         }
 
-        private var status = Status.NONE
+        private var statusHigh = Status.NONE
+        private var statusNormal = Status.NONE
 
-        fun isLoadingAds() = status == Status.LOADING
-
-        fun isLoadingOrShownAds() = status == Status.LOADING || status == Status.SHOWN
-
-        fun isNoneAds() = status == Status.NONE
-        fun isNoneOrFailAds() = status == Status.NONE || status == Status.FAIL
-        fun isFailAds() = status == Status.FAIL
-
-        fun mustReloadAds(): Boolean =
-            status == Status.SHOWN || status == Status.NONE || status == Status.FAIL_PRIORITY || status == Status.FAIL_NORMAL || status == Status.FAIL
+        private fun mustReloadAds(): Boolean =
+            (statusHigh == Status.SHOWN || statusNormal == Status.SHOWN) || (statusHigh == Status.NONE && statusNormal == Status.NONE) || (statusHigh == Status.FAIL && statusNormal == Status.FAIL)
 
         var isShowHighAds: Boolean = true
         var isShowNormalAds: Boolean = true
@@ -340,7 +338,7 @@ class AdsUtils {
             return false
         }
 
-        fun checkShowByIntervalTime(): Boolean {
+        private fun checkShowByIntervalTime(): Boolean {
             return if (isShowByIntervalTime) {
                 System.currentTimeMillis() - lastShowInter > intervalTime
             } else {
@@ -348,23 +346,29 @@ class AdsUtils {
             }
         }
 
+        private fun checkShowBySkip(): Boolean {
+            if (showAfterClick == 0 || (showAfterClick > 0 && countShown < showAfterClick)) {
+                countShown++
+                return true
+            }
+            countShown = 0
+            return false
+        }
+
         fun showInterAdsBeforeNavigate(
             context: Context, reloadAfterShow: Boolean = false, nextActionCallBack: (() -> Unit)
         ) {
             val finishCallback: (Boolean) -> Unit = run {
                 { isReload ->
-                    if (status != Status.FAIL && status != Status.FAIL_PRIORITY && status != Status.FAIL_NORMAL) {
-                        status = Status.SHOWN
-                    }
                     nextActionCallBack()
                     if (isReload) {
                         loadInterPrioritySameTime(
-                            context, idAdsPriority, idAdsNormal, reloadAfterShow
+                            context, idAdsPriority, idAdsNormal, reloadAfterShow, false
                         )
                     }
                 }
             }
-            if (canShowAds() && checkShowByIntervalTime()) {
+            if (canShowAds() && (!isShowByIntervalTime || checkShowByIntervalTime()) && checkShowBySkip()) {
                 if (interAdsPriorityLoaded() && !interAdsNormalLoaded()) {
                     AperoAd.getInstance().forceShowInterstitial(
                         context, interAdsPriority, object : AperoAdCallback() {
@@ -372,6 +376,7 @@ class AdsUtils {
                                 super.onNextAction()
                                 finishCallback(reloadAfterShow)
                                 lastShowInter = System.currentTimeMillis()
+                                statusHigh = Status.SHOWN
                             }
                         }, false
                     )
@@ -382,6 +387,7 @@ class AdsUtils {
                                 super.onNextAction()
                                 finishCallback(reloadAfterShow)
                                 lastShowInter = System.currentTimeMillis()
+                                statusNormal = Status.SHOWN
                             }
                         }, false
                     )
@@ -392,6 +398,7 @@ class AdsUtils {
                                 super.onNextAction()
                                 finishCallback(reloadAfterShow)
                                 lastShowInter = System.currentTimeMillis()
+                                statusHigh = Status.SHOWN
                             }
 
                             override fun onAdFailedToShow(adError: ApAdError?) {
@@ -404,6 +411,7 @@ class AdsUtils {
                                             super.onNextAction()
                                             finishCallback(reloadAfterShow)
                                             lastShowInter = System.currentTimeMillis()
+                                            statusNormal = Status.SHOWN
                                         }
                                     }, false
                                 )
@@ -412,7 +420,7 @@ class AdsUtils {
                     )
                 }
             } else {
-                finishCallback(status == Status.NONE || status == Status.FAIL || status == Status.FAIL_PRIORITY || status == Status.FAIL_NORMAL || status == Status.SHOWN)
+                finishCallback(mustReloadAds())
             }
         }
 
@@ -430,8 +438,8 @@ class AdsUtils {
             }
             this.idAdsPriority = idAdsPriority
             this.idAdsNormal = idAdsNormal
-            status = Status.LOADING
             if (isShowHighAds && !idAdsPriority.isNullOrEmpty()) {
+                statusHigh = Status.LOADING
                 AperoAd.getInstance()
                     .getInterstitialAds(context, idAdsPriority, object : AperoAdCallback() {
                         override fun onInterstitialLoad(interstitialAd: ApInterstitialAd?) {
@@ -439,7 +447,7 @@ class AdsUtils {
                             Log.d(TAG, "onInterstitialLoad: idAdsPriority SUCCESS $idAdsPriority")
                             interAdsPriority = interstitialAd
                             listener?.onAdsPriorityLoaded(interstitialAd)
-                            status = Status.SUCCESS
+                            statusHigh = Status.SUCCESS
                         }
 
                         override fun onAdFailedToLoad(adError: ApAdError?) {
@@ -447,14 +455,13 @@ class AdsUtils {
                             Log.d(TAG, "onAdFailedToLoad: idAdsPriority FAIL $idAdsPriority")
                             interAdsPriority = null
                             listener?.onAdsPriorityLoadFail(adError)
-                            if (status != Status.SUCCESS) {
-                                status = Status.FAIL_PRIORITY
-                            }
+                            statusHigh = Status.FAIL
                         }
                     })
             }
 
             if (isShowNormalAds && !idAdsNormal.isNullOrEmpty()) {
+                statusNormal = Status.LOADING
                 AperoAd.getInstance()
                     .getInterstitialAds(context, idAdsNormal, object : AperoAdCallback() {
                         override fun onInterstitialLoad(interstitialAd: ApInterstitialAd?) {
@@ -462,7 +469,7 @@ class AdsUtils {
                             Log.d(TAG, "onInterstitialLoad: idAdsNormal SUCCESS $idAdsNormal")
                             interAdsNormal = interstitialAd
                             listener?.onAdsNormalLoaded(interstitialAd)
-                            status = Status.SUCCESS
+                            statusHigh = Status.SUCCESS
                         }
 
                         override fun onAdFailedToLoad(adError: ApAdError?) {
@@ -470,9 +477,7 @@ class AdsUtils {
                             Log.d(TAG, "onAdFailedToLoad: idAdsNormal FAIL $idAdsNormal")
                             interAdsNormal = null
                             listener?.onAdsNormalLoadFail(adError)
-                            if (status != Status.SUCCESS) {
-                                status = Status.FAIL_NORMAL
-                            }
+                            statusNormal = Status.FAIL
                         }
                     })
             }
