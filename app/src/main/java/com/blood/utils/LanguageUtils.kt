@@ -2,11 +2,10 @@ package com.blood.utils
 
 import android.content.Context
 import android.content.res.Configuration
-import com.blood.App
 import com.blood.common.Constant
+import com.blood.data.Language
 import com.blood.utils.wrapper.ContextWrapper
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.ltl.apero.languageopen.Language
 import java.util.Locale
 
 object LanguageUtils {

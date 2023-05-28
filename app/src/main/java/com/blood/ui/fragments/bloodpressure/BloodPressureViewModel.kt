@@ -28,9 +28,7 @@ class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
             listBloodPressureObserver.postValue(listData)
         }, {
             listBloodPressureObserver.postValue(mutableListOf())
-        }, {
-
-        }, true)
+        })
     }
 
     fun getBloodPressureByID(id: Long) {
@@ -41,9 +39,7 @@ class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
             bloodPressureObserver.postValue(bloodPressure)
         }, {
             it.printStackTrace()
-        }, {
-
-        }, true)
+        })
     }
 
     fun insertBloodPressure(bloodPressure: BloodPressure) {

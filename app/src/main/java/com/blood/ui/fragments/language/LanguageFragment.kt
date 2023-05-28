@@ -18,7 +18,9 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
     private var isDoneSplash = false
 
     override fun initData() {
-        adapter = LanguageAdapter(requireContext())
+        adapter = LanguageAdapter(LanguageUtils.languageListItems(requireContext()).apply {
+            get(0).isChoose = true
+        })
         binding.rcvLanguage.adapter = adapter
     }
 

@@ -1,51 +1,38 @@
 package com.blood.ui.adapters
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
+import androidx.databinding.DataBindingUtil
+import com.blood.base.recyclerview.BaseRcvAdapter
+import com.blood.base.recyclerview.BaseRecyclerViewListener
+import com.blood.data.Language
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.ltl.apero.languageopen.Language
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.ItemLanguageSettingBinding
 
-class LanguageSettingAdapter(val list: List<Language>, val callback: Callback? = null) :
-    RecyclerView.Adapter<LanguageSettingAdapter.ViewHolder>() {
+class LanguageSettingAdapter(
+    list: List<Language>, callback: BaseRecyclerViewListener<Language>? = null
+) : BaseRcvAdapter<Language, ItemLanguageSettingBinding>(list, callback) {
 
-    override fun getItemCount(): Int {
-        return list.size
-    }
+    override fun createHolder(parent: ViewGroup) = ViewHolder(
+        DataBindingUtil.inflate(
+            LayoutInflater.from(parent.context), R.layout.item_language_setting, parent, false
+        )
+    )
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_language_setting, parent, false)
-        return ViewHolder(view)
-    }
+    inner class ViewHolder(binding: ItemLanguageSettingBinding) : BaseViewHolder(binding) {
 
-    @SuppressLint("NotifyDataSetChanged")
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val language = list[position]
-
-        holder.cbLanguage.visibility = if (language.isChoose) View.VISIBLE else View.INVISIBLE
-        holder.name.text = language.name
-        holder.itemView.clickWithDebounce {
-            for (element in list.indices) {
-                list[element].isChoose = element == position
+        override fun onBind(data: Language) {
+            with(binding) {
+                cbLanguage.visibility = if (data.isChoose) View.VISIBLE else View.INVISIBLE
+                tvName.text = data.name
+                itemView.clickWithDebounce {
+                    if (!data.isChoose) {
+                        listener?.onClick(data, absoluteAdapterPosition)
+                    }
+                }
             }
-            notifyDataSetChanged()
-            callback?.onLanguageClicked(language.code)
         }
-    }
-
-    inner class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val name: TextView = itemView.findViewById(R.id.tvName)
-        val cbLanguage: ImageView = itemView.findViewById(R.id.cbLanguage)
-    }
-
-    interface Callback {
-
-        fun onLanguageClicked(languageCode: String)
     }
 }

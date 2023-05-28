@@ -1,9 +1,10 @@
 package com.blood.data
 
+import com.blood.base.BaseData
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 
 class SettingMenu
-constructor(val icon: Int, val name: Int, val type: Type) {
+constructor(val icon: Int, val name: Int, val type: Type) : BaseData {
     companion object {
 
         enum class Type {

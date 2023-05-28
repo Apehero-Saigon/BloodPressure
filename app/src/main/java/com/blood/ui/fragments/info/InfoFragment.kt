@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentInfoBinding
 import com.blood.base.BaseFragment
+import com.blood.base.recyclerview.BaseRecyclerViewListener
 import com.blood.data.InfoKnowledge
 import com.blood.ui.adapters.BloodPressureInfoKnowledgeAdapter
 import com.blood.ui.fragments.home.HomeFragment
@@ -14,7 +15,7 @@ import com.blood.ui.fragments.home.IHomeUi
 
 class InfoFragment : BaseFragment<HomeViewModel, FragmentInfoBinding>(
     R.layout.fragment_info, HomeViewModel::class.java
-), BloodPressureInfoKnowledgeAdapter.Callback {
+), BaseRecyclerViewListener<InfoKnowledge> {
     var iHomeUi: IHomeUi? = null
 
     override fun onAttach(context: Context) {
@@ -51,11 +52,11 @@ class InfoFragment : BaseFragment<HomeViewModel, FragmentInfoBinding>(
         )
     )
 
-    override fun onInfoKnowLedgeClicked(infoKnowledge: InfoKnowledge) {
+    override fun onClick(data: InfoKnowledge, position: Int) {
         adsUtils.interInfo.showInterAdsBeforeNavigate(requireContext(), true) {
             iHomeUi?.navigateTo(
                 HomeFragmentDirections.actionHomeFragmentToInfoDetailFragment(
-                    infoKnowledge
+                    data
                 )
             )
         }

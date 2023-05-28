@@ -24,22 +24,22 @@ class BloodPressureAdapter(val list: List<BloodPressure>, val callback: Callback
 
     inner class ViewHolder(binding: ItemBloodPressureBinding) : BaseViewHolder(binding) {
 
-        override fun onBind(bloodPressure: BloodPressure) {
+        override fun onBind(data: BloodPressure) {
             with(binding) {
-                tvSystoleAndDiastole.text = bloodPressure.getSystoleAndDiastole()
-                tvPulse.text = bloodPressure.pulse.toString()
-                tvConclusion.setText(bloodPressure.getStatus())
+                tvSystoleAndDiastole.text = data.getSystoleAndDiastole()
+                tvPulse.text = data.pulse.toString()
+                tvConclusion.setText(data.getStatus())
                 tvConclusion.setTextColor(
                     ContextCompat.getColor(
-                        tvPulse.context, bloodPressure.getStatusColor()
+                        tvPulse.context, data.getStatusColor()
                     )
                 )
                 tvCreatedAt.text = tvPulse.context.getString(
                     R.string.measured_at_format,
-                    bloodPressure.createAt.strDateTime(Constant.FORMAT_DATETIME_ITEM)
+                    data.createAt.strDateTime(Constant.FORMAT_DATETIME_ITEM)
                 )
                 itemView.clickWithDebounce {
-                    callback?.onClick(bloodPressure, absoluteAdapterPosition)
+                    callback?.onClick(data, absoluteAdapterPosition)
                 }
             }
         }

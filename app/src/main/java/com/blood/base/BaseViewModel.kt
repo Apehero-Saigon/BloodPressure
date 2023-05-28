@@ -45,19 +45,21 @@ open class BaseViewModel @Inject internal constructor() : ViewModel(), Lifecycle
     protected fun launchOnUITryCatch(
         tryBlock: suspend CoroutineScope.() -> Unit,
         cacheBlock: suspend CoroutineScope.(Throwable) -> Unit,
-        finallyBlock: suspend CoroutineScope.() -> Unit,
-        handleCancellationExceptionManually: Boolean
+        finallyBlock: (suspend CoroutineScope.() -> Unit)? = null,
+        handleCancellationExceptionManually: Boolean = true
     ) {
         launchOnUI {
-            tryCatch(tryBlock, cacheBlock, finallyBlock, handleCancellationExceptionManually)
+            tryCatch(tryBlock, cacheBlock, {
+                finallyBlock?.invoke(this)
+            }, handleCancellationExceptionManually)
         }
     }
 
     protected fun launchOnUITryCatchWithLoading(
         tryBlock: suspend CoroutineScope.() -> Unit,
         cacheBlock: suspend CoroutineScope.(Throwable) -> Unit,
-        finallyBlock: suspend CoroutineScope.() -> Unit,
-        handleCancellationExceptionManually: Boolean
+        finallyBlock: (suspend CoroutineScope.() -> Unit)? = null,
+        handleCancellationExceptionManually: Boolean = true
     ) {
         launchOnUI {
             isLoading.postValue(true)
@@ -67,7 +69,9 @@ open class BaseViewModel @Inject internal constructor() : ViewModel(), Lifecycle
             }, {
                 isLoading.postValue(false)
                 cacheBlock.invoke(this, it)
-            }, finallyBlock, handleCancellationExceptionManually)
+            }, {
+                finallyBlock?.invoke(this)
+            }, handleCancellationExceptionManually)
         }
     }
 

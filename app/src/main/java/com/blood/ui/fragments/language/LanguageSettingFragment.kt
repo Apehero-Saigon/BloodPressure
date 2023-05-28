@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
+import com.blood.base.recyclerview.BaseRecyclerViewListener
 import com.blood.common.Constant
+import com.blood.data.Language
 import com.blood.ui.adapters.LanguageSettingAdapter
 import com.blood.utils.LanguageUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
@@ -14,7 +16,7 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.Fragme
 
 class LanguageSettingFragment : BaseFragment<BaseViewModel, FragmentLanguageSettingBinding>(
     R.layout.fragment_language_setting, BaseViewModel::class.java
-), LanguageSettingAdapter.Callback {
+), BaseRecyclerViewListener<Language> {
 
     override fun initData() {
         val languages = LanguageUtils.languageListItems(requireContext())
@@ -33,17 +35,15 @@ class LanguageSettingFragment : BaseFragment<BaseViewModel, FragmentLanguageSett
         }
     }
 
-    override fun onLanguageClicked(languageCode: String) {
-        if (languageCode != prefUtils.defaultLanguage) {
-            prefUtils.defaultLanguage = languageCode
-            LanguageUtils.changeLanguage(requireContext(), languageCode)
+    override fun onClick(data: Language, position: Int) {
+        prefUtils.defaultLanguage = data.code
+        LanguageUtils.changeLanguage(requireContext(), data.code)
 
-            val intent = requireActivity().intent
-            intent.flags =
-                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
-            intent.putExtra(Constant.KEY_START_SPLASH_FROM, true)
-            requireActivity().finish()
-            startActivity(intent)
-        }
+        val intent = requireActivity().intent
+        intent.flags =
+            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+        intent.putExtra(Constant.KEY_START_SPLASH_FROM, true)
+        requireActivity().finish()
+        startActivity(intent)
     }
 }

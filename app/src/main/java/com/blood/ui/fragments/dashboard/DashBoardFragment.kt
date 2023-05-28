@@ -39,10 +39,7 @@ class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboard
     }
 
     override fun initView() {
-        with(binding) {
-            tvDate.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_DATE)
-            tvTime.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_TIME)
-        }
+        resetData()
     }
 
     override fun initData() {
@@ -55,6 +52,8 @@ class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboard
         viewModel.insertBloodPressureObserver.observe(this.viewLifecycleOwner) { bloodPressure ->
             if (bloodPressure != null) {
                 adsUtils.interMeasure.showInterAdsBeforeNavigate(requireContext(), true) {
+                    resetData()
+
                     val action =
                         HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
                     action.id = bloodPressure.id
@@ -110,8 +109,19 @@ class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboard
         }
     }
 
+    private fun resetData() {
+        with(binding) {
+            edtNote.setText("")
+            tvDate.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_DATE)
+            tvTime.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_TIME)
+        }
+    }
+
     private fun getStringDateTime() = "${binding.tvDate.text} ${binding.tvTime.text}"
     override fun onClick(data: BloodPressure, position: Int) {
-        toast(getString(data.getStatus()))
+        val action = HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
+        action.id = data.id
+        action.viewDetail = true
+        iHomeUi?.navigateTo(action)
     }
 }
