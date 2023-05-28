@@ -46,4 +46,8 @@ class BloodPressureRepository @Inject constructor(
 
         return listData.map { it.toBloodPressure() }
     }
+
+    suspend fun deleteBloodById(id: Long) {
+        iBloodPressureDataSource.deleteBlood(id)
+    }
 }

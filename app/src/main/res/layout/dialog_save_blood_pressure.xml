@@ -150,7 +150,8 @@
                     android:background="@drawable/bg_fa507f_radius_10"
                     android:fontFamily="@font/montserrat_semibold"
                     android:text="@string/save"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

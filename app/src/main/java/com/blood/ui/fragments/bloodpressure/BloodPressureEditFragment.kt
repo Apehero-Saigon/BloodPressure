@@ -37,7 +37,7 @@ class BloodPressureEditFragment :
         binding.flBanner.loadBanner(
             requireActivity(),
             BuildConfig.banner_home,
-            !args.modeAdd && prefUtils.isShowBannerHome && isNetworkConnected()
+            args.mustShowBackButton && prefUtils.isShowBannerHome && isNetworkConnected()
         )
     }
 

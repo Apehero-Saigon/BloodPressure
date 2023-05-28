@@ -48,6 +48,9 @@
         <action
             android:id="@+id/action_homeFragment_to_bloodPressureDetailFragment"
             app:destination="@id/bloodPressureDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_insightBloodPressureFragment"
+            app:destination="@id/insightBloodPressureFragment" />
     </fragment>
 
     <fragment
@@ -155,8 +158,23 @@
             app:nullable="false" />
 
         <argument
+            android:name="mustShowBackButton"
+            android:defaultValue="false"
+            app:argType="boolean"
+            app:nullable="false" />
+
+        <argument
             android:name="id"
             android:defaultValue="0L"
             app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/insightBloodPressureFragment"
+        android:name="com.blood.ui.fragments.insight.InsightBloodPressureFragment"
+        tools:layout="@layout/fragment_insight_blood_pressure" >
+        <action
+            android:id="@+id/action_insightBloodPressureFragment_to_bloodPressureEditFragment"
+            app:destination="@id/bloodPressureEditFragment" />
     </fragment>
 </navigation>

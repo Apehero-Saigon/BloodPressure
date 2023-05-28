@@ -29,6 +29,10 @@ class BloodPressureDataSource @Inject constructor(private val bloodPressureDAO: 
         bloodPressureDAO.updateBloodPressure(bloodPressureEntity)
     }
 
+    override suspend fun deleteBlood(id: Long) {
+        bloodPressureDAO.deleteBloodPressure(id)
+    }
+
     override suspend fun insertBloodPressure(bloodPressureEntity: BloodPressureEntity): Long {
         return bloodPressureDAO.insertBloodPressure(bloodPressureEntity)
     }

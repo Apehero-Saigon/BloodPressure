@@ -121,6 +121,12 @@ class BindingUtils {
         }
 
         @JvmStatic
+        @BindingAdapter("visibleIfEmpty")
+        fun View.visibleIfEmpty(listItems: List<*>?) {
+            this.visibility = if (listItems.isNullOrEmpty()) View.VISIBLE else View.GONE
+        }
+
+        @JvmStatic
         @BindingAdapter("visibleIfNotZero")
         fun View.visibleIfNotZero(int: Int?) {
             this.visibility = if (int != null && int > 0) View.VISIBLE else View.GONE

@@ -26,4 +26,7 @@ interface BloodPressureDAO {
 
     @Update
     suspend fun updateBloodPressure(bloodPressureEntity: BloodPressureEntity)
+
+    @Query("DELETE FROM table_blood_pressure WHERE id=:id")
+    suspend fun deleteBloodPressure(id: Long)
 }

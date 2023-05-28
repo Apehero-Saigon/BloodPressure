@@ -6,6 +6,7 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
+import com.blood.ui.dialog.YesNoPopup
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
@@ -46,6 +47,13 @@ class BloodPressureDetailFragment :
                 showOptionPopup()
             }
         }
+
+        viewModel.deleteBloodObserver.observe(this.viewLifecycleOwner) { isDeleted ->
+            if (isDeleted) {
+                toast(getString(R.string.delete_blood_success_msg))
+                findNavController().navigateUp()
+            }
+        }
     }
 
     private fun showOptionPopup() {
@@ -63,7 +71,13 @@ class BloodPressureDetailFragment :
                 }
 
                 R.id.actionDelete -> {
-//                            showDialog(record)
+                    YesNoPopup.showPopup(
+                        childFragmentManager,
+                        R.string.delete_result,
+                        R.string.this_result_will_be_deleted_forever_are_you_sure
+                    ) {
+                        viewModel.deleteBloodById(args.id)
+                    }
                     true
                 }
 

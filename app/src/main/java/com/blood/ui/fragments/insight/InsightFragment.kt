@@ -3,6 +3,7 @@ package com.blood.ui.fragments.insight
 import android.content.Context
 import com.blood.base.BaseFragment
 import com.blood.ui.fragments.home.HomeFragment
+import com.blood.ui.fragments.home.HomeFragmentDirections
 import com.blood.ui.fragments.home.IHomeUi
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
@@ -38,7 +39,9 @@ class InsightFragment : BaseFragment<InsightViewModel, FragmentInsightBinding>(
         super.initListener()
         with(binding) {
             llBlood.clickWithDebounce {
-
+                val action =
+                    HomeFragmentDirections.actionHomeFragmentToInsightBloodPressureFragment()
+                iHomeUi?.navigateTo(action)
             }
 
             llHeart.clickWithDebounce {

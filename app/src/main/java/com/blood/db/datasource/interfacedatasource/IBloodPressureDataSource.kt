@@ -15,4 +15,5 @@ interface IBloodPressureDataSource {
 
     suspend fun updateBloodPressure(bloodPressureEntity: BloodPressureEntity)
 
+    suspend fun deleteBlood(id: Long)
 }

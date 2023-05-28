@@ -27,6 +27,7 @@ class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
     }
     val listBloodPressureObserver =
         MutableLiveData<List<BloodPressure>>().apply { value = mutableListOf() }
+    val deleteBloodObserver = SingleLiveEvent<Boolean>()
 
     fun getListBloodPressure(top: Int = 0) {
         launchOnUITryCatch({
@@ -70,5 +71,16 @@ class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
         }, {
 
         }, true)
+    }
+
+    fun deleteBloodById(id: Long) {
+        launchOnUITryCatchWithLoading({
+            bloodPressureRepository.deleteBloodById(id)
+            delay(300)
+
+            deleteBloodObserver.postValue(true)
+        }, {
+            deleteBloodObserver.postValue(false)
+        })
     }
 }

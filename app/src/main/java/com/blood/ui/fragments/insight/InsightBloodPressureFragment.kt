@@ -1,6 +1,8 @@
 package com.blood.ui.fragments.insight
 
+import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
+import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.gone
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
@@ -24,6 +26,29 @@ class InsightBloodPressureFragment :
             )
         } else {
             binding.flAds.gone()
+        }
+    }
+
+    override fun initData() {
+        viewModel.loadListBlood()
+    }
+
+    override fun initListener() {
+        super.initListener()
+
+        with(binding) {
+
+            btnBack.clickWithDebounce {
+                findNavController().navigateUp()
+            }
+
+            btnMeasureNow.clickWithDebounce {
+                val action =
+                    InsightBloodPressureFragmentDirections.actionInsightBloodPressureFragmentToBloodPressureEditFragment()
+                action.modeAdd = true
+                action.mustShowBackButton = true
+                findNavController().navigate(action)
+            }
         }
     }
 }

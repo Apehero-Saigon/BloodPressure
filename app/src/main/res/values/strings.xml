@@ -445,4 +445,7 @@
     <string name="recently">Recently</string>
     <string name="see_all">See all</string>
     <string name="empty_data">Empty data</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delete_blood_success_msg">Delete blood successfully</string>
 </resources>

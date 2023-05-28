@@ -44,9 +44,9 @@
             android:textSize="14sp" />
 
         <TextView
-            android:layout_marginTop="@dimen/_16sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
             android:fontFamily="@font/montserrat_semibold"
             android:paddingHorizontal="16dp"
             android:paddingVertical="10dp"
@@ -59,8 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_insights_menu"
-            android:orientation="horizontal"
-            app:visibleIfNotZero="@{viewModel.countBloodObserver}">
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="30dp"

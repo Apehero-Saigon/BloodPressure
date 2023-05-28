@@ -6,6 +6,7 @@ import com.blood.ui.fragments.dashboard.DashBoardFragment
 import com.blood.ui.fragments.home.HomeFragment
 import com.blood.ui.fragments.info.InfoDetailFragment
 import com.blood.ui.fragments.info.InfoFragment
+import com.blood.ui.fragments.insight.InsightBloodPressureFragment
 import com.blood.ui.fragments.insight.InsightFragment
 import com.blood.ui.fragments.language.LanguageFragment
 import com.blood.ui.fragments.language.LanguageSettingFragment
@@ -43,6 +44,9 @@ abstract class FragmentModule {
 
     @ContributesAndroidInjector
     abstract fun insightFragment(): InsightFragment
+
+    @ContributesAndroidInjector
+    abstract fun InsightBloodPressureFragment(): InsightBloodPressureFragment
 
     @ContributesAndroidInjector
     abstract fun infoFragment(): InfoFragment
