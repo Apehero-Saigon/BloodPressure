@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.blood.base.BaseViewModel
 import com.blood.di.ViewModelFactory
 import com.blood.di.key.ViewModelKey
+import com.blood.ui.fragments.bloodpressure.BloodPressureViewModel
 import com.blood.ui.fragments.home.HomeViewModel
 import com.blood.ui.fragments.profile.ProfileViewModel
 import com.blood.ui.fragments.splash.SplashViewModel
@@ -36,6 +37,11 @@ abstract class ViewModelModule {
     @Binds
     @ViewModelKey(ProfileViewModel::class)
     abstract fun provideProfileViewModel(profileViewModel: ProfileViewModel): ViewModel
+
+    @IntoMap
+    @Binds
+    @ViewModelKey(BloodPressureViewModel::class)
+    abstract fun provideBloodPressureViewModel(bloodPressureViewModel: BloodPressureViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory

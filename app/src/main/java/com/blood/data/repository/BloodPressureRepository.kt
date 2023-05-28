@@ -23,4 +23,8 @@ class BloodPressureRepository @Inject constructor(
         }
         return null
     }
+
+    suspend fun getDetailById(id: Long) : BloodPressure{
+        return iBloodPressureDataSource.getBloodPressureByID(id).toBloodPressure()
+    }
 }

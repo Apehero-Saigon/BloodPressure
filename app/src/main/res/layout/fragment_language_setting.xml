@@ -31,7 +31,7 @@
                 android:contentDescription="@string/button"
                 android:drawablePadding="20dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:text="@string/disclaimer"
+                android:text="@string/language"
                 android:textColor="@color/color_text_special"
                 android:textSize="16sp" />
         </LinearLayout>

@@ -435,4 +435,9 @@
     <string name="sys">SYS</string>
     <string name="mmhg">(mmHg)</string>
     <string name="dia">DIA</string>
+    <string name="dd_mm_yyyy">%d/%d/%d</string>
+    <string name="mm_hh">%2d:%2d</string>
+    <string name="saving">Saving</string>
+    <string name="two_dot">:</string>
+    <string name="note_format">Note: %s</string>
 </resources>

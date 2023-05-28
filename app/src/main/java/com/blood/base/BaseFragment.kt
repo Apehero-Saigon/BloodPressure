@@ -46,10 +46,12 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
 
     open fun initAds() {}
 
+    open fun loadingText(): String = getString(R.string.loading)
+
     open fun initListener() {
         viewModel.isLoading.observe(this.viewLifecycleOwner) {
             if (it) {
-                showLoading(getString(R.string.doing))
+                showLoading(loadingText())
             } else {
                 hideLoading()
             }

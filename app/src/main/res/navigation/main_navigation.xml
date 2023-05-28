@@ -127,15 +127,16 @@
         tools:layout="@layout/fragment_blood_pressure_detail">
 
         <argument
-            android:name="id"
-            android:defaultValue="0"
-            app:argType="integer"
+            android:name="viewDetail"
+            android:defaultValue="true"
+            app:argType="boolean"
             app:nullable="false" />
-
         <argument
-            android:name="mode"
-            android:defaultValue="0"
-            app:argType="integer"
-            app:nullable="false" />
+            android:name="id"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_bloodPressureDetailFragment_to_disclaimerFragment"
+            app:destination="@id/disclaimerFragment" />
     </fragment>
 </navigation>

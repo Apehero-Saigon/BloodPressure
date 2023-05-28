@@ -51,4 +51,10 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsFloating">false</item>
     </style>
+
+    <style name="TimePicker" parent="@style/ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorAccent">@color/colorAds</item>
+        <item name="colorPrimary">@color/colorAds</item>
+        <item name="colorPrimaryDark">@color/colorAds</item>
+    </style>
 </resources>

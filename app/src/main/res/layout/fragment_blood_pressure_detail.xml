@@ -3,10 +3,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.blood.utils.ColorUtils" />
+
+        <variable
+            name="fragment"
+            type="com.blood.ui.fragments.bloodpressure.BloodPressureDetailFragment" />
+
+        <variable
+            name="viewModel"
+            type="com.blood.ui.fragments.bloodpressure.BloodPressureViewModel" />
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center|start">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/_16sdp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/button"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/view_result"
+                android:textColor="@color/color_text_special"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/ivOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:contentDescription="@string/image"
+                android:padding="@dimen/_16sdp"
+                android:paddingHorizontal="10dp"
+                android:src="@drawable/ic_three_dot"
+                android:visibility="@{fragment.args.viewDetail ? View.GONE : View.INVISIBLE}" />
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -18,49 +73,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_16sdp"
                 android:paddingBottom="16dp"
                 tools:context=".ui.bloodpressure.BloodPressureInfoFragment">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="30dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/buttonBack"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:contentDescription="@string/image"
-                        android:padding="18dp"
-                        android:src="@drawable/ic_back" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/button"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:text="@string/view_result"
-                        android:textColor="@color/color_text_special"
-                        android:textSize="16sp" />
-
-                    <ImageView
-                        android:id="@+id/ivwPopupMenu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="5dp"
-                        android:contentDescription="@string/image"
-                        android:paddingHorizontal="10dp"
-                        android:src="@drawable/ic_three_dot" />
-
-                </LinearLayout>
-
-
-                <!-- SYSTOLE & DIASTOLE LAYOUT -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -68,11 +84,10 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/txtSystoleAndDiastole"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_semibold"
-                        android:text="@string/_120_80"
+                        android:text="@{viewModel.bloodPressureObserver.getSystoleAndDiastole()}"
                         android:textColor="@color/black"
                         android:textSize="32sp" />
 
@@ -85,25 +100,40 @@
                         android:src="@drawable/ic_heart" />
 
                     <TextView
-                        android:id="@+id/txtPulse"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_semibold"
-                        android:text="@string/_80"
                         android:textColor="@color/black"
-                        android:textSize="32sp" />
+                        android:textSize="32sp"
+                        app:textInt="@{viewModel.bloodPressureObserver.pulse}" />
 
-                </LinearLayout><!-- end SYSTOLE & DIASTOLE LAYOUT -->
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtCreatedAt"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:gravity="center"
-                    android:text="@string/measured_at_17_00pm_21_04_2023"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center"
+                        android:text="@string/measured_at"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:bindDate="@{viewModel.bloodPressureObserver.createAt}" />
+                </LinearLayout>
 
                 <!-- PROFILE LAYOUT -->
                 <LinearLayout
@@ -124,55 +154,127 @@
                         android:orientation="vertical"
                         android:paddingHorizontal="10dp">
 
-                        <TextView
-                            android:id="@+id/txtProfileName"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_semibold"
-                            android:paddingVertical="5dp"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
 
-                        <TextView
-                            android:id="@+id/txtProfileYearOfBirth"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_medium"
-                            android:text="@string/year_of_birth_2000"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/txtProfileHeight"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_medium"
-                            android:text="@string/weight_75"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/year_of_birth"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
 
-                        <TextView
-                            android:id="@+id/txtProfileWeight"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/two_dot"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:textInt="@{viewModel.prefUtils.profile.birthYear}" />
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_medium"
-                            android:text="@string/height_170"
-                            android:textColor="@color/black"
-                            android:textSize="12sp" />
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/weight"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/two_dot"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:textInt="@{viewModel.prefUtils.profile.weight}" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/height"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/two_dot"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:textInt="@{viewModel.prefUtils.profile.height}" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout> <!-- end PROFILE LAYOUT -->
+                </LinearLayout>
 
-                <!-- CONCLUSION -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:visibility="@{viewModel.bloodPressureObserver.note.length() == 0 ? View.GONE : View.VISIBLE}"
+                    app:textNote="@{viewModel.bloodPressureObserver.note}"
+                    tools:text="Note: asdkh hj hkh kdhak hdkaj h" />
+
                 <TextView
                     android:id="@+id/txtConclusion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="@dimen/_12sdp"
                     android:fontFamily="@font/montserrat_semibold"
                     android:gravity="center"
-                    android:text="@string/hypertension_stage_1"
+                    android:text="@{viewModel.bloodPressureObserver.getStatus()}"
                     android:textColor="@color/color_conclusion_low"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:textColorRes="@{viewModel.bloodPressureObserver.getStatusColor()}" />
 
                 <!-- 2 CIRCLE represents systole & diastole -->
                 <LinearLayout
@@ -190,19 +292,19 @@
                         android:paddingVertical="25dp">
 
                         <LinearLayout
-                            android:id="@+id/circleSystole"
                             android:layout_width="113dp"
-                            android:layout_height="113dp"
-                            android:background="@drawable/circle_low">
+                            android:layout_height="113dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:background="@drawable/ic_circle"
                                 android:fontFamily="@font/montserrat_semibold"
                                 android:gravity="center"
                                 android:text="@string/systole"
                                 android:textColor="@color/color_text_normal"
-                                android:textSize="16sp" />
+                                android:textSize="16sp"
+                                app:bindColorTint="@{ColorUtils.getColorSystolic(viewModel.bloodPressureObserver.systole)}" />
                         </LinearLayout>
 
                         <TextView
@@ -212,7 +314,7 @@
                             android:layout_marginVertical="15dp"
                             android:layout_marginTop="13dp"
                             android:fontFamily="@font/montserrat_semibold"
-                            android:text="@string/systole_range_elevated"
+                            android:text="@{viewModel.bloodPressureObserver.getSystoleRange()}"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -230,19 +332,19 @@
                         android:paddingVertical="25dp">
 
                         <LinearLayout
-                            android:id="@+id/circleDiastole"
                             android:layout_width="113dp"
-                            android:layout_height="113dp"
-                            android:background="@drawable/circle_low">
+                            android:layout_height="113dp">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:background="@drawable/ic_circle"
                                 android:fontFamily="@font/montserrat_semibold"
                                 android:gravity="center"
                                 android:text="@string/diastole"
                                 android:textColor="@color/color_text_normal"
-                                android:textSize="16sp" />
+                                android:textSize="16sp"
+                                app:bindColorTint="@{ColorUtils.getColorDiastolic(viewModel.bloodPressureObserver.diastole)}" />
                         </LinearLayout>
 
                         <TextView
@@ -252,7 +354,7 @@
                             android:layout_marginVertical="15dp"
                             android:layout_marginTop="13dp"
                             android:fontFamily="@font/montserrat_semibold"
-                            android:text="@string/systole_range_elevated"
+                            android:text="@{viewModel.bloodPressureObserver.setupDiastoleRange()}"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -264,7 +366,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
-                    android:fontFamily="@font/montserrat_semibold"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="@string/recommendations"
                     android:textColor="@color/color_text_normal"
                     android:textSize="16sp" />
@@ -275,7 +377,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="24dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="@string/recommendations_hypertension_stage_2"
+                    android:text="@{viewModel.bloodPressureObserver.getStatusRecommend()}"
                     android:textAlignment="gravity"
                     android:textColor="@color/color_text_normal"
                     android:textSize="14sp" />
@@ -291,7 +393,7 @@
                     android:textColor="@color/color_pink_vivid"
                     android:textStyle="bold|italic" />
 
-            </LinearLayout><!-- end CIRCLE represents systole & diastole -->
+            </LinearLayout>
 
         </ScrollView>
 

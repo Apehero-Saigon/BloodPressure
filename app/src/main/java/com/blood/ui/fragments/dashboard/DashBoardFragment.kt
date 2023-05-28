@@ -1,27 +1,27 @@
 package com.blood.ui.fragments.dashboard
 
 import android.content.Context
-import androidx.navigation.fragment.findNavController
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentDashboardBinding
 import com.blood.base.BaseFragment
 import com.blood.common.Constant
 import com.blood.data.BloodPressure
 import com.blood.ui.dialog.SaveBloodPressurePopup
+import com.blood.ui.fragments.bloodpressure.BloodPressureViewModel
 import com.blood.ui.fragments.home.HomeFragment
 import com.blood.ui.fragments.home.HomeFragmentDirections
-import com.blood.ui.fragments.home.HomeViewModel
 import com.blood.ui.fragments.home.IHomeUi
-import com.blood.ui.fragments.profile.ProfileEditFragmentDirections
 import com.blood.utils.DateUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.textTrim
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentDashboardBinding
+import java.util.Date
 
-class DashBoardFragment : BaseFragment<HomeViewModel, FragmentDashboardBinding>(
-    R.layout.fragment_dashboard, HomeViewModel::class.java
+class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboardBinding>(
+    R.layout.fragment_dashboard, BloodPressureViewModel::class.java
 ) {
     var iHomeUi: IHomeUi? = null
 
+    override fun loadingText() = getString(R.string.saving)
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (parentFragment?.parentFragment is HomeFragment) {
@@ -38,10 +38,14 @@ class DashBoardFragment : BaseFragment<HomeViewModel, FragmentDashboardBinding>(
 
     override fun initListener() {
         super.initListener()
-        viewModel.insertBloodPressureObserver.observe(this.viewLifecycleOwner) { profile ->
-            if (profile != null) {
+        viewModel.insertBloodPressureObserver.observe(this.viewLifecycleOwner) { bloodPressure ->
+            if (bloodPressure != null) {
                 adsUtils.interMeasure.showInterAdsBeforeNavigate(requireContext(), true) {
-                    iHomeUi?.navigateTo(HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment())
+                    val action =
+                        HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
+                    action.id = bloodPressure.id
+                    action.viewDetail = false
+                    iHomeUi?.navigateTo(action)
                 }
             } else {
                 toast(getString(R.string.cannot_add_blood_pressure))
@@ -49,8 +53,8 @@ class DashBoardFragment : BaseFragment<HomeViewModel, FragmentDashboardBinding>(
         }
 
         binding.btnSave.clickWithDebounce {
-            val dateStr = "${binding.tvDate.text} ${binding.tvDate.text}"
-            val date = DateUtils.format(dateStr, Constant.FORMAT_DATETIME)
+            val dateStr = getStringDateTime()
+            val date = DateUtils.format(dateStr, Constant.FORMAT_DATETIME) ?: Date()
 
             val bloodPressure = BloodPressure(
                 profileId = prefUtils.profile!!.id,
@@ -70,5 +74,27 @@ class DashBoardFragment : BaseFragment<HomeViewModel, FragmentDashboardBinding>(
                 viewModel.insertBloodPressure(bloodPressure)
             }
         }
+
+        binding.tvDate.clickWithDebounce {
+            DateUtils.openDatePicker(requireContext(),
+                DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
+                object : DateUtils.SelectDatetimeListener {
+                    override fun onDateSelected(day: Int, month: Int, year: Int) {
+                        binding.tvDate.text = getString(R.string.dd_mm_yyyy, day, month, year)
+                    }
+                })
+        }
+
+        binding.tvTime.clickWithDebounce {
+            DateUtils.openTimePicker(requireContext(),
+                DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
+                object : DateUtils.SelectDatetimeListener {
+                    override fun onTimeSelected(minute: Int, hour: Int) {
+                        binding.tvTime.text = DateUtils.strTime(hour, minute)
+                    }
+                })
+        }
     }
+
+    private fun getStringDateTime() = "${binding.tvDate.text} ${binding.tvTime.text}"
 }

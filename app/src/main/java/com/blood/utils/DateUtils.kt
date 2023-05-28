@@ -1,6 +1,14 @@
 package com.blood.utils
 
+import android.app.AlertDialog
+import android.app.DatePickerDialog
+import android.app.DatePickerDialog.OnDateSetListener
+import android.app.TimePickerDialog
+import android.content.Context
 import android.text.format.DateFormat
+import com.blood.common.Constant
+import com.blood.utils.AppUtils.isNotNull
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.time.Instant
@@ -52,6 +60,75 @@ object DateUtils {
             formatter.parse(dateStr)
         } catch (ex: Exception) {
             null
+        }
+    }
+
+    fun Date.strTime() = try {
+        val c = Calendar.getInstance()
+        c.time = this
+        String.format("%2d:%2d", c.get(Calendar.MINUTE), c.get(Calendar.HOUR_OF_DAY))
+    } catch (ex: java.lang.Exception) {
+        ""
+    }
+
+    fun Date.strDateTime(dateFormat: String) = try {
+        val formatter = SimpleDateFormat(dateFormat, Locale.getDefault())
+        formatter.format(this)
+    } catch (ex: java.lang.Exception) {
+        ""
+    }
+
+    fun strTime(hour: Int, minute: Int) = try {
+        String.format("%02d:%02d", hour, minute)
+    } catch (ex: java.lang.Exception) {
+        ""
+    }
+
+    fun openDatePicker(
+        context: Context, date: Date? = null, listener: SelectDatetimeListener? = null
+    ) {
+        val c = Calendar.getInstance()
+        if (date.isNotNull()) {
+            c.time = date!!
+        }
+        val year = c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
+
+
+        val dpd = DatePickerDialog(
+            context, { _, yearSelected, monthOfYear, dayOfMonth ->
+                listener?.onDateSelected(dayOfMonth, monthOfYear + 1, yearSelected)
+            }, year, month, day
+        )
+
+        dpd.show()
+    }
+
+    fun openTimePicker(context: Context, date: Date?, listener: SelectDatetimeListener? = null) {
+        val c = Calendar.getInstance()
+        if (date.isNotNull()) {
+            c.time = date!!
+        }
+        val hour = c.get(Calendar.HOUR_OF_DAY)
+        val minute = c.get(Calendar.MINUTE)
+        val timeSetListener =
+            TimePickerDialog.OnTimeSetListener { _, hourSelected, minuteSelected ->
+                listener?.onTimeSelected(minuteSelected, hourSelected)
+            }
+        val timePickerDialog = TimePickerDialog(
+            context, AlertDialog.THEME_HOLO_LIGHT, timeSetListener, hour, minute, true
+        )
+        timePickerDialog.show()
+    }
+
+    interface SelectDatetimeListener {
+        fun onDateSelected(day: Int, month: Int, year: Int) {
+
+        }
+
+        fun onTimeSelected(minute: Int, hour: Int) {
+
         }
     }
 }

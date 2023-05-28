@@ -19,14 +19,11 @@ class ProfileViewModel @Inject constructor() : BaseViewModel() {
     val insertProfileObserver = MutableLiveData<Profile?>()
 
     fun insertProfile(profile: Profile) {
-        isLoading.postValue(true)
-        launchOnUITryCatch({
+        launchOnUITryCatchWithLoading({
             val profileNew = profileRepository.insertProfile(profile)
             delay(500)
-            isLoading.postValue(false)
             insertProfileObserver.postValue(profileNew)
         }, {
-            isLoading.postValue(false)
             insertProfileObserver.postValue(null)
         }, {
 

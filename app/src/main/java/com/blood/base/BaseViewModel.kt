@@ -53,6 +53,24 @@ open class BaseViewModel @Inject internal constructor() : ViewModel(), Lifecycle
         }
     }
 
+    protected fun launchOnUITryCatchWithLoading(
+        tryBlock: suspend CoroutineScope.() -> Unit,
+        cacheBlock: suspend CoroutineScope.(Throwable) -> Unit,
+        finallyBlock: suspend CoroutineScope.() -> Unit,
+        handleCancellationExceptionManually: Boolean
+    ) {
+        launchOnUI {
+            isLoading.postValue(true)
+            tryCatch({
+                tryBlock.invoke(this)
+                isLoading.postValue(false)
+            }, {
+                isLoading.postValue(false)
+                cacheBlock.invoke(this, it)
+            }, finallyBlock, handleCancellationExceptionManually)
+        }
+    }
+
     /**
      * add launch task to [mLaunchManager]
      */
