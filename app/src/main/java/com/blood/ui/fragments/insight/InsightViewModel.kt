@@ -20,7 +20,7 @@ class InsightViewModel @Inject constructor() : BaseViewModel() {
     val countWeightBMIObserver = MutableLiveData<Int>().apply { value = 0 }
 
 
-    val listBloodObserver = MutableLiveData<List<BloodPressure>>()
+    val listBloodObserver = MutableLiveData<List<BloodPressure>>().apply { value = mutableListOf() }
 
     fun loadListBlood() {
         launchOnUITryCatch({

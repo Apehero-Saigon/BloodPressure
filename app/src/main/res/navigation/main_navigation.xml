@@ -167,6 +167,9 @@
             android:name="id"
             android:defaultValue="0L"
             app:argType="long" />
+        <action
+            android:id="@+id/action_bloodPressureEditFragment_to_bloodPressureDetailFragment"
+            app:destination="@id/bloodPressureDetailFragment" />
     </fragment>
 
     <fragment
@@ -176,5 +179,8 @@
         <action
             android:id="@+id/action_insightBloodPressureFragment_to_bloodPressureEditFragment"
             app:destination="@id/bloodPressureEditFragment" />
+        <action
+            android:id="@+id/action_insightBloodPressureFragment_to_bloodPressureDetailFragment"
+            app:destination="@id/bloodPressureDetailFragment" />
     </fragment>
 </navigation>

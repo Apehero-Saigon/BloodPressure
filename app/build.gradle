@@ -166,12 +166,6 @@ android {
 
         implementation 'io.github.ShawnLin013:number-picker:2.4.13'
 
-        // for apero ads
-        implementation 'com.facebook.shimmer:shimmer:0.5.0'
-        implementation 'apero-inhouse:apero-ads:1.0.6-alpha05'
-        implementation  'com.google.ads.mediation:applovin:11.9.0.0'
-        implementation  'com.google.ads.mediation:pangle:5.1.0.9.0'
-
         // firebase
         implementation 'com.google.android.gms:play-services-ads:22.1.0'
         implementation platform('com.google.firebase:firebase-bom:32.0.0')
@@ -186,8 +180,8 @@ android {
         kapt 'com.google.dagger:dagger-android-processor:2.42'
 
         // ui
-        implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0-rc01'
-        implementation 'androidx.navigation:navigation-ui-ktx:2.6.0-rc01'
+        implementation 'androidx.navigation:navigation-fragment-ktx:2.7.0-alpha01'
+        implementation 'androidx.navigation:navigation-ui-ktx:2.7.0-alpha01'
         implementation 'androidx.navigation:navigation-runtime-ktx:2.5.3'
 
         // room
@@ -209,16 +203,19 @@ android {
 
         implementation "org.jetbrains.kotlin:kotlin-reflect:1.8.10"
 
-        //ads
+        // for apero ads
+        implementation 'com.facebook.shimmer:shimmer:0.5.0'
         implementation 'apero-inhouse:apero-ads:1.0.6-alpha05'
+
+        //ads
         implementation 'com.google.android.gms:play-services-ads:22.1.0'
         implementation  'com.google.ads.mediation:applovin:11.9.0.0'
         implementation  'com.google.ads.mediation:vungle:6.12.1.1'
-        implementation  'com.google.ads.mediation:pangle:5.1.0.9.0'
+        implementation  'com.google.ads.mediation:pangle:5.2.0.3.0'
         implementation  'com.google.ads.mediation:ironsource:7.3.0.1.0'
         implementation  'com.google.ads.mediation:mintegral:16.4.41.0'
         implementation 'com.pangle.global:adapter-for-admob:2.0.0'
-        implementation 'com.pangle.global:ads-sdk:5.1.1.0'
+        implementation 'com.pangle.global:ads-sdk:5.2.0.3'
         implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
     }
 }

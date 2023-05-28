@@ -1,19 +1,14 @@
 package com.blood.utils
 
-import android.content.res.ColorStateList
-import android.graphics.drawable.GradientDrawable
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.blood.base.BaseData
 import com.blood.base.recyclerview.BaseRcvAdapter
-import com.blood.base.recyclerview.BaseRecyclerViewListener
 import com.blood.common.Constant
 import com.blood.data.BloodPressure
 import com.blood.ui.adapters.BloodPressureAdapter
@@ -104,7 +99,7 @@ class BindingUtils {
 
         @JvmStatic
         @BindingAdapter("bindListBloodPressure", "listenerBlood")
-        fun RecyclerView.updateDataBloodPressure(
+        fun RecyclerView.bindListBloodPressure(
             listItems: List<BloodPressure>, listener: BloodPressureAdapter.Callback
         ) {
             if (adapter == null) {

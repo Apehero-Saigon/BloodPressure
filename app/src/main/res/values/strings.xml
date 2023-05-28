@@ -448,4 +448,8 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="delete_blood_success_msg">Delete blood successfully</string>
+    <string name="all">All</string>
+    <string name="_1w">1W</string>
+    <string name="_1m">1M</string>
+    <string name="yours_record">Your records</string>
 </resources>

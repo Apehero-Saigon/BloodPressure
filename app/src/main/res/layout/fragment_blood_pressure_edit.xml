@@ -270,7 +270,7 @@
             android:id="@+id/flBanner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="@{fragment.args.modeAdd ? View.GONE : View.VISIBLE}">
+            android:visibility="@{fragment.args.mustShowBackButton ? View.VISIBLE : View.GONE}">
 
             <include layout="@layout/layout_banner_control" />
         </FrameLayout>

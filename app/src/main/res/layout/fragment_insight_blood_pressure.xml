@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
+        <variable
+            name="insightBloodPressureFragment"
+            type="com.blood.ui.fragments.insight.InsightBloodPressureFragment" />
 
         <variable
             name="viewModel"
@@ -44,6 +49,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
             android:layout_weight="1">
 
             <LinearLayout
@@ -54,10 +60,87 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="vertical"
                     android:visibility="gone"
-                    app:visibleIfNotEmpty="@{viewModel.listBloodObserver}">
+                    app:visibleIfNotEmpty="@{viewModel.listBloodObserver}"
+                    tools:visibility="visible">
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_bg_tab_filter"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingHorizontal="14dp"
+                            android:paddingVertical="6dp"
+                            android:text="@string/all"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tvWeek"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:background="@drawable/selector_bg_tab_filter"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingHorizontal="14dp"
+                            android:paddingVertical="6dp"
+                            android:text="@string/_1w"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tvMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_bg_tab_filter"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingHorizontal="14dp"
+                            android:paddingVertical="6dp"
+                            android:text="@string/_1m"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.CandleStickChart
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="@string/yours_record"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvRecent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        app:bindListBloodPressure="@{viewModel.listBloodObserver}"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:listenerBlood="@{insightBloodPressureFragment}"
+                        tools:listitem="@layout/item_blood_pressure" />
+
+                    <TextView
+                        android:id="@+id/tvEmptyRecent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="center"
+                        android:padding="@dimen/_16sdp"
+                        android:text="@string/empty_data"
+                        app:visibleIfEmpty="@{viewModel.listBloodObserver}" />
                 </LinearLayout>
 
                 <LinearLayout

@@ -1,12 +1,17 @@
 package com.blood.ui.fragments.bloodpressure
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.PopupMenu
+import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
 import com.blood.ui.dialog.YesNoPopup
+import com.blood.ui.fragments.home.HomeFragment
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
@@ -34,9 +39,17 @@ class BloodPressureDetailFragment :
     override fun initListener() {
         super.initListener()
 
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    onBack()
+                }
+            })
+
         with(binding) {
             btnBack.clickWithDebounce {
-                findNavController().navigateUp()
+                onBack()
             }
 
             tvDisclaimer.clickWithDebounce {
@@ -51,8 +64,20 @@ class BloodPressureDetailFragment :
         viewModel.deleteBloodObserver.observe(this.viewLifecycleOwner) { isDeleted ->
             if (isDeleted) {
                 toast(getString(R.string.delete_blood_success_msg))
-                findNavController().navigateUp()
+                onBack()
             }
+        }
+    }
+
+    private fun onBack() {
+        if (HomeFragment::class.java.name.equals((findNavController().previousBackStackEntry?.destination as? FragmentNavigator.Destination)?.className)) {
+            findNavController().popBackStack(
+                R.id.homeFragment, inclusive = false, saveState = true
+            )
+        } else {
+            findNavController().popBackStack(
+                R.id.insightBloodPressureFragment, inclusive = false, saveState = true
+            )
         }
     }
 
@@ -65,6 +90,7 @@ class BloodPressureDetailFragment :
                     val action =
                         BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToBloodPressureEditFragment()
                     action.modeAdd = false
+                    action.mustShowBackButton = true
                     action.id = args.id
                     findNavController().navigate(action)
                     true

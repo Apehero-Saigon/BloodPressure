@@ -30,6 +30,14 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
         adsUtils.interInfo.loadInterPrioritySameTime(
             requireContext(), BuildConfig.inter_info_high, BuildConfig.inter_info
         )
+
+        adsUtils.interBloodDetails.isShowHighAds = prefUtils.isShowInterBloodPressureDetailsHigh
+        adsUtils.interBloodDetails.isShowNormalAds = prefUtils.isShowInterBloodPressureDetails
+        adsUtils.interBloodDetails.loadInterPrioritySameTime(
+            requireContext(),
+            BuildConfig.inter_bloodpressure_details_high,
+            BuildConfig.inter_bloodpressure_details
+        )
     }
 
     override fun initView() {

@@ -6,7 +6,7 @@
     <data>
 
         <variable
-            name="profileEditFragment"
+            name="fragment"
             type="com.blood.ui.fragments.profile.ProfileEditFragment" />
     </data>
 
@@ -37,7 +37,7 @@
                     android:gravity="center"
                     android:paddingHorizontal="34dp"
                     android:paddingTop="60dp"
-                    android:text="@{profileEditFragment.args.editMode ? @string/update_profile : @string/create_new_profile}"
+                    android:text="@{fragment.args.editMode ? @string/update_profile : @string/create_new_profile}"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
