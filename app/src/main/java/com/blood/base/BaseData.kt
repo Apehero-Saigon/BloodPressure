@@ -1,4 +1,3 @@
 package com.blood.base
 
-class BaseRcvAdapter {
-}
+interface BaseData

@@ -7,5 +7,9 @@ interface IBloodPressureDataSource {
 
     suspend fun getBloodPressureByID(id: Long): BloodPressureEntity
 
+    suspend fun getListBloodPressureByProfileID(
+        profileId: Long, top: Int = 0
+    ): List<BloodPressureEntity>?
+
     suspend fun insertBloodPressure(bloodPressureEntity: BloodPressureEntity): Long
 }

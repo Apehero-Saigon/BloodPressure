@@ -97,6 +97,7 @@
     <string name="recommendations_hypertension_stage_2">Here are some tips to reduce your blood pressure.\n • Quit smoking. Besides damaging your lungs smoking constricts blood vessels and increases your blood pressure making it hard for your heart to beat.\n• Avoid alcohol consumption or have it only in moderation. Alcohol increases your blood pressure to unhealthy levels.\n• Follow a healthy diet. Avoid too much salt in food.\n• Lose weight. Obese people are more likely to suffer from high blood pressure.\n• Exercise regularly. It helps prevent High blood pressure and Diabetes. Besides it keeps you young both in your mind and body and is a great de-stressor.\n• Drink enough water daily.\n• Avoid stress.</string>
     <string name="recommendations_emergency_care_needed">Here are some tips to reduce your blood pressure.\n • Quit smoking. Besides damaging your lungs smoking constricts blood vessels and increases your blood pressure making it hard for your heart to beat.\n• Avoid alcohol consumption or have it only in moderation. Alcohol increases your blood pressure to unhealthy levels.\n• Follow a healthy diet. Avoid too much salt in food.\n• Lose weight. Obese people are more likely to suffer from high blood pressure.\n• Exercise regularly. It helps prevent High blood pressure and Diabetes. Besides it keeps you young both in your mind and body and is a great de-stressor.\n• Drink enough water daily.\n• Avoid stress.</string>
     <string name="measured_at">Measured at</string>
+    <string name="measured_at_format">Measured at: %s</string>
     <string name="good_morning">Good morning !</string>
     <string name="good_afternoon">Good afternoon !</string>
     <string name="good_evening">Good evening !</string>
@@ -440,4 +441,7 @@
     <string name="saving">Saving</string>
     <string name="two_dot">:</string>
     <string name="note_format">Note: %s</string>
+    <string name="recently">Recently</string>
+    <string name="see_all">See all</string>
+    <string name="empty_data">Empty data</string>
 </resources>

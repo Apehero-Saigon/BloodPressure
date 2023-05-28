@@ -15,6 +15,16 @@ class BloodPressureDataSource @Inject constructor(private val bloodPressureDAO: 
         return bloodPressureDAO.getBloodPressureByID(id)
     }
 
+    override suspend fun getListBloodPressureByProfileID(
+        profileId: Long, top: Int
+    ): List<BloodPressureEntity>? {
+        return if (top == 0) {
+            bloodPressureDAO.getAllBloodPressure(profileId)
+        } else {
+            bloodPressureDAO.getTopBloodPressure(profileId, top)
+        }
+    }
+
     override suspend fun insertBloodPressure(bloodPressureEntity: BloodPressureEntity): Long {
         return bloodPressureDAO.insertBloodPressure(bloodPressureEntity)
     }

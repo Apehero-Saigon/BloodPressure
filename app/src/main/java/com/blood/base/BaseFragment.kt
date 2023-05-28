@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.blood.App
+import com.blood.base.recyclerview.BaseRecyclerViewListener
 import com.blood.utils.PrefUtils
 import dagger.android.AndroidInjection
 import dagger.android.support.DaggerFragment
@@ -33,7 +34,7 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
     lateinit var prefUtils: PrefUtils
 
     open lateinit var binding: DB
-    private fun init(inflater: LayoutInflater, container: ViewGroup) {
+    open fun init(inflater: LayoutInflater, container: ViewGroup) {
         binding = DataBindingUtil.inflate(inflater, layout, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.setVariable(BR.viewModel, viewModel)

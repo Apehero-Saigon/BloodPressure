@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/elementLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/background_insights_blood_pressure_element"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSystoleAndDiastole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                tools:text="@string/_120_80"
+                tools:textColor="@color/color_text_normal"
+                tools:textSize="14sp"
+                tools:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPulse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_heart"
+                android:drawablePadding="5sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                tools:text="@string/_80"
+                tools:textColor="@color/color_text_normal"
+                tools:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="15dp"
+            android:background="#D9D9D9" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/tvConclusion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingTop="10dp"
+                tools:text="@string/hypertension_stage_1"
+                tools:textColor="@color/color_text_normal"
+                tools:textSize="14sp"
+                tools:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCreatedAt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="@string/measured_at_17_00pm_21_04_2023"
+                tools:textColor="@color/color_text_normal"
+                tools:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -24,7 +24,16 @@ class BloodPressureRepository @Inject constructor(
         return null
     }
 
-    suspend fun getDetailById(id: Long) : BloodPressure{
+    suspend fun getDetailById(id: Long): BloodPressure {
         return iBloodPressureDataSource.getBloodPressureByID(id).toBloodPressure()
+    }
+
+    suspend fun getListBloodPressureByID(profileId: Long, top: Int = 0): List<BloodPressure> {
+        var listData = iBloodPressureDataSource.getListBloodPressureByProfileID(profileId, top)
+        if (listData == null) {
+            listData = mutableListOf()
+        }
+
+        return listData.map { it.toBloodPressure() }
     }
 }

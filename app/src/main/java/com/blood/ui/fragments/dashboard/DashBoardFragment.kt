@@ -1,9 +1,12 @@
 package com.blood.ui.fragments.dashboard
 
 import android.content.Context
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import com.blood.base.BaseFragment
 import com.blood.common.Constant
 import com.blood.data.BloodPressure
+import com.blood.ui.adapters.BloodPressureAdapter
 import com.blood.ui.dialog.SaveBloodPressurePopup
 import com.blood.ui.fragments.bloodpressure.BloodPressureViewModel
 import com.blood.ui.fragments.home.HomeFragment
@@ -12,13 +15,14 @@ import com.blood.ui.fragments.home.IHomeUi
 import com.blood.utils.DateUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.textTrim
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentDashboardBinding
 import java.util.Date
 
 class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboardBinding>(
     R.layout.fragment_dashboard, BloodPressureViewModel::class.java
-) {
+), BloodPressureAdapter.Callback {
     var iHomeUi: IHomeUi? = null
 
     override fun loadingText() = getString(R.string.saving)
@@ -29,11 +33,21 @@ class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboard
         }
     }
 
+    override fun init(inflater: LayoutInflater, container: ViewGroup) {
+        super.init(inflater, container)
+        binding.setVariable(BR.bloodListener, this)
+    }
+
     override fun initView() {
         with(binding) {
             tvDate.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_DATE)
             tvTime.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_TIME)
         }
+    }
+
+    override fun initData() {
+        super.initData()
+        viewModel.getListBloodPressure(3)
     }
 
     override fun initListener() {
@@ -97,4 +111,7 @@ class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboard
     }
 
     private fun getStringDateTime() = "${binding.tvDate.text} ${binding.tvTime.text}"
+    override fun onClick(data: BloodPressure, position: Int) {
+        toast(getString(data.getStatus()))
+    }
 }

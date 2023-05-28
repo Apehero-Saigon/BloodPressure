@@ -14,18 +14,17 @@ import com.blood.App
 import com.blood.base.BaseActivity
 import com.blood.base.BaseFragment
 import com.blood.common.Constant
-import com.blood.ui.fragments.profile.ProfileEditFragment
 import com.blood.utils.PrefUtils
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentSplashScreenBinding
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentSplashBinding
 import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdError
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 
-class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashScreenBinding>(
-    R.layout.fragment_splash_screen, SplashViewModel::class.java
+class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
+    R.layout.fragment_splash, SplashViewModel::class.java
 ) {
 
     companion object {

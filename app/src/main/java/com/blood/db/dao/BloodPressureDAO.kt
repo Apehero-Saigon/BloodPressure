@@ -16,4 +16,10 @@ interface BloodPressureDAO {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertBloodPressure(bloodPressureEntity: BloodPressureEntity): Long
+
+    @Query("SELECT * FROM table_blood_pressure WHERE profileId LIKE :profileId ORDER BY id DESC")
+    suspend fun getAllBloodPressure(profileId: Long): List<BloodPressureEntity>?
+
+    @Query("SELECT * FROM table_blood_pressure WHERE profileId LIKE :profileId ORDER BY id DESC LIMIT :top")
+    suspend fun getTopBloodPressure(profileId: Long, top: Int): List<BloodPressureEntity>?
 }

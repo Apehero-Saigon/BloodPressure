@@ -1,5 +1,6 @@
 package com.blood.data
 
+import com.blood.base.BaseData
 import com.blood.common.Constant
 import com.blood.utils.DateUtils
 import com.blood.utils.DateUtils.strDateTime
@@ -15,7 +16,7 @@ data class BloodPressure(
     var createAt: Date = Date(),
     var note: String = "",
     var id: Long = 0
-) : Serializable {
+) : Serializable, BaseData {
 
     fun getSystoleAndDiastole() = "${systole}/${diastole}"
 

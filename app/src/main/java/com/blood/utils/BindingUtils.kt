@@ -10,7 +10,13 @@ import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.blood.base.BaseData
+import com.blood.base.recyclerview.BaseRcvAdapter
+import com.blood.base.recyclerview.BaseRecyclerViewListener
 import com.blood.common.Constant
+import com.blood.data.BloodPressure
+import com.blood.ui.adapters.BloodPressureAdapter
 import com.blood.utils.AppUtils.isNotNull
 import com.blood.utils.DateUtils.strDateTime
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
@@ -51,7 +57,6 @@ class BindingUtils {
             imageView.setImageResource(drawableRes)
         }
 
-
         @JvmStatic
         @BindingAdapter("textColorRes")
         fun TextView.textColorRes(@ColorRes colorRes: Int?) {
@@ -65,6 +70,18 @@ class BindingUtils {
         fun View.bindColorTint(@ColorRes colorRes: Int?) {
             if (colorRes.isNotNull() && colorRes != 0) {
                 backgroundTintList = context.resources.getColorStateList(colorRes!!, null)
+            }
+        }
+
+        @JvmStatic
+        @BindingAdapter("bindListBloodPressure", "listenerBlood")
+        fun RecyclerView.updateDataBloodPressure(
+            listItems: List<BloodPressure>, listener: BloodPressureAdapter.Callback
+        ) {
+            if (adapter == null) {
+                adapter = BloodPressureAdapter(listItems, listener)
+            } else {
+                (adapter as? BaseRcvAdapter<BloodPressure, *>)?.updateData(listItems)
             }
         }
     }

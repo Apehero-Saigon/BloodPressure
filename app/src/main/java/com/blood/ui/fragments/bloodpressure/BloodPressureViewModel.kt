@@ -17,6 +17,21 @@ class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
 
     val insertBloodPressureObserver = SingleLiveEvent<BloodPressure?>()
     val bloodPressureObserver = MutableLiveData<BloodPressure>().apply { value = BloodPressure() }
+    val listBloodPressureObserver =
+        MutableLiveData<List<BloodPressure>>().apply { value = mutableListOf() }
+
+    fun getListBloodPressure(top: Int = 0) {
+        launchOnUITryCatch({
+            val listData = withContext(Dispatchers.IO) {
+                bloodPressureRepository.getListBloodPressureByID(prefUtils.profile!!.id, top)
+            }
+            listBloodPressureObserver.postValue(listData)
+        }, {
+            listBloodPressureObserver.postValue(mutableListOf())
+        }, {
+
+        }, true)
+    }
 
     fun getBloodPressureByID(id: Long) {
         launchOnUITryCatch({
