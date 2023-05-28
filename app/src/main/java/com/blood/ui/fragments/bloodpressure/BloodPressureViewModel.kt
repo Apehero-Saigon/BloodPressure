@@ -8,6 +8,7 @@ import com.blood.utils.listener.SingleLiveEvent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
+import java.util.Calendar
 import javax.inject.Inject
 
 class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
@@ -15,8 +16,15 @@ class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
     @Inject
     lateinit var bloodPressureRepository: BloodPressureRepository
 
-    val insertBloodPressureObserver = SingleLiveEvent<BloodPressure?>()
-    val bloodPressureObserver = MutableLiveData<BloodPressure>().apply { value = BloodPressure() }
+    val updateBloodPressureObserver = SingleLiveEvent<BloodPressure?>()
+    val bloodPressureObserver = MutableLiveData<BloodPressure>().apply {
+        value = BloodPressure(
+            systole = 150,
+            diastole = 70,
+            pulse = 88,
+            createAt = Calendar.getInstance().time
+        )
+    }
     val listBloodPressureObserver =
         MutableLiveData<List<BloodPressure>>().apply { value = mutableListOf() }
 
@@ -42,16 +50,22 @@ class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
         })
     }
 
-    fun insertBloodPressure(bloodPressure: BloodPressure) {
+    fun updateBloodPressure(bloodPressure: BloodPressure) {
         launchOnUITryCatchWithLoading({
-            val bloodPressureNew = withContext(Dispatchers.IO) {
-                bloodPressureRepository.insertBloodPressure(bloodPressure)
+            val bloodPressureNew = if (bloodPressure.id == 0L) {
+                withContext(Dispatchers.IO) {
+                    bloodPressureRepository.insertBloodPressure(bloodPressure)
+                }
+            } else {
+                withContext(Dispatchers.IO) {
+                    bloodPressureRepository.updateBloodPressure(bloodPressure)
+                }
             }
             delay(500)
 
-            insertBloodPressureObserver.postValue(bloodPressureNew)
+            updateBloodPressureObserver.postValue(bloodPressureNew)
         }, {
-            insertBloodPressureObserver.postValue(null)
+            updateBloodPressureObserver.postValue(null)
             it.printStackTrace()
         }, {
 

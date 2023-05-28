@@ -20,6 +20,7 @@ import com.blood.ui.adapters.BloodPressureAdapter
 import com.blood.utils.AppUtils.isNotNull
 import com.blood.utils.DateUtils.strDateTime
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
+import com.shawnlin.numberpicker.NumberPicker
 import java.util.Date
 
 class BindingUtils {
@@ -36,12 +37,40 @@ class BindingUtils {
         }
 
         @JvmStatic
+        @BindingAdapter("bindDateDDMMYYY")
+        fun TextView.bindDateDDMMYYY(date: Date) {
+            if (date.isNotNull()) {
+                this.text = date.strDateTime(Constant.FORMAT_DATE)
+            } else {
+                this.text = ""
+            }
+        }
+
+        @JvmStatic
+        @BindingAdapter("bindDateHHMM")
+        fun TextView.bindDateHHMM(date: Date) {
+            if (date.isNotNull()) {
+                this.text = date.strDateTime(Constant.FORMAT_TIME)
+            } else {
+                this.text = ""
+            }
+        }
+
+        @JvmStatic
         @BindingAdapter("textInt")
         fun TextView.textInt(int: Int?) {
             if (int.isNotNull()) {
                 this.text = int.toString()
             } else {
                 this.text = ""
+            }
+        }
+
+        @JvmStatic
+        @BindingAdapter("bindNPValue")
+        fun NumberPicker.bindNPValue(value: Int?) {
+            if (value.isNotNull()) {
+                this.value = value!!
             }
         }
 
@@ -83,6 +112,18 @@ class BindingUtils {
             } else {
                 (adapter as? BaseRcvAdapter<BloodPressure, *>)?.updateData(listItems)
             }
+        }
+
+        @JvmStatic
+        @BindingAdapter("visibleIfNotEmpty")
+        fun View.visibleIfNotEmpty(listItems: List<*>?) {
+            this.visibility = if (listItems.isNullOrEmpty()) View.GONE else View.VISIBLE
+        }
+
+        @JvmStatic
+        @BindingAdapter("visibleIfNotZero")
+        fun View.visibleIfNotZero(int: Int?) {
+            this.visibility = if (int != null && int > 0) View.VISIBLE else View.GONE
         }
     }
 }

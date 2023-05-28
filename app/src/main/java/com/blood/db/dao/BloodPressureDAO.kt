@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import com.blood.db.entity.BloodPressureEntity
 
 @Dao
@@ -22,4 +23,7 @@ interface BloodPressureDAO {
 
     @Query("SELECT * FROM table_blood_pressure WHERE profileId LIKE :profileId ORDER BY id DESC LIMIT :top")
     suspend fun getTopBloodPressure(profileId: Long, top: Int): List<BloodPressureEntity>?
+
+    @Update
+    suspend fun updateBloodPressure(bloodPressureEntity: BloodPressureEntity)
 }

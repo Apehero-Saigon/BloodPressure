@@ -138,5 +138,25 @@
         <action
             android:id="@+id/action_bloodPressureDetailFragment_to_disclaimerFragment"
             app:destination="@id/disclaimerFragment" />
+        <action
+            android:id="@+id/action_bloodPressureDetailFragment_to_bloodPressureEditFragment"
+            app:destination="@id/bloodPressureEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bloodPressureEditFragment"
+        android:name="com.blood.ui.fragments.bloodpressure.BloodPressureEditFragment"
+        tools:layout="@layout/fragment_blood_pressure_edit">
+
+        <argument
+            android:name="modeAdd"
+            android:defaultValue="true"
+            app:argType="boolean"
+            app:nullable="false" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="0L"
+            app:argType="long" />
     </fragment>
 </navigation>

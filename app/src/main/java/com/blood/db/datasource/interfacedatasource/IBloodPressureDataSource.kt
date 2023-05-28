@@ -12,4 +12,7 @@ interface IBloodPressureDataSource {
     ): List<BloodPressureEntity>?
 
     suspend fun insertBloodPressure(bloodPressureEntity: BloodPressureEntity): Long
+
+    suspend fun updateBloodPressure(bloodPressureEntity: BloodPressureEntity)
+
 }

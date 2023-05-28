@@ -24,6 +24,16 @@ class BloodPressureRepository @Inject constructor(
         return null
     }
 
+    suspend fun updateBloodPressure(bloodPressure: BloodPressure): BloodPressure? {
+        iBloodPressureDataSource.updateBloodPressure(
+            BloodPressureEntity.fromBloodPressure(
+                bloodPressure
+            )
+        )
+
+        return iBloodPressureDataSource.getBloodPressureByID(bloodPressure.id).toBloodPressure()
+    }
+
     suspend fun getDetailById(id: Long): BloodPressure {
         return iBloodPressureDataSource.getBloodPressureByID(id).toBloodPressure()
     }

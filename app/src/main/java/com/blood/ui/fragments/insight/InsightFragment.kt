@@ -1,15 +1,16 @@
 package com.blood.ui.fragments.insight
 
 import android.content.Context
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentInsightBinding
 import com.blood.base.BaseFragment
 import com.blood.ui.fragments.home.HomeFragment
-import com.blood.ui.fragments.home.HomeViewModel
 import com.blood.ui.fragments.home.IHomeUi
+import com.blood.utils.ViewUtils.clickWithDebounce
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentInsightBinding
 
-class InsightFragment : BaseFragment<HomeViewModel, FragmentInsightBinding>(
-    R.layout.fragment_insight, HomeViewModel::class.java
+class InsightFragment : BaseFragment<InsightViewModel, FragmentInsightBinding>(
+    R.layout.fragment_insight, InsightViewModel::class.java
 ) {
     var iHomeUi: IHomeUi? = null
 
@@ -17,6 +18,36 @@ class InsightFragment : BaseFragment<HomeViewModel, FragmentInsightBinding>(
         super.onAttach(context)
         if (parentFragment?.parentFragment is HomeFragment) {
             iHomeUi = parentFragment?.parentFragment as HomeFragment
+        }
+    }
+
+    override fun initAds() {
+        if (isNetworkConnected() && prefUtils.isShowNativeRecentAction) {
+            adsUtils.nativeRecentAction.loadAds(
+                requireActivity(), BuildConfig.native_recent_action, null, R.layout.native_medium
+            )
+        }
+    }
+
+    override fun initData() {
+        super.initData()
+        viewModel.checkCount()
+    }
+
+    override fun initListener() {
+        super.initListener()
+        with(binding) {
+            llBlood.clickWithDebounce {
+
+            }
+
+            llHeart.clickWithDebounce {
+
+            }
+
+            llWeight.clickWithDebounce {
+
+            }
         }
     }
 }

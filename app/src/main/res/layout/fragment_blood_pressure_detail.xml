@@ -60,7 +60,7 @@
                 android:padding="@dimen/_16sdp"
                 android:paddingHorizontal="10dp"
                 android:src="@drawable/ic_three_dot"
-                android:visibility="@{fragment.args.viewDetail ? View.GONE : View.INVISIBLE}" />
+                android:visibility="@{fragment.args.viewDetail ? View.VISIBLE : View.INVISIBLE}" />
         </LinearLayout>
 
         <ScrollView

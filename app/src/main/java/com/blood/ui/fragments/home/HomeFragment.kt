@@ -22,17 +22,13 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
         adsUtils.interMeasure.isShowHighAds = prefUtils.isShowInterMeasureHigh
         adsUtils.interMeasure.isShowNormalAds = prefUtils.isShowInterMeasure
         adsUtils.interMeasure.loadInterPrioritySameTime(
-            requireContext(),
-            BuildConfig.inter_measure_high,
-            BuildConfig.inter_measure
+            requireContext(), BuildConfig.inter_measure_high, BuildConfig.inter_measure
         )
 
         adsUtils.interInfo.isShowHighAds = prefUtils.isShowInterInfoHigh
         adsUtils.interInfo.isShowNormalAds = prefUtils.isShowInterInfo
         adsUtils.interInfo.loadInterPrioritySameTime(
-            requireContext(),
-            BuildConfig.inter_info_high,
-            BuildConfig.inter_info
+            requireContext(), BuildConfig.inter_info_high, BuildConfig.inter_info
         )
     }
 

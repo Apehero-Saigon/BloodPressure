@@ -1,13 +1,16 @@
 package com.blood.ui.fragments.dashboard
 
 import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import com.blood.base.BaseFragment
 import com.blood.common.Constant
 import com.blood.data.BloodPressure
 import com.blood.ui.adapters.BloodPressureAdapter
 import com.blood.ui.dialog.SaveBloodPressurePopup
+import com.blood.ui.fragments.bloodpressure.BloodPressureEditFragment
 import com.blood.ui.fragments.bloodpressure.BloodPressureViewModel
 import com.blood.ui.fragments.home.HomeFragment
 import com.blood.ui.fragments.home.HomeFragmentDirections
@@ -35,11 +38,11 @@ class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboard
 
     override fun init(inflater: LayoutInflater, container: ViewGroup) {
         super.init(inflater, container)
-        binding.setVariable(BR.bloodListener, this)
+        binding.setVariable(BR.dashBoardFragment, this)
     }
 
     override fun initView() {
-        resetData()
+
     }
 
     override fun initData() {
@@ -49,75 +52,8 @@ class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboard
 
     override fun initListener() {
         super.initListener()
-        viewModel.insertBloodPressureObserver.observe(this.viewLifecycleOwner) { bloodPressure ->
-            if (bloodPressure != null) {
-                adsUtils.interMeasure.showInterAdsBeforeNavigate(requireContext(), true) {
-                    resetData()
-
-                    val action =
-                        HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
-                    action.id = bloodPressure.id
-                    action.viewDetail = false
-                    iHomeUi?.navigateTo(action)
-                }
-            } else {
-                toast(getString(R.string.cannot_add_blood_pressure))
-            }
-        }
-
-        binding.btnSave.clickWithDebounce {
-            val dateStr = getStringDateTime()
-            val date = DateUtils.format(dateStr, Constant.FORMAT_DATETIME) ?: Date()
-
-            val bloodPressure = BloodPressure(
-                profileId = prefUtils.profile!!.id,
-                systole = binding.pickSys.value,
-                diastole = binding.pickDia.value,
-                pulse = binding.pickPurse.value,
-                note = binding.edtNote.textTrim(),
-                createAt = date
-            )
-
-            SaveBloodPressurePopup.showPopup(
-                childFragmentManager,
-                bloodPressure.systole,
-                bloodPressure.diastole,
-                bloodPressure.pulse
-            ) {
-                viewModel.insertBloodPressure(bloodPressure)
-            }
-        }
-
-        binding.tvDate.clickWithDebounce {
-            DateUtils.openDatePicker(requireContext(),
-                DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
-                object : DateUtils.SelectDatetimeListener {
-                    override fun onDateSelected(day: Int, month: Int, year: Int) {
-                        binding.tvDate.text = getString(R.string.dd_mm_yyyy, day, month, year)
-                    }
-                })
-        }
-
-        binding.tvTime.clickWithDebounce {
-            DateUtils.openTimePicker(requireContext(),
-                DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
-                object : DateUtils.SelectDatetimeListener {
-                    override fun onTimeSelected(minute: Int, hour: Int) {
-                        binding.tvTime.text = DateUtils.strTime(hour, minute)
-                    }
-                })
-        }
     }
 
-    private fun resetData() {
-        with(binding) {
-            edtNote.setText("")
-            tvDate.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_DATE)
-            tvTime.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_TIME)
-        }
-    }
-
-    private fun getStringDateTime() = "${binding.tvDate.text} ${binding.tvTime.text}"
     override fun onClick(data: BloodPressure, position: Int) {
         val action = HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
         action.id = data.id

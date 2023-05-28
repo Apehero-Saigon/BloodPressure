@@ -1,5 +1,8 @@
 package com.blood.ui.fragments.bloodpressure
 
+import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
@@ -38,6 +41,46 @@ class BloodPressureDetailFragment :
             tvDisclaimer.clickWithDebounce {
                 findNavController().navigate(BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToDisclaimerFragment())
             }
+
+            ivOption.clickWithDebounce {
+                showOptionPopup()
+            }
+        }
+    }
+
+    private fun showOptionPopup() {
+        val popupMenu = PopupMenu(requireContext(), binding.ivOption)
+        popupMenu.inflate(R.menu.menu_popup_option_blood_detail)
+        popupMenu.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.actionEdit -> {
+                    val action =
+                        BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToBloodPressureEditFragment()
+                    action.modeAdd = false
+                    action.id = args.id
+                    findNavController().navigate(action)
+                    true
+                }
+
+                R.id.actionDelete -> {
+//                            showDialog(record)
+                    true
+                }
+
+                else -> false
+            }
+        }
+
+        try {
+            val fieldMPopup = PopupMenu::class.java.getDeclaredField("mPopup")
+            fieldMPopup.isAccessible = true
+            val mPopup = fieldMPopup.get(popupMenu)
+            mPopup.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+                .invoke(mPopup, true)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+            popupMenu.show()
         }
     }
 }

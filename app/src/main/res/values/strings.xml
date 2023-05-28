@@ -425,6 +425,7 @@
     <string name="cannot_add_profile">Cannot add profile</string>
     <string name="number_picker_formatter">%04d</string>
     <string name="add_your_record">Add your record</string>
+    <string name="edit_your_record">Edit your record</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="sys_mmhg">SYS (mmHg)</string>

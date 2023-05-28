@@ -7,6 +7,7 @@ import com.blood.di.ViewModelFactory
 import com.blood.di.key.ViewModelKey
 import com.blood.ui.fragments.bloodpressure.BloodPressureViewModel
 import com.blood.ui.fragments.home.HomeViewModel
+import com.blood.ui.fragments.insight.InsightViewModel
 import com.blood.ui.fragments.profile.ProfileViewModel
 import com.blood.ui.fragments.splash.SplashViewModel
 import dagger.Binds
@@ -42,6 +43,11 @@ abstract class ViewModelModule {
     @Binds
     @ViewModelKey(BloodPressureViewModel::class)
     abstract fun provideBloodPressureViewModel(bloodPressureViewModel: BloodPressureViewModel): ViewModel
+
+    @IntoMap
+    @Binds
+    @ViewModelKey(InsightViewModel::class)
+    abstract fun provideInsightViewModel(insightViewModel: InsightViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(viewModelFactory: ViewModelFactory): ViewModelProvider.Factory
