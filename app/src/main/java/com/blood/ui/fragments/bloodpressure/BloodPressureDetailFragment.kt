@@ -1,9 +1,5 @@
 package com.blood.ui.fragments.bloodpressure
 
-import android.app.Activity
-import android.content.Intent
-import android.os.Bundle
-import android.util.Log
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.fragment.FragmentNavigator
@@ -39,8 +35,7 @@ class BloodPressureDetailFragment :
     override fun initListener() {
         super.initListener()
 
-        requireActivity().onBackPressedDispatcher.addCallback(
-            viewLifecycleOwner,
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
                     onBack()

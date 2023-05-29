@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.core.util.Consumer
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import com.blood.utils.ViewUtils.clickWithDebounce
+import com.blood.utils.ViewUtils.textTrim
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 
 class SaveBloodPressurePopup : DialogFragment() {
@@ -19,7 +21,8 @@ class SaveBloodPressurePopup : DialogFragment() {
     var sys: Int = 0
     var dia: Int = 0
     var purse: Int = 0
-    var callBack: Consumer<Boolean>? = null
+    var note: String = ""
+    var callBack: Consumer<String>? = null
 
     companion object {
         fun showPopup(
@@ -27,12 +30,14 @@ class SaveBloodPressurePopup : DialogFragment() {
             sys: Int,
             dia: Int,
             pures: Int,
-            callBack: Consumer<Boolean>? = null
+            note: String,
+            callBack: Consumer<String>? = null
         ) {
             val popup = SaveBloodPressurePopup()
             popup.sys = sys
             popup.dia = dia
             popup.purse = pures
+            popup.note = note
             popup.callBack = callBack
             popup.show(fragmentManager, SaveBloodPressurePopup::class.java.simpleName)
         }
@@ -62,12 +67,14 @@ class SaveBloodPressurePopup : DialogFragment() {
         view.findViewById<TextView>(R.id.tvSys)?.text = sys.toString()
         view.findViewById<TextView>(R.id.tvDia)?.text = dia.toString()
         view.findViewById<TextView>(R.id.tvPurse)?.text = purse.toString()
+        val edtNote = view.findViewById<EditText>(R.id.edtNote)
+        edtNote.setText(note)
 
         view.findViewById<Button>(R.id.btnCancel)?.clickWithDebounce {
             dismiss()
         }
         view.findViewById<Button>(R.id.btnSave)?.clickWithDebounce {
-            callBack?.accept(true)
+            callBack?.accept(edtNote.textTrim())
             dismiss()
         }
     }

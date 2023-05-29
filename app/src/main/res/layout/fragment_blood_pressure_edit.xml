@@ -165,8 +165,10 @@
                     app:np_max="250"
                     app:np_min="70"
                     app:np_orientation="horizontal"
-                    app:np_selectedTextColor="@color/colorAds"
+                    app:np_selectedTextColor="@color/black"
+                    app:np_selectedTextSize="@dimen/text_size_26"
                     app:np_textColor="@color/color_hint"
+                    app:np_textSize="@dimen/text_size_16"
                     app:np_value="150"
                     app:np_wheelItemCount="5" />
 
@@ -192,8 +194,10 @@
                     app:np_max="120"
                     app:np_min="30"
                     app:np_orientation="horizontal"
-                    app:np_selectedTextColor="@color/colorAds"
+                    app:np_selectedTextColor="@color/black"
+                    app:np_selectedTextSize="@dimen/text_size_26"
                     app:np_textColor="@color/color_hint"
+                    app:np_textSize="@dimen/text_size_16"
                     app:np_value="70"
                     app:np_wheelItemCount="5" />
 
@@ -219,42 +223,18 @@
                     app:np_max="180"
                     app:np_min="30"
                     app:np_orientation="horizontal"
-                    app:np_selectedTextColor="@color/colorAds"
+                    app:np_selectedTextColor="@color/black"
+                    app:np_selectedTextSize="@dimen/text_size_26"
                     app:np_textColor="@color/color_hint"
+                    app:np_textSize="@dimen/text_size_16"
                     app:np_value="88"
                     app:np_wheelItemCount="5" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_18sdp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:text="@string/note"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/edtNote"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/bg_white_radius_10"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:hint="@string/note"
-                    android:imeOptions="actionDone"
-                    android:paddingHorizontal="@dimen/_10sdp"
-                    android:paddingVertical="@dimen/_12sdp"
-                    android:singleLine="true"
-                    android:text="@{viewModel.bloodPressureObserver.note}"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/color_hint"
-                    app:np_fadingEdgeEnabled="false" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnSave"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
                     android:background="@drawable/background_button_accept"
                     android:text="@string/save"
                     android:textAllCaps="false"

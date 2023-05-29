@@ -1,6 +1,7 @@
 package com.blood.ui.fragments.bloodpressure
 
 import android.content.Context
+import android.graphics.Typeface
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
@@ -14,7 +15,6 @@ import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.AppUtils.isNull
 import com.blood.utils.DateUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
-import com.blood.utils.ViewUtils.textTrim
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentBloodPressureEditBinding
@@ -40,6 +40,19 @@ class BloodPressureEditFragment :
             BuildConfig.banner_home,
             args.mustShowBackButton && prefUtils.isShowBannerHome && isNetworkConnected()
         )
+    }
+
+    override fun initView() {
+        with(binding) {
+            pickSys.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
+            pickSys.setSelectedTypeface(Typeface.defaultFromStyle(Typeface.BOLD))
+
+            pickDia.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
+            pickDia.setSelectedTypeface(Typeface.defaultFromStyle(Typeface.BOLD))
+
+            pickPurse.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
+            pickPurse.setSelectedTypeface(Typeface.defaultFromStyle(Typeface.BOLD))
+        }
     }
 
     override fun initData() {
@@ -122,21 +135,24 @@ class BloodPressureEditFragment :
             systole = binding.pickSys.value,
             diastole = binding.pickDia.value,
             pulse = binding.pickPurse.value,
-            note = binding.edtNote.textTrim(),
             createAt = date,
             id = if (args.modeAdd) 0 else args.id
         )
 
         SaveBloodPressurePopup.showPopup(
-            childFragmentManager, bloodPressure.systole, bloodPressure.diastole, bloodPressure.pulse
-        ) {
+            childFragmentManager,
+            bloodPressure.systole,
+            bloodPressure.diastole,
+            bloodPressure.pulse,
+            viewModel.bloodPressureObserver.value?.note ?: ""
+        ) { note ->
+            bloodPressure.note = note
             viewModel.updateBloodPressure(bloodPressure)
         }
     }
 
     private fun resetData() {
         with(binding) {
-            edtNote.setText("")
             tvDate.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_DATE)
             tvTime.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_TIME)
         }

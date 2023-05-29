@@ -1,12 +1,11 @@
 package com.blood.ui.fragments.insight
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
+import com.blood.common.enumdata.FilterType
 import com.blood.data.BloodPressure
 import com.blood.ui.adapters.BloodPressureAdapter
 import com.blood.utils.ViewUtils.clickWithDebounce
@@ -15,7 +14,6 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentInsightBloodPressureBinding
-import kotlin.reflect.jvm.internal.impl.descriptors.deserialization.PlatformDependentDeclarationFilter.All
 
 class InsightBloodPressureFragment :
     BaseFragment<InsightViewModel, FragmentInsightBloodPressureBinding>(
@@ -23,7 +21,6 @@ class InsightBloodPressureFragment :
     ), BloodPressureAdapter.Callback {
 
     companion object {
-        enum class FilterType { ALL, WEEK, MONTH }
 
         private var filterType = FilterType.ALL
     }
@@ -50,27 +47,26 @@ class InsightBloodPressureFragment :
     }
 
     override fun initData() {
-        viewModel.loadListBlood()
         updateFilter()
         with(binding) {
             tvAll.clickWithDebounce {
                 if (!tvAll.isSelected) {
                     filterType = FilterType.ALL
-                    updateFilter()
+                    updateFilter(true)
                 }
             }
 
             tvWeek.clickWithDebounce {
                 if (!tvWeek.isSelected) {
                     filterType = FilterType.WEEK
-                    updateFilter()
+                    updateFilter(true)
                 }
             }
 
             tvMonth.clickWithDebounce {
                 if (!tvMonth.isSelected) {
                     filterType = FilterType.MONTH
-                    updateFilter()
+                    updateFilter(true)
                 }
             }
         }
@@ -105,7 +101,7 @@ class InsightBloodPressureFragment :
         }
     }
 
-    private fun updateFilter() {
+    private fun updateFilter(withLoading: Boolean = false) {
         with(binding) {
             tvAll.isSelected = filterType == FilterType.ALL
             tvAll.setTextColor(
@@ -128,5 +124,6 @@ class InsightBloodPressureFragment :
                 )
             )
         }
+        viewModel.loadListBlood(filterType, withLoading)
     }
 }

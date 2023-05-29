@@ -93,8 +93,11 @@
                                 app:layout_constraintTop_toBottomOf="@id/tvBirth"
                                 app:np_dividerColor="@android:color/transparent"
                                 app:np_min="1900"
-                                app:np_selectedTextColor="@color/colorAds"
-                                app:np_textColor="@color/color_hint" />
+                                app:np_selectedTextColor="@color/black"
+                                app:np_selectedTextSize="@dimen/text_size_26"
+                                app:np_textColor="@color/color_hint"
+                                app:np_textSize="@dimen/text_size_16"
+                                app:np_value="1990" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -173,8 +176,10 @@
                         app:np_max="300"
                         app:np_min="30"
                         app:np_orientation="horizontal"
-                        app:np_selectedTextColor="@color/colorAds"
+                        app:np_selectedTextColor="@color/black"
+                        app:np_selectedTextSize="@dimen/text_size_26"
                         app:np_textColor="@color/color_hint"
+                        app:np_textSize="@dimen/text_size_16"
                         app:np_value="55"
                         app:np_wheelItemCount="5" />
 
@@ -202,8 +207,10 @@
                         app:np_max="300"
                         app:np_min="120"
                         app:np_orientation="horizontal"
-                        app:np_selectedTextColor="@color/colorAds"
+                        app:np_selectedTextColor="@color/black"
+                        app:np_selectedTextSize="@dimen/text_size_26"
                         app:np_textColor="@color/color_hint"
+                        app:np_textSize="@dimen/text_size_16"
                         app:np_value="155"
                         app:np_wheelItemCount="5" />
                 </LinearLayout>

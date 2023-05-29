@@ -28,12 +28,21 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
     }
 
     override fun initView() {
-        binding.pickBirthDay.typeface = Typeface.create("montserrat_semibold", Typeface.NORMAL)
-        binding.pickBirthDay.setFormatter(R.string.number_picker_formatter)
-        binding.pickBirthDay.maxValue = DateUtils.getCurrentYear()
-        binding.pickBirthDay.value = 1990
+        with(binding) {
+            pickBirthDay.setFormatter(R.string.number_picker_formatter)
+            pickBirthDay.maxValue = DateUtils.getCurrentYear()
+            pickBirthDay.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
+            pickBirthDay.setSelectedTypeface(Typeface.defaultFromStyle(Typeface.BOLD))
+            pickBirthDay.value = 1990
 
-        binding.tvMale.isSelected = true
+            pickHeight.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
+            pickHeight.setSelectedTypeface(Typeface.defaultFromStyle(Typeface.BOLD))
+
+            pickWeight.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
+            pickWeight.setSelectedTypeface(Typeface.defaultFromStyle(Typeface.BOLD))
+
+            tvMale.isSelected = true
+        }
     }
 
     override fun initListener() {
