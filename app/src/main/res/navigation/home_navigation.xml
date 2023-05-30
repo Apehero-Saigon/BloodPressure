@@ -11,8 +11,8 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/insightFragment"
-        android:name="com.blood.ui.fragments.insight.InsightFragment"
+        android:id="@+id/insightBloodPressureFragment"
+        android:name="com.blood.ui.fragments.insight.InsightBloodPressureFragment"
         tools:layout="@layout/fragment_insight" />
 
     <fragment

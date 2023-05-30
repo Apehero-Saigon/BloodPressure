@@ -15,6 +15,7 @@ object Constant {
     const val FORMAT_DATETIME = "dd/MM/yyyy hh:mm"
     const val FORMAT_DATETIME_VN = "hh:mma dd.MM.yyyy"
     const val FORMAT_DATE = "dd/MM/yyyy"
+    const val FORMAT_DM = "dd/MM"
     const val FORMAT_TIME = "hh:mm"
     const val FORMAT_DATETIME_ITEM = "HH:mm dd.MM.yyyy"
 

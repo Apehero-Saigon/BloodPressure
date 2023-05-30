@@ -7,6 +7,7 @@ import com.blood.base.BaseFragment
 import com.blood.data.Profile
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.DateUtils
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.gone
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
@@ -28,6 +29,7 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
     }
 
     override fun initView() {
+        FirebaseUtils.eventDisplayCreateUser()
         with(binding) {
             pickBirthDay.setFormatter(R.string.number_picker_formatter)
             pickBirthDay.maxValue = DateUtils.getCurrentYear()
@@ -81,6 +83,7 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
         val valueHeight = binding.pickHeight.value
         val valueBirthYear = binding.pickBirthDay.value
 
+        FirebaseUtils.eventClickCreateUser(valueBirthYear, if (valueGender == 1) "Male" else "Female")
         val newProfile = Profile(
             if (args.editMode) 0 else 1,
             valueBirthYear,

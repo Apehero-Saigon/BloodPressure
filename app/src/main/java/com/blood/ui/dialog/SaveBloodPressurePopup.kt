@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.core.util.Consumer
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.textTrim
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
@@ -40,6 +41,7 @@ class SaveBloodPressurePopup : DialogFragment() {
             popup.note = note
             popup.callBack = callBack
             popup.show(fragmentManager, SaveBloodPressurePopup::class.java.simpleName)
+            FirebaseUtils.eventDisplayConfirmPopup()
         }
     }
 
@@ -71,9 +73,11 @@ class SaveBloodPressurePopup : DialogFragment() {
         edtNote.setText(note)
 
         view.findViewById<Button>(R.id.btnCancel)?.clickWithDebounce {
+            FirebaseUtils.eventCancelConfirmPopup()
             dismiss()
         }
         view.findViewById<Button>(R.id.btnSave)?.clickWithDebounce {
+            FirebaseUtils.eventYesConfirmPopup()
             callBack?.accept(edtNote.textTrim())
             dismiss()
         }

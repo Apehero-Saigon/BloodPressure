@@ -62,6 +62,11 @@ object FirebaseUtils {
     private const val CLICK_RELATED_POST_SCR_VIEW_INFO_KNOW =
         "click_related_post_scr_view_info_know"
     private const val CLICK_BACK_SCR_VIEW_INFO_KNOW = "click_back_scr_view_info_know"
+    private const val CLICK_BACK_SCR_HOME = "scr_home"
+    private const val CLICK_ADD_SCR_HOME = "click_add_scr_home"
+    private const val POP_UP_CONFIRM = "pop_up_confirm"
+    private const val CLICK_SAVE_POP_UP_CONFIRM = "click_save_pop_up_confirm"
+    private const val CLICK_CANCEL_POP_UP_CONFIRM = "click_cancel_pop_up_confirm"
 
     fun eventSplashScreen() {
         fbAnalytics?.logEvent(SPLASH_SCREEN, null)
@@ -85,6 +90,26 @@ object FirebaseUtils {
 
     fun eventDisplayLanguageScreen() {
         fbAnalytics?.logEvent(SCR_LANGUAGE, null)
+    }
+
+    fun eventDisplayHomeScreen() {
+        fbAnalytics?.logEvent(CLICK_BACK_SCR_HOME, null)
+    }
+
+    fun eventClickAddBloodHomeScreen() {
+        fbAnalytics?.logEvent(CLICK_ADD_SCR_HOME, null)
+    }
+
+    fun eventDisplayConfirmPopup() {
+        fbAnalytics?.logEvent(POP_UP_CONFIRM, null)
+    }
+
+    fun eventCancelConfirmPopup() {
+        fbAnalytics?.logEvent(CLICK_SAVE_POP_UP_CONFIRM, null)
+    }
+
+    fun eventYesConfirmPopup() {
+        fbAnalytics?.logEvent(CLICK_CANCEL_POP_UP_CONFIRM, null)
     }
 
     fun eventClickChooseLanguage() {

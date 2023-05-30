@@ -5,14 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.PopupMenu
-import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
 import com.blood.data.InfoKnowledge
 import com.blood.ui.dialog.YesNoPopup
-import com.blood.ui.fragments.home.HomeFragment
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
@@ -40,13 +39,15 @@ class BloodPressureDetailFragment :
     }
 
     override fun initData() {
+        FirebaseUtils.eventDisplayBloodPressureResult()
         viewModel.getBloodPressureByID(args.id)
     }
 
     override fun initListener() {
         super.initListener()
 
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
                     onBack()
@@ -76,23 +77,18 @@ class BloodPressureDetailFragment :
     }
 
     override fun onHeaderBackPressed() {
+        FirebaseUtils.eventClickBackDisplayBloodPressureResult()
         onBack()
     }
 
     override fun onOptionPressed(view: View) {
+        FirebaseUtils.eventClickBloodDetailOption()
         showOptionPopup(view)
     }
 
     private fun onBack() {
-        if (HomeFragment::class.java.name.equals((findNavController().previousBackStackEntry?.destination as? FragmentNavigator.Destination)?.className)) {
-            findNavController().popBackStack(
-                R.id.homeFragment, inclusive = false, saveState = true
-            )
-        } else {
-            findNavController().popBackStack(
-                R.id.insightBloodPressureFragment, inclusive = false, saveState = true
-            )
-        }
+        FirebaseUtils.eventClickBloodDetailBack()
+        findNavController().popBackStack(R.id.homeFragment, inclusive = false, saveState = true)
     }
 
     private fun showOptionPopup(view: View) {
@@ -101,6 +97,7 @@ class BloodPressureDetailFragment :
         popupMenu.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.actionEdit -> {
+                    FirebaseUtils.eventClickBloodDetailEdit()
                     val action =
                         BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToBloodPressureEditFragment()
                     action.modeAdd = false
@@ -111,6 +108,7 @@ class BloodPressureDetailFragment :
                 }
 
                 R.id.actionDelete -> {
+                    FirebaseUtils.eventClickBloodDetailDelete()
                     YesNoPopup.showPopup(
                         childFragmentManager,
                         R.string.delete_result,

@@ -5,6 +5,7 @@ import com.blood.base.BaseFragment
 import com.blood.ui.fragments.home.HomeFragment
 import com.blood.ui.fragments.home.HomeFragmentDirections
 import com.blood.ui.fragments.home.IHomeUi
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
@@ -32,6 +33,7 @@ class InsightFragment : BaseFragment<InsightViewModel, FragmentInsightBinding>(
 
     override fun initData() {
         super.initData()
+        FirebaseUtils.eventDisplayInsightScreen()
         viewModel.checkCount()
     }
 

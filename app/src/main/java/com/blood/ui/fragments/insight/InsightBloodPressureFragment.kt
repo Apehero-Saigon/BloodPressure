@@ -1,5 +1,6 @@
 package com.blood.ui.fragments.insight
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -8,9 +9,14 @@ import com.blood.base.BaseFragment
 import com.blood.common.enumdata.FilterType
 import com.blood.data.BloodPressure
 import com.blood.ui.adapters.BloodPressureAdapter
+import com.blood.ui.fragments.home.HomeFragment
+import com.blood.ui.fragments.home.HomeFragmentDirections
+import com.blood.ui.fragments.home.IHomeUi
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.gone
 import com.blood.utils.customview.HeaderView
+import com.blood.utils.customview.chart.CandleChart
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
@@ -26,34 +32,46 @@ class InsightBloodPressureFragment :
         private var filterType = FilterType.ALL
     }
 
+
+    var iHomeUi: IHomeUi? = null
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (parentFragment?.parentFragment is HomeFragment) {
+            iHomeUi = parentFragment?.parentFragment as HomeFragment
+        }
+    }
+
     override fun init(inflater: LayoutInflater, container: ViewGroup) {
         super.init(inflater, container)
         binding.setVariable(BR.insightBloodPressureFragment, this)
     }
 
     override fun initAds() {
-        if (isNetworkConnected() && prefUtils.isShowNativeRecentAction) {
-            adsUtils.nativeRecentAction.showAds(
-                requireActivity(),
-                BuildConfig.native_recent_action,
-                null,
-                R.layout.layout_native_medium_custom,
-                binding.flAds,
-                false,
-                reloadAfterShow = true
-            )
-        } else {
-            binding.flAds.gone()
-        }
+//        if (isNetworkConnected() && prefUtils.isShowNativeRecentAction) {
+//            adsUtils.nativeRecentAction.showAds(
+//                requireActivity(),
+//                BuildConfig.native_recent_action,
+//                null,
+//                R.layout.layout_native_medium_custom,
+//                binding.flAds,
+//                false,
+//                reloadAfterShow = true
+//            )
+//        } else {
+//            binding.flAds.gone()
+//        }
     }
 
     override fun initData() {
+        FirebaseUtils.eventDisplayInsightBlood()
         updateFilter()
         with(binding) {
             tvAll.clickWithDebounce {
                 if (!tvAll.isSelected) {
                     filterType = FilterType.ALL
                     updateFilter(true)
+                    FirebaseUtils.eventClickChooseDateInsightBlood()
                 }
             }
 
@@ -61,6 +79,7 @@ class InsightBloodPressureFragment :
                 if (!tvWeek.isSelected) {
                     filterType = FilterType.WEEK
                     updateFilter(true)
+                    FirebaseUtils.eventClickChooseDateInsightBlood()
                 }
             }
 
@@ -68,6 +87,7 @@ class InsightBloodPressureFragment :
                 if (!tvMonth.isSelected) {
                     filterType = FilterType.MONTH
                     updateFilter(true)
+                    FirebaseUtils.eventClickChooseDateInsightBlood()
                 }
             }
         }
@@ -75,29 +95,39 @@ class InsightBloodPressureFragment :
 
     override fun initListener() {
         super.initListener()
+        viewModel.listBloodObserver.observe(this.viewLifecycleOwner) { list ->
+            val chartData = mutableListOf<CandleChart.Data>()
+            list.forEach {
+                chartData.add(
+                    CandleChart.Data(
+                        it.systole.toFloat(), it.diastole.toFloat(), it.createAt
+                    )
+                )
+            }
+            binding.candleChart.setData(
+                chartData,
+                if (chartData.isEmpty()) 0f else chartData.maxOf { it.max },
+                if (chartData.isEmpty()) 0f else chartData.minOf { it.min },
+            )
+        }
 
         with(binding) {
             btnMeasureNow.clickWithDebounce {
-                val action =
-                    InsightBloodPressureFragmentDirections.actionInsightBloodPressureFragmentToBloodPressureEditFragment()
+                val action = HomeFragmentDirections.actionHomeFragmentToBloodPressureEditFragment()
                 action.modeAdd = true
                 action.mustShowBackButton = true
-                findNavController().navigate(action)
+                iHomeUi?.navigateTo(action)
             }
         }
     }
 
-    override fun onHeaderBackPressed() {
-        findNavController().navigateUp()
-    }
-
     override fun onClick(data: BloodPressure, position: Int) {
+        FirebaseUtils.eventClickDetailItemInsightBlood()
         adsUtils.interBloodDetails.showInterAdsBeforeNavigate(requireContext(), true) {
-            val action =
-                InsightBloodPressureFragmentDirections.actionInsightBloodPressureFragmentToBloodPressureDetailFragment()
+            val action = HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
             action.id = data.id
             action.viewDetail = true
-            findNavController().navigate(action)
+            iHomeUi?.navigateTo(action)
         }
     }
 

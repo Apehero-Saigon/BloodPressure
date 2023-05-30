@@ -5,6 +5,7 @@ import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.ui.adapters.LanguageAdapter
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.LanguageUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
@@ -18,6 +19,7 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
     private var isDoneSplash = false
 
     override fun initData() {
+        FirebaseUtils.eventDisplayLanguageScreen()
         adapter = LanguageAdapter(LanguageUtils.languageListItems(requireContext()).apply {
             get(0).isChoose = true
         })
@@ -33,6 +35,7 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
         binding.ivConfirmLanguage.clickWithDebounce {
             val chooseLang = adapter.getSelectedLanguage()
             if (chooseLang != null) {
+                FirebaseUtils.eventClickChooseLanguage()
                 prefUtils.defaultLanguage = chooseLang.code
                 prefUtils.isShowLanguageFirstOpen = false
                 LanguageUtils.changeLanguage(requireContext(), chooseLang.code)

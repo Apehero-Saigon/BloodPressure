@@ -9,26 +9,31 @@
         android:id="@+id/splashFragment"
         android:name="com.blood.ui.fragments.splash.SplashFragment"
         tools:layout="@layout/fragment_splash">
+
         <action
             android:id="@+id/action_splashFragment_to_homeFragment"
             app:destination="@id/homeFragment"
             app:popUpTo="@+id/main_navigation"
             app:popUpToInclusive="true" />
+
         <action
             android:id="@+id/action_splashFragment_to_languageFragment"
             app:destination="@id/languageFragment"
             app:popUpTo="@+id/main_navigation"
             app:popUpToInclusive="true" />
+
         <action
             android:id="@+id/action_splashFragment_to_onBoardingFragment"
             app:destination="@id/onBoardingFragment"
             app:popUpTo="@+id/main_navigation"
             app:popUpToInclusive="true" />
+
         <action
             android:id="@+id/action_splashFragment_to_profileEditFragment"
             app:destination="@id/profileEditFragment"
             app:popUpTo="@+id/main_navigation"
             app:popUpToInclusive="true" />
+
     </fragment>
 
     <fragment
@@ -51,6 +56,9 @@
         <action
             android:id="@+id/action_homeFragment_to_insightBloodPressureFragment"
             app:destination="@id/insightBloodPressureFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bloodPressureEditFragment"
+            app:destination="@id/bloodPressureEditFragment" />
     </fragment>
 
     <fragment
@@ -178,12 +186,5 @@
     <fragment
         android:id="@+id/insightBloodPressureFragment"
         android:name="com.blood.ui.fragments.insight.InsightBloodPressureFragment"
-        tools:layout="@layout/fragment_insight_blood_pressure" >
-        <action
-            android:id="@+id/action_insightBloodPressureFragment_to_bloodPressureEditFragment"
-            app:destination="@id/bloodPressureEditFragment" />
-        <action
-            android:id="@+id/action_insightBloodPressureFragment_to_bloodPressureDetailFragment"
-            app:destination="@id/bloodPressureDetailFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_insight_blood_pressure" />
 </navigation>

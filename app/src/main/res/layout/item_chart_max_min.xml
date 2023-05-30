@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <com.blood.utils.customview.chart.CandleView
+        android:id="@+id/standChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="55dp"
+        android:layout_height="@dimen/chart_max_min_bottom_height"
+        android:layout_gravity="center"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center|top"
+        android:paddingTop="@dimen/_5sdp"
+        android:textColor="@android:color/black"
+        android:textSize="10sp"
+        tools:text="21/04" />
+</LinearLayout>

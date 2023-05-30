@@ -11,6 +11,7 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.Fragme
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.ui.adapters.OnBoardingPageAdapter
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 
 class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding>(
@@ -23,11 +24,10 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
     override fun initAds() {
         displayedPage.add(OnBoardingPageAdapter.PAGE_INDEX_1)
         showNativeOnBoarding(OnBoardingPageAdapter.PAGE_INDEX_1)
+        FirebaseUtils.eventDisplayOnBoarding1()
 
         adsUtils.interSaveProfile.loadInterPrioritySameTime(
-            requireContext(),
-            BuildConfig.inter_save_high,
-            BuildConfig.inter_save
+            requireContext(), BuildConfig.inter_save_high, BuildConfig.inter_save
         )
     }
 
@@ -36,12 +36,6 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
         adapter = OnBoardingPageAdapter(requireContext(), childFragmentManager)
         binding.viewPager.adapter = adapter
         binding.tabLayout.setupWithViewPager(binding.viewPager)
-
-        binding.viewPager.setOnTouchListener { _, _ -> true }
-        val tabStrip = binding.tabLayout.getChildAt(0) as LinearLayout
-        for (i in 0 until tabStrip.childCount) {
-            tabStrip.getChildAt(i).setOnTouchListener { _, _ -> true }
-        }
     }
 
     override fun initListener() {
@@ -62,9 +56,11 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
                 if (position == 1 && !displayedPage.contains(1)) {
                     displayedPage.add(1)
                     showNativeOnBoarding(position)
+                    FirebaseUtils.eventDisplayOnBoarding2()
                 } else if (position == 2 && !displayedPage.contains(2)) {
                     displayedPage.add(2)
                     showNativeOnBoarding(position)
+                    FirebaseUtils.eventDisplayOnBoarding3()
                 }
             }
 
@@ -75,6 +71,7 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
         binding.tvNext.clickWithDebounce {
             if (binding.viewPager.currentItem == OnBoardingPageAdapter.NUMBER_PAGE - 1) {
                 prefUtils.isShowOnBoardingFirstOpen = false
+                FirebaseUtils.eventClickStartNowOnBoard()
 
                 val action =
                     OnBoardingFragmentDirections.actionOnBoardingFragmentToProfileEditFragment()

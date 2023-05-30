@@ -5,7 +5,7 @@
         android:icon="@drawable/ic_dashboard_selector"
         android:title="@string/dashboard" />
     <item
-        android:id="@+id/insightFragment"
+        android:id="@+id/insightBloodPressureFragment"
         android:icon="@drawable/ic_insights_selector"
         android:title="@string/insights" />
     <item

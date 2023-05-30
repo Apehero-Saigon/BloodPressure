@@ -14,6 +14,7 @@ import com.blood.App
 import com.blood.base.BaseActivity
 import com.blood.base.BaseFragment
 import com.blood.common.Constant
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.PrefUtils
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
@@ -79,6 +80,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     }
 
     override fun initData() {
+        FirebaseUtils.eventSplashScreen()
         if (openByChangeLanguage()) {
             val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
             findNavController().navigate(action)

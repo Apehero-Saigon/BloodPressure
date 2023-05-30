@@ -22,8 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:headerListener="@{insightBloodPressureFragment}"
-            app:headerTitle="@string/blood_pressure"
-            app:showBackButton="true" />
+            app:headerTitle="@string/blood_pressure" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -89,10 +88,11 @@
                             android:textColor="@color/white" />
                     </LinearLayout>
 
-                    <com.github.mikephil.charting.charts.CandleStickChart
+                    <com.blood.utils.customview.chart.CandleChart
+                        android:id="@+id/candleChart"
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_marginTop="@dimen/_12sdp" />
+                        android:layout_height="270dp"
+                        android:layout_marginHorizontal="16dp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -186,7 +186,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginBottom="@dimen/_10sdp">
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="gone">
 
             <include layout="@layout/layout_shimmer_native_small" />
 

@@ -7,6 +7,7 @@ import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
@@ -25,6 +26,7 @@ class InfoDetailFragment : BaseFragment<BaseViewModel, FragmentInfoDetailBinding
     }
 
     override fun initData() {
+        FirebaseUtils.eventDisplayInfoDetail()
         binding.ivPhoto.setImageResource(args.infoKnowledge.photo)
     }
 
@@ -35,6 +37,7 @@ class InfoDetailFragment : BaseFragment<BaseViewModel, FragmentInfoDetailBinding
     }
 
     override fun onHeaderBackPressed() {
+        FirebaseUtils.eventClickBackInfoPost()
         findNavController().navigateUp()
     }
 }

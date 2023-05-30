@@ -31,6 +31,7 @@ class InfoFragment : BaseFragment<HomeViewModel, FragmentInfoBinding>(
     }
 
     override fun initView() {
+        FirebaseUtils.eventDisplayInfoScreen()
         with(binding) {
             adapter = BloodPressureInfoKnowledgeAdapter(
                 InfoKnowledge.getListBloodPressure(), this@InfoFragment
@@ -64,6 +65,7 @@ class InfoFragment : BaseFragment<HomeViewModel, FragmentInfoBinding>(
     }
 
     override fun onClick(data: InfoKnowledge, position: Int) {
+        FirebaseUtils.eventClickInfoDetail()
         adsUtils.interInfo.showInterAdsBeforeNavigate(requireContext(), true) {
             iHomeUi?.navigateTo(
                 HomeFragmentDirections.actionHomeFragmentToInfoDetailFragment(

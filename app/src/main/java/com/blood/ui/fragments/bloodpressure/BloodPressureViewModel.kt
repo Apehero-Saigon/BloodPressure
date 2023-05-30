@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.blood.base.BaseViewModel
 import com.blood.data.BloodPressure
 import com.blood.data.repository.BloodPressureRepository
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.listener.SingleLiveEvent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -51,6 +52,7 @@ class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
     fun updateBloodPressure(bloodPressure: BloodPressure) {
         launchOnUITryCatchWithLoading({
             val bloodPressureNew = if (bloodPressure.id == 0L) {
+                FirebaseUtils.eventClickAddBloodHomeScreen()
                 withContext(Dispatchers.IO) {
                     bloodPressureRepository.insertBloodPressure(bloodPressure)
                 }

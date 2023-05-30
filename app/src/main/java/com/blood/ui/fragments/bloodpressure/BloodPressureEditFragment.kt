@@ -80,19 +80,11 @@ class BloodPressureEditFragment :
                 adsUtils.interMeasure.showInterAdsBeforeNavigate(requireContext(), true) {
                     if (args.modeAdd) {
                         resetData()
-                        if (findNavController().previousBackStackEntry.isNull()) {
-                            val action =
-                                HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
-                            action.id = bloodPressure.id
-                            action.viewDetail = false
-                            iHomeUi?.navigateTo(action)
-                        } else {
-                            val action =
-                                BloodPressureEditFragmentDirections.actionBloodPressureEditFragmentToBloodPressureDetailFragment()
-                            action.id = bloodPressure.id
-                            action.viewDetail = false
-                            findNavController().navigate(action)
-                        }
+                        val action =
+                            HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
+                        action.id = bloodPressure.id
+                        action.viewDetail = false
+                        iHomeUi?.navigateTo(action)
                     } else {
                         findNavController().navigateUp()
                     }
