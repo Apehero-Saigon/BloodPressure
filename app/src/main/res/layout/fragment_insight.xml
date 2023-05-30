@@ -11,157 +11,160 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="@dimen/_16sdp"
-        android:layout_marginVertical="@dimen/_30sdp"
         android:orientation="vertical">
 
-        <TextView
+        <com.blood.utils.customview.HeaderView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_semibold"
-            android:text="@string/insights"
-            android:textColor="@color/color_text_special"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:fontFamily="@font/montserrat_semibold"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="10dp"
-            android:text="@string/blood_pressure_advice"
-            android:textColor="@color/color_text_normal"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_medium"
-            android:paddingHorizontal="16dp"
-            android:text="@string/a_normal_blood_pressure"
-            android:textColor="@color/color_text_normal"
-            android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:fontFamily="@font/montserrat_semibold"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="10dp"
-            android:text="@string/totals"
-            android:textColor="@color/color_text_normal"
-            android:textSize="16sp" />
+            app:headerTitle="@string/insights" />
 
         <LinearLayout
-            android:id="@+id/llBlood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_insights_menu"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="15dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_intro_1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/montserrat_semibold"
-                android:paddingVertical="@dimen/_12sdp"
-                android:text="@string/blood_pressure"
-                android:textColor="@color/color_text_normal" />
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
-                android:fontFamily="@font/montserrat_medium"
-                android:paddingHorizontal="13dp"
-                android:textAlignment="viewEnd"
-                android:textColor="@color/black"
-                app:textInt="@{viewModel.countBloodObserver}" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llHeart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_28sdp"
-            android:background="@drawable/background_insights_menu"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="15dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_intro_2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16sdp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:paddingVertical="@dimen/_12sdp"
-                android:text="@string/heart_rate"
-                android:textColor="@color/color_text_normal" />
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:text="@string/blood_pressure_advice"
+                android:textColor="@color/color_text_normal"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
                 android:fontFamily="@font/montserrat_medium"
-                android:paddingHorizontal="13dp"
-                android:textAlignment="viewEnd"
-                android:textColor="@color/black"
-                app:textInt="@{viewModel.countHeartObserver}" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llWeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_28sdp"
-            android:background="@drawable/background_insights_menu"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="15dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/ic_intro_3" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/montserrat_semibold"
-                android:paddingVertical="@dimen/_12sdp"
-                android:text="@string/weight_and_bmi"
-                android:textColor="@color/color_text_normal" />
+                android:paddingHorizontal="16dp"
+                android:text="@string/a_normal_blood_pressure"
+                android:textColor="@color/color_text_normal"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|end"
-                android:fontFamily="@font/montserrat_medium"
-                android:paddingHorizontal="13dp"
-                android:textAlignment="viewEnd"
-                android:textColor="@color/black"
-                app:textInt="@{viewModel.countWeightBMIObserver}" />
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:text="@string/totals"
+                android:textColor="@color/color_text_normal"
+                android:textSize="16sp" />
 
+            <LinearLayout
+                android:id="@+id/llBlood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_insights_menu"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="15dp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/ic_intro_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@color/color_text_normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingHorizontal="13dp"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/black"
+                    app:textInt="@{viewModel.countBloodObserver}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHeart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:background="@drawable/background_insights_menu"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="15dp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/ic_intro_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:text="@string/heart_rate"
+                    android:textColor="@color/color_text_normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingHorizontal="13dp"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/black"
+                    app:textInt="@{viewModel.countHeartObserver}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_28sdp"
+                android:background="@drawable/background_insights_menu"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="15dp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/ic_intro_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:text="@string/weight_and_bmi"
+                    android:textColor="@color/color_text_normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingHorizontal="13dp"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/black"
+                    app:textInt="@{viewModel.countWeightBMIObserver}" />
+
+            </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 </layout>

@@ -8,9 +8,10 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:layout_marginTop="@dimen/_8sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAds"
+            android:background="@color/white"
             android:orientation="horizontal"
             android:paddingVertical="@dimen/_8sdp">
 
@@ -21,10 +22,10 @@
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="@dimen/_16sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/montserrat_semibold"
                 android:text="@string/language"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textColor="@color/colorAds"
+                android:textSize="22sp" />
 
             <ImageButton
                 android:id="@+id/ivConfirmLanguage"
@@ -34,7 +35,7 @@
                 android:background="@android:color/transparent"
                 android:padding="10dp"
                 android:src="@drawable/ic_done"
-                app:tint="@color/white" />
+                app:tint="@color/colorAds" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

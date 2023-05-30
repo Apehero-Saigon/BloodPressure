@@ -10,6 +10,7 @@ import com.blood.ui.fragments.bloodpressure.BloodPressureViewModel
 import com.blood.ui.fragments.home.HomeFragment
 import com.blood.ui.fragments.home.HomeFragmentDirections
 import com.blood.ui.fragments.home.IHomeUi
+import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentDashboardBinding
@@ -34,7 +35,7 @@ class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboard
 
     override fun initData() {
         super.initData()
-        viewModel.getListBloodPressure(3)
+        viewModel.getTopBloodPressureByID(3)
     }
 
     override fun onClick(data: BloodPressure, position: Int) {

@@ -18,20 +18,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <FrameLayout
-            android:id="@+id/flAds"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/height_native_ads"
-            android:layout_marginHorizontal="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:background="@drawable/bg_f8f8f8_radius_10"
-            app:layout_constraintBottom_toTopOf="@id/tabLayout">
-
-            <include layout="@layout/layout_shimmer_native" />
-
-        </FrameLayout>
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="120dp"
@@ -42,7 +28,8 @@
             android:clickable="false"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/flAds"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:tabBackground="@drawable/tab_indicator_selector"
             app:tabIndicatorColor="@android:color/transparent"
@@ -62,5 +49,20 @@
             app:layout_constraintBottom_toBottomOf="@id/tabLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tabLayout" />
+
+        <FrameLayout
+            android:id="@+id/flAds"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_native_ads"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_f8f8f8_radius_10"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <include layout="@layout/layout_shimmer_native" />
+
+        </FrameLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

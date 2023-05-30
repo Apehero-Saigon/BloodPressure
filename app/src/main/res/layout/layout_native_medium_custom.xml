@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:layout_marginVertical="@dimen/_16sdp"
-                android:background="@drawable/background_button_accept"
+                android:background="@drawable/bg_fe7489_radius_50"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold"

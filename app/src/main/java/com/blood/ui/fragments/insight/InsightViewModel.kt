@@ -5,6 +5,7 @@ import com.blood.base.BaseViewModel
 import com.blood.common.enumdata.FilterType
 import com.blood.data.BloodPressure
 import com.blood.data.repository.BloodPressureRepository
+import com.blood.utils.DateUtils
 import com.blood.utils.listener.SingleLiveEvent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -31,7 +32,16 @@ class InsightViewModel @Inject constructor() : BaseViewModel() {
         }
         launchOnUITryCatch({
             val listBloods = withContext(Dispatchers.IO) {
-                bloodPressureRepository.getListBloodPressureByID(prefUtils.profile!!.id)
+                if (filterType == FilterType.ALL) {
+                    bloodPressureRepository.getTopBloodPressureByID(prefUtils.profile!!.id)
+                } else {
+                    val startDate = DateUtils.getCurrentDate()
+                    val endDate =
+                        DateUtils.getDateBefore(if (filterType == FilterType.WEEK) 7 else 31)
+                    bloodPressureRepository.getListBloodPressureByFilterDate(
+                        prefUtils.profile!!.id, endDate, startDate
+                    )
+                }
             }
 
             if (withLoading) {

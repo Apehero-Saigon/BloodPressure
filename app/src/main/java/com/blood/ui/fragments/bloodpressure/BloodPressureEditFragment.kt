@@ -2,6 +2,8 @@ package com.blood.ui.fragments.bloodpressure
 
 import android.content.Context
 import android.graphics.Typeface
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
@@ -15,6 +17,8 @@ import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.AppUtils.isNull
 import com.blood.utils.DateUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
+import com.blood.utils.customview.HeaderView
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentBloodPressureEditBinding
@@ -23,11 +27,16 @@ import java.util.Date
 class BloodPressureEditFragment :
     BaseFragment<BloodPressureViewModel, FragmentBloodPressureEditBinding>(
         R.layout.fragment_blood_pressure_edit, BloodPressureViewModel::class.java
-    ) {
+    ), HeaderView.Listener {
 
     private var iHomeUi: IHomeUi? = null
 
     val args: BloodPressureEditFragmentArgs by navArgs()
+
+    override fun init(inflater: LayoutInflater, container: ViewGroup) {
+        super.init(inflater, container)
+        binding.setVariable(BR.bloodPressureEditFragment, this)
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -56,14 +65,10 @@ class BloodPressureEditFragment :
     }
 
     override fun initData() {
+        binding.btnSave.setText(R.string.save)
         if (args.modeAdd) {
             resetData()
-            binding.tvTitle.setText(R.string.add_your_record)
-            binding.btnSave.setText(R.string.save)
         } else {
-            binding.tvTitle.setText(R.string.edit_your_record)
-            binding.btnSave.setText(R.string.save)
-
             viewModel.getBloodPressureByID(args.id)
         }
     }
@@ -97,33 +102,35 @@ class BloodPressureEditFragment :
             }
         }
 
-        binding.btnSave.clickWithDebounce {
-            updateBloodPressure()
-        }
+        with(binding) {
+            btnSave.clickWithDebounce {
+                updateBloodPressure()
+            }
 
-        binding.btnBack.clickWithDebounce {
-            findNavController().navigateUp()
-        }
+            tvDate.clickWithDebounce {
+                DateUtils.openDatePicker(requireContext(),
+                    DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
+                    object : DateUtils.SelectDatetimeListener {
+                        override fun onDateSelected(day: Int, month: Int, year: Int) {
+                            binding.tvDate.text = getString(R.string.dd_mm_yyyy, day, month, year)
+                        }
+                    })
+            }
 
-        binding.tvDate.clickWithDebounce {
-            DateUtils.openDatePicker(requireContext(),
-                DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
-                object : DateUtils.SelectDatetimeListener {
-                    override fun onDateSelected(day: Int, month: Int, year: Int) {
-                        binding.tvDate.text = getString(R.string.dd_mm_yyyy, day, month, year)
-                    }
-                })
+            tvTime.clickWithDebounce {
+                DateUtils.openTimePicker(requireContext(),
+                    DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
+                    object : DateUtils.SelectDatetimeListener {
+                        override fun onTimeSelected(minute: Int, hour: Int) {
+                            binding.tvTime.text = DateUtils.strTime(hour, minute)
+                        }
+                    })
+            }
         }
+    }
 
-        binding.tvTime.clickWithDebounce {
-            DateUtils.openTimePicker(requireContext(),
-                DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
-                object : DateUtils.SelectDatetimeListener {
-                    override fun onTimeSelected(minute: Int, hour: Int) {
-                        binding.tvTime.text = DateUtils.strTime(hour, minute)
-                    }
-                })
-        }
+    override fun onHeaderBackPressed() {
+        findNavController().navigateUp()
     }
 
     private fun updateBloodPressure() {

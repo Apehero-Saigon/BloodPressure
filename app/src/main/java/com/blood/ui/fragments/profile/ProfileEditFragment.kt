@@ -57,7 +57,7 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
             binding.tvFemale.isSelected = true
         }
 
-        binding.btnSave.clickWithDebounce {
+        binding.tvSave.clickWithDebounce {
             createProfile()
         }
 

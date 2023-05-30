@@ -9,35 +9,31 @@
         android:orientation="vertical"
         tools:context=".ui.info.InfoFragment">
 
-
-        <TextView
+        <com.blood.utils.customview.HeaderView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginVertical="30dp"
-            android:fontFamily="@font/montserrat_semibold"
-            android:text="@string/information_knowledge"
-            android:textColor="@color/color_text_special"
-            android:textSize="16sp" />
+            app:headerTitle="@string/information_knowledge" />
 
-        <androidx.appcompat.widget.Toolbar
+        <EditText
+            android:id="@+id/edtSearch"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/searchView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:background="@drawable/background_dashboard_menu_layout"
-                android:shadowColor="@android:color/transparent"
-                android:textSize="14sp"
-                app:defaultQueryHint="@string/search"
-                app:iconifiedByDefault="false"
-                app:queryHint="@string/search"
-                app:searchHintIcon="@drawable/ic_search"
-                app:searchIcon="@drawable/ic_search" />
-        </androidx.appcompat.widget.Toolbar>
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/background_dashboard_menu_layout"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/search"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:shadowColor="@android:color/transparent"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color_hint"
+            android:textSize="14sp" />
 
 
         <TextView

@@ -1,20 +1,28 @@
 package com.blood.ui.fragments.info
 
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
-import com.blood.utils.ViewUtils.clickWithDebounce
+import com.blood.utils.customview.HeaderView
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentInfoDetailBinding
 
 class InfoDetailFragment : BaseFragment<BaseViewModel, FragmentInfoDetailBinding>(
     R.layout.fragment_info_detail, BaseViewModel::class.java
-) {
+), HeaderView.Listener {
 
     val args: InfoDetailFragmentArgs by navArgs()
+
+    override fun init(inflater: LayoutInflater, container: ViewGroup) {
+        super.init(inflater, container)
+        binding.setVariable(BR.infoDetailFragment, this)
+    }
 
     override fun initData() {
         binding.ivPhoto.setImageResource(args.infoKnowledge.photo)
@@ -26,10 +34,7 @@ class InfoDetailFragment : BaseFragment<BaseViewModel, FragmentInfoDetailBinding
         )
     }
 
-    override fun initListener() {
-        super.initListener()
-        binding.btnBack.clickWithDebounce {
-            findNavController().navigateUp()
-        }
+    override fun onHeaderBackPressed() {
+        findNavController().navigateUp()
     }
 }

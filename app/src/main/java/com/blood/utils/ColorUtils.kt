@@ -1,9 +1,14 @@
 package com.blood.utils
 
+import android.content.Context
+import androidx.annotation.ColorRes
+import androidx.core.content.ContextCompat
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 
 class ColorUtils {
     companion object {
+        fun Context.colorCompat(@ColorRes color: Int) = ContextCompat.getColor(this, color)
+
         @JvmStatic
         fun getColorSystolic(systole: Int): Int {
             return if (systole < 90) {

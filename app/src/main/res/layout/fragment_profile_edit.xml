@@ -23,31 +23,50 @@
             android:layout_weight="1"
             android:fillViewport="true"
             android:fitsSystemWindows="true"
-            android:paddingHorizontal="@dimen/_24sdp">
+            android:paddingHorizontal="@dimen/_24sdp"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:gravity="center"
-                    android:paddingHorizontal="34dp"
-                    android:paddingTop="60dp"
-                    android:text="@{fragment.args.editMode ? @string/update_profile : @string/create_new_profile}"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="@string/create_a_user" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center|start"
+                        android:paddingTop="@dimen/_24sdp"
+                        android:text="@{fragment.args.editMode ? @string/update_profile : @string/create_new_profile}"
+                        android:textColor="@color/color_870026"
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold"
+                        tools:text="@string/create_a_user" />
+
+                    <TextView
+                        android:id="@+id/tvSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center|end"
+                        android:paddingTop="@dimen/_24sdp"
+                        android:text="@string/save"
+                        android:textColor="@color/color_FE7489"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_italic"
+                    android:gravity="center|start"
                     android:paddingVertical="@dimen/_12sdp"
                     android:text="@string/let_create_first_user"
                     android:textColor="@color/color_text_normal"
@@ -63,7 +82,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingVertical="@dimen/_20sdp">
+                        android:paddingVertical="@dimen/_16sdp">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="0dp"
@@ -214,19 +233,6 @@
                         app:np_value="155"
                         app:np_wheelItemCount="5" />
                 </LinearLayout>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnSave"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="40dp"
-                    android:background="@drawable/background_button_accept"
-                    android:text="@string/create"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
             </LinearLayout>
 
         </ScrollView>

@@ -1,15 +1,21 @@
 package com.blood.ui.fragments.bloodpressure
 
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
+import com.blood.data.InfoKnowledge
 import com.blood.ui.dialog.YesNoPopup
 import com.blood.ui.fragments.home.HomeFragment
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.ViewUtils.clickWithDebounce
+import com.blood.utils.customview.HeaderView
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentBloodPressureDetailBinding
@@ -17,9 +23,14 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.Fragme
 class BloodPressureDetailFragment :
     BaseFragment<BloodPressureViewModel, FragmentBloodPressureDetailBinding>(
         R.layout.fragment_blood_pressure_detail, BloodPressureViewModel::class.java
-    ) {
+    ), HeaderView.Listener {
 
     val args: BloodPressureDetailFragmentArgs by navArgs()
+
+    override fun init(inflater: LayoutInflater, container: ViewGroup) {
+        super.init(inflater, container)
+        binding.setVariable(BR.bloodPressureDetailFragment, this)
+    }
 
     override fun initAds() {
         super.initAds()
@@ -43,16 +54,16 @@ class BloodPressureDetailFragment :
             })
 
         with(binding) {
-            btnBack.clickWithDebounce {
-                onBack()
-            }
-
             tvDisclaimer.clickWithDebounce {
                 findNavController().navigate(BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToDisclaimerFragment())
             }
 
-            ivOption.clickWithDebounce {
-                showOptionPopup()
+            btnHelp.clickWithDebounce {
+                val action =
+                    BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToInfoDetailFragment(
+                        InfoKnowledge.getListBloodPressure()[5]
+                    )
+                findNavController().navigate(action)
             }
         }
 
@@ -62,6 +73,14 @@ class BloodPressureDetailFragment :
                 onBack()
             }
         }
+    }
+
+    override fun onHeaderBackPressed() {
+        onBack()
+    }
+
+    override fun onOptionPressed(view: View) {
+        showOptionPopup(view)
     }
 
     private fun onBack() {
@@ -76,8 +95,8 @@ class BloodPressureDetailFragment :
         }
     }
 
-    private fun showOptionPopup() {
-        val popupMenu = PopupMenu(requireContext(), binding.ivOption)
+    private fun showOptionPopup(view: View) {
+        val popupMenu = PopupMenu(requireContext(), view)
         popupMenu.inflate(R.menu.menu_popup_option_blood_detail)
         popupMenu.setOnMenuItemClickListener { item ->
             when (item.itemId) {

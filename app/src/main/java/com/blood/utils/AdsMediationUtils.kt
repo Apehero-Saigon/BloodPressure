@@ -28,11 +28,11 @@ class AdsMediationUtils {
 
 
     companion object {
-        val MINTEGRAL_APP_ID = "215450"
+        val MINTEGRAL_APP_ID = "8133025"
         val MINTEGRAL_KEY = "bbcbb5b7173a7c8c07e45c4d4a951683"
         val PANGLE_APP_ID = "8134349"
-        val IRON_SOURCE_APP_ID = "1a193cdf5"
-        val VUNGLE_APP_ID = "64671a99d1046f28e111618b"
+        val IRON_SOURCE_APP_ID = "1a153fb15"
+        val VUNGLE_APP_ID = "645dade6802fa327835903f4"
         val APPLOVIN_APP_ID =
             "3N4Mt8SNhOzkQnGb9oHsRRG1ItybcZDpJWN1fVAHLdRagxP-_k_ZXVaMAdMe5Otsmp6qJSXskfsrtakfRmPAGW"
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HeaderView">
+        <attr name="text" format="string" />
+        <attr name="showBackButton" format="boolean" />
+        <attr name="showOptionButton" format="boolean" />
+        <attr name="headerBackground" format="reference" />
+        <attr name="headerTitle" format="reference" />
+        <attr name="optionIcon" format="reference" />
+    </declare-styleable>
+</resources>

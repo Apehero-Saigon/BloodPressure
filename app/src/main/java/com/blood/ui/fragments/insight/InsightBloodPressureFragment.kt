@@ -10,6 +10,7 @@ import com.blood.data.BloodPressure
 import com.blood.ui.adapters.BloodPressureAdapter
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.gone
+import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
@@ -18,7 +19,7 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.Fragme
 class InsightBloodPressureFragment :
     BaseFragment<InsightViewModel, FragmentInsightBloodPressureBinding>(
         R.layout.fragment_insight_blood_pressure, InsightViewModel::class.java
-    ), BloodPressureAdapter.Callback {
+    ), BloodPressureAdapter.Callback, HeaderView.Listener {
 
     companion object {
 
@@ -76,11 +77,6 @@ class InsightBloodPressureFragment :
         super.initListener()
 
         with(binding) {
-
-            btnBack.clickWithDebounce {
-                findNavController().navigateUp()
-            }
-
             btnMeasureNow.clickWithDebounce {
                 val action =
                     InsightBloodPressureFragmentDirections.actionInsightBloodPressureFragmentToBloodPressureEditFragment()
@@ -89,6 +85,10 @@ class InsightBloodPressureFragment :
                 findNavController().navigate(action)
             }
         }
+    }
+
+    override fun onHeaderBackPressed() {
+        findNavController().navigateUp()
     }
 
     override fun onClick(data: BloodPressure, position: Int) {

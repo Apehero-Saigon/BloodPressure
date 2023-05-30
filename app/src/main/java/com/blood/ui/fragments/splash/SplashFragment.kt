@@ -82,8 +82,6 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         if (openByChangeLanguage()) {
             val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
             findNavController().navigate(action)
-        } else {
-            Glide.with(this).load(R.drawable.img_heart_beat).into(binding.ivLogo)
         }
     }
 
@@ -152,30 +150,29 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private fun onShowSplashScreen() {
         if (fetchRemoteConfig == FetchRemoteConfig.DONE) {
             if (SplashType.OPEN_SPLASH == splashLoadType) {
-                AppOpenManager.getInstance().showAppOpenSplash(
-                    requireActivity() as AppCompatActivity?,
-                    object : AdCallback() {
-                        override fun onNextAction() {
-                            super.onNextAction()
-                            goToMainScreen()
-                        }
-
-                        override fun onAdFailedToShow(adError: AdError?) {
-                            super.onAdFailedToShow(adError)
-                            if ((requireActivity() as? BaseActivity<*, *>)?.isOnResume == false) {
-                                errorShowAdsInBackground = true
+                AppOpenManager.getInstance()
+                    .showAppOpenSplash(requireActivity() as AppCompatActivity?,
+                        object : AdCallback() {
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                goToMainScreen()
                             }
-                            goToMainScreen()
-                        }
 
-                        override fun onAdClosed() {
-                            super.onAdClosed()
-                            goToMainScreen()
-                        }
-                    })
+                            override fun onAdFailedToShow(adError: AdError?) {
+                                super.onAdFailedToShow(adError)
+                                if ((requireActivity() as? BaseActivity<*, *>)?.isOnResume == false) {
+                                    errorShowAdsInBackground = true
+                                }
+                                goToMainScreen()
+                            }
+
+                            override fun onAdClosed() {
+                                super.onAdClosed()
+                                goToMainScreen()
+                            }
+                        })
             } else if (SplashType.INTERSTITIAL == splashLoadType) {
-                AperoAd.getInstance().onShowSplash(
-                    requireActivity() as AppCompatActivity,
+                AperoAd.getInstance().onShowSplash(requireActivity() as AppCompatActivity,
                     object : AperoAdCallback() {
                         override fun onNextAction() {
                             super.onNextAction()

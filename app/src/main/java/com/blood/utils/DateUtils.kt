@@ -24,6 +24,16 @@ object DateUtils {
         return calendar.get(Calendar.YEAR)
     }
 
+    fun getCurrentDate(): Date {
+        return Calendar.getInstance().time
+    }
+
+    fun getDateBefore(before: Int): Date {
+        val c = Calendar.getInstance()
+        c.timeInMillis = c.timeInMillis - (36000000 * before)
+        return c.time
+    }
+
     fun getTime24(timestamp: Int, format: String): String {
         val calendar = Calendar.getInstance(Locale.ENGLISH)
         calendar.timeInMillis = timestamp.times(1000L)

@@ -3,6 +3,7 @@ package com.blood.db.datasource
 import com.blood.db.dao.BloodPressureDAO
 import com.blood.db.datasource.interfacedatasource.IBloodPressureDataSource
 import com.blood.db.entity.BloodPressureEntity
+import java.util.Date
 import javax.inject.Inject
 
 class BloodPressureDataSource @Inject constructor(private val bloodPressureDAO: BloodPressureDAO) :
@@ -15,14 +16,20 @@ class BloodPressureDataSource @Inject constructor(private val bloodPressureDAO: 
         return bloodPressureDAO.getBloodPressureByID(id)
     }
 
-    override suspend fun getListBloodPressureByProfileID(
+    override suspend fun getListBloodPressure(profileId: Long): List<BloodPressureEntity>? {
+        return bloodPressureDAO.getAllBloodPressure(profileId)
+    }
+
+    override suspend fun getListBloodPressureByFilterDate(
+        profileId: Long, fromDate: Date?, toDate: Date?
+    ): List<BloodPressureEntity>? {
+        return bloodPressureDAO.getBloodPressureFilterDate(profileId, fromDate, toDate)
+    }
+
+    override suspend fun getTopBloodPressure(
         profileId: Long, top: Int
     ): List<BloodPressureEntity>? {
-        return if (top == 0) {
-            bloodPressureDAO.getAllBloodPressure(profileId)
-        } else {
-            bloodPressureDAO.getTopBloodPressure(profileId, top)
-        }
+        return bloodPressureDAO.getTopBloodPressure(profileId, top)
     }
 
     override suspend fun updateBloodPressure(bloodPressureEntity: BloodPressureEntity) {

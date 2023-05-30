@@ -14,6 +14,7 @@ import com.blood.data.BloodPressure
 import com.blood.ui.adapters.BloodPressureAdapter
 import com.blood.utils.AppUtils.isNotNull
 import com.blood.utils.DateUtils.strDateTime
+import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.shawnlin.numberpicker.NumberPicker
 import java.util.Date
@@ -126,5 +127,12 @@ class BindingUtils {
         fun View.visibleIfNotZero(int: Int?) {
             this.visibility = if (int != null && int > 0) View.VISIBLE else View.GONE
         }
+
+        @JvmStatic
+        @BindingAdapter("headerListener")
+        fun HeaderView.headerListener(listener: HeaderView.Listener?) {
+            this.listener = listener
+        }
+
     }
 }

@@ -4,6 +4,7 @@ import com.blood.data.BloodPressure
 import com.blood.data.mapping.MappingData.toBloodPressure
 import com.blood.db.datasource.interfacedatasource.IBloodPressureDataSource
 import com.blood.db.entity.BloodPressureEntity
+import java.util.Date
 import javax.inject.Inject
 
 class BloodPressureRepository @Inject constructor(
@@ -24,7 +25,7 @@ class BloodPressureRepository @Inject constructor(
         return null
     }
 
-    suspend fun updateBloodPressure(bloodPressure: BloodPressure): BloodPressure? {
+    suspend fun updateBloodPressure(bloodPressure: BloodPressure): BloodPressure {
         iBloodPressureDataSource.updateBloodPressure(
             BloodPressureEntity.fromBloodPressure(
                 bloodPressure
@@ -38,8 +39,28 @@ class BloodPressureRepository @Inject constructor(
         return iBloodPressureDataSource.getBloodPressureByID(id).toBloodPressure()
     }
 
-    suspend fun getListBloodPressureByID(profileId: Long, top: Int = 0): List<BloodPressure> {
-        var listData = iBloodPressureDataSource.getListBloodPressureByProfileID(profileId, top)
+    suspend fun getTopBloodPressureByID(
+        profileId: Long, top: Int = 0
+    ): List<BloodPressure> {
+        var listData = if (top > 0) iBloodPressureDataSource.getTopBloodPressure(
+            profileId, top
+        ) else iBloodPressureDataSource.getListBloodPressure(profileId)
+
+        if (listData == null) {
+            listData = mutableListOf()
+        }
+
+        return listData.map { it.toBloodPressure() }
+    }
+
+    suspend fun getListBloodPressureByFilterDate(
+        profileId: Long, fromDate: Date? = null, toDate: Date? = null
+    ): List<BloodPressure> {
+        var listData = if (fromDate != null || toDate != null) {
+            iBloodPressureDataSource.getListBloodPressureByFilterDate(profileId, fromDate, toDate)
+        } else {
+            iBloodPressureDataSource.getListBloodPressure(profileId)
+        }
         if (listData == null) {
             listData = mutableListOf()
         }

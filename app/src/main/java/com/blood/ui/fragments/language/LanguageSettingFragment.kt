@@ -1,6 +1,8 @@
 package com.blood.ui.fragments.language
 
 import android.content.Intent
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
@@ -10,13 +12,20 @@ import com.blood.data.Language
 import com.blood.ui.adapters.LanguageSettingAdapter
 import com.blood.utils.LanguageUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
+import com.blood.utils.customview.HeaderView
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentLanguageSettingBinding
 
 
 class LanguageSettingFragment : BaseFragment<BaseViewModel, FragmentLanguageSettingBinding>(
     R.layout.fragment_language_setting, BaseViewModel::class.java
-), BaseRecyclerViewListener<Language> {
+), BaseRecyclerViewListener<Language>, HeaderView.Listener {
+
+    override fun init(inflater: LayoutInflater, container: ViewGroup) {
+        super.init(inflater, container)
+        binding.setVariable(BR.languageSettingFragment, this)
+    }
 
     override fun initData() {
         val languages = LanguageUtils.languageListItems(requireContext())
@@ -28,11 +37,8 @@ class LanguageSettingFragment : BaseFragment<BaseViewModel, FragmentLanguageSett
         binding.rcvLanguage.adapter = LanguageSettingAdapter(languages, this)
     }
 
-    override fun initListener() {
-        super.initListener()
-        binding.btnBack.clickWithDebounce {
-            findNavController().navigateUp()
-        }
+    override fun onHeaderBackPressed() {
+        findNavController().navigateUp()
     }
 
     override fun onClick(data: Language, position: Int) {
@@ -40,8 +46,7 @@ class LanguageSettingFragment : BaseFragment<BaseViewModel, FragmentLanguageSett
         LanguageUtils.changeLanguage(requireContext(), data.code)
 
         val intent = requireActivity().intent
-        intent.flags =
-            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
         intent.putExtra(Constant.KEY_START_SPLASH_FROM, true)
         requireActivity().finish()
         startActivity(intent)
