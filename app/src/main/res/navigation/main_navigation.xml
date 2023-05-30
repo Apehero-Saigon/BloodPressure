@@ -156,8 +156,8 @@
             android:id="@+id/action_bloodPressureDetailFragment_to_bloodPressureEditFragment"
             app:destination="@id/bloodPressureEditFragment" />
         <action
-            android:id="@+id/action_bloodPressureDetailFragment_to_infoDetailFragment"
-            app:destination="@id/infoDetailFragment" />
+            android:id="@+id/action_bloodPressureDetailFragment_to_limitValuesFragment"
+            app:destination="@id/limitValuesFragment" />
     </fragment>
 
     <fragment

@@ -95,6 +95,7 @@
     </string>
     <string name="recommendations_normal">Here are some tips to improve your blood pressure.\n • Drink more water. Dehydration can cause temporary drop in blood pressure.\n• Follow a healthy diet. Increase salt content in food if you have Low blood pressure.\n• If the pressure is low and you are taking any medication – check their side effects.\n• Eat small low carb meals.\n• Avoid alcohol consumption or have it only in moderation.\n• Include some form of exercise in your daily routine. Exercises such as brisk walking and swimming can help in circulation of blood. Besides it keeps you young both in your mind and body and is a great de-stressor.</string>
     <string name="recommendations_hypertension_stage_2">Here are some tips to reduce your blood pressure.\n • Quit smoking. Besides damaging your lungs smoking constricts blood vessels and increases your blood pressure making it hard for your heart to beat.\n• Avoid alcohol consumption or have it only in moderation. Alcohol increases your blood pressure to unhealthy levels.\n• Follow a healthy diet. Avoid too much salt in food.\n• Lose weight. Obese people are more likely to suffer from high blood pressure.\n• Exercise regularly. It helps prevent High blood pressure and Diabetes. Besides it keeps you young both in your mind and body and is a great de-stressor.\n• Drink enough water daily.\n• Avoid stress.</string>
+    <string name="recommendations_hypertension_stage_3">Here are some tips to reduce your blood pressure.\n • Quit smoking. Besides damaging your lungs smoking constricts blood vessels and increases your blood pressure making it hard for your heart to beat.\n• Avoid alcohol consumption or have it only in moderation. Alcohol increases your blood pressure to unhealthy levels.\n• Follow a healthy diet. Avoid too much salt in food.\n• Lose weight. Obese people are more likely to suffer from high blood pressure.\n• Exercise regularly. It helps prevent High blood pressure and Diabetes. Besides it keeps you young both in your mind and body and is a great de-stressor.\n• Drink enough water daily.\n• Avoid stress.</string>
     <string name="recommendations_emergency_care_needed">Here are some tips to reduce your blood pressure.\n • Quit smoking. Besides damaging your lungs smoking constricts blood vessels and increases your blood pressure making it hard for your heart to beat.\n• Avoid alcohol consumption or have it only in moderation. Alcohol increases your blood pressure to unhealthy levels.\n• Follow a healthy diet. Avoid too much salt in food.\n• Lose weight. Obese people are more likely to suffer from high blood pressure.\n• Exercise regularly. It helps prevent High blood pressure and Diabetes. Besides it keeps you young both in your mind and body and is a great de-stressor.\n• Drink enough water daily.\n• Avoid stress.</string>
     <string name="measured_at">Measured at</string>
     <string name="measured_at_format">Measured at: %s</string>
@@ -393,7 +394,7 @@
         \n<b>S — Speech</b>: Ask the person to repeat a simple phrase. Is their speech slurred or strange?
         \n<b>T — Time</b>: If you observe any of these signs, call for help immediately. Early treatment is essential.
         \n\nSource: https://www.nhlbi.nih.gov/</string>
-    <string name="low">Low</string>
+    <string name="lower">Lower</string>
     <string name="systole_range_low"><![CDATA[< 90]]></string>
     <string name="diastole_range_low"><![CDATA[(<60)]]></string>
 
@@ -462,4 +463,5 @@
     <string name="high_normal">High Normal</string>
     <string name="hypertension_stage_3">HypertensionStage 3</string>
     <string name="and_or">and/or</string>
+    <string name="Hypertensive_crisis">Hypertensive crisis</string>
 </resources>

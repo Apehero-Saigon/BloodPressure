@@ -27,11 +27,11 @@ class LimitValueAdapter(callback: BaseRecyclerViewListener<LimitValue>? = null) 
 
                 tvName.setText(data.name)
 
-                tvSys.text = data.sys.getTextMaxMin()
-                tvSys.background.setTint(context.colorCompat(data.sys.color))
+                tvSys.text = data.sys!!.getTextMaxMin()
+                tvSys.background.setTint(context.colorCompat(data.sys!!.color))
 
-                tvDia.text = data.sys.getTextMaxMin()
-                tvDia.background.setTint(context.colorCompat(data.sys.color))
+                tvDia.text = data.dia!!.getTextMaxMin()
+                tvDia.background.setTint(context.colorCompat(data.dia!!.color))
 
                 tvOpera.setText(data.opera)
             }

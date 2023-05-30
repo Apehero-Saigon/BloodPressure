@@ -8,9 +8,10 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
-import com.blood.data.InfoKnowledge
+import com.blood.data.Recommended
 import com.blood.ui.dialog.YesNoPopup
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
+import com.blood.utils.AssetUtils.getJsonDataFromAsset
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.customview.HeaderView
@@ -18,6 +19,8 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentBloodPressureDetailBinding
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class BloodPressureDetailFragment :
     BaseFragment<BloodPressureViewModel, FragmentBloodPressureDetailBinding>(
@@ -41,6 +44,7 @@ class BloodPressureDetailFragment :
     override fun initData() {
         FirebaseUtils.eventDisplayBloodPressureResult()
         viewModel.getBloodPressureByID(args.id)
+        loadAssetRecommend()
     }
 
     override fun initListener() {
@@ -61,9 +65,7 @@ class BloodPressureDetailFragment :
 
             btnHelp.clickWithDebounce {
                 val action =
-                    BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToInfoDetailFragment(
-                        InfoKnowledge.getListBloodPressure()[5]
-                    )
+                    BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToLimitValuesFragment()
                 findNavController().navigate(action)
             }
         }
@@ -134,5 +136,15 @@ class BloodPressureDetailFragment :
         } finally {
             popupMenu.show()
         }
+    }
+
+    fun loadAssetRecommend() {
+        val jsonFileString = getJsonDataFromAsset(requireContext(), "recommends.json")
+
+        val gson = Gson()
+        val listPersonType = object : TypeToken<List<Recommended>>() {}.type
+
+        var persons: List<Recommended> = gson.fromJson(jsonFileString, listPersonType)
+        println("asds $persons")
     }
 }

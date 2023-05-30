@@ -28,10 +28,10 @@ class BloodPressureAdapter(val list: List<BloodPressure>, val callback: Callback
             with(binding) {
                 tvSystoleAndDiastole.text = data.getSystoleAndDiastole()
                 tvPulse.text = data.pulse.toString()
-                tvConclusion.setText(data.getStatus())
+                tvConclusion.setText(data.getStatus().name)
                 tvConclusion.setTextColor(
                     ContextCompat.getColor(
-                        tvPulse.context, data.getStatusColor()
+                        tvPulse.context, data.getStatus().selectedColor
                     )
                 )
                 tvCreatedAt.text = tvPulse.context.getString(

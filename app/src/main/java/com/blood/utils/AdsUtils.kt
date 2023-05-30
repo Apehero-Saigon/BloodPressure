@@ -432,6 +432,7 @@ class AdsUtils {
             notLoadIfReady: Boolean = true,
             listener: Listener? = null
         ) {
+            return
             if (notLoadIfReady && !mustReloadAds()) return
             if (isReloadFailAds) {
                 resetDataAds()

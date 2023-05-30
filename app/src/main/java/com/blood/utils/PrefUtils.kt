@@ -5,11 +5,17 @@ import com.blood.common.Constant
 import com.blood.data.Profile
 import com.blood.db.entity.ProfileEntity
 import com.google.gson.Gson
+import java.time.Instant
 import java.util.*
 import javax.inject.Inject
 
 class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferences) {
+    init {
+        instant = this
+    }
+
     companion object {
+        lateinit var instant: PrefUtils
         const val PREF_NAME = "blood_pressure_pref"
 
         const val KEY_LANGUAGE_FIRST_OPEN = "KEY_LANGUAGE_FIRST_OPEN"

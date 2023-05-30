@@ -62,7 +62,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_18sdp"
-            android:orientation="horizontal">
+            android:background="@color/COLOR_F5F5F5"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -140,6 +142,7 @@
             android:id="@+id/rcvLimitValue"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:padding="6dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
