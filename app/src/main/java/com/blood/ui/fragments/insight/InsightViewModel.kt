@@ -23,23 +23,21 @@ class InsightViewModel @Inject constructor() : BaseViewModel() {
 
 
     val listBloodObserver = MutableLiveData<List<BloodPressure>>().apply { value = mutableListOf() }
-    val listFilterBloodObserver =
-        MutableLiveData<List<BloodPressure>>().apply { value = mutableListOf() }
 
     fun loadListBlood(filterType: FilterType, withLoading: Boolean = false) {
         if (withLoading) {
             isLoading.postValue(true)
         }
+        checkCount()
         launchOnUITryCatch({
             val listBloods = withContext(Dispatchers.IO) {
                 if (filterType == FilterType.ALL) {
                     bloodPressureRepository.getTopBloodPressureByID(prefUtils.profile!!.id)
                 } else {
-                    val startDate = DateUtils.getCurrentDate()
-                    val endDate =
-                        DateUtils.getDateBefore(if (filterType == FilterType.WEEK) 7 else 31)
+                    val startDate =
+                        DateUtils.getDateBefore(if (filterType == FilterType.WEEK) 7 else 3600)
                     bloodPressureRepository.getListBloodPressureByFilterDate(
-                        prefUtils.profile!!.id, endDate, startDate
+                        prefUtils.profile!!.id, startDate, DateUtils.getCurrentDate()
                     )
                 }
             }

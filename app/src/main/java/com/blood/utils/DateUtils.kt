@@ -29,9 +29,9 @@ object DateUtils {
     }
 
     fun getDateBefore(before: Int): Date {
-        val c = Calendar.getInstance()
-        c.timeInMillis = c.timeInMillis - (36000000 * before)
-        return c.time
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.DAY_OF_YEAR, -before)
+        return calendar.time
     }
 
     fun getTime24(timestamp: Int, format: String): String {

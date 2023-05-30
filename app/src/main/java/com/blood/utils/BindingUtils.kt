@@ -129,6 +129,12 @@ class BindingUtils {
         }
 
         @JvmStatic
+        @BindingAdapter("visibleIfZero")
+        fun View.visibleIfZero(int: Int?) {
+            this.visibility = if (int == null || int <= 0) View.VISIBLE else View.GONE
+        }
+
+        @JvmStatic
         @BindingAdapter("headerListener")
         fun HeaderView.headerListener(listener: HeaderView.Listener?) {
             this.listener = listener

@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:headerListener="@{insightBloodPressureFragment}"
-            app:headerTitle="@string/language"
+            app:headerTitle="@string/blood_pressure"
             app:showBackButton="true" />
 
         <ScrollView
@@ -43,7 +43,7 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:visibility="gone"
-                    app:visibleIfNotEmpty="@{viewModel.listBloodObserver}"
+                    app:visibleIfNotZero="@{viewModel.countBloodObserver}"
                     tools:visibility="visible">
 
                     <LinearLayout
@@ -134,7 +134,7 @@
                     android:paddingStart="38dp"
                     android:paddingEnd="38dp"
                     android:visibility="gone"
-                    app:visibleIfEmpty="@{viewModel.listBloodObserver}">
+                    app:visibleIfZero="@{viewModel.countBloodObserver}">
 
                     <TextView
                         android:layout_width="match_parent"
