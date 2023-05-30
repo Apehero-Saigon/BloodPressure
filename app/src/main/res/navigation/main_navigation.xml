@@ -59,6 +59,9 @@
         <action
             android:id="@+id/action_homeFragment_to_bloodPressureEditFragment"
             app:destination="@id/bloodPressureEditFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_limitValuesFragment"
+            app:destination="@id/limitValuesFragment" />
     </fragment>
 
     <fragment
@@ -187,4 +190,9 @@
         android:id="@+id/insightBloodPressureFragment"
         android:name="com.blood.ui.fragments.insight.InsightBloodPressureFragment"
         tools:layout="@layout/fragment_insight_blood_pressure" />
+
+    <fragment
+        android:id="@+id/limitValuesFragment"
+        android:name="com.blood.ui.fragments.limitvalues.LimitValuesFragment"
+        tools:layout="@layout/fragment_limit_values" />
 </navigation>

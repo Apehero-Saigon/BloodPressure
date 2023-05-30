@@ -18,6 +18,7 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         const val KE_CURRENT_PROFILE = "KE_CURRENT_PROFILE"
         const val KE_MUST_SHOW_INTER_INFO = "KE_MUST_SHOW_INTER_INFO"
         const val KE_MUST_SHOW_INTER_DETAIL = "KE_MUST_SHOW_INTER_DETAIL"
+        const val KEY_LIMIT_VALUE_TYPE = "KEY_LIMIT_VALUE_TYPE"
 
         // Key remote
         const val REMOTE_SHOW_APPOPEN_RESUME = "appopen_resume"
@@ -50,142 +51,148 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         }
         set(value) {
             val profileStr = if (value != null) Gson().toJson(value) else null
-            preferenceHelper?.edit()?.putString(KE_CURRENT_PROFILE, profileStr)?.apply()
+            preferenceHelper.edit().putString(KE_CURRENT_PROFILE, profileStr).apply()
         }
 
     var defaultLanguage: String
-        get() = preferenceHelper?.getString(KE_DEFAULT_LANGUAGE, Constant.LANGUAGE_EN)
+        get() = preferenceHelper.getString(KE_DEFAULT_LANGUAGE, Constant.LANGUAGE_EN)
             ?: Constant.LANGUAGE_EN
         set(value) {
-            preferenceHelper?.edit()?.putString(KE_DEFAULT_LANGUAGE, value)?.apply()
+            preferenceHelper.edit().putString(KE_DEFAULT_LANGUAGE, value).apply()
         }
 
     var isShowLanguageFirstOpen: Boolean
-        get() = preferenceHelper?.getBoolean(KEY_LANGUAGE_FIRST_OPEN, true) ?: true
+        get() = preferenceHelper.getBoolean(KEY_LANGUAGE_FIRST_OPEN, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(KEY_LANGUAGE_FIRST_OPEN, value)?.apply()
+            preferenceHelper.edit().putBoolean(KEY_LANGUAGE_FIRST_OPEN, value).apply()
         }
 
     var isShowOnBoardingFirstOpen: Boolean
-        get() = preferenceHelper?.getBoolean(KEY_ONBOARDING_FIRST_OPEN, true) ?: true
+        get() = preferenceHelper.getBoolean(KEY_ONBOARDING_FIRST_OPEN, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(KEY_ONBOARDING_FIRST_OPEN, value)?.apply()
+            preferenceHelper.edit().putBoolean(KEY_ONBOARDING_FIRST_OPEN, value).apply()
         }
 
     var mustShowInterInfo: Boolean
-        get() = preferenceHelper?.getBoolean(KE_MUST_SHOW_INTER_INFO, true) ?: true
+        get() = preferenceHelper.getBoolean(KE_MUST_SHOW_INTER_INFO, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(KE_MUST_SHOW_INTER_INFO, value)?.apply()
+            preferenceHelper.edit().putBoolean(KE_MUST_SHOW_INTER_INFO, value).apply()
         }
 
     var mustShowInterDetail: Boolean
-        get() = preferenceHelper?.getBoolean(KE_MUST_SHOW_INTER_DETAIL, true) ?: true
+        get() = preferenceHelper.getBoolean(KE_MUST_SHOW_INTER_DETAIL, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(KE_MUST_SHOW_INTER_DETAIL, value)?.apply()
+            preferenceHelper.edit().putBoolean(KE_MUST_SHOW_INTER_DETAIL, value).apply()
         }
 
     var isShowAppOpenResume: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_APPOPEN_RESUME, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_APPOPEN_RESUME, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_APPOPEN_RESUME, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_APPOPEN_RESUME, value).apply()
         }
 
     var isShowAppOpenSplash: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_APPOPEN_SPLASH, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_APPOPEN_SPLASH, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_APPOPEN_SPLASH, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_APPOPEN_SPLASH, value).apply()
         }
 
     var isShowBannerHome: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_BANNER_HOME, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_BANNER_HOME, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_BANNER_HOME, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_BANNER_HOME, value).apply()
         }
 
     var isShowInterBloodPressureDetails: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS, value)
-                ?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS, value)
+                .apply()
         }
 
     var isShowInterBloodPressureDetailsHigh: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH, true)
-            ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH, true)
         set(value) {
-            preferenceHelper?.edit()
-                ?.putBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH, value)
+                .apply()
         }
 
     var isShowInterInfo: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_INTER_INFO, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_INFO, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_INTER_INFO, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INFO, value).apply()
         }
 
     var isShowInterInfoHigh: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_INTER_INFO_HIGH, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_INFO_HIGH, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_INTER_INFO_HIGH, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INFO_HIGH, value).apply()
         }
 
     var isShowInterMeasure: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_INTER_MEASURE, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_MEASURE, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_INTER_MEASURE, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_MEASURE, value).apply()
         }
 
     var isShowInterMeasureHigh: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_INTER_MEASURE_HIGH, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_MEASURE_HIGH, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_INTER_MEASURE_HIGH, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_MEASURE_HIGH, value).apply()
         }
 
     var isShowInterSave: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_INTER_SAVE, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_SAVE, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_INTER_SAVE, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_SAVE, value).apply()
         }
 
     var isShowInterSaveHigh: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_INTER_SAVE_HIGH, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_SAVE_HIGH, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_INTER_SAVE_HIGH, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_SAVE_HIGH, value).apply()
         }
 
     var isShowInterSplash: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_INTER_SPLASH, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_SPLASH, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_INTER_SPLASH, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_SPLASH, value).apply()
         }
 
     var isShowNativeLanguage: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_NATIVE_LANGUAGE, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_LANGUAGE, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_NATIVE_LANGUAGE, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_LANGUAGE, value).apply()
         }
 
     var isShowNativeOnBoarding: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_NATIVE_ONBOARDING, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_ONBOARDING, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_NATIVE_ONBOARDING, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_ONBOARDING, value).apply()
         }
 
     var isShowNativeRecentAction: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_NATIVE_RECENT_ACTION, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_RECENT_ACTION, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_NATIVE_RECENT_ACTION, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_RECENT_ACTION, value).apply()
         }
 
     var isShowNativeBloodPressure: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE, value).apply()
         }
 
     var isShowBannerCreateUser: Boolean
-        get() = preferenceHelper?.getBoolean(REMOTE_SHOW_BANNER_CREATE_USER, true) ?: true
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_BANNER_CREATE_USER, true)
         set(value) {
-            preferenceHelper?.edit()?.putBoolean(REMOTE_SHOW_BANNER_CREATE_USER, value)?.apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_BANNER_CREATE_USER, value).apply()
+        }
+
+    var typeLimitValue: String
+        get() = preferenceHelper.getString(KEY_LIMIT_VALUE_TYPE, Constant.ACC_AHA_2017)
+            ?: Constant.ACC_AHA_2017
+        set(value) {
+            preferenceHelper.edit().putString(KEY_LIMIT_VALUE_TYPE, value).apply()
         }
 }

@@ -81,7 +81,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
 
     override fun initData() {
         FirebaseUtils.eventSplashScreen()
-        if (openByChangeLanguage()) {
+        if (!openByChangeLanguage()) {
             val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
             findNavController().navigate(action)
         }

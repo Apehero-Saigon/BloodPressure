@@ -126,9 +126,7 @@ object DateUtils {
             TimePickerDialog.OnTimeSetListener { _, hourSelected, minuteSelected ->
                 listener?.onTimeSelected(minuteSelected, hourSelected)
             }
-        val timePickerDialog = TimePickerDialog(
-            context, AlertDialog.THEME_HOLO_LIGHT, timeSetListener, hour, minute, true
-        )
+        val timePickerDialog = TimePickerDialog(context, timeSetListener, hour, minute, true)
         timePickerDialog.show()
     }
 

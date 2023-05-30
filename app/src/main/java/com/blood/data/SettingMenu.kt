@@ -8,7 +8,7 @@ constructor(val icon: Int, val name: Int, val type: Type) : BaseData {
     companion object {
 
         enum class Type {
-            USER, LANGUAGE, PRIVACY, RATE, TERM, DISCLAIMER
+            USER, LANGUAGE, PRIVACY, RATE, TERM, DISCLAIMER, LIMIT_VALUES
         }
 
         fun getList(): List<SettingMenu> {
@@ -23,11 +23,14 @@ constructor(val icon: Int, val name: Int, val type: Type) : BaseData {
                 SettingMenu(R.drawable.ic_term_of_service, R.string.term_of_service, Type.TERM)
             val disclaimer =
                 SettingMenu(R.drawable.ic_disclaimer, R.string.disclaimer, Type.DISCLAIMER)
+            val limitValue =
+                SettingMenu(R.drawable.ic_disclaimer, R.string.limit_values, Type.LIMIT_VALUES)
 
             list.add(language)
             list.add(privacy)
             list.add(term)
             list.add(disclaimer)
+            list.add(limitValue)
             return list
         }
     }

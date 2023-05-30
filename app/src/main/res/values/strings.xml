@@ -453,4 +453,13 @@
     <string name="_1m">1M</string>
     <string name="yours_record">Your records</string>
     <string name="plus_add">+ Add</string>
+    <string name="limit_values">Limit Values</string>
+    <string name="_2017_acc_aha">2017 ACC/AHA</string>
+    <string name="_2018_esc_esh">2018 ESC/ESH</string>
+    <string name="category">Category</string>
+    <string name="and">and</string>
+    <string name="optimal">Optimal</string>
+    <string name="high_normal">High Normal</string>
+    <string name="hypertension_stage_3">HypertensionStage 3</string>
+    <string name="and_or">and/or</string>
 </resources>
