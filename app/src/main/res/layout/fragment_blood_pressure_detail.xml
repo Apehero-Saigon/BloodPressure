@@ -7,7 +7,7 @@
 
         <import type="android.view.View" />
 
-        <import type="com.blood.utils.ColorUtils" />
+        <import type="com.blood.data.BloodPressure" />
 
         <variable
             name="bloodPressureDetailFragment"
@@ -282,7 +282,7 @@
                                 android:text="@string/systole"
                                 android:textColor="@color/color_text_normal"
                                 android:textSize="16sp"
-                                app:bindColorTint="@{ColorUtils.getColorSystolic(viewModel.bloodPressureObserver.systole)}" />
+                                app:bindColorTint="@{BloodPressure.getColorSystolic(viewModel.bloodPressureObserver.systole)}" />
                         </LinearLayout>
 
                         <TextView
@@ -322,7 +322,7 @@
                                 android:text="@string/diastole"
                                 android:textColor="@color/color_text_normal"
                                 android:textSize="16sp"
-                                app:bindColorTint="@{ColorUtils.getColorDiastolic(viewModel.bloodPressureObserver.diastole)}" />
+                                app:bindColorTint="@{BloodPressure.getColorDiastolic(viewModel.bloodPressureObserver.diastole)}" />
                         </LinearLayout>
 
                         <TextView

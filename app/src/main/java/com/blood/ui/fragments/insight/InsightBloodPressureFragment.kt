@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
 import com.blood.common.enumdata.FilterType
 import com.blood.data.BloodPressure
@@ -14,11 +13,9 @@ import com.blood.ui.fragments.home.HomeFragmentDirections
 import com.blood.ui.fragments.home.IHomeUi
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
-import com.blood.utils.ViewUtils.gone
 import com.blood.utils.customview.HeaderView
 import com.blood.utils.customview.chart.CandleChart
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentInsightBloodPressureBinding
 
@@ -45,22 +42,6 @@ class InsightBloodPressureFragment :
     override fun init(inflater: LayoutInflater, container: ViewGroup) {
         super.init(inflater, container)
         binding.setVariable(BR.insightBloodPressureFragment, this)
-    }
-
-    override fun initAds() {
-//        if (isNetworkConnected() && prefUtils.isShowNativeRecentAction) {
-//            adsUtils.nativeRecentAction.showAds(
-//                requireActivity(),
-//                BuildConfig.native_recent_action,
-//                null,
-//                R.layout.layout_native_medium_custom,
-//                binding.flAds,
-//                false,
-//                reloadAfterShow = true
-//            )
-//        } else {
-//            binding.flAds.gone()
-//        }
     }
 
     override fun initData() {

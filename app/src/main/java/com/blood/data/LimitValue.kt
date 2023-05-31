@@ -7,8 +7,8 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 
 
 data class LimitValue(
-    var sys: Limit?,
-    var dia: Limit?,
+    var sys: Limit,
+    var dia: Limit,
     @StringRes var name: Int,
     @StringRes var opera: Int,
     @ColorRes var selectedColor: Int = 0
@@ -131,6 +131,9 @@ data class LimitValue(
 }
 
 data class Limit(var max: Int = 0, var min: Int = 0, @ColorRes var color: Int) {
+
+    fun contains(num: Int) = num in min..max || (min == 0 && num < max) || (max == 0 && num > min)
+
     fun getTextMaxMin(): String {
         return if (max > 0 && min > 0) {
             "$min - $max"

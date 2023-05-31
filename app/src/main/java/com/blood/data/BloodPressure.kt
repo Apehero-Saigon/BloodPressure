@@ -17,6 +17,30 @@ data class BloodPressure(
     var id: Long = 0
 ) : Serializable, BaseData {
 
+    companion object {
+        @JvmStatic
+        fun getColorSystolic(systole: Int): Int {
+            return if (PrefUtils.instant.typeLimitValue == Constant.ACC_AHA_2017) {
+                LimitValue.getList2017ACCAHA().map { it.sys }.toMutableList()
+                    .findLast { sys -> sys.contains(systole) }!!.color
+            } else {
+                LimitValue.getList2018ESCESH().map { it.sys }.toMutableList()
+                    .findLast { sys -> sys.contains(systole) }!!.color
+            }
+        }
+
+        @JvmStatic
+        fun getColorDiastolic(diastole: Int): Int {
+            return if (PrefUtils.instant.typeLimitValue == Constant.ACC_AHA_2017) {
+                LimitValue.getList2017ACCAHA().map { it.dia }.toMutableList()
+                    .findLast { sys -> sys.contains(diastole) }!!.color
+            } else {
+                LimitValue.getList2018ESCESH().map { it.dia }.toMutableList()
+                    .findLast { sys -> sys.contains(diastole) }!!.color
+            }
+        }
+    }
+
     fun getSystoleAndDiastole() = "${systole}/${diastole}"
 
     fun getStatus(): LimitValue {
@@ -24,6 +48,26 @@ data class BloodPressure(
             getStatus(LimitValue.getList2017ACCAHA())
         } else {
             getStatus(LimitValue.getList2018ESCESH())
+        }
+    }
+
+    fun getColorSystolic(): Int {
+        return if (PrefUtils.instant.typeLimitValue == Constant.ACC_AHA_2017) {
+            LimitValue.getList2017ACCAHA().map { it.sys }.toMutableList()
+                .findLast { sys -> sys.contains(systole) }!!.color
+        } else {
+            LimitValue.getList2018ESCESH().map { it.sys }.toMutableList()
+                .findLast { sys -> sys.contains(systole) }!!.color
+        }
+    }
+
+    fun getColorDiastolic(): Int {
+        return if (PrefUtils.instant.typeLimitValue == Constant.ACC_AHA_2017) {
+            LimitValue.getList2017ACCAHA().map { it.dia }.toMutableList()
+                .findLast { sys -> sys.contains(systole) }!!.color
+        } else {
+            LimitValue.getList2018ESCESH().map { it.dia }.toMutableList()
+                .findLast { sys -> sys.contains(systole) }!!.color
         }
     }
 

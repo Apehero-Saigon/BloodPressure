@@ -14,8 +14,8 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.blood.common.Constant
+import com.blood.data.BloodPressure
 import com.blood.utils.AppUtils.px
-import com.blood.utils.ColorUtils
 import com.blood.utils.DateUtils.strDateTime
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.ChartCandleBinding
@@ -133,12 +133,6 @@ class CandleChart @JvmOverloads constructor(
         canvas.drawText(nextStep.toString().replace(".0", ""), 10.px, fourPosY, paintVerticalAxis)
     }
 
-    private fun drawText(canvas: Canvas, text: String, x: Float, y: Float) {
-        canvas.drawText(text, x, y, paintVerticalAxis)
-    }
-
-    fun hasData() = !listData.isNullOrEmpty()
-
     fun setData(list: List<Data> = mutableListOf(), max: Float, min: Float) {
         this.listData = list
 
@@ -203,10 +197,10 @@ class CandleChart @JvmOverloads constructor(
         }
 
         override fun onBindViewHolder(holder: ChartViewHolder, position: Int) {
-            val data = list[holder.adapterPosition]
+            val data = list[holder.absoluteAdapterPosition]
 
-            holder.standChart.colorTop = ColorUtils.getColorSystolic(data.max.toInt())
-            holder.standChart.colorBottom = ColorUtils.getColorDiastolic(data.min.toInt())
+            holder.standChart.colorTop = BloodPressure.getColorSystolic(data.max.toInt())
+            holder.standChart.colorBottom = BloodPressure.getColorDiastolic(data.min.toInt())
 
             holder.standChart.circleRadius = pointChartSize.toInt() / 2f
             holder.standChart.textSizeValue = textValueSize

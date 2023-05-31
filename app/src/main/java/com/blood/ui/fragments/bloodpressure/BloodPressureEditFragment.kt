@@ -14,6 +14,7 @@ import com.blood.ui.fragments.dashboard.DashBoardFragment
 import com.blood.ui.fragments.home.HomeFragmentDirections
 import com.blood.ui.fragments.home.IHomeUi
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
+import com.blood.utils.AppUtils.isNotNull
 import com.blood.utils.AppUtils.isNull
 import com.blood.utils.DateUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
@@ -80,11 +81,19 @@ class BloodPressureEditFragment :
                 adsUtils.interMeasure.showInterAdsBeforeNavigate(requireContext(), true) {
                     if (args.modeAdd) {
                         resetData()
-                        val action =
-                            HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
-                        action.id = bloodPressure.id
-                        action.viewDetail = false
-                        iHomeUi?.navigateTo(action)
+                        if (iHomeUi.isNotNull()) {
+                            val action =
+                                HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
+                            action.id = bloodPressure.id
+                            action.viewDetail = false
+                            iHomeUi?.navigateTo(action)
+                        } else {
+                            val action =
+                                BloodPressureEditFragmentDirections.actionBloodPressureEditFragmentToBloodPressureDetailFragment()
+                            action.id = bloodPressure.id
+                            action.viewDetail = false
+                            findNavController().navigate(action)
+                        }
                     } else {
                         findNavController().navigateUp()
                     }
