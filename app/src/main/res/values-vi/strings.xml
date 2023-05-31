@@ -60,7 +60,6 @@
     <string name="pulse">PULSE</string>
     <string name="measure">Đo</string>
     <string name="result">Kết quả</string>
-    <string name="_120_80">120/80</string>
     <string name="_80">80</string>
     <string name="measured_at_17_00pm_21_04_2023">Đã đo lúc 17:00 21.04.2023</string>
     <string name="year_of_birth_2000">Năm sinh: 2000</string>
@@ -205,8 +204,8 @@ Rất quan trọng để uống thuốc hạ huyết áp đúng cách theo hư�
     \n\nNguồn: https://www.cdc.gov/
 
     </string>
-<string name="post_04_title">Triệu chứng và nguyên nhân của tăng huyết áp</string>
-<string name="post_04_content">
+    <string name="post_04_title">Triệu chứng và nguyên nhân của tăng huyết áp</string>
+    <string name="post_04_content">
         \n\n<font size="16"><b>Làm thế nào để biết tôi có tăng huyết áp?</b></font>\n
         Chỉ có một cách để biết bạn có tăng huyết áp: hãy để bác sĩ hoặc nhân viên y tế khác đo nó. Đo huyết áp của bạn nhanh chóng và không đau.
     Nói chuyện với đội ngũ chăm sóc sức khỏe của bạn về việc đo huyết áp thường xuyên tại nhà, còn được gọi là giám sát huyết áp tự đo (SMBP).
@@ -255,8 +254,8 @@ Huyết áp được xác định bởi hai yếu tố: lượng máu tim bơm v
 
     \n\nNguồn: https://www.mayoclinic.org/"
          </string>
-<string name="post_06_title">Cách điều trị các giai đoạn khác nhau của tăng huyết áp như thế nào?</string>
-<string name="post_06_content">
+    <string name="post_06_title">Cách điều trị các giai đoạn khác nhau của tăng huyết áp như thế nào?</string>
+    <string name="post_06_content">
     Hiệp hội Tim Mỹ đã phát hành một hướng dẫn về tăng huyết áp cập nhật vào năm 2017, đưa ra các mục tiêu và khuyến nghị điều trị mới cho bệnh nhân mắc tăng huyết áp.
     Trong hướng dẫn tăng huyết áp mới, định nghĩa về tăng huyết áp đã được thay đổi để phản ánh các mục tiêu mới cho đo huyết áp tâm thu và tâm trương. Các mục tiêu huyết áp này giúp hướng dẫn quyết định lâm sàng bằng cách phân loại tăng huyết áp: huyết áp bình thường, huyết áp tăng cao, giai đoạn 1 và giai đoạn 2.1
     Trước đó, tăng huyết áp được định nghĩa là đo huyết áp tâm thu bằng 140 mmHg trở lên hoặc đo huyết áp tâm trương bằng 90 mmHg trở lên.1 Hướng dẫn cập nhật đã định nghĩa lại tăng huyết áp là đo huyết áp tâm thu bằng 130 mmHg trở lên hoặc đo huyết áp tâm trương bằng 80 mmHg trở lên.1 Do đó, bệnh nhân có đo huyết áp tâm thu từ 140/90 mmHg trở lên được xem là mắc tăng huyết áp giai đoạn 2.1
@@ -299,8 +298,8 @@ Huyết áp được xác định bởi hai yếu tố: lượng máu tim bơm v
 
     \n\nNguồn: hillrom.com
     </string>
-<string name="post_07_title">Kế hoạch ăn uống DASH là gì?</string>
-<string name="post_07_content">Mức huyết áp có thể không lành mạnh ngay cả khi chỉ cao hơn mức bình thường dưới 120/80 mmHg. Càng cao huyết áp so với mức bình thường, nguy cơ mắc bệnh càng cao. Nghiên cứu cho thấy áp lực máu giảm khi ăn một kế hoạch ăn uống ít chất béo bão hòa, cholesterol và chất béo tổng hợp, tập trung vào các loại trái cây, rau quả, sữa không chất béo hoặc ít chất béo và các sản phẩm sữa. Kế hoạch ăn uống này - được biết đến với tên gọi là kế hoạch ăn uống DASH - cũng bao gồm các sản phẩm nguyên cám, cá, thịt gia cầm và hạt. Nó ít chất béo đỏ, đường, đường được thêm vào và thức uống chứa đường so với chế độ ăn của người Mỹ thông thường. Nó giàu kali, magiê và canxi, cũng như protein và chất xơ. (Xem hộp 2 để biết các mục tiêu dinh dưỡng hàng ngày của các nghiên cứu DASH)."
+    <string name="post_07_title">Kế hoạch ăn uống DASH là gì?</string>
+    <string name="post_07_content">Mức huyết áp có thể không lành mạnh ngay cả khi chỉ cao hơn mức bình thường dưới 120/80 mmHg. Càng cao huyết áp so với mức bình thường, nguy cơ mắc bệnh càng cao. Nghiên cứu cho thấy áp lực máu giảm khi ăn một kế hoạch ăn uống ít chất béo bão hòa, cholesterol và chất béo tổng hợp, tập trung vào các loại trái cây, rau quả, sữa không chất béo hoặc ít chất béo và các sản phẩm sữa. Kế hoạch ăn uống này - được biết đến với tên gọi là kế hoạch ăn uống DASH - cũng bao gồm các sản phẩm nguyên cám, cá, thịt gia cầm và hạt. Nó ít chất béo đỏ, đường, đường được thêm vào và thức uống chứa đường so với chế độ ăn của người Mỹ thông thường. Nó giàu kali, magiê và canxi, cũng như protein và chất xơ. (Xem hộp 2 để biết các mục tiêu dinh dưỡng hàng ngày của các nghiên cứu DASH)."
 
     \n\nKế hoạch ăn uống DASH tuân thủ các hướng dẫn làm cho tim khỏe mạnh để giới hạn chất béo bão hòa và cholesterol. Nó tập trung vào tăng cường lượng thực phẩm giàu dinh dưỡng có dự kiến ​​giảm huyết áp, chủ yếu là khoáng chất (như kali, canxi và magiê), protein và chất xơ. Nó bao gồm các thực phẩm giàu dinh dưỡng để đáp ứng các yêu cầu dinh dưỡng khác như được khuyến nghị bởi Viện Y học. Nghiên cứu DASH đầu tiên bao gồm 459 người lớn có huyết áp tâm thu dưới 160 mmHg và huyết áp tâm trương từ 80-95 mmHg. Khoảng 27% số người tham gia có huyết áp cao. Khoảng 50% là phụ nữ và 60% là người Mỹ gốc Phi. Nó so sánh ba kế hoạch ăn uống: kế hoạch bao gồm thực phẩm tương tự như những gì nhiều người Mỹ thường ăn; một kế hoạch bao gồm thực phẩm tương tự như những gì nhiều người Mỹ thường ăn cộng với nhiều hoa quả và rau củ hơn; và kế hoạch ăn uống DASH. Cả ba kế hoạch đều bao gồm khoảng 3.000 miligam muối mỗi ngày. Không có kế hoạch ăn chay hay sử dụng các loại thực phẩm đặc biệt. Kết quả đạt được rất ấn tượng. Những người tham gia tuân thủ cả kế hoạch bao gồm nhiều hoa quả và rau củ hơn và kế hoạch ăn uống DASH đều có tác dụng làm giảm huyết áp. Nhưng kế hoạch ăn uống DASH có tác dụng lớn nhất, đặc biệt là đối với những người có huyết áp cao. Hơn nữa, sự giảm huyết áp đến rất nhanh - trong vòng 2 tuần kể từ khi bắt đầu kế hoạch.
 
@@ -308,8 +307,8 @@ Huyết áp được xác định bởi hai yếu tố: lượng máu tim bơm v
 
     \n\nNguồn: HƯỚNG DẪN CỦA BẠN ĐỂ GIẢM HUYẾT ÁP VỚI DASH - Viện tim, phổi và máu Quốc gia của Viện Sức khỏe Quốc gia.
     </string>
-<string name="post_09_title">Hiểu đọc kết quả huyết áp</string>
-<string name="post_09_content">
+    <string name="post_09_title">Hiểu đọc kết quả huyết áp</string>
+    <string name="post_09_content">
    \n\n<font size="16"><b>Số đo huyết áp của bạn có nghĩa gì?</b></font>\n
    \nCách duy nhất để biết bạn có huyết áp cao (HBP, hoặc tăng huyết áp) hay không là đo huyết áp. Hiểu kết quả của bạn là chìa khóa để kiểm soát tình trạng tăng huyết áp.
    \n\nPhạm vi huyết áp lành mạnh và bất lợi
@@ -350,8 +349,8 @@ Năm phạm vi huyết áp (BP) được công nhận bởi Hiệp hội Tim M�
 Nguồn: https://www.heart.org/
 
     </string>
-<string name="post_10_title">Triệu chứng và nguyên nhân huyết áp thấp</string>
-<string name="post_10_content">
+    <string name="post_10_title">Triệu chứng và nguyên nhân huyết áp thấp</string>
+    <string name="post_10_content">
 
     Huyết áp thấp xảy ra khi máu chảy qua các mạch máu của bạn với áp suất thấp hơn bình thường. Thuật ngữ y tế cho huyết áp thấp là huyết áp thấp.\n\nHuyết áp là lực đẩy của máu đẩy vào tường động mạch khi tim bơm máu. Nó thường được mô tả là hai con số: huyết áp tâm thu và huyết áp tâm trương. Hai số này ghi lại huyết áp trong đơn vị milimét thủy ngân (mm Hg), với huyết áp tâm thu được liệt kê phía trên huyết áp tâm trương.\n\nĐối với hầu hết người lớn, huyết áp bình thường thường thấp hơn 120/80 mm Hg. Huyết áp thấp là huyết áp thấp hơn 90/60 mm Hg.\n\nMột số người có huyết áp thấp suốt cả thời gian và đó là bình thường đối với họ. Những người khác có thể gặp phải một sự giảm đột ngột trong huyết áp hoặc có huyết áp thấp có thể liên quan đến vấn đề sức khỏe. Điều này có thể nguy hiểm, vì có thể có nghĩa là tim, não hoặc các cơ quan quan trọng khác của bạn không được đủ lưu lượng máu và bạn có nguy cơ mắc bệnh đột quỵ hoặc nhồi máu cơ tim.
 
@@ -385,8 +384,8 @@ Thuốc điều trị ca
 
 Bạn có thể không cần điều trị cho huyết áp thấp. Tùy thuộc vào triệu chứng của bạn, điều trị có thể bao gồm uống nhiều nước để ngăn ngừa sự mất nước, sử dụng thuốc để tăng huyết áp hoặc điều chỉnh thuốc gây huyết áp thấp. \nBác sĩ của bạn có thể nói chuyện với bạn về các thay đổi lối sống, bao gồm thay đổi thực đơn, cách bạn ngồi và đứng lên. Bác sĩ của bạn cũng có thể đề xuất  bạn nên sử dụng tất chống trầy xước nếu bạn đứng lâu trong một thời gian dài.\n\nNguồn: https://www.nhlbi.nih.gov/
          </string>
-<string name="post_11_title">Huyết áp tăng cao? Đại dịch COVID-19 có thể gây ra vấn đề này</string>
-<string name="post_11_content">
+    <string name="post_11_title">Huyết áp tăng cao? Đại dịch COVID-19 có thể gây ra vấn đề này</string>
+    <string name="post_11_content">
 Đó là một sự thật mà ít ai có thể bác bỏ: Đại dịch COVID-19 đã gây ra những tác động nghiêm trọng đối với người Mỹ. Nó đã gây ra tỷ lệ cao về tử vong và bệnh tật, làm đảo lộn gần như mọi khía cạnh của cuộc sống hàng ngày, và được liên kết với tăng cao về bệnh tim, bệnh phổi, béo phì và vấn đề về giấc ngủ. \n\nBây giờ, các nhà nghiên cứu được tài trợ bởi NHLBI nói rằng virus và stress liên quan cũng có thể được coi là nguyên nhân gây ra tình trạng tăng huyết áp ở người Mỹ.\n\nMột nghiên cứu quan sát lớn, được xuất bản gần đây trong tạp chí Circulation, đã đánh giá dữ liệu sức khỏe từ hơn nửa triệu người Mỹ từ 50 bang và Quận Columbia. Nó phát hiện ra sự tăng nhỏ nhưng quan trọng về áp lực máu trung bình trong giai đoạn đỉnh điểm ban đầu của đại dịch.\n\nTất cả các người tham gia nghiên cứu được đăng ký trong một chương trình chăm sóc sức khỏe do nhà tài trợ của họ tổ chức yêu cầu đo huyết áp hàng năm bởi nhân viên có đào tạo trong suốt giai đoạn ba năm được phân tích, từ 2018-2020.\n\nNghiên cứu này đã phát hiện ra rằng huyết áp tâm thu trung bình - con số trên trong kết quả đo huyết áp - tăng khoảng 2 milimet thủy ngân (mm Hg) từ tháng 4 năm 2020 đến tháng 12 năm 2020 - được xem là giai đoạn đỉnh điểm của đại dịch. Áp lực tâm trương trung bình - con số dưới - cũng tăng một chút. Huyết áp bình thường là ít hơn 120/80 mm Hg. \n\nTrái lại, không có sự thay đổi nào được báo cáo trong số đo áp huyết trung bình trong giai đoạn 15 tháng trước đại dịch COVID-19 từ tháng 1 năm 2019 đến khi đại dịch bùng phát (từ tháng 4 năm 2020 đến tháng 12 năm 2020). Giai đoạn sau có sự ra lệnh giữ ở nhà và phong tỏa rộng rãi.\n\n"Điều đó đáng lo ngại", Luke Laffin, M.D., tác giả chính của nghiên cứu và cộng tác viên chủ chốt của Trung tâm Rối loạn Huyết áp tại Cleveland Clinic, cho biết. "Ở cấp độ cá nhân, điều đó (tăng 2 mm Hg) dường như không nhiều. Nhưng chúng tôi biết rằng một tăng huyết áp nhỏ có thể gây ra một sự gia tăng đáng kể về đột quỵ và nhồi máu cơ tim trên toàn dân" - điều này có thể dẫn đến tử vong. Tăng huyết áp, hay tăng áp lực máu, cũng có thể tăng nguy cơ mắc các biến chứng nghiêm trọng hơn từ bệnh COVID-19.\n\nỞ Mỹ, khoảng một nửa người lớn có tăng huyết áp, nhưng chỉ có khoảng một trong bốn (24%) được kiểm soát.
         \n\n\n\nLaffin cho biết có nhiều yếu tố đằng sau sự tăng trưởng trên toàn quốc, bắt đầu bằng việc giảm chăm sóc y tế đang diễn ra trong đại dịch. Theo Laffin, những người mắc tăng huyết áp không đến gặp bác sĩ thường xuyên, điều này có nghĩa là nhiều người không dùng thuốc chống tăng huyết áp của mình. Trong đại dịch, ước tính khoảng 40% người lớn ở Hoa Kỳ báo cáo tránh chăm sóc y tế do lo ngại liên quan đến COVID-19, theo một báo cáo năm 2020 từ Trung tâm Kiểm soát và Phòng ngừa Dịch bệnh.
 \n\n\n\nĐối với những người không mắc tăng huyết áp, Laffin nói rằng sự tăng này có thể liên quan đến sự thay đổi trong các mẫu ăn uống. Cụ thể, nghiên cứu cho thấy sự tiêu thụ natri hoặc muối quá mức. "Chúng tôi biết rằng nguyên nhân chính liên quan đến các mẫu ăn uống của huyết áp là sự thừa natri, vì vậy trong thời gian đại dịch, người ta có thể đã ăn các loại thực phẩm chứa muối nhiều hơn".\n\nCăng thẳng, mà đã được biết đến từ lâu làm tăng huyết áp, cũng có thể đóng một vai trò quan trọng trong nhóm nghiên cứu này. "Chúng ta biết rằng nếu người ta không xử lý tốt căng thẳng, điều đó ảnh hưởng đến lối sống của họ", Laffin nói. "Họ không ăn đúng, họ uống nhiều rượu hơn, họ không ngủ đủ giấc".\n\nCác kết quả này được hỗ trợ bởi ít nhất hai nghiên cứu theo dõi huyết áp trên toàn quốc khác cho thấy sự tăng đột ngột trong các đọc số huyết áp trong giai đoạn này. Laffin loại bỏ các giải thích khác cho sự tăng lên, bao gồm béo phì, tăng huyết áp do virus và chính vắc-xin. Ông nói bằng chứng trong nghiên cứu này không hỗ trợ những yếu tố đó.\n\nSự tăng đột ngột lớn nhất được trải qua bởi phụ nữ, chiếm một nửa số người tham gia nghiên cứu.
@@ -397,10 +396,10 @@ Lawrence Fine, M.D., Dr.P.H., cố vấn cấp cao của Phân nhánh Ứng dụ
 
 Nguồn: https://www.nhlbi.nih.gov/
     </string>
-<string name = "post_12_title"> Sống với huyết áp cao </string>
-<string name = "post_12_content"> Quan trọng là phải thường xuyên đo huyết áp và biết số của bạn, vì huyết áp cao thường không gây ra triệu chứng cho đến khi nó gây ra những vấn đề nghiêm trọng.
+    <string name="post_12_title"> Sống với huyết áp cao </string>
+    <string name="post_12_content"> Quan trọng là phải thường xuyên đo huyết áp và biết số của bạn, vì huyết áp cao thường không gây ra triệu chứng cho đến khi nó gây ra những vấn đề nghiêm trọng.
 
-<font size = "16"> <b> Mẹo quản lý huyết áp cao tại nhà </b> </font> \ n
+<font size="16"> <b> Mẹo quản lý huyết áp cao tại nhà </b> </font> \ n
 
     Nếu bạn đã được chẩn đoán mắc bệnh cao huyết áp, thì rất quan trọng là bạn tiếp tục kế hoạch điều trị của mình. Bạn cần chăm sóc theo dõi định kỳ và nên tìm hiểu cách giám sát tình trạng của mình tại nhà. Bác sĩ của bạn có thể cần thay đổi hoặc bổ sung thuốc trong kế hoạch điều trị của bạn theo thời gian.\n\nHãy thông báo cho nhà cung cấp dịch vụ chăm sóc sức khỏe của bạn biết nếu bạn đang dự định có thai. \n\n<font size="16"><b>Quản lý tình trạng của bạn</b></font>\nHãy tiếp tục kế hoạch điều trị của bạn, bao gồm những thay đổi lối sống lành mạnh, để giúp kiểm soát huyết áp của bạn và ngăn ngừa bệnh tim. Thay đổi lối sống và nhớ uống thuốc mỗi ngày có thể khó khăn, nhưng có một số công cụ để giúp bạn.\n\nHỏi nhà cung cấp dịch vụ chăm sóc sức khỏe hoặc nhà thuốc của bạn về các ứng dụng để giám sát và theo dõi huyết áp của bạn. Họ cũng có thể biết cách nhận tin nhắn nhắc bạn nhớ uống thuốc mỗi ngày và thông báo cho bạn khi đến lúc điền đơn thuốc của mình.\nCó sự hỗ trợ từ người thân và cộng đồng của bạn. Hãy đến khám bác sĩ và kiểm tra định kỳ theo chỉ dẫn của nhà cung cấp dịch vụ chăm sóc sức khỏe. Hỏi câu hỏi và thảo luận về tiến độ của bạn. Thông báo cho nhà cung cấp dịch vụ chăm sóc sức khỏe của bạn về bất kỳ điều kiện mới nào hoặc nếu bạn đã sử dụng thuốc mới kể từ cuộc hẹn cuối cùng của mình.\nNhà cung cấp dịch vụ chăm sóc sức khỏe của bạn có thể muốn bạn kiểm tra huyết áp của mình tại nhà hoặc tại các địa điểm khác có trang thiết bị đo huyết áp. Chẩn đoán cung cấp lời nhắc nhở về cách chuẩn bị cho kiểm tra huyết áp và cách tự kiểm tra huyết áp của bạn.\n
     \n\n<font size="16"><b>Biết khi nào gọi cấp cứu khi có biến chứng</b></font>\n
@@ -437,4 +436,55 @@ Nguồn: https://www.nhlbi.nih.gov/
     <string name="click_here_for_reference"><u>Nhấp vào đây để tham khảo</u></string>
     <string name="disclaimer_content">Ứng dụng chăm sóc sức khỏe của chúng tôi cung cấp chức năng nhập và theo dõi duy nhất. Chúng tôi cung cấp kết quả và đề xuất dựa trên các nguồn tin đáng tin cậy và đáng tin cậy, được trích dẫn rõ ràng trên nền tảng của chúng tôi. Mục tiêu của chúng tôi là mang đến cho người dùng trải nghiệm đáng tin cậy và dễ sử dụng. Tuy nhiên, xin lưu ý rằng chúng tôi không phải là một dịch vụ chăm sóc sức khỏe, và để có kết quả chính xác nhất, chúng tôi khuyến nghị mạnh mẽ liên hệ với bệnh viện, phòng khám hoặc bác sĩ gần nhất. Cảm ơn bạn đã sử dụng ứng dụng của chúng tôi, và chúng tôi chân thành chúc bạn sức khỏe tốt.
     </string>
+    <string name="reference">Tham khảo</string>
+    <string name="install">Cài đặt</string>
+    <string name="loading">Đang tải</string>
+    <string name="cannot_add_profile">Không thể thêm hồ sơ</string>
+    <string name="number_picker_formatter">%04d</string>
+    <string name="add_your_record">Thêm hồ sơ của bạn</string>
+    <string name="edit_your_record">Chỉnh sửa hồ sơ của bạn</string>
+    <string name="date">Ngày</string>
+    <string name="time">Thời gian</string>
+    <string name="sys_mmhg">SYS (mmHg)</string>
+    <string name="dia_mmhg">DIA (mmHg)</string>
+    <string name="note">Ghi chú</string>
+    <string name="cannot_add_blood_pressure">Không thể thêm huyết áp</string>
+    <string name="doing">Đang thực hiện</string>
+    <string name="save_your_record">Lưu hồ sơ của bạn</string>
+    <string name="sys">SYS</string>
+    <string name="mmhg">(mmHg)</string>
+    <string name="dia">DIA</string>
+    <string name="dd_mm_yyyy" translatable="false">%d/%d/%d</string>
+    <string name="mm_hh" translatable="false">%2d:%2d</string>
+    <string name="saving">Đang lưu</string>
+    <string name="two_dot">:</string>
+    <string name="note_format">Ghi chú: %s</string>
+    <string name="recently">Gần đây</string>
+    <string name="see_all">Xem tất cả</string>
+    <string name="empty_data">Dữ liệu trống</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
+    <string name="delete_blood_success_msg">Xóa thành công dữ liệu huyết áp</string>
+    <string name="all">Tất cả</string>
+    <string name="_1w">1 tuần</string>
+    <string name="_1m">1 tháng</string>
+    <string name="yours_record">Hồ sơ của bạn</string>
+    <string name="plus_add">+ Thêm</string>
+    <string name="limit_values">Giới hạn giá trị</string>
+    <string name="_2017_acc_aha">2017 ACC/AHA</string>
+    <string name="_2018_esc_esh">2018 ESC/ESH</string>
+    <string name="category">Danh mục</string>
+    <string name="and">và</string>
+    <string name="optimal">Tối ưu</string>
+    <string name="high_normal">Bình thường cao</string>
+    <string name="hypertension_stage_3">Huyết áp giai đoạn 3</string>
+    <string name="and_or">và/hoặc</string>
+    <string name="Hypertensive_crisis">Khủng hoảng huyết áp</string>
+    <string name="source_ex">"Nguồn: "</string>
+    <string name="source_2017_acc_aha"><b>Nguồn: </b><u>https://www.acc.org/~/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Guidelines/2017/Guidelines_Made_Simple_2017_HBP.pdf</u></string>
+    <string name="source_2018_esc_esh"><b>Nguồn: </b><u>https://academic.oup.com/eurheartj/article/39/33/3021/5079119</u></string>
+    <string name="which_limit_values_are_you_prefer">Bạn ưa thích giới hạn giá trị nào?</string>
+    <string name="_2018_esc_esh_content">(Hội Tim mạch Châu Âu,\nHội Huyết áp Châu Âu)</string>
+    <string name="_2017_acc_aha_content">(Học viện Tim mạch Mỹ,\nHiệp hội Tim mạch Mỹ)</string>
+    <string name="lower">Thấp hơn</string>
 </resources>

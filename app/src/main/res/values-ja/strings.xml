@@ -68,7 +68,6 @@
 
 
     <string name="result">結果</string>
-    <string name="_120_80">120/80</string>
     <string name="_80">80</string>
     <string name="measured_at_17_00pm_21_04_2023">計測日時: 2023年4月21日 17:00</string>
     <string name="year_of_birth_2000">生年月日: 2000年</string>
@@ -415,4 +414,55 @@ eBook をダウンロードして、高血圧のさまざまな段階を治療�
     <string name="disclaimer">免責事項</string>
     <string name="disclaimer_italic"><u>免責事項</u></string>
     <string name="click_here_for_reference"><u>参照のためここをクリックしてください</u></string>
+    <string name="reference">参考</string>
+    <string name="install">インストール</string>
+    <string name="loading">読み込み中</string>
+    <string name="cannot_add_profile">プロフィールを追加できません</string>
+    <string name="number_picker_formatter">%04d</string>
+    <string name="add_your_record">記録を追加する</string>
+    <string name="edit_your_record">記録を編集する</string>
+    <string name="date">日付</string>
+    <string name="time">時間</string>
+    <string name="sys_mmhg">SYS (mmHg)</string>
+    <string name="dia_mmhg">DIA (mmHg)</string>
+    <string name="note">メモ</string>
+    <string name="cannot_add_blood_pressure">血圧を追加できません</string>
+    <string name="doing">実行中</string>
+    <string name="save_your_record">記録を保存する</string>
+    <string name="sys">SYS</string>
+    <string name="mmhg">(mmHg)</string>
+    <string name="dia">DIA</string>
+    <string name="dd_mm_yyyy" translatable="false">%d/%d/%d</string>
+    <string name="mm_hh" translatable="false">%2d:%2d</string>
+    <string name="saving">保存中</string>
+    <string name="two_dot">：</string>
+    <string name="note_format">メモ：%s</string>
+    <string name="recently">最近</string>
+    <string name="see_all">すべてを表示</string>
+    <string name="empty_data">データがありません</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="delete_blood_success_msg">血液を正常に削除しました</string>
+    <string name="all">すべて</string>
+    <string name="_1w">1週間</string>
+    <string name="_1m">1ヶ月</string>
+    <string name="yours_record">あなたの記録</string>
+    <string name="plus_add">追加 +</string>
+    <string name="limit_values">基準値</string>
+    <string name="_2017_acc_aha">2017 ACC/AHA</string>
+    <string name="_2018_esc_esh">2018 ESC/ESH</string>
+    <string name="category">カテゴリー</string>
+    <string name="and">および</string>
+    <string name="optimal">最適</string>
+    <string name="high_normal">高めの正常</string>
+    <string name="hypertension_stage_3">高血圧ステージ3</string>
+    <string name="and_or">および/または</string>
+    <string name="Hypertensive_crisis">高血圧危機</string>
+    <string name="source_ex">"情報源: "</string>
+    <string name="source_2017_acc_aha"><b>情報源: </b><u>https://www.acc.org/~/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Guidelines/2017/Guidelines_Made_Simple_2017_HBP.pdf</u></string>
+    <string name="source_2018_esc_esh"><b>情報源: </b><u>https://academic.oup.com/eurheartj/article/39/33/3021/5079119</u></string>
+    <string name="which_limit_values_are_you_prefer">どの基準値を選択しますか？</string>
+    <string name="_2018_esc_esh_content">(European Society of Cardiology,\nEuropean Society of Hypertension)</string>
+    <string name="_2017_acc_aha_content">(American College of Cardiology,\nAmerican Heart Association)</string>
+    <string name="lower">下限</string>
 </resources>

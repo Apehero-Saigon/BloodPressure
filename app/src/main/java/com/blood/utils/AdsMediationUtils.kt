@@ -39,21 +39,21 @@ class AdsMediationUtils {
         fun init(application: Application, listDeviceTest: List<String>) {
             Log.d("MobileAds", "Init MobileAds")
             MobileAds.initialize(application) { initializationStatus: InitializationStatus ->
-                val statusMap =
-                    initializationStatus.adapterStatusMap
+                val statusMap = initializationStatus.adapterStatusMap
                 for (adapterClass in statusMap.keys) {
                     val status = statusMap[adapterClass]
                     Log.d(
                         "MobileAds", String.format(
                             "Adapter name: %s, Description: %s, Latency: %d",
-                            adapterClass, status!!.description, status.latency
+                            adapterClass,
+                            status!!.description,
+                            status.latency
                         )
                     )
                 }
             }
-            val requestConfiguration = RequestConfiguration.Builder()
-                .setTestDeviceIds(listDeviceTest)
-                .build()
+            val requestConfiguration =
+                RequestConfiguration.Builder().setTestDeviceIds(listDeviceTest).build()
             MobileAds.setRequestConfiguration(requestConfiguration)
             MobileAds.registerRtbAdapter(PangleMediationAdapter::class.java)
             MobileAds.registerRtbAdapter(VungleMediationAdapter::class.java)
@@ -89,11 +89,8 @@ class AdsMediationUtils {
             }
 
             private fun buildNewConfig(): PAGConfig? {
-                return PAGConfig.Builder()
-                    .appId(PANGLE_APP_ID)
-                    .debugLog(BuildConfig.build_debug)
-                    .supportMultiProcess(true)
-                    .build()
+                return PAGConfig.Builder().appId(PANGLE_APP_ID).debugLog(BuildConfig.build_debug)
+                    .supportMultiProcess(true).build()
             }
         }
     }
@@ -119,9 +116,7 @@ class AdsMediationUtils {
                         )
                     }
                 })
-                val configuration = MobileAds.getRequestConfiguration()
-                    .toBuilder()
-                    .build()
+                val configuration = MobileAds.getRequestConfiguration().toBuilder().build()
                 MobileAds.setRequestConfiguration(configuration)
             }
         }
@@ -132,10 +127,7 @@ class AdsMediationUtils {
         companion object {
             fun init(context: Context, listDeviceTest: List<String>) {
                 AppLovinSdk.getInstance(
-                    APPLOVIN_APP_ID,
-                    AppLovinSdkSettings(context).apply {
-                    },
-                    context
+                    APPLOVIN_APP_ID, AppLovinSdkSettings(context).apply {}, context
                 ).initializeSdk()
                 AppLovinSdk.getInstance(context).mediationProvider = AppLovinMediationProvider.MAX
             }

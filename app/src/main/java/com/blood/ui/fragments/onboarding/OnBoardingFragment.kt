@@ -99,6 +99,7 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
                 requireActivity(),
                 BuildConfig.native_onboarding,
                 null,
+                null,
                 R.layout.native_medium,
                 binding.flAds
             )

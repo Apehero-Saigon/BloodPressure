@@ -19,7 +19,6 @@ import com.blood.utils.PrefUtils
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentSplashBinding
-import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdError
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
@@ -44,7 +43,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
 
         if (prefUtils.isShowNativeLanguage && prefUtils.isShowLanguageFirstOpen) {
             adsUtils.nativeLanguage.loadAds(
-                requireActivity(), BuildConfig.native_language, null, R.layout.native_medium
+                requireActivity(), BuildConfig.native_language, null, null, R.layout.native_medium
             )
         }
 
@@ -54,17 +53,20 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
                 requireActivity(),
                 BuildConfig.native_onboarding,
                 null,
+                null,
                 R.layout.layout_native_control
             )
             App.adsUtils.nativeOnBoarding2.loadAds(
                 requireActivity(),
                 BuildConfig.native_onboarding,
                 null,
+                null,
                 R.layout.layout_native_control
             )
             App.adsUtils.nativeOnBoarding3.loadAds(
                 requireActivity(),
                 BuildConfig.native_onboarding,
+                null,
                 null,
                 R.layout.layout_native_control
             )
@@ -152,29 +154,30 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private fun onShowSplashScreen() {
         if (fetchRemoteConfig == FetchRemoteConfig.DONE) {
             if (SplashType.OPEN_SPLASH == splashLoadType) {
-                AppOpenManager.getInstance()
-                    .showAppOpenSplash(requireActivity() as AppCompatActivity?,
-                        object : AdCallback() {
-                            override fun onNextAction() {
-                                super.onNextAction()
-                                goToMainScreen()
-                            }
+                AppOpenManager.getInstance().showAppOpenSplash(
+                    requireActivity() as AppCompatActivity?,
+                    object : AdCallback() {
+                        override fun onNextAction() {
+                            super.onNextAction()
+                            goToMainScreen()
+                        }
 
-                            override fun onAdFailedToShow(adError: AdError?) {
-                                super.onAdFailedToShow(adError)
-                                if ((requireActivity() as? BaseActivity<*, *>)?.isOnResume == false) {
-                                    errorShowAdsInBackground = true
-                                }
-                                goToMainScreen()
+                        override fun onAdFailedToShow(adError: AdError?) {
+                            super.onAdFailedToShow(adError)
+                            if ((requireActivity() as? BaseActivity<*, *>)?.isOnResume == false) {
+                                errorShowAdsInBackground = true
                             }
+                            goToMainScreen()
+                        }
 
-                            override fun onAdClosed() {
-                                super.onAdClosed()
-                                goToMainScreen()
-                            }
-                        })
+                        override fun onAdClosed() {
+                            super.onAdClosed()
+                            goToMainScreen()
+                        }
+                    })
             } else if (SplashType.INTERSTITIAL == splashLoadType) {
-                AperoAd.getInstance().onShowSplash(requireActivity() as AppCompatActivity,
+                AperoAd.getInstance().onShowSplash(
+                    requireActivity() as AppCompatActivity,
                     object : AperoAdCallback() {
                         override fun onNextAction() {
                             super.onNextAction()

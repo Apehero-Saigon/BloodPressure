@@ -64,7 +64,7 @@ android {
             dimension "type"
             buildConfigField("String", "FLAVOR_buildEnv", '"dev"')
 
-            manifestPlaceholders = [ ad_app_id:"ca-app-pub-6548166688052880~8502263167" ]
+            manifestPlaceholders = [ad_app_id: "ca-app-pub-6548166688052880~8502263167"]
             buildConfigField "String", "appopen_splash", "\"ca-app-pub-3940256099942544/3419835294\""
             buildConfigField "String", "appopen_resume", "\"ca-app-pub-3940256099942544/3419835294\""
             buildConfigField "String", "banner_home", "\"ca-app-pub-3940256099942544/6300978111\""
@@ -99,7 +99,7 @@ android {
             dimension "type"
             buildConfigField("String", "FLAVOR_buildEnv", '"prod"')
 
-            manifestPlaceholders = [ ad_app_id:"ca-app-pub-6548166688052880~8502263167" ]
+            manifestPlaceholders = [ad_app_id: "ca-app-pub-6548166688052880~8502263167"]
             buildConfigField "String", "appopen_splash", "\"ca-app-pub-6548166688052880/5601380035\""
             buildConfigField "String", "appopen_resume", "\"ca-app-pub-6548166688052880/8076296299\""
             buildConfigField "String", "banner_home", "\"ca-app-pub-6548166688052880/7817329896\""
@@ -190,8 +190,8 @@ android {
 
         // net
         implementation "com.squareup.retrofit2:retrofit:2.9.0"
-        implementation  "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
-        implementation  "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+        implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
+        implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
         implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
 
         // Gson
@@ -205,15 +205,15 @@ android {
 
         // for apero ads
         implementation 'com.facebook.shimmer:shimmer:0.5.0'
-        implementation 'apero-inhouse:apero-ads:1.0.6-alpha05'
+        implementation 'apero-inhouse:apero-ads:1.0.6-alpha07'
 
         //ads
         implementation 'com.google.android.gms:play-services-ads:22.1.0'
-        implementation  'com.google.ads.mediation:applovin:11.9.0.0'
-        implementation  'com.google.ads.mediation:vungle:6.12.1.1'
-        implementation  'com.google.ads.mediation:pangle:5.2.0.3.0'
-        implementation  'com.google.ads.mediation:ironsource:7.3.0.1.0'
-        implementation  'com.google.ads.mediation:mintegral:16.4.41.0'
+        implementation 'com.google.ads.mediation:applovin:11.9.0.0'
+        implementation 'com.google.ads.mediation:vungle:6.12.1.1'
+        implementation 'com.google.ads.mediation:pangle:5.2.0.3.0'
+        implementation 'com.google.ads.mediation:ironsource:7.3.0.1.0'
+        implementation 'com.google.ads.mediation:mintegral:16.4.41.0'
         implementation 'com.pangle.global:adapter-for-admob:2.0.0'
         implementation 'com.pangle.global:ads-sdk:5.2.0.3'
         implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'

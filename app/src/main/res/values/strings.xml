@@ -63,7 +63,6 @@
     <string name="pulse">PULSE</string>
     <string name="measure">Measure</string>
     <string name="result">Result</string>
-    <string name="_120_80">120/80</string>
     <string name="_80">80</string>
     <string name="measured_at_17_00pm_21_04_2023">Measured at 17:00PM 21.04.2023</string>
     <string name="year_of_birth_2000">Year of Birth: 2000</string>
@@ -394,6 +393,7 @@
         \n<b>S — Speech</b>: Ask the person to repeat a simple phrase. Is their speech slurred or strange?
         \n<b>T — Time</b>: If you observe any of these signs, call for help immediately. Early treatment is essential.
         \n\nSource: https://www.nhlbi.nih.gov/</string>
+    <string name="low">Low</string>
     <string name="lower">Lower</string>
     <string name="systole_range_low"><![CDATA[< 90]]></string>
     <string name="diastole_range_low"><![CDATA[(<60)]]></string>

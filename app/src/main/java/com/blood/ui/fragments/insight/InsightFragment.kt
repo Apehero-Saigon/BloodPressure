@@ -26,7 +26,11 @@ class InsightFragment : BaseFragment<InsightViewModel, FragmentInsightBinding>(
     override fun initAds() {
         if (isNetworkConnected() && prefUtils.isShowNativeRecentAction) {
             adsUtils.nativeRecentAction.loadAds(
-                requireActivity(), BuildConfig.native_recent_action, null, R.layout.native_medium
+                requireActivity(),
+                BuildConfig.native_recent_action,
+                null,
+                null,
+                R.layout.native_medium
             )
         }
     }

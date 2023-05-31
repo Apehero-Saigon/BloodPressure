@@ -59,6 +59,7 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
                 requireActivity(),
                 BuildConfig.native_language,
                 null,
+                null,
                 R.layout.native_medium,
                 binding.flAds
             )
