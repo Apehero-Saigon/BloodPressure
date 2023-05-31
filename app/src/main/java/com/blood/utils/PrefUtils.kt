@@ -39,11 +39,16 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         const val REMOTE_SHOW_INTER_SAVE = "inter_save"
         const val REMOTE_SHOW_INTER_SAVE_HIGH = "inter_save_high"
         const val REMOTE_SHOW_INTER_SPLASH = "inter_splash"
+        const val REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH = "inter_insight_details_high"
+        const val REMOTE_SHOW_INTER_INSIGHT_DETAILS = "inter_insight_details"
         const val REMOTE_SHOW_NATIVE_LANGUAGE = "native_language"
         const val REMOTE_SHOW_NATIVE_ONBOARDING = "native_onboarding"
         const val REMOTE_SHOW_NATIVE_RECENT_ACTION = "native_recent_action"
         const val REMOTE_SHOW_NATIVE_BLOOD_PRESSURE = "native_bloodpressure"
-        const val REMOTE_SHOW_BANNER_CREATE_USER = "banner_create_user"
+        const val REMOTE_SHOW_NATIVE_CREATE_USER = "native_create_user"
+        const val REMOTE_SHOW_NATIVE_VALUE = "native_value"
+        const val REMOTE_SHOW_NATIVE_EXIT = "native_exit"
+        const val REMOTE_SHOW_NATIVE_EXIT_HIGH = "native_exit_high"
     }
 
     var profile: Profile?
@@ -165,6 +170,18 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_SPLASH, value).apply()
         }
 
+    var isShowInterInsightDetailHigh: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH, value).apply()
+        }
+
+    var isShowInterInsightDetail: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS, value).apply()
+        }
+
     var isShowNativeLanguage: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_LANGUAGE, true)
         set(value) {
@@ -189,10 +206,28 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE, value).apply()
         }
 
-    var isShowBannerCreateUser: Boolean
-        get() = preferenceHelper.getBoolean(REMOTE_SHOW_BANNER_CREATE_USER, true)
+    var isShowNativeCreateUser: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_CREATE_USER, true)
         set(value) {
-            preferenceHelper.edit().putBoolean(REMOTE_SHOW_BANNER_CREATE_USER, value).apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_CREATE_USER, value).apply()
+        }
+
+    var isShowNativeDefaultValue: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_VALUE, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_VALUE, value).apply()
+        }
+
+    var isShowNativeExit: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_EXIT, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_EXIT, value).apply()
+        }
+
+    var isShowNativeExitHigh: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_EXIT_HIGH, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_EXIT_HIGH, value).apply()
         }
 
     var typeLimitValue: String

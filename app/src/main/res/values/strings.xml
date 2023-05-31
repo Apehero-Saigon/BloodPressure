@@ -474,4 +474,5 @@
     <string name="_2018_esc_esh_content">(European Society of Cardiology,\nEuropean Society of Hypertension)</string>
     <string name="_2017_acc_aha_content">(American College of Cardiology,\nAmerican Heart Association)</string>
     <string name="for_more_references">For more references</string>
+    <string name="exit_title">Do you really want to exit?</string>
 </resources>

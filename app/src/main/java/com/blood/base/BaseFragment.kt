@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
@@ -14,6 +15,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.blood.App
 import com.blood.base.recyclerview.BaseRecyclerViewListener
+import com.blood.ui.dialog.PopupExit
 import com.blood.utils.LanguageUtils
 import com.blood.utils.PrefUtils
 import dagger.android.AndroidInjection
@@ -35,6 +37,8 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
     lateinit var prefUtils: PrefUtils
 
     open lateinit var binding: DB
+
+    open fun backPressedWithExitPopup(): Boolean = false
     open fun init(inflater: LayoutInflater, container: ViewGroup) {
         binding = DataBindingUtil.inflate(inflater, layout, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
@@ -89,6 +93,16 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
         initView()
         initData()
         initListener()
+
+        if (backPressedWithExitPopup()) {
+            requireActivity().onBackPressedDispatcher.addCallback(
+                viewLifecycleOwner,
+                object : OnBackPressedCallback(true) {
+                    override fun handleOnBackPressed() {
+                        showPopupExit()
+                    }
+                })
+        }
     }
 
     override fun onAttach(context: Context) {
@@ -137,5 +151,9 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
 
     override fun toast(msg: String) {
         iBase?.toast(msg)
+    }
+
+    fun showPopupExit() {
+        PopupExit().show(childFragmentManager, PopupExit::class.java.simpleName)
     }
 }

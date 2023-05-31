@@ -22,10 +22,10 @@
 
         <com.blood.utils.customview.HeaderView
             android:layout_width="match_parent"
+            android:id="@+id/header"
             android:layout_height="wrap_content"
             android:visibility="@{bloodPressureEditFragment.args.mustShowBackButton ? View.VISIBLE : View.GONE}"
             app:headerListener="@{bloodPressureEditFragment}"
-            app:headerTitle="@string/edit_your_record"
             app:showBackButton="true" />
 
         <ScrollView
@@ -230,12 +230,13 @@
         </ScrollView>
 
         <FrameLayout
-            android:id="@+id/flBanner"
+            android:id="@+id/flAds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="@{bloodPressureEditFragment.args.mustShowBackButton ? View.VISIBLE : View.GONE}">
+            android:layout_marginTop="@dimen/_12sdp">
 
-            <include layout="@layout/layout_banner_control" />
+            <include layout="@layout/layout_native_medium" />
+
         </FrameLayout>
     </LinearLayout>
 </layout>

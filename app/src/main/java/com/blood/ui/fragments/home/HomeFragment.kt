@@ -14,29 +14,31 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     R.layout.fragment_home, HomeViewModel::class.java
 ), IHomeUi {
 
+    override fun backPressedWithExitPopup() = true
+
     override fun initAds() {
         binding.flBanner.loadBanner(
             requireActivity(), BuildConfig.banner_home, prefUtils.isShowBannerHome
         )
 
-        adsUtils.interMeasure.isShowHighAds = prefUtils.isShowInterMeasureHigh
-        adsUtils.interMeasure.isShowNormalAds = prefUtils.isShowInterMeasure
-        adsUtils.interMeasure.loadInterPrioritySameTime(
-            requireContext(), BuildConfig.inter_measure_high, BuildConfig.inter_measure
+        adsUtils.interSave.isShowHighAds = prefUtils.isShowInterSaveHigh
+        adsUtils.interSave.isShowNormalAds = prefUtils.isShowInterSave
+        adsUtils.interSave.loadInterPrioritySameTime(
+            requireContext(), BuildConfig.inter_save_high, BuildConfig.inter_save
+        )
+
+        adsUtils.interInsightDetail.isShowHighAds = prefUtils.isShowInterInsightDetailHigh
+        adsUtils.interInsightDetail.isShowNormalAds = prefUtils.isShowInterInsightDetail
+        adsUtils.interInsightDetail.loadInterPrioritySameTime(
+            requireContext(),
+            BuildConfig.inter_insight_details_high,
+            BuildConfig.inter_insight_details
         )
 
         adsUtils.interInfo.isShowHighAds = prefUtils.isShowInterInfoHigh
         adsUtils.interInfo.isShowNormalAds = prefUtils.isShowInterInfo
         adsUtils.interInfo.loadInterPrioritySameTime(
             requireContext(), BuildConfig.inter_info_high, BuildConfig.inter_info
-        )
-
-        adsUtils.interBloodDetails.isShowHighAds = prefUtils.isShowInterBloodPressureDetailsHigh
-        adsUtils.interBloodDetails.isShowNormalAds = prefUtils.isShowInterBloodPressureDetails
-        adsUtils.interBloodDetails.loadInterPrioritySameTime(
-            requireContext(),
-            BuildConfig.inter_bloodpressure_details_high,
-            BuildConfig.inter_bloodpressure_details
         )
     }
 

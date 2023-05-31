@@ -3,6 +3,7 @@ package com.blood.ui.fragments.profile
 import android.graphics.Typeface
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.blood.App
 import com.blood.base.BaseFragment
 import com.blood.data.Profile
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
@@ -20,11 +21,30 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
 
     val args: ProfileEditFragmentArgs by navArgs()
 
+    override fun backPressedWithExitPopup() = args.editMode == false
+
     override fun initAds() {
-        if (isNetworkConnected() && prefUtils.isShowBannerCreateUser) {
-            binding.flBanner.loadBanner(requireActivity(), BuildConfig.banner_create_user)
+        if (isNetworkConnected() && prefUtils.isShowNativeCreateUser) {
+            adsUtils.nativeCreateUser.showAds(
+                requireActivity(),
+                BuildConfig.native_onboarding,
+                null,
+                null,
+                R.layout.layout_native_medium_custom,
+                binding.flAds
+            )
         } else {
-            binding.flBanner.gone()
+            binding.flAds.gone()
+        }
+
+        if (isNetworkConnected() && prefUtils.isShowNativeDefaultValue) {
+            App.adsUtils.nativeDefaultValue.loadAds(
+                requireActivity(),
+                BuildConfig.native_value_high,
+                BuildConfig.native_value,
+                null,
+                R.layout.native_medium
+            )
         }
     }
 
@@ -65,12 +85,10 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
 
         viewModel.insertProfileObserver.observe(this.viewLifecycleOwner) { profile ->
             if (profile != null) {
-                adsUtils.interSaveProfile.showInterAdsBeforeNavigate(requireContext(), false) {
-                    prefUtils.profile = profile
-                    val action =
-                        ProfileEditFragmentDirections.actionProfileEditFragmentToMeasurementGuidelineDefaultFragment()
-                    findNavController().navigate(action)
-                }
+                prefUtils.profile = profile
+                val action =
+                    ProfileEditFragmentDirections.actionProfileEditFragmentToMeasurementGuidelineDefaultFragment()
+                findNavController().navigate(action)
             } else {
                 toast(getString(R.string.cannot_add_profile))
             }

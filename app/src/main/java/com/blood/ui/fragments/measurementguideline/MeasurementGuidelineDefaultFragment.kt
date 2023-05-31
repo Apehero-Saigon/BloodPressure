@@ -5,13 +5,32 @@ import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.common.Constant
 import com.blood.utils.ViewUtils.clickWithDebounce
+import com.blood.utils.ViewUtils.gone
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentMeasurementDefaultBinding
 
 class MeasurementGuidelineDefaultFragment :
     BaseFragment<BaseViewModel, FragmentMeasurementDefaultBinding>(
-        R.layout.fragment_measurement_guideline, BaseViewModel::class.java
+        R.layout.fragment_measurement_default, BaseViewModel::class.java
     ) {
+
+    override fun backPressedWithExitPopup() = true
+
+    override fun initAds() {
+        if (isNetworkConnected() && prefUtils.isShowNativeCreateUser) {
+            adsUtils.nativeDefaultValue.showAds(
+                requireActivity(),
+                BuildConfig.native_value_high,
+                BuildConfig.native_value,
+                null,
+                R.layout.native_medium,
+                binding.flAds
+            )
+        } else {
+            binding.flAds.gone()
+        }
+    }
 
     override fun initData() {
         super.initData()

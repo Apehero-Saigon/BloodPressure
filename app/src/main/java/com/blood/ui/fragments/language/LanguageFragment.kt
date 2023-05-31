@@ -18,6 +18,8 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
     private lateinit var adapter: LanguageAdapter
     private var isDoneSplash = false
 
+    override fun backPressedWithExitPopup() = true
+
     override fun initData() {
         FirebaseUtils.eventDisplayLanguageScreen()
         adapter = LanguageAdapter(LanguageUtils.languageListItems(requireContext()).apply {
@@ -57,8 +59,8 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
         if (isNetworkConnected() && prefUtils.isShowNativeLanguage) {
             adsUtils.nativeLanguage.showAds(
                 requireActivity(),
+                BuildConfig.native_language_high,
                 BuildConfig.native_language,
-                null,
                 null,
                 R.layout.native_medium,
                 binding.flAds

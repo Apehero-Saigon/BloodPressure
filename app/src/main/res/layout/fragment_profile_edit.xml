@@ -17,60 +17,61 @@
         android:orientation="vertical"
         tools:context=".ui.profile.ProfileCreateActivity">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:fillViewport="true"
-            android:fitsSystemWindows="true"
-            android:paddingHorizontal="@dimen/_24sdp"
-            android:scrollbars="none">
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_24sdp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:gravity="center|start"
-                        android:paddingTop="@dimen/_24sdp"
-                        android:text="@{fragment.args.editMode ? @string/update_profile : @string/create_new_profile}"
-                        android:textColor="@color/color_870026"
-                        android:textSize="@dimen/text_size_22"
-                        android:textStyle="bold"
-                        tools:text="@string/create_a_user" />
-
-                    <TextView
-                        android:id="@+id/tvSave"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:gravity="center|end"
-                        android:paddingTop="@dimen/_24sdp"
-                        android:text="@string/save"
-                        android:textColor="@color/color_FE7489"
-                        android:textSize="@dimen/text_size_18"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_italic"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_medium"
                     android:gravity="center|start"
-                    android:paddingVertical="@dimen/_12sdp"
-                    android:text="@string/let_create_first_user"
-                    android:textColor="@color/color_text_normal"
-                    android:textSize="14sp" />
+                    android:paddingTop="@dimen/_24sdp"
+                    android:text="@{fragment.args.editMode ? @string/update_profile : @string/create_new_profile}"
+                    android:textColor="@color/color_870026"
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold"
+                    tools:text="@string/create_a_user" />
+
+                <TextView
+                    android:id="@+id/tvSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center|end"
+                    android:paddingTop="@dimen/_24sdp"
+                    android:text="@string/save"
+                    android:textColor="@color/color_FE7489"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_italic"
+                android:gravity="center|start"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="@string/let_create_first_user"
+                android:textColor="@color/color_text_normal"
+                android:textSize="14sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                android:fitsSystemWindows="true"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -200,7 +201,7 @@
                         app:np_textColor="@color/color_hint"
                         app:np_textSize="@dimen/text_size_16"
                         app:np_value="55"
-                        app:np_wheelItemCount="5" />
+                        app:np_wheelItemCount="6" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -231,19 +232,20 @@
                         app:np_textColor="@color/color_hint"
                         app:np_textSize="@dimen/text_size_16"
                         app:np_value="155"
-                        app:np_wheelItemCount="5" />
+                        app:np_wheelItemCount="6" />
                 </LinearLayout>
-            </LinearLayout>
+            </ScrollView>
 
-        </ScrollView>
+        </LinearLayout>
 
         <FrameLayout
-            android:id="@+id/flBanner"
+            android:id="@+id/flAds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp">
 
-            <include layout="@layout/layout_banner_control" />
+            <include layout="@layout/layout_native_medium" />
+
         </FrameLayout>
 
     </LinearLayout>

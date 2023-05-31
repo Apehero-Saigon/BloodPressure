@@ -24,19 +24,24 @@ import com.google.android.gms.ads.nativead.NativeAdView
 class AdsUtils {
 
     // inter
-    val interBloodDetails: InterPriority = InterPriority()
-    val interMeasure: InterPriority = InterPriority()
-    val interInfo: InterPriority = InterPriority().apply {
-        showAfterClick = 1
+    val interInsightDetail: InterPriority = InterPriority().apply {
+        showAfterClick = 2
+        countShown = -2
     }
-    val interSaveProfile: InterPriority = InterPriority()
+    val interSave: InterPriority = InterPriority().apply {
+        showAfterClick = 2
+    }
+    val interInfo: InterPriority = InterPriority()
 
     // native
     val nativeOnBoarding1 = NativeAds()
     val nativeOnBoarding2 = NativeAds()
     val nativeOnBoarding3 = NativeAds()
-    val nativeAddBloodPressure = NativeAds()
+    val nativeCreateUser = NativeAds()
+    val nativeBloodPressure = NativeAds()
+    val nativeDefaultValue = NativeAds()
     val nativeLanguage = NativeAds()
+    val nativeExit = NativeAds()
     val nativeRecentAction = NativeAds()
 
     enum class Status {
@@ -102,6 +107,7 @@ class AdsUtils {
                         idAdsNativeNormal,
                         idAdsNativeLow,
                         layoutCustom,
+                        true,
                         object : AperoAdCallback() {
                             override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
                                 super.onNativeAdLoaded(nativeAd)
@@ -185,8 +191,10 @@ class AdsUtils {
             idAdsNativeNormal: String?,
             idAdsNativeLow: String?,
             @LayoutRes layoutCustom: Int,
+            notReloadIfReady: Boolean = true,
             listener: AperoAdCallback? = null
         ) {
+            if (notReloadIfReady && !isFailOrShownOrNoneAds()) return
             Log.d(
                 AdsUtils::class.java.simpleName,
                 "NativeAds loadAds: idAdsNativeHigh $idAdsNativeHigh"
@@ -284,11 +292,6 @@ class AdsUtils {
         private fun interAdsNormalLoaded(): Boolean =
             interAdsNormal?.interstitialAd != null && interAdsNormal!!.isReady
 
-        private fun resetDataAds() {
-            interAdsPriority = null
-            interAdsNormal = null
-        }
-
         fun checkAdsRepairedAll(): Boolean {
             if (interAdsPriorityLoaded() && interAdsNormalLoaded()) {
                 return true
@@ -312,11 +315,18 @@ class AdsUtils {
         }
 
         private fun checkShowBySkip(): Boolean {
-            if (showAfterClick == 0 || (showAfterClick > 0 && countShown < showAfterClick)) {
+            if (showAfterClick == 0) {
+                return true
+            }
+            if (countShown < 0) {
+                countShown++
+                return false
+            }
+            if (countShown == 0 || countShown % (showAfterClick + 1) == 0) {
                 countShown++
                 return true
             }
-            countShown = 0
+            countShown++
             return false
         }
 
@@ -415,7 +425,12 @@ class AdsUtils {
         ) {
             if (notLoadIfReady && !mustReloadAds()) return
             if (isReloadFailAds) {
-                resetDataAds()
+                if (statusHigh == Status.FAIL) {
+                    interAdsPriority = null
+                }
+                if (statusNormal == Status.FAIL) {
+                    interAdsNormal = null
+                }
             }
             this.idAdsPriority = idAdsPriority
             this.idAdsNormal = idAdsNormal

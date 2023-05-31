@@ -9,11 +9,13 @@ import com.blood.base.BaseViewModel
 import com.blood.common.Constant
 import com.blood.data.LimitValue
 import com.blood.ui.adapters.LimitValueAdapter
+import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.AppUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.textTrim
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentMeasurementGuidelineBinding
 
@@ -29,7 +31,9 @@ class MeasurementGuidelineFragment : BaseFragment<BaseViewModel, FragmentMeasure
     }
 
     override fun initAds() {
-
+        binding.flBanner.loadBanner(
+            requireActivity(), BuildConfig.banner_home, prefUtils.isShowBannerHome
+        )
     }
 
     override fun initView() {

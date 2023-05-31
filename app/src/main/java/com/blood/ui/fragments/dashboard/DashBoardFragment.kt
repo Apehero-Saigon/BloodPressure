@@ -41,7 +41,7 @@ class DashBoardFragment : BaseFragment<BloodPressureViewModel, FragmentDashboard
     }
 
     override fun onClick(data: BloodPressure, position: Int) {
-        adsUtils.interBloodDetails.showInterAdsBeforeNavigate(requireContext(), true) {
+        adsUtils.interInsightDetail.showInterAdsBeforeNavigate(requireContext(), true) {
             val action = HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
             action.id = data.id
             action.viewDetail = true

@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.LinearLayout
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
+import com.blood.App
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentOnboardingBinding
@@ -21,14 +22,22 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
     var adapter: OnBoardingPageAdapter? = null
     private val displayedPage = HashSet<Int>()
 
+    override fun backPressedWithExitPopup() = true
+
     override fun initAds() {
         displayedPage.add(OnBoardingPageAdapter.PAGE_INDEX_1)
         showNativeOnBoarding(OnBoardingPageAdapter.PAGE_INDEX_1)
         FirebaseUtils.eventDisplayOnBoarding1()
 
-        adsUtils.interSaveProfile.loadInterPrioritySameTime(
-            requireContext(), BuildConfig.inter_save_high, BuildConfig.inter_save
-        )
+        if (isNetworkConnected() && prefUtils.isShowNativeCreateUser) {
+            App.adsUtils.nativeCreateUser.loadAds(
+                requireActivity(),
+                BuildConfig.native_create_user_high,
+                BuildConfig.native_create_user,
+                null,
+                R.layout.native_medium
+            )
+        }
     }
 
     @SuppressLint("ClickableViewAccessibility")

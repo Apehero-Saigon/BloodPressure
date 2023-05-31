@@ -63,46 +63,71 @@ android {
         appDev {
             dimension "type"
             buildConfigField("String", "FLAVOR_buildEnv", '"dev"')
+            manifestPlaceholders = [ad_app_id: "ca-app-pub-4973559944609228~2720967183"]
 
-            manifestPlaceholders = [ad_app_id: "ca-app-pub-6548166688052880~8502263167"]
+            buildConfigField "String", "inter_splash", "\"ca-app-pub-3940256099942544/1033173712\""
             buildConfigField "String", "appopen_splash", "\"ca-app-pub-3940256099942544/3419835294\""
+            buildConfigField "String", "native_language", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "native_language_high", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "native_onboarding", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "native_onboarding_high", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "native_create_user", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "native_create_user_high", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "native_value", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "native_value_high", "\"ca-app-pub-3940256099942544/1044960115\""
             buildConfigField "String", "appopen_resume", "\"ca-app-pub-3940256099942544/3419835294\""
             buildConfigField "String", "banner_home", "\"ca-app-pub-3940256099942544/6300978111\""
-            buildConfigField "String", "banner_create_user", "\"ca-app-pub-3940256099942544/6300978111\""
-
-            buildConfigField "String", "native_recent_action", "\"ca-app-pub-3940256099942544/2247696110\""
-            buildConfigField "String", "inter_splash", "\"ca-app-pub-3940256099942544/1033173712\""
-            buildConfigField "String", "native_language", "\"ca-app-pub-3940256099942544/2247696110\""
-            buildConfigField "String", "native_bloodpressure", "\"ca-app-pub-3940256099942544/2247696110\""
-
-            buildConfigField "String", "native_onboarding", "\"ca-app-pub-3940256099942544/2247696110\""
-            buildConfigField "String", "native_recent_action", "\"ca-app-pub-3940256099942544/2247696110\""
-            buildConfigField "String", "inter_save_high", "\"ca-app-pub-3940256099942544/1033173712\""
-
             buildConfigField "String", "inter_save", "\"ca-app-pub-3940256099942544/1033173712\""
-            buildConfigField "String", "inter_measure_high", "\"ca-app-pub-3940256099942544/1033173712\""
-            buildConfigField "String", "inter_measure", "\"ca-app-pub-3940256099942544/1033173712\""
-
-            buildConfigField "String", "inter_bloodpressure_details_high", "\"ca-app-pub-3940256099942544/1033173712\""
-            buildConfigField "String", "inter_bloodpressure_details", "\"ca-app-pub-3940256099942544/1033173712\""
-            buildConfigField "String", "inter_info_high", "\"ca-app-pub-3940256099942544/1033173712\""
-
+            buildConfigField "String", "inter_save_high", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "inter_insight_details", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "inter_insight_details_high", "\"ca-app-pub-3940256099942544/1033173712\""
             buildConfigField "String", "inter_info", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "inter_info_high", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "native_exit", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "native_exit_high", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "native_bloodpressure", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "banner_create_user", "\"ca-app-pub-3940256099942544/6300978111\""
+            buildConfigField "String", "inter_measure", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "inter_measure_high", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "native_recent_action", "\"ca-app-pub-3940256099942544/1033173712\""
+
             buildConfigField "Boolean", "build_debug", "true"
-
-
             buildConfigField "String", "BASE_URL", "\"https://yourapi.com/\""
         }
 
         appProd {
             dimension "type"
             buildConfigField("String", "FLAVOR_buildEnv", '"prod"')
+            manifestPlaceholders = [ad_app_id: "ca-app-pub-4973559944609228~2720967183"]
 
-            manifestPlaceholders = [ad_app_id: "ca-app-pub-6548166688052880~8502263167"]
-            buildConfigField "String", "appopen_splash", "\"11111111111111\""
+            buildConfigField "String", "inter_splash", "\"ca-app-pub-4973559944609228/7908826633\""
+            buildConfigField "String", "appopen_splash", "\"ca-app-pub-4973559944609228/5146931923\""
+            buildConfigField "String", "native_language", "\"ca-app-pub-4973559944609228/4413306892\""
+            buildConfigField "String", "native_language_high", "\"ca-app-pub-4973559944609228/9533039112\""
+            buildConfigField "String", "native_onboarding", "\"ca-app-pub-4973559944609228/6320412794\""
+            buildConfigField "String", "native_onboarding_high", "\"ca-app-pub-4973559944609228/8987132259\""
+            buildConfigField "String", "native_create_user", "\"ca-app-pub-4973559944609228/5402222417\""
+            buildConfigField "String", "native_create_user_high", "\"ca-app-pub-4973559944609228/9841033013\""
+            buildConfigField "String", "native_value", "\"ca-app-pub-4973559944609228/5187472136\""
+            buildConfigField "String", "native_value_high", "\"ca-app-pub-4973559944609228/5678442635\""
+            buildConfigField "String", "appopen_resume", "\"ca-app-pub-4973559944609228/1120057000\""
+            buildConfigField "String", "banner_home", "\"ca-app-pub-4973559944609228/8160980210\""
+            buildConfigField "String", "inter_save", "\"ca-app-pub-4973559944609228/8535512595\""
+            buildConfigField "String", "inter_save_high", "\"ca-app-pub-4973559944609228/2161675931\""
+            buildConfigField "String", "inter_insight_details", "\"ca-app-pub-4973559944609228/5315340932\""
+            buildConfigField "String", "inter_insight_details_high", "\"ca-app-pub-4973559944609228/6128841100\""
+            buildConfigField "String", "inter_info", "\"ca-app-pub-4973559944609228/6021029890\""
+            buildConfigField "String", "inter_info_high", "\"ca-app-pub-4973559944609228/8703033556\""
+            buildConfigField "String", "native_exit", "\"ca-app-pub-4973559944609228/7063660581\""
+            buildConfigField "String", "native_exit_high", "\"ca-app-pub-4973559944609228/5307725789\""
+            buildConfigField "String", "native_bloodpressure", "\"ca-app-pub-4973559944609228/4787839276\""
+            buildConfigField "String", "banner_create_user", "\"ca-app-pub-4973559944609228/8894605249\""
+            buildConfigField "String", "inter_measure", "\"ca-app-pub-4973559944609228/4221735203\""
+            buildConfigField "String", "inter_measure_high", "\"ca-app-pub-4973559944609228/6628422606\""
+            buildConfigField "String", "native_recent_action", "\"ca-app-pub-4973559944609228/2329196898\""
+
 
             buildConfigField "Boolean", "build_debug", "false"
-
             buildConfigField "String", "BASE_URL", "\"https://yourapi.com/\""
         }
 

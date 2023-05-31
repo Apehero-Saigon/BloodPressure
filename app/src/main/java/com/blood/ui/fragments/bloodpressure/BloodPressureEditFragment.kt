@@ -13,11 +13,10 @@ import com.blood.ui.dialog.SaveBloodPressurePopup
 import com.blood.ui.fragments.dashboard.DashBoardFragment
 import com.blood.ui.fragments.home.HomeFragmentDirections
 import com.blood.ui.fragments.home.IHomeUi
-import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.AppUtils.isNotNull
-import com.blood.utils.AppUtils.isNull
 import com.blood.utils.DateUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
+import com.blood.utils.ViewUtils.gone
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
@@ -45,15 +44,26 @@ class BloodPressureEditFragment :
     }
 
     override fun initAds() {
-        binding.flBanner.loadBanner(
-            requireActivity(),
-            BuildConfig.banner_home,
-            args.mustShowBackButton && prefUtils.isShowBannerHome && isNetworkConnected()
-        )
+        if (isNetworkConnected() && prefUtils.isShowNativeBloodPressure) {
+            adsUtils.nativeBloodPressure.showAds(
+                requireActivity(),
+                BuildConfig.native_bloodpressure,
+                null,
+                null,
+                R.layout.layout_native_medium_custom,
+                binding.flAds,
+                false,
+                reloadAfterShow = true
+            )
+        } else {
+            binding.flAds.gone()
+        }
     }
 
     override fun initView() {
         with(binding) {
+            header.binding.tvHeader.setText(if (args.modeAdd) R.string.add_your_record else R.string.edit_your_record)
+
             pickSys.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
             pickSys.setSelectedTypeface(Typeface.defaultFromStyle(Typeface.BOLD))
 
@@ -78,7 +88,7 @@ class BloodPressureEditFragment :
         super.initListener()
         viewModel.updateBloodPressureObserver.observe(this.viewLifecycleOwner) { bloodPressure ->
             if (bloodPressure != null) {
-                adsUtils.interMeasure.showInterAdsBeforeNavigate(requireContext(), true) {
+                adsUtils.interSave.showInterAdsBeforeNavigate(requireContext(), true) {
                     if (args.modeAdd) {
                         resetData()
                         if (iHomeUi.isNotNull()) {

@@ -41,9 +41,21 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     override fun initAds() {
         if (openByChangeLanguage()) return
 
+        adsUtils.nativeExit.loadAds(
+            requireActivity(),
+            if (prefUtils.isShowNativeExitHigh) BuildConfig.native_exit_high else BuildConfig.native_exit,
+            if (prefUtils.isShowNativeExit) BuildConfig.native_exit else "",
+            null,
+            R.layout.native_medium
+        )
+
         if (prefUtils.isShowNativeLanguage && prefUtils.isShowLanguageFirstOpen) {
             adsUtils.nativeLanguage.loadAds(
-                requireActivity(), BuildConfig.native_language, null, null, R.layout.native_medium
+                requireActivity(),
+                BuildConfig.native_language_high,
+                BuildConfig.native_language,
+                null,
+                R.layout.native_medium
             )
         }
 
@@ -51,32 +63,42 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         if (isNetworkConnected() && prefUtils.isShowOnBoardingFirstOpen && prefUtils.isShowNativeOnBoarding) {
             App.adsUtils.nativeOnBoarding1.loadAds(
                 requireActivity(),
+                BuildConfig.native_onboarding_high,
                 BuildConfig.native_onboarding,
                 null,
-                null,
-                R.layout.layout_native_control
+                R.layout.native_medium,
             )
             App.adsUtils.nativeOnBoarding2.loadAds(
                 requireActivity(),
+                BuildConfig.native_onboarding_high,
                 BuildConfig.native_onboarding,
                 null,
-                null,
-                R.layout.layout_native_control
+                R.layout.native_medium
             )
             App.adsUtils.nativeOnBoarding3.loadAds(
                 requireActivity(),
+                BuildConfig.native_onboarding_high,
                 BuildConfig.native_onboarding,
                 null,
-                null,
-                R.layout.layout_native_control
+                R.layout.native_medium
             )
         }
 
-        if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen && prefUtils.profile == null) {
-            App.adsUtils.interSaveProfile.isShowHighAds = prefUtils.isShowInterSaveHigh
-            App.adsUtils.interSaveProfile.isShowNormalAds = prefUtils.isShowInterSave
-            App.adsUtils.interSaveProfile.loadInterPrioritySameTime(
-                requireContext(), BuildConfig.inter_save_high, BuildConfig.inter_save
+        if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen && prefUtils.profile == null && prefUtils.isShowNativeCreateUser) {
+            App.adsUtils.nativeCreateUser.loadAds(
+                requireActivity(),
+                BuildConfig.native_create_user_high,
+                BuildConfig.native_create_user,
+                null,
+                R.layout.native_medium
+            )
+        } else if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen && prefUtils.profile != null && prefUtils.typeLimitValue.isEmpty() && prefUtils.isShowNativeDefaultValue) {
+            App.adsUtils.nativeDefaultValue.loadAds(
+                requireActivity(),
+                BuildConfig.native_value_high,
+                BuildConfig.native_value,
+                null,
+                R.layout.native_medium
             )
         }
     }
@@ -93,23 +115,19 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         fetchRemoteConfig = FetchRemoteConfig.FETCHING
         val firebaseRemoteConfig = FirebaseRemoteConfig.getInstance()
         val configSettings = FirebaseRemoteConfigSettings.Builder().setFetchTimeoutInSeconds(5000)
-            .setMinimumFetchIntervalInSeconds(if (BuildConfig.build_debug) 3600 else 0).build()
+            .setMinimumFetchIntervalInSeconds(3600).build()
         firebaseRemoteConfig.setConfigSettingsAsync(configSettings)
 
         firebaseRemoteConfig.fetchAndActivate().addOnCompleteListener(requireActivity()) { task ->
             if (task.isSuccessful) {
-                val updated: Boolean = task.result
-                if (updated) {
-                    fetchDataRemote(firebaseRemoteConfig)
-                }
+                fetchDataRemote(firebaseRemoteConfig)
             }
             fetchRemoteConfig = FetchRemoteConfig.DONE
-            onShowSplashScreen()
+            loadSplash()
         }.addOnFailureListener {
             fetchRemoteConfig = FetchRemoteConfig.DONE
-            onShowSplashScreen()
+            loadSplash()
         }
-        loadSplash()
     }
 
     private fun fetchDataRemote(firebaseRemoteConfig: FirebaseRemoteConfig) {
@@ -137,8 +155,10 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SAVE_HIGH)
         prefUtils.isShowInterSplash =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SPLASH)
-        prefUtils.isShowInterSplash =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SPLASH)
+        prefUtils.isShowInterInsightDetailHigh =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH)
+        prefUtils.isShowInterInsightDetail =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS)
         prefUtils.isShowNativeLanguage =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE)
         prefUtils.isShowNativeOnBoarding =
@@ -147,8 +167,14 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_RECENT_ACTION)
         prefUtils.isShowNativeBloodPressure =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_BLOOD_PRESSURE)
-        prefUtils.isShowBannerCreateUser =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_BANNER_CREATE_USER)
+        prefUtils.isShowNativeCreateUser =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_CREATE_USER)
+        prefUtils.isShowNativeDefaultValue =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_VALUE)
+        prefUtils.isShowNativeExit =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT)
+        prefUtils.isShowNativeExitHigh =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT_HIGH)
     }
 
     private fun onShowSplashScreen() {
