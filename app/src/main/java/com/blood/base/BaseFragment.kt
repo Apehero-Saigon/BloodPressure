@@ -14,6 +14,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.blood.App
 import com.blood.base.recyclerview.BaseRecyclerViewListener
+import com.blood.utils.LanguageUtils
 import com.blood.utils.PrefUtils
 import dagger.android.AndroidInjection
 import dagger.android.support.DaggerFragment
@@ -77,6 +78,7 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         Log.d(TAG, "onCreateView: ")
+        LanguageUtils.loadLocale(requireContext(), prefUtils.defaultLanguage)
         init(inflater, container!!)
         return binding.root
     }

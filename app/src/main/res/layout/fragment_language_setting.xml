@@ -30,6 +30,8 @@
             android:layout_marginHorizontal="@dimen/_16sdp"
             android:layout_marginVertical="@dimen/_12sdp"
             android:layout_weight="1"
+            app:bindLanguages="@{languageSettingFragment.prefUtils.defaultLanguage}"
+            app:languageListener="@{languageSettingFragment}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="10"
             tools:listitem="@layout/item_language_setting" />

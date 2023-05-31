@@ -1,6 +1,5 @@
 package com.blood.ui.adapters
 
-import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
@@ -53,6 +52,8 @@ class LanguageAdapter(
                     notifyItemChanged(absoluteAdapterPosition)
 
                     isSelectedIndex = absoluteAdapterPosition
+
+                    listener?.onClick(data, absoluteAdapterPosition)
                 }
             }
         }

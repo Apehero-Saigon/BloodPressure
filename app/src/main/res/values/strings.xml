@@ -438,8 +438,8 @@
     <string name="sys">SYS</string>
     <string name="mmhg">(mmHg)</string>
     <string name="dia">DIA</string>
-    <string name="dd_mm_yyyy">%d/%d/%d</string>
-    <string name="mm_hh">%2d:%2d</string>
+    <string name="dd_mm_yyyy" translatable="false">%d/%d/%d</string>
+    <string name="mm_hh" translatable="false">%2d:%2d</string>
     <string name="saving">Saving</string>
     <string name="two_dot">:</string>
     <string name="note_format">Note: %s</string>
@@ -467,4 +467,7 @@
     <string name="source_ex">"Source: "</string>
     <string name="source_2017_acc_aha"><b>Source: </b><u>https://www.acc.org/~/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Guidelines/2017/Guidelines_Made_Simple_2017_HBP.pdf</u></string>
     <string name="source_2018_esc_esh"><b>Source: </b><u>https://academic.oup.com/eurheartj/article/39/33/3021/5079119</u></string>
+    <string name="which_limit_values_are_you_prefer">Which limit values are you prefer?</string>
+    <string name="_2018_esc_esh_content">(European Society of Cardiology,\nEuropean Society of Hypertension)</string>
+    <string name="_2017_acc_aha_content">(American College of Cardiology,\nAmerican Heart Association)</string>
 </resources>

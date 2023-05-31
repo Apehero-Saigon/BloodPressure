@@ -10,6 +10,7 @@ import com.blood.ui.fragments.insight.InsightBloodPressureFragment
 import com.blood.ui.fragments.insight.InsightFragment
 import com.blood.ui.fragments.language.LanguageFragment
 import com.blood.ui.fragments.language.LanguageSettingFragment
+import com.blood.ui.fragments.limitvalues.DefaultLimitValueFragment
 import com.blood.ui.fragments.limitvalues.LimitValuesFragment
 import com.blood.ui.fragments.onboarding.OnBoardingFragment
 import com.blood.ui.fragments.onboarding.OnBoardingPageFragment
@@ -72,4 +73,7 @@ abstract class FragmentModule {
 
     @ContributesAndroidInjector
     abstract fun limitValuesFragment(): LimitValuesFragment
+
+    @ContributesAndroidInjector
+    abstract fun defaultLimitValueFragment(): DefaultLimitValueFragment
 }

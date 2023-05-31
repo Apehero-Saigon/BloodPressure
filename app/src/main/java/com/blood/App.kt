@@ -10,6 +10,8 @@ import com.blood.di.AppInjector
 import com.blood.utils.AdsMediationUtils
 import com.blood.utils.AdsUtils
 import com.blood.utils.FirebaseUtils
+import com.blood.utils.LanguageUtils
+import com.blood.utils.PrefUtils
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -69,10 +71,14 @@ class App : AdsMultiDexApplication(), HasAndroidInjector {
 
         //Firebase analytics
         FirebaseUtils.init(this)
+        LanguageUtils.loadLocale(this, prefUtils.defaultLanguage)
     }
 
     @Inject
     lateinit var androidInjector: DispatchingAndroidInjector<Any>
+
+    @Inject
+    lateinit var prefUtils: PrefUtils
 
     override fun androidInjector(): AndroidInjector<Any> = androidInjector
 }

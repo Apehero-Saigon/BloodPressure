@@ -38,7 +38,7 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
                 FirebaseUtils.eventClickChooseLanguage()
                 prefUtils.defaultLanguage = chooseLang.code
                 prefUtils.isShowLanguageFirstOpen = false
-                LanguageUtils.changeLanguage(requireContext(), chooseLang.code)
+                LanguageUtils.loadLocale(requireContext(), chooseLang.code)
 
                 val action = LanguageFragmentDirections.actionLanguageFragmentToOnBoardingFragment()
                 findNavController().navigate(action)

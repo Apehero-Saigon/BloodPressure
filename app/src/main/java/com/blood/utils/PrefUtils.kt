@@ -196,8 +196,7 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         }
 
     var typeLimitValue: String
-        get() = preferenceHelper.getString(KEY_LIMIT_VALUE_TYPE, Constant.ACC_AHA_2017)
-            ?: Constant.ACC_AHA_2017
+        get() = preferenceHelper.getString(KEY_LIMIT_VALUE_TYPE, "") ?: Constant.ACC_AHA_2017
         set(value) {
             preferenceHelper.edit().putString(KEY_LIMIT_VALUE_TYPE, value).apply()
         }

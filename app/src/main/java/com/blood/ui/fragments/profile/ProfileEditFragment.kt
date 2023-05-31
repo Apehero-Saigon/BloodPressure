@@ -68,7 +68,7 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
                 adsUtils.interSaveProfile.showInterAdsBeforeNavigate(requireContext(), false) {
                     prefUtils.profile = profile
                     val action =
-                        ProfileEditFragmentDirections.actionProfileEditFragmentToHomeFragment()
+                        ProfileEditFragmentDirections.actionProfileEditFragmentToDefaultLimitValueFragment()
                     findNavController().navigate(action)
                 }
             } else {
@@ -83,7 +83,9 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
         val valueHeight = binding.pickHeight.value
         val valueBirthYear = binding.pickBirthDay.value
 
-        FirebaseUtils.eventClickCreateUser(valueBirthYear, if (valueGender == 1) "Male" else "Female")
+        FirebaseUtils.eventClickCreateUser(
+            valueBirthYear, if (valueGender == 1) "Male" else "Female"
+        )
         val newProfile = Profile(
             if (args.editMode) 0 else 1,
             valueBirthYear,

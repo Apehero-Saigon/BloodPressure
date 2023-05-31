@@ -330,6 +330,10 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
                         SplashFragmentDirections.actionSplashFragmentToProfileEditFragment()
                     action.editMode = false
                     findNavController().navigate(action)
+                } else if (prefUtils.typeLimitValue.isEmpty()) {
+                    val action =
+                        SplashFragmentDirections.actionSplashFragmentToDefaultLimitValueFragment()
+                    findNavController().navigate(action)
                 } else {
                     val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
                     findNavController().navigate(action)

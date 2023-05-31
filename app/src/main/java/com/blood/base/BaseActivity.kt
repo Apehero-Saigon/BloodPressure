@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
 import com.blood.ui.dialog.LoadingDialog
 import com.blood.utils.AdsMediationUtils
+import com.blood.utils.LanguageUtils
 import com.blood.utils.PrefUtils
 import com.ironsource.mediationsdk.IronSource
 import dagger.android.AndroidInjection
@@ -50,6 +51,7 @@ open class BaseActivity<VM : BaseViewModel, VB : ViewBinding> @Inject constructo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
+        LanguageUtils.loadLocale(this, prefUtils.defaultLanguage)
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, layoutId) as VB
         setContentView(binding.root)
