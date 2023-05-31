@@ -1,6 +1,7 @@
 package com.blood.utils
 
 import android.view.View
+import android.webkit.WebView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorRes
@@ -11,12 +12,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.blood.base.recyclerview.BaseRcvAdapter
 import com.blood.common.Constant
 import com.blood.data.BloodPressure
+import com.blood.data.Language
+import com.blood.data.Recommended
 import com.blood.ui.adapters.BloodPressureAdapter
 import com.blood.utils.AppUtils.isNotNull
 import com.blood.utils.DateUtils.strDateTime
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.shawnlin.numberpicker.NumberPicker
+import java.lang.Exception
 import java.util.Date
 
 class BindingUtils {
@@ -140,5 +146,24 @@ class BindingUtils {
             this.listener = listener
         }
 
+        @JvmStatic
+        @BindingAdapter("bindRecommendation", "languageCode")
+        fun WebView.bindRecommendation(name: String, languageCode: String) {
+            try {
+                val jsonFileString = AssetUtils.getJsonDataFromAsset(
+                    this.context, "languages/recommends_${languageCode}.json"
+                )
+
+                val listPersonType = object : TypeToken<List<Recommended>>() {}.type
+                var listRecommended: List<Recommended> =
+                    Gson().fromJson(jsonFileString, listPersonType)
+                val recommended = listRecommended.findLast { it -> it.name.equals(name, true) }
+                this.loadData(
+                    recommended?.content ?: listRecommended[0].content, "text/html", "UTF-8"
+                )
+            } catch (ex: Exception) {
+
+            }
+        }
     }
 }

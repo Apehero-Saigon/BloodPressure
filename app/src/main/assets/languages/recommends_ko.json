@@ -1,0 +1,34 @@
+[
+  {
+    "name": "lower",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>만약 낮은 혈압의 원인이 명확하지 않거나 치료 방법이 없다면, 목표는 혈압을 높이고 증상을 감소시키는 것입니다. 나이, 건강 상태 및 낮은 혈압의 유형에 따라 이를 달성하는 몇 가지 방법이 있습니다:</p><ul><li><strong>더 많은 소금을 섭취합니다.</strong></li><li><strong>더 많은 물을 마십니다.</strong></li><li><strong>압박 양말을 착용합니다.</strong></li><li><strong>약물.</strong></li></ul><p>만약 만성성 (장기적인) 직립성 저혈압이 있다면, midodrine (Orvaten)이 처방될 수 있습니다. 이 약물은 혈관의 팽창 능력을 감소시켜 혈압을 높입니다.</p><p>출처: <a style=\"text-decoration: underline;\" href=\"https://www.mayoclinic.org/\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "normal",
+    "content": "<td class=\"confluenceTd\"><p><span style=\"color: rgb(55,65,81);\">좋은 추적 결과입니다. 건강한 습관을 유지해주세요!</span></p></td>"
+  },
+  {
+    "name": "high_normal",
+    "content": "<td class=\"confluenceTd\"><p>고혈압이 증가하면 심장 질환 위험이 증가합니다. 따라서 고혈압을 통제하는 것이 매우 중요합니다. 핵심은 건강한 생활습관으로의 전환이 필요합니다. 다음의 팁을 시도해보세요:</p><ul><li>건강한 식사</li><li>소금 섭취 줄이기</li><li>체중 관리</li><li>신체활동 증가</li><li>알코올 제한</li><li>금연</li><li>스트레스 관리</li></ul><p>출처: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "optimal",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>최적의 혈압을 유지하는 것은 건강에 매우 좋은 상태입니다. 이는 당신의 혈압이 이상적인 수준에 있으며 심혈관계에 위험을 야기하지 않음을 나타냅니다.</p><p>하지만 최적의 혈압을 유지한다는 것은 완전히 위험에서 자유로워진다는 의미는 아닙니다. 장기적으로 좋은 혈압을 유지하기 위해 예방조치를 취하고 전반적인 건강 관리가 여전히 필요합니다.</p></td>"
+  },
+  {
+    "name": "elevated",
+    "content": "<td class=\"confluenceTd\"><p>고혈압이 증가하면 심장 질환 위험이 증가합니다. 따라서 고혈압을 통제하는 것이 매우 중요합니다. 핵심은 건강한 생활습관으로의 전환이 필요합니다. 다음의 팁을 시도해보세요:</p><ul><li>건강한 식사</li><li>소금 섭취 줄이기</li><li>체중 관리</li><li>신체활동 증가</li><li>알코올 제한</li><li>금연</li><li>스트레스 관리</li></ul><p>출처: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_1",
+    "content": "<td class=\"confluenceTd\"><p>많은 사람들이 건강한 수치로 혈압을 낮추거나 유지하기 위해 생활 습관을 변경함으로써 가능합니다. 다음은 몇 가지 제안입니다:</p><ul><li>건강한 식습관</li><li>알코올 섭취 제한</li><li>체중 감량</li><li>활동 증가</li><li>카페인 섭취 줄이기</li><li>금연</li></ul><p>출처: <a style=\"text-decoration: underline;\" href=\"https://www.nhs.uk/\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_2",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>많은 사람들이 건강한 수치로 혈압을 낮추거나 유지하기 위해 생활 습관을 변경함으로써 가능합니다. 다음은 몇 가지 제안입니다:</p><ul><li>건강한 식습관</li><li>알코올 섭취 제한</li><li>체중 감량</li><li>활동 증가</li><li>카페인 섭취 줄이기</li><li>금연</li></ul><p>출처: <a style=\"text-decoration: underline;\" href=\"https://www.nhs.uk/\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_3",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>5분 정도 기다리고 다시 측정해보세요. 두 번째 측정 결과가 여전히 높고 가슴 통증, 호흡 곤란, 등통증, 촉각 및 근력의 저하, 시야 변화 또는 말하는 것이 어렵다는 대상 장기 손상의 다른 증상이 없는 경우 이는 고혈압 긴급 상황으로 간주됩니다. 건강 전문가는 당신에게 약물 조정이나 추가를 권할 수 있지만, 입원이 필요한 경우는 드물다는 것을 명심하세요.</p><p>출처: <a style=\"text-decoration: underline;\" href=\"https://www.heart.org/\" class=\"external-link\" rel=\"nofollow\">https://www.heart.org/</a></p></td>"
+  }
+]

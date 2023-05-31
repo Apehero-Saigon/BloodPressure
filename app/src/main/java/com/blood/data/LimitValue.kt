@@ -11,8 +11,7 @@ data class LimitValue(
     var dia: Limit?,
     @StringRes var name: Int,
     @StringRes var opera: Int,
-    @ColorRes var selectedColor: Int = 0,
-    var sameValueSys: Boolean = false
+    @ColorRes var selectedColor: Int = 0
 ) : BaseData {
     companion object {
         fun getList2017ACCAHA(): List<LimitValue> {
@@ -91,24 +90,15 @@ data class LimitValue(
                     Limit(129, 120, R.color.color_47D598),
                     Limit(84, 80, R.color.color_47D598),
                     R.string.normal,
-                    R.string.and,
-                    sameValueSys = true
+                    R.string.and_or
                 )
             )
             list.add(
                 LimitValue(
-                    Limit(139, 130, R.color.color_47D598),
-                    Limit(89, 85, R.color.color_47D598),
+                    Limit(139, 130, R.color.color_FFC543),
+                    Limit(89, 85, R.color.color_FFC543),
                     R.string.high_normal,
-                    R.string.and
-                )
-            )
-            list.add(
-                LimitValue(
-                    Limit(129, 120, R.color.color_FFC543),
-                    Limit(80, 0, R.color.color_FFC543),
-                    R.string.elevated,
-                    R.string.and
+                    R.string.and_or
                 )
             )
             list.add(
@@ -116,7 +106,7 @@ data class LimitValue(
                     Limit(159, 140, R.color.color_FF7A00),
                     Limit(99, 90, R.color.color_FF7A00),
                     R.string.hypertension_stage_1,
-                    R.string.and
+                    R.string.and_or
                 )
             )
             list.add(
@@ -124,7 +114,7 @@ data class LimitValue(
                     Limit(179, 160, R.color.color_FF2C2C),
                     Limit(109, 100, R.color.color_FF2C2C),
                     R.string.hypertension_stage_2,
-                    R.string.and
+                    R.string.and_or
                 )
             )
             list.add(

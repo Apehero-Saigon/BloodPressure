@@ -8,6 +8,7 @@ import android.util.TypedValue
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
+import java.lang.Exception
 
 object AppUtils {
     val Int.dp: Float get() = (this / Resources.getSystem().displayMetrics.density)
@@ -27,9 +28,13 @@ object AppUtils {
     fun <T : Any> T?.isNotNull() = this != null
 
     fun openWebsite(context: Context, url: String) {
-        val uri = Uri.parse(url)
-        val intent = Intent(Intent.ACTION_VIEW, uri)
-        val intentChooser = Intent.createChooser(intent, "Select your browser to continue")
-        context.startActivity(intentChooser)
+        try {
+            val uri = Uri.parse(url)
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            val intentChooser = Intent.createChooser(intent, "Select your browser to continue")
+            context.startActivity(intentChooser)
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
     }
 }

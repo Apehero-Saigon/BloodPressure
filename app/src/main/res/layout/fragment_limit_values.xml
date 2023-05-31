@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -141,11 +142,22 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvLimitValue"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_weight="1"
             android:padding="6dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_limit_value" />
 
+        <TextView
+            android:id="@+id/tvSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:paddingHorizontal="22dp"
+            android:text="@string/source_2017_acc_aha"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="normal|italic" />
     </LinearLayout>
 </layout>

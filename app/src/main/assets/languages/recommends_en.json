@@ -1,0 +1,34 @@
+[
+  {
+    "name": "lower",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>If it's not clear what's causing low blood pressure or no treatment exists, the goal is to raise blood pressure and reduce symptoms. Depending on age, health and the type of low blood pressure, there are several ways to do this:</p><ul><li><strong>Use more salt.</strong><span>&nbsp;</span></li><li><strong>Drink more water.</strong><span>&nbsp;</span></li><li><strong>Wear compression stockings.</strong><span>&nbsp;</span></li><li><p><strong>Medications.</strong><span>&nbsp;</span></p><p>If you have long-term (chronic) orthostatic hypotension, midodrine (Orvaten) may be prescribed to raise standing blood pressure levels. This drug reduces the ability of the blood vessels to expand, which raises blood pressure.</p></li></ul><p>Source: <a href=\"https://www.mayoclinic.org/\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "normal",
+    "content": "It's good tracking. Please maintain healthy habits! "
+  },
+  {
+    "name": "high_normal",
+    "content": "<td class=\"confluenceTd\"><p style=\"text-align: left;\"><span style=\"color: rgb(8,8,8);\">As blood pressure increases, so does the risk of heart disease. That's why it's so important to control elevated blood pressure. The key is a commitment to healthy lifestyle changes. Try these tips:</span></p><ul><li>Eat healthy foods</li><li>Use less salt (sodium)</li><li>Manage weight</li><li>Increase physical activity</li><li>Limit alcohol</li><li>Don't smoke</li><li>Manage stress</li></ul><p>Source: <a href=\"https://www.mayoclinic.org/\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "optimal",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Having optimal blood pressure is a very good condition for health. It indicates that your blood pressure is at an ideal level and does not pose a risk to your cardiovascular system.</p><p>However, maintaining optimal blood pressure does not mean that you are completely free from risks. It is still necessary to take preventive measures and overall health management to sustain good blood pressure in the long term.</p></td>"
+  },
+  {
+    "name": "elevated",
+    "content": "<td class=\"confluenceTd\"><p style=\"text-align: left;\"><span style=\"color: rgb(8,8,8);\">As blood pressure increases, so does the risk of heart disease. That's why it's so important to control elevated blood pressure. The key is a commitment to healthy lifestyle changes. Try these tips:</span></p><ul><li>Eat healthy foods</li><li>Use less salt (sodium)</li><li>Manage weight</li><li>Increase physical activity</li><li>Limit alcohol</li><li>Don't smoke</li><li>Manage stress</li></ul><p>Source: <a href=\"https://www.mayoclinic.org/\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_1",
+    "content": "<td class=\"confluenceTd\"><p>Many people with high blood pressure can lower their blood pressure to a healthy range or keep their numbers in a healthy range by making lifestyle changes. Here are some suggestions:</p><ul><li style=\"list-style-type: none;\"><ul><li>Healthy diet</li><li>Limit your alcohol intake</li><li>Lose weight</li><li>Get active</li><li>Cut down on caffeine</li><li>Stop smoking</li></ul></li></ul><p>Source: <a href=\"https://www.nhs.uk/\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_2",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Many people with high blood pressure can lower their blood pressure to a healthy range or keep their numbers in a healthy range by making lifestyle changes. Here are some suggestions:</p><ul><li style=\"list-style-type: none;\"><ul><li>Healthy diet</li><li>Limit your alcohol intake</li><li>Lose weight</li><li>Get active</li><li>Cut down on caffeine</li><li>Stop smoking</li></ul></li></ul><p>Source: <a href=\"https://www.nhs.uk/\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_3",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p><span style=\"color: rgb(34,35,40);\">You should wait about <strong>five minutes</strong> and <strong>try again</strong>. If the second reading is just as high and you are not experiencing any other associated symptoms of target organ damage such as chest pain, shortness of breath, back pain, numbness/weakness, change in vision, or difficulty speaking, this would be considered a hypertensive urgency. Your healthcare professional may just have you adjust or add medications, but rarely requires hospitalization.</span></p><p><span style=\"color: rgb(34,35,40);\">Source: <a href=\"https://www.heart.org/\" class=\"external-link\" rel=\"nofollow\">https://www.heart.org/</a></span></p></td>"
+  }
+]

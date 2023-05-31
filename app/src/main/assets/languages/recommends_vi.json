@@ -1,0 +1,34 @@
+[
+  {
+    "name": "lower",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Nếu không rõ nguyên nhân gây huyết áp thấp hoặc không có phương pháp điều trị, mục tiêu là tăng huyết áp và giảm các triệu chứng. Tùy thuộc vào tuổi tác, sức khỏe và loại huyết áp thấp, có một số cách để làm điều này:</p><ul><li>Sử dụng nhiều muối hơn.</li><li>Uống nhiều nước hơn.</li><li>Mang bít tất chống áp lực.</li><li>Dùng thuốc.</li></ul><p>Nếu bạn mắc chứng hạ huyết áp đứng lâu dài (mạn tính), có thể được kê đơn midodrine (Orvaten) để tăng huyết áp đứng. Loại thuốc này giảm khả năng giãn nở của mạch máu, từ đó tăng huyết áp.</p><p>Nguồn: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "normal",
+    "content": "<td class=\"confluenceTd\"><p><span style=\"color: rgb(55,65,81);\">Theo dõi tốt lắm. Vui lòng duy trì thói quen lành mạnh!</span></p></td>"
+  },
+  {
+    "name": "high_normal",
+    "content": "<td class=\"confluenceTd\"><p>Khi huyết áp tăng cao, nguy cơ mắc bệnh tim tăng lên. Đó là lý do tại sao kiểm soát huyết áp tăng cao rất quan trọng. Chìa khóa là cam kết thay đổi lối sống lành mạnh. Hãy thử những mẹo sau đây:</p><ul><li>Ăn thực phẩm lành mạnh</li><li>Sử dụng ít muối (natri)</li><li>Quản lý cân nặng</li><li>Tăng hoạt động thể chất</li><li>Hạn chế uống rượu</li><li>Không hút thuốc</li><li>Quản lý căng thẳng</li></ul><p>Nguồn: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a>\"</p></td>"
+  },
+  {
+    "name": "optimal",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Có huyết áp lý tưởng là một tình trạng rất tốt cho sức khỏe. Nó cho thấy huyết áp của bạn ở mức lý tưởng và không gây nguy cơ cho hệ tim mạch.</p><p>Tuy nhiên, duy trì huyết áp lý tưởng không có nghĩa là bạn hoàn toàn không có rủi ro. Vẫn cần thực hiện biện pháp phòng ngừa và quản lý sức khỏe tổng thể để duy trì huyết áp tốt trong dài hạn.</p></td>"
+  },
+  {
+    "name": "elevated",
+    "content": "<td class=\"confluenceTd\"><p>Khi huyết áp tăng cao, nguy cơ mắc bệnh tim tăng lên. Đó là lý do tại sao kiểm soát huyết áp tăng cao rất quan trọng. Chìa khóa là cam kết thay đổi lối sống lành mạnh. Hãy thử những mẹo sau đây:</p><ul><li>Ăn thực phẩm lành mạnh</li><li>Sử dụng ít muối (natri)</li><li>Quản lý cân nặng</li><li>Tăng hoạt động thể chất</li><li>Hạn chế uống rượu</li><li>Không hút thuốc</li><li>Quản lý căng thẳng</li></ul><p>Nguồn: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a>\"</p></td>"
+  },
+  {
+    "name": "hypertension_stage_1",
+    "content": "<td class=\"confluenceTd\"><p>Nhiều người bị tăng huyết áp có thể hạ huyết áp về mức khoảng khỏe mạnh hoặc giữ các chỉ số ở mức khoảng khỏe mạnh bằng cách thay đổi lối sống. Dưới đây là một số gợi ý:</p><ul><li>Ăn một chế độ ăn lành mạnh</li><li>Hạn chế lượng cồn</li><li>Giảm cân</li><li>Tăng cường hoạt động thể chất</li><li>Giới hạn đồ uống có chứa caffeine</li><li>Không hút thuốc Giảm stress</li></ul><p>Nguồn: <a style=\"text-decoration: underline;\" href=\"https://www.nhs.uk/\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_2",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Nhiều người bị tăng huyết áp có thể hạ huyết áp về mức khoảng khỏe mạnh hoặc giữ các chỉ số ở mức khoảng khỏe mạnh bằng cách thay đổi lối sống. Dưới đây là một số gợi ý:</p><ul><li>Ăn một chế độ ăn lành mạnh</li><li>Hạn chế lượng cồn</li><li>Giảm cân</li><li>Tăng cường hoạt động thể chất</li><li>Giới hạn đồ uống có chứa caffeine</li><li>Không hút thuốc Giảm stress</li></ul><p>Nguồn: <a href=\"https://www.nhs.uk/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_3",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Bạn nên đợi khoảng năm phút và đo lại. Nếu lần đo thứ hai cũng cao và bạn không gặp bất kỳ triệu chứng nào khác như đau ngực, khó thở, đau lưng, tê/nhức cơ, thay đổi thị lực hoặc khó nói chuyện, điều này sẽ được coi là tình trạng khẩn cấp tăng huyết áp. Bác sĩ của bạn có thể chỉnh hoặc bổ sung thuốc cho bạn, nhưng hiếm khi yêu cầu nhập viện.</p><p>Nguồn: <a style=\"text-decoration: underline;\" href=\"https://www.heart.org/\" class=\"external-link\" rel=\"nofollow\">https://www.heart.org/</a></p></td>"
+  }
+]

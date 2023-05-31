@@ -43,10 +43,8 @@ data class BloodPressure(
                     }
                     diaLoop++
                 }
-                if (!valueFirst.sameValueSys) {
-                    valueFirst.selectedColor = valueFirst.sys!!.color
-                    return valueFirst
-                }
+                valueFirst.selectedColor = valueFirst.sys!!.color
+                return valueFirst
             }
             sysLoop++
         }
@@ -55,16 +53,16 @@ data class BloodPressure(
         }
     }
 
-    fun getStatusRecommend(): Int {
+    fun getStatusRecommendName(): String {
         return when (getStatus().name) {
-            R.string.lower -> R.string.recommendations_normal
-            R.string.normal -> R.string.recommendations_normal
-            R.string.high_normal -> R.string.recommendations_normal
-            R.string.optimal -> R.string.recommendations_normal
-            R.string.elevated -> R.string.recommendations_normal
-            R.string.hypertension_stage_1 -> R.string.recommendations_hypertension_stage_1
-            R.string.hypertension_stage_2 -> R.string.recommendations_hypertension_stage_2
-            else -> R.string.recommendations_hypertension_stage_3
+            R.string.lower -> "lower"
+            R.string.normal -> "normal"
+            R.string.high_normal -> "high_normal"
+            R.string.optimal -> "optimal"
+            R.string.elevated -> "elevated"
+            R.string.hypertension_stage_1 -> "hypertension_stage_1"
+            R.string.hypertension_stage_2 -> "hypertension_stage_2"
+            else -> "hypertension_stage_3"
         }
     }
 }

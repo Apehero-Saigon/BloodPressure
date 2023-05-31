@@ -1,0 +1,34 @@
+[
+  {
+    "name": "lower",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>低血圧の原因が明確でない場合や治療法が存在しない場合、目標は血圧を上げて症状を軽減することです。年齢、健康状態、低血圧のタイプによって、以下のような方法があります：</p><ul><li>より多くの塩を摂取する。</li><li>より多くの水を飲む。</li><li>圧迫ストッキングを着用する。</li><li>薬物治療。</li></ul><p>長期（慢性的）の直立性低血圧の場合、ミドドリン（オルバテン）が処方されることがあります。この薬は血管の拡張能力を減少させ、血圧を上昇させます。</p><p>出典: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "normal",
+    "content": "<td class=\"confluenceTd\"><p><span style=\"color: rgb(55,65,81);\">追跡が良好です。健康的な習慣を維持してください！</span></p></td>"
+  },
+  {
+    "name": "high_normal",
+    "content": "<td class=\"confluenceTd\"><p>血圧が上昇するにつれて、心臓病のリスクも高まります。そのため、高血圧をコントロールすることが非常に重要です。鍵は健康的なライフスタイルの変化に取り組むことです。以下の方法を試してみてください。</p><ul><li>健康的な食事を摂る</li><li>塩分を控える</li><li>体重を管理する</li><li>運動量を増やす</li><li>アルコールを制限する</li><li>禁煙する</li><li>ストレスを管理する</li></ul><p>出典：<a href=\"https://www.mayoclinic.org/%E3%80%8D\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/」</a></p></td>"
+  },
+  {
+    "name": "optimal",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>最適な血圧を保つことは、健康にとって非常に良い状態です。これは、血圧が理想的なレベルにあり、心血管系にリスクをもたらさないことを示しています。</p><p>ただし、最適な血圧を維持することは、完全にリスクから解放されることを意味するわけではありません。長期的に良好な血圧を維持するためには、予防策を講じ、全体的な健康管理を行う必要があります。</p></td>"
+  },
+  {
+    "name": "elevated",
+    "content": "<td class=\"confluenceTd\"><p>血圧が上昇するにつれて、心臓病のリスクも高まります。そのため、高血圧をコントロールすることが非常に重要です。鍵は健康的なライフスタイルの変化に取り組むことです。以下の方法を試してみてください。</p><ul><li>健康的な食事を摂る</li><li>塩分を控える</li><li>体重を管理する</li><li>運動量を増やす</li><li>アルコールを制限する</li><li>禁煙する</li><li>ストレスを管理する</li></ul><p>出典：<a href=\"https://www.mayoclinic.org/%E3%80%8D\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/」</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_1",
+    "content": "<td class=\"confluenceTd\"><p>高血圧の人の多くは、ライフスタイルの変更により血圧を健康的な範囲に下げるか、健康的な範囲に保つことができます。以下はいくつかの提案です。</p><ul><li>健康的な食事</li><li>アルコール摂取量を制限する</li><li>体重を減らす</li><li>運動を増やす</li><li>カフェインを控える</li><li>禁煙する</li></ul><p>出典：<a href=\"https://www.nhs.uk/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_2",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>高血圧の人の多くは、ライフスタイルの変更により血圧を健康的な範囲に下げるか、健康的な範囲に保つことができます。以下はいくつかの提案です。</p><ul><li>健康的な食事</li><li>アルコール摂取量を制限する</li><li>体重を減らす</li><li>運動を増やす</li><li>カフェインを控える</li><li>禁煙する</li></ul><p>出典：<a href=\"https://www.nhs.uk/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_3",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>5分間待って再度測定してください。2回目の測定値が同様に高く、胸痛、呼吸困難、背中の痛み、しびれや弱さ、視力の変化、話すことの困難などの標的臓器障害の他の関連症状がない場合、これは高血圧緊急性と見なされます。あなたの医療従事者は、薬を調整または追加するよう勧める場合がありますが、入院が必要となることはめったにありません。</p><p>出典：<a href=\"https://www.heart.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.heart.org/</a></p></td>"
+  }
+]

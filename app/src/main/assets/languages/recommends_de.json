@@ -1,0 +1,34 @@
+[
+  {
+    "name": "lower",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Wenn nicht klar ist, was den niedrigen Blutdruck verursacht oder keine Behandlung existiert, ist das Ziel, den Blutdruck zu erhöhen und die Symptome zu reduzieren. Abhängig von Alter, Gesundheit und Art des niedrigen Blutdrucks gibt es verschiedene Möglichkeiten, dies zu tun:</p><ul><li><strong>Mehr Salz verwenden. </strong></li><li><strong>Mehr Wasser trinken. </strong></li><li><strong>Kompressionsstrümpfe tragen.</strong></li><li><strong>Medikamente.</strong></li></ul><p>Wenn Sie eine langfristige (chronische) orthostatische Hypotonie haben, kann Ihnen möglicherweise Midodrin (Orvaten) verschrieben werden, um den Blutdruck im Stehen zu erhöhen. Dieses Medikament verringert die Fähigkeit der Blutgefäße, sich auszudehnen, was den Blutdruck erhöht.</p><p>Quelle: <a style=\"text-decoration: underline;\" href=\"https://www.mayoclinic.org/\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "normal",
+    "content": "<td class=\"confluenceTd\"><p><span style=\"color: rgb(55,65,81);\">Es ist eine gute Überwachung. Bitte behalten Sie gesunde Gewohnheiten bei!</span>&nbsp;</p></td>"
+  },
+  {
+    "name": "high_normal",
+    "content": "<td class=\"confluenceTd\"><p>Mit steigendem Blutdruck steigt auch das Risiko von Herzkrankheiten. Deshalb ist es so wichtig, erhöhten Blutdruck zu kontrollieren. Der Schlüssel dazu liegt in einem Engagement für gesunde Veränderungen des Lebensstils. Versuchen Sie diese Tipps:</p><ul><li>Gesunde Lebensmittel essen</li><li>Weniger Salz (Natrium) verwenden</li><li>Gewicht managen</li><li>Körperliche Aktivität erhöhen</li><li>Alkoholkonsum begrenzen</li><li>Nichtrauchen</li><li>Stress managen</li></ul><p>Quelle: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "optimal",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Eine optimale Blutdrucksituation ist für die Gesundheit sehr vorteilhaft. Sie zeigt an, dass der Blutdruck auf einem idealen Niveau ist und keine Gefahr für das kardiovaskuläre System darstellt.</p><p>Dennoch bedeutet die Aufrechterhaltung eines optimalen Blutdrucks nicht, dass man völlig risikofrei ist. Es ist immer noch notwendig, präventive Maßnahmen zu ergreifen und die Gesundheit insgesamt zu managen, um einen guten Blutdruck langfristig aufrechtzuerhalten.</p></td>"
+  },
+  {
+    "name": "elevated",
+    "content": "<td class=\"confluenceTd\"><p>Mit steigendem Blutdruck steigt auch das Risiko von Herzkrankheiten. Deshalb ist es so wichtig, erhöhten Blutdruck zu kontrollieren. Der Schlüssel dazu liegt in einem Engagement für gesunde Veränderungen des Lebensstils. Versuchen Sie diese Tipps:</p><ul><li>Gesunde Lebensmittel essen</li><li>Weniger Salz (Natrium) verwenden</li><li>Gewicht managen</li><li>Körperliche Aktivität erhöhen</li><li>Alkoholkonsum begrenzen</li><li>Nichtrauchen</li><li>Stress managen</li></ul><p>Quelle: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_1",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Viele Menschen mit hohem Blutdruck können ihren Blutdruck durch Änderungen ihres Lebensstils auf einen gesunden Wert senken oder diesen in einem gesunden Bereich halten. Hier sind einige Vorschläge:</p><ul><li>Gesunde Ernährung</li><li>Begrenzen Sie Ihren Alkoholkonsum</li><li>Abnehmen</li><li>Werden Sie aktiv</li><li>Reduzieren Sie den Koffeinkonsum</li><li>Hören Sie auf zu rauchen</li></ul><p>Quelle: <a href=\"https://www.nhs.uk/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_2",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Viele Menschen mit hohem Blutdruck können ihren Blutdruck durch Änderungen ihres Lebensstils auf einen gesunden Wert senken oder diesen in einem gesunden Bereich halten. Hier sind einige Vorschläge:</p><ul><li>Gesunde Ernährung</li><li>Begrenzen Sie Ihren Alkoholkonsum</li><li>Abnehmen</li><li>Werden Sie aktiv</li><li>Reduzieren Sie den Koffeinkonsum</li><li>Hören Sie auf zu rauchen</li></ul><p>Quelle: <a href=\"https://www.nhs.uk/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_3",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Sie sollten etwa fünf Minuten warten und es erneut versuchen. Wenn die zweite Messung genauso hoch ist und Sie keine anderen damit verbundenen Symptome von Organschäden haben, wie Brustschmerzen, Atemnot, Rückenschmerzen, Taubheitsgefühl/Schwäche, Veränderungen im Sehvermögen oder Schwierigkeiten beim Sprechen, handelt es sich um eine hypertensive Dringlichkeit. Ihr medizinischer Fachmann kann Sie bitten, die Medikamente anzupassen oder hinzuzufügen, erfordert jedoch selten einen Krankenhausaufenthalt.</p><p>Quelle: <a style=\"text-decoration: underline;\" href=\"https://www.heart.org/\" class=\"external-link\" rel=\"nofollow\">https://www.heart.org/</a></p></td>"
+  }
+]

@@ -343,27 +343,19 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
                     android:fontFamily="@font/montserrat_bold"
+                    android:paddingHorizontal="8dp"
                     android:text="@string/recommendations"
                     android:textColor="@color/color_text_normal"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/txtRecommendation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="24dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="@{viewModel.bloodPressureObserver.getStatusRecommend()}"
-                    android:textAlignment="gravity"
-                    android:textColor="@color/color_text_normal"
-                    android:textSize="14sp" />
-
                 <WebView
                     android:id="@+id/webView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    app:bindRecommendation="@{viewModel.bloodPressureObserver.getStatusRecommendName()}"
+                    app:languageCode="@{bloodPressureDetailFragment.prefUtils.defaultLanguage}"
+                    tools:ignore="WebViewLayout" />
 
                 <TextView
                     android:id="@+id/tvDisclaimer"

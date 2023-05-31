@@ -7,11 +7,11 @@ import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.common.Constant
-import com.blood.common.enumdata.FilterType
 import com.blood.data.LimitValue
 import com.blood.ui.adapters.LimitValueAdapter
-import com.blood.ui.fragments.insight.InsightBloodPressureFragment
+import com.blood.utils.AppUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
+import com.blood.utils.ViewUtils.textTrim
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
@@ -54,14 +54,22 @@ class LimitValuesFragment : BaseFragment<BaseViewModel, FragmentLimitValuesBindi
                     updateTypeValue(Constant.ESC_ESH_2018)
                 }
             }
+
+            tvSource.clickWithDebounce {
+                AppUtils.openWebsite(
+                    requireContext(), tvSource.textTrim().replace(getString(R.string.source_ex), "")
+                )
+            }
         }
     }
 
     private fun updateTypeValue(type: String) {
         with(binding) {
             if (type == Constant.ACC_AHA_2017) {
+                tvSource.setText(R.string.source_2017_acc_aha)
                 adapter.updateData(LimitValue.getList2017ACCAHA())
             } else {
+                tvSource.setText(R.string.source_2018_esc_esh)
                 adapter.updateData(LimitValue.getList2018ESCESH())
             }
             tv2017ACC.isSelected = type == Constant.ACC_AHA_2017

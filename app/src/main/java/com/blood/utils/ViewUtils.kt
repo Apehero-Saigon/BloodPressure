@@ -98,4 +98,6 @@ object ViewUtils {
     }
 
     fun EditText.isBlank() = this.text.toString().trim().isBlank()
+
+    fun TextView.textTrim() = this.text.toString().trim()
 }

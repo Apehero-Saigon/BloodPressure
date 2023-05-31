@@ -1,0 +1,34 @@
+[
+  {
+    "name": "lower",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Si la cause de la baisse de la tension artérielle n'est pas claire ou s'il n'existe aucun traitement, l'objectif est d'augmenter la pression artérielle et de réduire les symptômes. Selon l'âge, l'état de santé et le type d'hypotension, il existe plusieurs façons d'y parvenir :</p><ul><li><strong>Consommez plus de sel.</strong></li><li><strong>Buvez plus d'eau.</strong></li><li><strong>Portez des bas de contention.</strong></li><li><strong>Médicaments.</strong></li></ul><p>Si vous souffrez d'une hypotension orthostatique à long terme (chronique), il est possible que l'on vous prescrive de la midodrine (Orvaten) pour augmenter votre pression artérielle en position debout. Ce médicament réduit la capacité des vaisseaux sanguins à se dilater, ce qui élève la pression artérielle.</p><p>Source : <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "normal",
+    "content": "<td class=\"confluenceTd\"><p><span style=\"color: rgb(55,65,81);\"> C'est un bon suivi. Veuillez maintenir des habitudes saines!</span></p></td>"
+  },
+  {
+    "name": "high_normal",
+    "content": "<td class=\"confluenceTd\"><p>Avec l'augmentation de la tension artérielle, le risque de maladies cardiaques augmente également. C'est pourquoi il est si important de contrôler la tension artérielle élevée. La clé est de s'engager à apporter des changements sains à son mode de vie. Essayez ces conseils :</p><ul><li>Mangez des aliments sains</li><li>Utilisez moins de sel (sodium)</li><li>Gérez votre poids</li><li>Augmentez votre activité physique</li><li>Limitez l'alcool Ne fumez pas</li><li>Gérez le stress</li></ul><p>Source : <a style=\"text-decoration: underline;\" href=\"https://www.mayoclinic.org/\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "optimal",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Avoir une pression artérielle optimale est une condition très favorable pour la santé. Cela indique que votre pression artérielle est à un niveau idéal et ne présente aucun risque pour votre système cardiovasculaire.</p><p>Cependant, maintenir une pression artérielle optimale ne signifie pas que vous êtes totalement à l'abri des risques. Il est toujours nécessaire de prendre des mesures préventives et de gérer globalement votre santé afin de maintenir une bonne pression artérielle à long terme.</p></td>"
+  },
+  {
+    "name": "elevated",
+    "content": "<td class=\"confluenceTd\"><p>Avec l'augmentation de la tension artérielle, le risque de maladies cardiaques augmente également. C'est pourquoi il est si important de contrôler la tension artérielle élevée. La clé est de s'engager à apporter des changements sains à son mode de vie. Essayez ces conseils :</p><ul><li>Mangez des aliments sains</li><li>Utilisez moins de sel (sodium)</li><li>Gérez votre poids</li><li>Augmentez votre activité physique</li><li>Limitez l'alcool Ne fumez pas</li><li>Gérez le stress</li></ul><p>Source : <a style=\"text-decoration: underline;\" href=\"https://www.mayoclinic.org/\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_1",
+    "content": "<td class=\"confluenceTd\"><p>De nombreuses personnes atteintes d'hypertension artérielle peuvent réduire leur tension artérielle à une valeur saine ou maintenir leurs chiffres dans une fourchette saine en apportant des changements à leur mode de vie. Voici quelques suggestions :</p><ul><li>Alimentation saine</li><li>Limitez votre consommation d'alcool</li><li>Perdre du poids</li><li>Soyez actif</li><li>Réduire la consommation de caféine</li><li>Arrêtez de fumer</li></ul><p>Source : <a style=\"text-decoration: underline;\" href=\"https://www.nhs.uk/\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_2",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>De nombreuses personnes atteintes d'hypertension artérielle peuvent réduire leur tension artérielle à une valeur saine ou maintenir leurs chiffres dans une fourchette saine en apportant des changements à leur mode de vie. Voici quelques suggestions :</p><ul><li>Alimentation saine</li><li>Limitez votre consommation d'alcool</li><li>Perdre du poids</li><li>Soyez actif</li><li>Réduire la consommation de caféine</li><li>Arrêtez de fumer</li></ul><p>Source : <a href=\"https://www.nhs.uk/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_3",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Vous devriez attendre environ cinq minutes et réessayer. Si la deuxième lecture est tout aussi élevée et que vous ne ressentez aucun autre symptôme associé à des lésions des organes cibles tels que des douleurs thoraciques, un essoufflement, des douleurs dorsales, des engourdissements/faiblesses, des changements de vision ou des difficultés à parler, cela serait considéré comme une urgence hypertensive. Votre professionnel de la santé peut simplement vous demander d'ajuster ou d'ajouter des médicaments, mais cela nécessite rarement une hospitalisation.</p><p>Source: <a href=\"https://www.heart.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.heart.org/</a></p></td>"
+  }
+]

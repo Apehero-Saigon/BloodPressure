@@ -1,0 +1,34 @@
+[
+  {
+    "name": "lower",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Se não está claro o que está causando a pressão arterial baixa ou se não há tratamento disponível, o objetivo é elevar a pressão arterial e reduzir os sintomas. Dependendo da idade, saúde e do tipo de pressão arterial baixa, existem várias maneiras de fazer isso:</p><ul><li>Consumir mais sal.</li><li>Beber mais água.</li><li>Utilizar meias de compressão.</li><li>Medicamentos.</li></ul><p>Se você tem hipotensão ortostática crônica, o medicamento midodrina (Orvaten) pode ser prescrito para elevar os níveis de pressão arterial em posição vertical. Esse medicamento reduz a capacidade dos vasos sanguíneos se expandirem, o que eleva a pressão arterial.</p><p>Fonte: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "normal",
+    "content": "<td class=\"confluenceTd\"><p><span style=\"color: rgb(55,65,81);\">É bom monitorar. Por favor, mantenha hábitos saudáveis!</span></p></td>"
+  },
+  {
+    "name": "high_normal",
+    "content": "<td class=\"confluenceTd\"><p>À medida que a pressão arterial aumenta, aumenta também o risco de doenças cardíacas. É por isso que é tão importante controlar a pressão arterial elevada. A chave é o compromisso com mudanças saudáveis no estilo de vida. Tente estas dicas:</p><ul><li>Coma alimentos saudáveis</li><li>Use menos sal (sódio)</li><li>Controle o peso</li><li>Aumente a atividade física</li><li>Limite o consumo de álcool</li><li>Não fume</li><li>Gerencie o estresse</li></ul><p>Fonte: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "optimal",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Ter uma pressão arterial ótima é uma condição muito boa para a saúde. Isso indica que sua pressão arterial está em um nível ideal e não representa riscos para o sistema cardiovascular.</p><p>No entanto, manter uma pressão arterial ótima não significa que você está completamente livre de riscos. Ainda é necessário adotar medidas preventivas e realizar um gerenciamento geral da saúde para manter uma boa pressão arterial a longo prazo.</p></td>"
+  },
+  {
+    "name": "elevated",
+    "content": "<td class=\"confluenceTd\"><p>À medida que a pressão arterial aumenta, aumenta também o risco de doenças cardíacas. É por isso que é tão importante controlar a pressão arterial elevada. A chave é o compromisso com mudanças saudáveis no estilo de vida. Tente estas dicas:</p><ul><li>Coma alimentos saudáveis</li><li>Use menos sal (sódio)</li><li>Controle o peso</li><li>Aumente a atividade física</li><li>Limite o consumo de álcool</li><li>Não fume</li><li>Gerencie o estresse</li></ul><p>Fonte: <a href=\"https://www.mayoclinic.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.mayoclinic.org/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_1",
+    "content": "<td class=\"confluenceTd\"><p>Muitas pessoas com pressão arterial alta podem diminuir sua pressão arterial para uma faixa saudável ou manter seus números em uma faixa saudável fazendo mudanças no estilo de vida. Aqui estão algumas sugestões:</p><ul><li>Dieta saudável</li><li>Limite a ingestão de álcool</li><li>Perca peso</li><li>Seja mais ativo</li><li>Reduza o consumo de cafeína</li><li>Pare de fumar</li></ul><p>Fonte: <a style=\"text-decoration: underline;\" href=\"https://www.nhs.uk/\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_2",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Muitas pessoas com pressão arterial alta podem diminuir sua pressão arterial para uma faixa saudável ou manter seus números em uma faixa saudável fazendo mudanças no estilo de vida. Aqui estão algumas sugestões:</p><ul><li>Dieta saudável</li><li>Limite a ingestão de álcool</li><li>Perca peso</li><li>Seja mais ativo</li><li>Reduza o consumo de cafeína</li><li>Pare de fumar</li></ul><p>Fonte: <a href=\"https://www.nhs.uk/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.nhs.uk/</a></p></td>"
+  },
+  {
+    "name": "hypertension_stage_3",
+    "content": "<td colspan=\"1\" class=\"confluenceTd\"><p>Você deve esperar cerca de cinco minutos e tentar novamente. Se a segunda leitura for tão alta quanto a primeira e você não estiver experimentando nenhum outro sintoma associado a danos em órgãos-alvo, como dor no peito, falta de ar, dor nas costas, dormência / fraqueza, alteração da visão ou dificuldade para falar, isso seria considerado uma urgência hipertensiva. Seu profissional de saúde pode ajustar ou adicionar medicamentos, mas raramente requer hospitalização.</p><p>Fonte: <a href=\"https://www.heart.org/\" style=\"text-decoration: underline;\" class=\"external-link\" rel=\"nofollow\">https://www.heart.org/</a></p></td>"
+  }
+]
