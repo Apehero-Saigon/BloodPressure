@@ -1,4 +1,4 @@
-package com.blood.ui.fragments.limitvalues
+package com.blood.ui.fragments.measurementguideline
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -15,10 +15,10 @@ import com.blood.utils.ViewUtils.textTrim
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentLimitValuesBinding
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentMeasurementGuidelineBinding
 
-class LimitValuesFragment : BaseFragment<BaseViewModel, FragmentLimitValuesBinding>(
-    R.layout.fragment_limit_values, BaseViewModel::class.java
+class MeasurementGuidelineFragment : BaseFragment<BaseViewModel, FragmentMeasurementGuidelineBinding>(
+    R.layout.fragment_measurement_guideline, BaseViewModel::class.java
 ), HeaderView.Listener {
 
     val adapter = LimitValueAdapter()

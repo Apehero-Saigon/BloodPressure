@@ -71,6 +71,10 @@ class InsightBloodPressureFragment :
                     FirebaseUtils.eventClickChooseDateInsightBlood()
                 }
             }
+
+            tvForMore.clickWithDebounce {
+                iHomeUi?.navigateTo(HomeFragmentDirections.actionHomeFragmentToMeasurementGuidelineFragment())
+            }
         }
     }
 

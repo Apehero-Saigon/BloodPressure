@@ -19,8 +19,6 @@ data class InfoKnowledge(val id: Int, val photo: Int, val title: Int, val conten
             ), InfoKnowledge(
                 5, R.drawable.img_post_07, R.string.post_07_title, R.string.post_07_content
             ), InfoKnowledge(
-                6, R.drawable.img_post_09, R.string.post_09_title, R.string.post_09_content
-            ), InfoKnowledge(
                 8, R.drawable.img_post_10, R.string.post_10_title, R.string.post_10_content
             ), InfoKnowledge(
                 9, R.drawable.img_post_11, R.string.post_11_title, R.string.post_11_content

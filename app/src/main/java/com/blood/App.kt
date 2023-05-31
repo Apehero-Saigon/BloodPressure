@@ -27,7 +27,7 @@ class App : AdsMultiDexApplication(), HasAndroidInjector {
     override fun onCreate() {
         super.onCreate()
         AppInjector.init(this)
-        val environment = if (BuildConfig.ENV_TEST) {
+        val environment = if (BuildConfig.build_debug) {
             AperoAdConfig.ENVIRONMENT_DEVELOP
         } else {
             AperoAdConfig.ENVIRONMENT_PRODUCTION

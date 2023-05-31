@@ -14,7 +14,7 @@
             android:layout_marginHorizontal="@dimen/_16sdp"
             android:fontFamily="@font/montserrat_semibold"
             android:gravity="center"
-            android:text="@string/which_limit_values_are_you_prefer"
+            android:text="@string/which_measurement_guidelines_do_you_prefer"
             android:textColor="@color/color_870026"
             android:textSize="@dimen/text_size_24" />
 

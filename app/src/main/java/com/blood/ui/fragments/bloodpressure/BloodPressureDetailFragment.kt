@@ -60,7 +60,7 @@ class BloodPressureDetailFragment :
 
             btnHelp.clickWithDebounce {
                 val action =
-                    BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToLimitValuesFragment()
+                    BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToMeasurementGuidelineFragment()
                 findNavController().navigate(action)
             }
         }

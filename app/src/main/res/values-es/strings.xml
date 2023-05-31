@@ -407,7 +407,7 @@ La abreviatura mm Hg significa milímetros de mercurio. El mercurio se usó en l
     <string name="_1m">1M</string>
     <string name="yours_record">Tus registros</string>
     <string name="plus_add">+ Agregar</string>
-    <string name="limit_values">Valores Límite</string>
+    <string name="measurement_guideline">Pauta de medición</string>
     <string name="_2017_acc_aha">2017 ACC/AHA</string>
     <string name="_2018_esc_esh">2018 ESC/ESH</string>
     <string name="category">Categoría</string>
@@ -420,8 +420,11 @@ La abreviatura mm Hg significa milímetros de mercurio. El mercurio se usó en l
     <string name="source_ex">"Fuente: "</string>
     <string name="source_2017_acc_aha"><b>Fuente: </b><u>https://www.acc.org/~/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Guidelines/2017/Guidelines_Made_Simple_2017_HBP.pdf</u></string>
     <string name="source_2018_esc_esh"><b>Fuente: </b><u>https://academic.oup.com/eurheartj/article/39/33/3021/5079119</u></string>
-    <string name="which_limit_values_are_you_prefer">¿Cuáles valores límite prefieres?</string>
-    <string name="_2018_esc_esh_content">(Sociedad Europea de Cardiología,\nSociedad Europea de Hipertensión)</string>
-    <string name="_2017_acc_aha_content">(Colegio Americano de Cardiología,\nAsociación Americana del Corazón)</string>
     <string name="lower">Más bajo</string>
+    <string name="stage_1">Nivel 1</string>
+    <string name="stage_2">Nivel 2</string>
+    <string name="stage_3">Nivel 3</string>
+    <string name="which_measurement_guidelines_do_you_prefer">¿Qué pautas de medición prefieres?</string>
+    <string name="_2018_esc_esh_content">(Sociedad Europea de Cardiología, Sociedad Europea de Hipertensión)</string>
+    <string name="_2017_acc_aha_content">(Colegio Americano de Cardiología, Asociación Americana del Corazón)</string>
 </resources>

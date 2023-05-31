@@ -450,7 +450,7 @@ Sentar pode aliviar os sintomas. Se a pressão arterial cair muito, os órgãos 
     <string name="_1m">1M</string>
     <string name="yours_record">Seus registros</string>
     <string name="plus_add">+ Adicionar</string>
-    <string name="limit_values">Valores Limite</string>
+    <string name="measurement_guideline">Diretriz de Medição</string>
     <string name="_2017_acc_aha">2017 ACC/AHA</string>
     <string name="_2018_esc_esh">2018 ESC/ESH</string>
     <string name="category">Categoria</string>
@@ -463,8 +463,11 @@ Sentar pode aliviar os sintomas. Se a pressão arterial cair muito, os órgãos 
     <string name="source_ex">"Fonte: "</string>
     <string name="source_2017_acc_aha"><b>Fonte: </b><u>https://www.acc.org/~/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Guidelines/2017/Guidelines_Made_Simple_2017_HBP.pdf</u></string>
     <string name="source_2018_esc_esh"><b>Fonte: </b><u>https://academic.oup.com/eurheartj/article/39/33/3021/5079119</u></string>
-    <string name="which_limit_values_are_you_prefer">Quais valores limite você prefere?</string>
-    <string name="_2018_esc_esh_content">(Sociedade Europeia de Cardiologia,\nSociedade Europeia de Hipertensão)</string>
-    <string name="_2017_acc_aha_content">(American College of Cardiology,\nAmerican Heart Association)</string>
     <string name="lower">Menor</string>
+    <string name="stage_1">Estágio 1</string>
+    <string name="stage_2">Estágio 2</string>
+    <string name="stage_3">Estágio 3</string>
+    <string name="which_measurement_guidelines_do_you_prefer">Que diretrizes de medição você prefere?</string>
+    <string name="_2018_esc_esh_content">(Sociedade Europeia de Cardiologia, Sociedade Europeia de Hipertensão)</string>
+    <string name="_2017_acc_aha_content">(Colégio Americano de Cardiologia, Associação Americana do Coração)</string>
 </resources>

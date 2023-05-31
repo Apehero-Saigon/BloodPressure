@@ -470,7 +470,7 @@ Nguồn: https://www.nhlbi.nih.gov/
     <string name="_1m">1 tháng</string>
     <string name="yours_record">Hồ sơ của bạn</string>
     <string name="plus_add">+ Thêm</string>
-    <string name="limit_values">Giới hạn giá trị</string>
+    <string name="measurement_guideline">Hướng dẫn đo lường</string>
     <string name="_2017_acc_aha">2017 ACC/AHA</string>
     <string name="_2018_esc_esh">2018 ESC/ESH</string>
     <string name="category">Danh mục</string>
@@ -483,8 +483,11 @@ Nguồn: https://www.nhlbi.nih.gov/
     <string name="source_ex">"Nguồn: "</string>
     <string name="source_2017_acc_aha"><b>Nguồn: </b><u>https://www.acc.org/~/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Guidelines/2017/Guidelines_Made_Simple_2017_HBP.pdf</u></string>
     <string name="source_2018_esc_esh"><b>Nguồn: </b><u>https://academic.oup.com/eurheartj/article/39/33/3021/5079119</u></string>
-    <string name="which_limit_values_are_you_prefer">Bạn ưa thích giới hạn giá trị nào?</string>
-    <string name="_2018_esc_esh_content">(Hội Tim mạch Châu Âu,\nHội Huyết áp Châu Âu)</string>
-    <string name="_2017_acc_aha_content">(Học viện Tim mạch Mỹ,\nHiệp hội Tim mạch Mỹ)</string>
     <string name="lower">Thấp hơn</string>
+    <string name="stage_1">Giai đoạn 1</string>
+    <string name="stage_2">Giai đoạn 2</string>
+    <string name="stage_3">Giai đoạn 3</string>
+    <string name="which_measurement_guidelines_do_you_prefer">Bạn ưa thích hướng dẫn đo lường nào?</string>
+    <string name="_2018_esc_esh_content">(Hội chứng tim mạch châu Âu, Hội chứng tăng huyết áp châu Âu)</string>
+    <string name="_2017_acc_aha_content">(Học viện tim mạch Mỹ, Hiệp hội tim mạch Mỹ)</string>
 </resources>

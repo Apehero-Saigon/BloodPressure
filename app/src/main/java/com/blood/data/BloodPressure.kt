@@ -41,6 +41,26 @@ data class BloodPressure(
         }
     }
 
+    fun getTextDiastoleMaxMin(): String {
+        return if (PrefUtils.instant.typeLimitValue == Constant.ACC_AHA_2017) {
+            LimitValue.getList2017ACCAHA().map { it.dia }.toMutableList()
+                .findLast { sys -> sys.contains(diastole) }!!.getTextMaxMin()
+        } else {
+            LimitValue.getList2018ESCESH().map { it.dia }.toMutableList()
+                .findLast { sys -> sys.contains(diastole) }!!.getTextMaxMin()
+        }
+    }
+
+    fun getTextSystoleMaxMin(): String {
+        return if (PrefUtils.instant.typeLimitValue == Constant.ACC_AHA_2017) {
+            LimitValue.getList2017ACCAHA().map { it.sys }.toMutableList()
+                .findLast { sys -> sys.contains(systole) }?.getTextMaxMin() ?: ""
+        } else {
+            LimitValue.getList2018ESCESH().map { it.sys }.toMutableList()
+                .findLast { sys -> sys.contains(systole) }?.getTextMaxMin() ?: ""
+        }
+    }
+
     fun getSystoleAndDiastole() = "${systole}/${diastole}"
 
     fun getStatus(): LimitValue {

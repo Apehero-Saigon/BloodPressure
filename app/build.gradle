@@ -89,7 +89,6 @@ android {
 
             buildConfigField "String", "inter_info", "\"ca-app-pub-3940256099942544/1033173712\""
             buildConfigField "Boolean", "build_debug", "true"
-            buildConfigField "Boolean", "ENV_TEST", "true"
 
 
             buildConfigField "String", "BASE_URL", "\"https://yourapi.com/\""
@@ -100,31 +99,9 @@ android {
             buildConfigField("String", "FLAVOR_buildEnv", '"prod"')
 
             manifestPlaceholders = [ad_app_id: "ca-app-pub-6548166688052880~8502263167"]
-            buildConfigField "String", "appopen_splash", "\"ca-app-pub-6548166688052880/5601380035\""
-            buildConfigField "String", "appopen_resume", "\"ca-app-pub-6548166688052880/8076296299\""
-            buildConfigField "String", "banner_home", "\"ca-app-pub-6548166688052880/7817329896\""
-            buildConfigField "String", "banner_create_user", "\"ca-app-pub-6548166688052880/1812836933\""
+            buildConfigField "String", "appopen_splash", "\"11111111111111\""
 
-            buildConfigField "String", "native_recent_action", "\"ca-app-pub-6548166688052880/9349053353\""
-            buildConfigField "String", "inter_splash", "\"ca-app-pub-6548166688052880/9130411566\""
-            buildConfigField "String", "native_language", "\"ca-app-pub-6548166688052880/4220811768\""
-            buildConfigField "String", "native_bloodpressure", "\"ca-app-pub-6548166688052880/2597830217\""
-
-            buildConfigField "String", "native_onboarding", "\"ca-app-pub-6548166688052880/5274927036\""
-            buildConfigField "String", "native_recent_action", "\"ca-app-pub-6548166688052880/9349053353\""
-            buildConfigField "String", "inter_save_high", "\"ca-app-pub-6548166688052880/5900762930\""
-
-            buildConfigField "String", "inter_save", "\"ca-app-pub-6548166688052880/4587681260\""
-            buildConfigField "String", "inter_measure_high", "\"ca-app-pub-6548166688052880/1594648428\""
-            buildConfigField "String", "inter_measure", "\"ca-app-pub-6548166688052880/5988392844\""
-
-            buildConfigField "String", "inter_bloodpressure_details_high", "\"ca-app-pub-6548166688052880/3274599592\""
-            buildConfigField "String", "inter_bloodpressure_details", "\"ca-app-pub-6548166688052880/5191166554\""
-            buildConfigField "String", "inter_info_high", "\"ca-app-pub-6548166688052880/3878084881\""
-
-            buildConfigField "String", "inter_info", "\"ca-app-pub-6548166688052880/9281566759\""
-
-            buildConfigField "Boolean", "ENV_TEST", "false"
+            buildConfigField "Boolean", "build_debug", "false"
 
             buildConfigField "String", "BASE_URL", "\"https://yourapi.com/\""
         }

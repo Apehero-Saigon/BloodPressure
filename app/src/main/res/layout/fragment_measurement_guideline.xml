@@ -7,7 +7,7 @@
 
         <variable
             name="limitValuesFragment"
-            type="com.blood.ui.fragments.limitvalues.LimitValuesFragment" />
+            type="com.blood.ui.fragments.measurementguideline.MeasurementGuidelineFragment" />
     </data>
 
     <LinearLayout
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:headerListener="@{limitValuesFragment}"
-            app:headerTitle="@string/limit_values"
+            app:headerTitle="@string/measurement_guideline"
             app:showBackButton="true" />
 
         <LinearLayout
@@ -35,6 +35,7 @@
                 android:id="@+id/tv2017ACC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_weight="1"
                 android:background="@drawable/selector_bg_tab_filter"
                 android:fontFamily="@font/montserrat_semibold"
@@ -47,7 +48,7 @@
                 android:id="@+id/tv2018ESC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp"
+                android:layout_marginStart="@dimen/_5sdp"
                 android:layout_weight="1"
                 android:background="@drawable/selector_bg_tab_filter"
                 android:fontFamily="@font/montserrat_semibold"

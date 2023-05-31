@@ -448,7 +448,7 @@ eBook をダウンロードして、高血圧のさまざまな段階を治療�
     <string name="_1m">1ヶ月</string>
     <string name="yours_record">あなたの記録</string>
     <string name="plus_add">追加 +</string>
-    <string name="limit_values">基準値</string>
+    <string name="measurement_guideline">測定ガイドライン</string>
     <string name="_2017_acc_aha">2017 ACC/AHA</string>
     <string name="_2018_esc_esh">2018 ESC/ESH</string>
     <string name="category">カテゴリー</string>
@@ -461,8 +461,11 @@ eBook をダウンロードして、高血圧のさまざまな段階を治療�
     <string name="source_ex">"情報源: "</string>
     <string name="source_2017_acc_aha"><b>情報源: </b><u>https://www.acc.org/~/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Guidelines/2017/Guidelines_Made_Simple_2017_HBP.pdf</u></string>
     <string name="source_2018_esc_esh"><b>情報源: </b><u>https://academic.oup.com/eurheartj/article/39/33/3021/5079119</u></string>
-    <string name="which_limit_values_are_you_prefer">どの基準値を選択しますか？</string>
-    <string name="_2018_esc_esh_content">(European Society of Cardiology,\nEuropean Society of Hypertension)</string>
-    <string name="_2017_acc_aha_content">(American College of Cardiology,\nAmerican Heart Association)</string>
     <string name="lower">下限</string>
+    <string name="stage_1">ステージ1</string>
+    <string name="stage_2">ステージ2</string>
+    <string name="stage_3">ステージ3</string>
+    <string name="which_measurement_guidelines_do_you_prefer">どの測定ガイドラインを好むか？</string>
+    <string name="_2018_esc_esh_content">(欧州心臓学会、欧州高血圧学会)</string>
+    <string name="_2017_acc_aha_content">(アメリカ心臓学会、アメリカ心臓協会)</string>
 </resources>

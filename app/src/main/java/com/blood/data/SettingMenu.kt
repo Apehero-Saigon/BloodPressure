@@ -24,7 +24,7 @@ constructor(val icon: Int, val name: Int, val type: Type) : BaseData {
             val disclaimer =
                 SettingMenu(R.drawable.ic_disclaimer, R.string.disclaimer, Type.DISCLAIMER)
             val limitValue =
-                SettingMenu(R.drawable.ic_ruler, R.string.limit_values, Type.LIMIT_VALUES)
+                SettingMenu(R.drawable.ic_ruler, R.string.measurement_guideline, Type.LIMIT_VALUES)
 
             list.add(language)
             list.add(limitValue)

@@ -292,7 +292,7 @@
                             android:layout_marginVertical="15dp"
                             android:layout_marginTop="13dp"
                             android:fontFamily="@font/montserrat_semibold"
-                            android:text="@{viewModel.bloodPressureObserver.getStatus().sys.getTextMaxMin()}"
+                            android:text="@{viewModel.bloodPressureObserver.getTextSystoleMaxMin()}"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -332,7 +332,7 @@
                             android:layout_marginVertical="15dp"
                             android:layout_marginTop="13dp"
                             android:fontFamily="@font/montserrat_semibold"
-                            android:text="@{viewModel.bloodPressureObserver.getStatus().dia.getTextMaxMin()}"
+                            android:text="@{viewModel.bloodPressureObserver.getTextDiastoleMaxMin()}"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
 
@@ -352,7 +352,7 @@
                 <WebView
                     android:id="@+id/webView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     app:bindRecommendation="@{viewModel.bloodPressureObserver.getStatusRecommendName()}"
                     app:languageCode="@{bloodPressureDetailFragment.prefUtils.defaultLanguage}"
                     tools:ignore="WebViewLayout" />

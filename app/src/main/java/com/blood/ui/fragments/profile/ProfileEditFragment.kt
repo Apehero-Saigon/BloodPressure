@@ -68,7 +68,7 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
                 adsUtils.interSaveProfile.showInterAdsBeforeNavigate(requireContext(), false) {
                     prefUtils.profile = profile
                     val action =
-                        ProfileEditFragmentDirections.actionProfileEditFragmentToDefaultLimitValueFragment()
+                        ProfileEditFragmentDirections.actionProfileEditFragmentToMeasurementGuidelineDefaultFragment()
                     findNavController().navigate(action)
                 }
             } else {

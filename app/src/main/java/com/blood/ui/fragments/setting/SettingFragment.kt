@@ -58,7 +58,7 @@ class SettingFragment : BaseFragment<HomeViewModel, FragmentSettingBinding>(
             }
 
             SettingMenu.Companion.Type.LIMIT_VALUES -> {
-                iHomeUi?.navigateTo(HomeFragmentDirections.actionHomeFragmentToLimitValuesFragment())
+                iHomeUi?.navigateTo(HomeFragmentDirections.actionHomeFragmentToMeasurementGuidelineFragment())
             }
 
             else -> {
