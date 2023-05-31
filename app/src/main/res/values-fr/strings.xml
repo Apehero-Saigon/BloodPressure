@@ -1,0 +1,278 @@
+<resources>
+    <string name="app_name">Tension Artérielle</string>
+    <string name="heart_rate_blood_pressure_monitor"><![CDATA[Moniteur de fréquence cardiaque et de tension artérielle]]></string>
+    <string name="settings">Paramètres</string>
+    <string name="home">Accueil</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </string>
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="next">Suivant</string>
+    <string name="create_new_profile">Créer un nouveau profil</string>
+    <string name="image">Image</string>
+    <string name="info">Info</string>
+    <string name="insights">Aperçus</string>
+    <string name="enter_your_weight_kg">Entrez votre poids (kg)</string>
+    <string name="enter_your_height_cm">Entrez votre taille (cm)</string>
+    <string name="not_known">Inconnu</string>
+    <string name="female">Femme</string>
+    <string name="male">Homme</string>
+    <string name="save">Enregistrer</string>
+    <string name="update_profile">Mettre à jour le profil</string>
+    <string name="greeting">Bonjour, Phong</string>
+    <string name="icon">Icône</string>
+    <string name="heart_rate">Fréquence cardiaque</string>
+    <string name="manually">Manuellement</string>
+    <string name="create_a_user">Créer un utilisateur</string>
+    <string name="let_create_first_user">Créons le premier utilisateur pour \n explorer quelques fonctions incroyables \n de cette application</string>
+    <string name="heart_rate_content">Mesurez votre fréquence cardiaque avec des informations en temps réel sur les performances de votre cœur.</string>
+    <string name="heart_rate_button_content">Mesurer maintenant</string>
+    <string name="default_height">170</string>
+    <string name="default_weight">60</string>
+    <string name="name">Nom</string>
+    <string name="year_of_birth">Année de naissance</string>
+    <string name="year_of_birth_2">Année de naissance : </string>
+    <string name="weight_kg">Poids (kg)</string>
+    <string name="height_cm">Taille (cm)</string>
+    <string name="gender">Genre</string>
+    <string name="photo">Photo</string>
+    <string name="dashboard">Tableau de bord</string>
+    <string name="intro_title_1">Mesurez votre \n fréquence cardiaque</string>
+    <string name="intro_title_2">Suivez votre \n tension artérielle</string>
+    <string name="intro_title_3">Calculez votre \n Poids &amp; IMC</string>
+    <string name="intro_content_1">Mesurez votre fréquence cardiaque et obtenez des informations en temps réel sur la performance de votre cœur.</string>
+    <string name="intro_content_2">Suivez vos lectures de tension artérielle au fil du temps et recevez des informations utiles.</string>
+    <string name="intro_content_3">Vous permet de suivre votre poids et de surveiller vos progrès vers l\'atteinte de vos objectifs.</string>
+    <string name="start">Commencer</string>
+    <string name="welcome">Bienvenue !</string>
+    <string name="measure_your_pulse_rate_with_real_time_information_about_your_heart_s_performance">Mesurez votre fréquence cardiaque et obtenez des informations en temps réel sur la performance de votre cœur.</string>
+    <string name="measure_now">Mesurer maintenant</string>
+    <string name="blood_pressure">Pression artérielle</string>
+    <string name="blood_pressure_content">Suivez vos lectures de pression artérielle au fil du temps et fournissez des informations précieuses.</string>
+    <string name="blood_pressure_button_content">Suivre maintenant</string>
+    <string name="weight_and_bmi">Poids &amp; IMC</string>
+    <string name="weight_and_bmi_content">Suivez votre poids et surveillez vos progrès pour atteindre vos objectifs.</string>
+    <string name="weight_and_bmi_button_content">Calculer maintenant</string>
+    <string name="button">Bouton</string>
+    <string name="systole">SYS</string>
+    <string name="ex_170">Ex: 170</string>
+    <string name="ex_60">Ex: 60</string>
+    <string name="ex_85">Ex: 85</string>
+    <string name="diastole">DIA</string>
+    <string name="pulse">PULSE</string>
+    <string name="measure">Mesure</string>
+    <string name="result">Résultat</string>
+    <string name="_120_80">120/80</string>
+    <string name="_80">80</string>
+    <string name="measured_at_17_00pm_21_04_2023">Mesuré à 17h00 le 21/04/2023</string>
+    <string name="year_of_birth_2000">Année de naissance : 2000</string>
+    <string name="height_170">Taille : 170cm\n</string>
+    <string name="weight_75">Poids : 75kg</string>
+    <string name="hypertension_stage_1">Hypertension de stade 1</string>
+    <string name="systole_range_elevated">(120 – 129)</string>
+    <string name="systole_range_normal">(&lt; 120)</string>
+    <string name="systole_range_hypertension_stage_1">(120 – 139)</string>
+    <string name="systole_range_hypertension_stage_2">(140 – 179)</string>
+    <string name="systole_range_emergency_care_needed">(>180)</string>
+    <string name="diastole_range_normal_and_elevated">(&lt; 80)</string>
+    <string name="diastole_range_hypertension_stage_1">(80 – 89)</string>
+    <string name="diastole_range_hypertension_stage_2">(90 – 100)</string>
+    <string name="diastole_range_emergency_care_needed">(>100)</string>
+    <string name="recommendations">RECOMMANDATIONS</string>
+    <string name="weight">"Poids : "</string>
+    <string name="kg">kg</string>
+    <string name="height">"Height: "</string>
+    <string name="cm">cm</string>
+    <string name="normal">Normal</string>
+    <string name="elevated">Élevé</string>
+    <string name="hypertension_stage_2">Hypertension stade 2</string>
+    <string name="emergency_care_needed">Soins d\'urgence nécessaires</string>
+    <string name="recommendations_hypertension_stage_1">Beaucoup de personnes atteintes d\'hypertension artérielle peuvent réduire leur tension artérielle à des niveaux sains ou maintenir leurs chiffres à des niveaux sains en apportant des changements à leur mode de vie. Voici quelques suggestions : \n• Faire au moins 150 minutes d\'activité physique chaque semaine (environ 30 minutes par jour, 5 jours par semaine) \n• Ne pas fumer \n• Manger une alimentation saine, y compris limiter le sodium (sel) et l\'alcool \n• Maintenir un poids santé \n• Gérer le stress \n
+</string>
+    <string name="recommendations_normal">Voici quelques conseils pour améliorer votre pression artérielle. \n• Buvez plus d\'eau. La déshydratation peut provoquer une baisse temporaire de la pression artérielle. \n• Suivez un régime alimentaire sain. Augmentez la teneur en sel des aliments si vous avez une faible pression artérielle. \n• Si la pression est faible et que vous prenez des médicaments, vérifiez leurs effets secondaires. \n• Mangez de petits repas à faible teneur en glucides. \n• Évitez la consommation d\'alcool ou ne le prenez qu\'en modération. \n• Intégrez une forme d\'exercice dans votre routine quotidienne. Des exercices tels que la marche rapide et la natation peuvent aider à la circulation sanguine. En outre, cela vous maintient jeune tant dans votre esprit que dans votre corps et est un excellent moyen de déstresser.</string>
+    <string name="recommendations_hypertension_stage_2">Voici quelques conseils pour réduire votre pression artérielle. \n• Arrêtez de fumer. En plus de endommager vos poumons, la cigarette rétrécit les vaisseaux sanguins et augmente votre pression artérielle, rendant ainsi difficile le travail de votre cœur. \n• Évitez la consommation d\'alcool ou ne le prenez qu\'en modération. L\'alcool augmente votre pression artérielle à des niveaux dangereux. \n• Suivez un régime alimentaire sain. Évitez trop de sel dans les aliments. \n• Perdez du poids. Les personnes obèses sont plus susceptibles de souffrir d\'hypertension artérielle. \n• Faites régulièrement de l\'exercice. Cela aide à prévenir l\'hypertension artérielle et le diabète. En outre, cela vous maintient jeune tant dans votre esprit que dans votre corps et est un excellent moyen de déstresser. \n• Buvez suffisamment d\'eau chaque jour. \n• Évitez le stress.</string>
+    <string name="recommendations_emergency_care_needed">Voici quelques conseils pour réduire votre tension artérielle.\n• Arrêtez de fumer. En plus de nuire à vos poumons, le tabagisme rétrécit les vaisseaux sanguins et augmente votre tension artérielle, ce qui rend difficile le travail de votre cœur.\n• Évitez la consommation d\'alcool ou ne le consommez qu\'avec modération. L\'alcool augmente votre tension artérielle à des niveaux malsains.\n• Suivez un régime alimentaire sain. Évitez une trop grande quantité de sel dans les aliments.\n• Perdez du poids. Les personnes obèses sont plus susceptibles de souffrir d\'hypertension artérielle.\n• Faites régulièrement de l\'exercice. Cela aide à prévenir l\'hypertension artérielle et le diabète. En outre, cela vous garde jeune à la fois dans votre esprit et dans votre corps et est un excellent moyen de réduire le stress.\n• Buvez suffisamment d\'eau chaque jour.\n• Évitez le stress.</string>
+    <string name="measured_at">Mesuré à</string>
+    <string name="good_morning">Bonjour !</string>
+    <string name="good_afternoon">Bon après-midi !</string>
+    <string name="good_evening">Bonsoir !</string>
+    <string name="dashboard_intro_fragment">Fragment d\'introduction du tableau de bord</string>
+    <string name="your_recently_action">Vos actions récentes</string>
+    <string name="more_detail">Plus de détails</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="default_suggestion">Monsieur Phong doit enregistrer une tension artérielle dès maintenant !</string>
+    <string name="action">Action</string>
+    <string name="profile_select">Sélection de profil</string>
+    <string name="user_management">Gestion des utilisateurs</string>
+    <string name="insights_blood_pressure_fragment">Fragment des insights sur la pression artérielle</string>
+    <string name="search">Recherche</string>
+    <string name="your_health_condition">Votre état de santé</string>
+    <string name="your_heart_rate_is_so_hight">Votre rythme cardiaque est très élevé. Vous devriez vous asseoir et rester calme. Faire régulièrement de l\'exercice, comme la marche rapide, la course, le vélo ou la natation, peut aider à améliorer votre santé cardiovasculaire.</string>
+    <string name="totals">Total</string>
+    <string name="view_result">Voir les résultats</string>
+    <string name="information_knowledge"><![CDATA[Information et Connaissance]]></string>
+    <string name="edit">Modifier</string>
+    <string name="delete">Supprimer</string>
+    <string name="edit_your_information">Modifier vos informations</string>
+    <string name="update">Mettre à jour</string>
+    <string name="blood_pressure_edit_fragment">Fragment d\'édition de la pression artérielle</string>
+    <string name="oops_there_is_an_error_try_again">Oops, une erreur est survenue. Réessayez plus tard !</string>
+    <string name="this_result_will_be_deleted_forever_are_you_sure">Ce résultat sera supprimé définitivement. Êtes-vous sûr(e) ?</string>
+    <string name="a_normal_blood_pressure">Une pression artérielle normale est inférieure à 120/80 mmHg. Peu importe votre âge, vous pouvez prendre chaque jour des mesures pour maintenir votre pression artérielle dans une plage saine.</string>
+    <string name="blood_pressure_advice">Conseils sur la pression artérielle</string>
+    <string name="how_to_improve_weight_better">Comment améliorer son poids</string>
+    <string name="example_info_detail">L\'exercice physique est un élément important dans la prévention des maladies, y compris le cancer. Mais tous les types d\'exercice ne sont pas égaux. Il est essentiel que certaines activités physiques fassent battre votre cœur plus vite que lorsque vous êtes au repos.\n\n Le fait de faire battre votre cœur plus vite entraîne une meilleure circulation de l\'oxygène et du sang vers vos muscles, vous aide à brûler plus de calories et à réduire votre taux de cholestérol. Tout cela peut vous aider à rester en bonne santé et à réduire votre risque de cancer.\n\n Le fait de faire battre votre cœur plus vite entraîne une meilleure circulation de l\'oxygène et du sang vers vos muscles, vous aide à brûler plus de calories et à réduire votre taux de cholestérol. Tout cela peut vous aider à rester en bonne santé et à réduire votre risque de cancer.\n
+    </string>
+    <string name="related_posts">Articles connexes</string>
+    <string name="info_detail_fragment">Fragment de détails d\'information</string>
+    <string name="language">Langue</string>
+    <string name="privacy">Confidentialité</string>
+    <string name="rate_us">Évaluez-nous</string>
+    <string-array name="gender">
+        <item>@string/male</item>
+        <item>@string/female</item>
+        <item>@string/not_known</item>
+    </string-array>
+    <string name="japanese">Japonais</string>
+    <string name="korean">Coréen</string>
+    <string name="vietnamese">Vietnamien</string>
+    <string name="setting_language_fragment">Fragment de paramètres de langue</string>
+    <string name="english">Anglais</string>
+    <string name="german">Allemand</string>
+    <string name="spanish">Espagnol</string>
+    <string name="french">Français</string>
+    <string name="portugal">Portugais</string>
+    <string name="change_default_language_successfully">Changement de langue par défaut effectué avec succès !</string>
+    <string name="post_01_title">10 façons de contrôler l\'hypertension artérielle sans médicaments</string>
+    <string name="post_01_content">En apportant ces 10 changements de mode de vie, vous pouvez abaisser votre tension artérielle et réduire votre risque de maladies cardiaques.\n\nSi vous souffrez d\'hypertension artérielle, vous vous demandez peut-être si la prise de médicaments est nécessaire pour faire baisser les chiffres. Mais le mode de vie joue un rôle vital dans le traitement de l\'hypertension artérielle. La maîtrise de la tension artérielle grâce à un mode de vie sain pourrait empêcher, retarder ou réduire le besoin de médicaments.\n\nVoici 10 changements de mode de vie qui peuvent abaisser la tension artérielle et la maintenir basse.\n\n<font size="16"><b>1. Perdre des kilos superflus et surveiller votre tour de taille</b></font>\nLa tension artérielle augmente souvent avec l\'augmentation du poids. Le surpoids peut également provoquer des interruptions de la respiration pendant le sommeil (apnée du sommeil), ce qui augmente encore la tension artérielle.\nLa perte de poids est l\'un des changements de mode de vie les plus efficaces pour contrôler la tension artérielle. Si vous êtes en surpoids ou avez de l\'obésité, perdre ne serait-ce qu\'un peu de poids peut aider à réduire la tension artérielle. En général, la tension artérielle peut baisser d\'environ 1 millimètre de mercure (mm Hg).
+    En perdant chaque kilogramme (environ 2,2 livres), la pression artérielle peut baisser d\'environ 1 millimètre de mercure (mm Hg).\n\nDe plus, la taille de la taille est importante. Porter trop de poids autour de la taille peut augmenter le risque d\'hypertension artérielle.\n\nEn général:\n\n• Les hommes sont à risque si leur tour de taille est supérieur à 40 pouces (102 centimètres).\n• Les femmes sont à risque si leur tour de taille est supérieur à 35 pouces (89 centimètres).\nCes chiffres varient selon les groupes ethniques. Demandez à votre professionnel de la santé quelle est une mesure saine pour vous.\n\n<font size="16"><b>2. Faites régulièrement de l\'exercice</b></font>\nL\'activité physique régulière peut réduire la pression artérielle élevée d\'environ 5 à 8 mm Hg. Il est important de continuer à faire de l\'exercice pour éviter que la pression artérielle ne remonte à nouveau. En général, visez au moins 30 minutes d\'activité physique modérée chaque jour.\n\nL\'exercice peut également aider à empêcher une pression artérielle élevée de se transformer en hypertension artérielle.Pour ceux qui souffrent d\'hypertension, une activité physique régulière peut ramener la tension artérielle à des niveaux plus sûrs.
+
+Quelques exemples d\'exercices aérobiques qui peuvent aider à réduire la pression artérielle sont la marche, la course, le cyclisme, la natation ou la danse. Une autre possibilité est l\'entraînement en intervalles de haute intensité. Ce type d\'entraînement consiste à alterner de courtes périodes d\'activité intense avec des périodes d\'activité plus légère.
+
+La musculation peut également aider à réduire la pression artérielle. Essayez d\'inclure des exercices de musculation au moins deux jours par semaine. Parlez à un professionnel de la santé pour développer un programme d\'exercices.
+
+<font size="16"><b>3. Mangez une alimentation saine</b></font>\n
+
+Manger une alimentation riche en grains entiers, fruits, légumes et produits laitiers faibles en gras et faible en gras saturés et en cholestérol peut réduire la pression artérielle élevée jusqu\'à 11 mm Hg. Des exemples de plans d\'alimentation qui peuvent aider à contrôler la pression artérielle sont le régime DASH (Dietary Approaches to Stop Hypertension) et le régime méditerranéen.\n\nLe potassium dans l\'alimentation peut atténuer les effets du sel (sodium) sur la pression artérielle. Les meilleures sources de potassium sont les aliments tels que les fruits et les légumes, plutôt que les suppléments. Visez de consommer entre 3 500 et 5 000 mg par jour, ce qui pourrait réduire la pression artérielle de 4 à 5 mm Hg. Demandez à votre professionnel de santé quelle quantité de potassium vous devriez consommer.\n\n<font size="16"><b>4. Réduire le sel (sodium) dans votre alimentation</b></font>\nMême une petite réduction du sodium dans l\'alimentation peut améliorer la santé cardiaque et réduire la pression artérielle élevée d\'environ 5 à 6 mm Hg.\n\nL\'effet de la consommation de sodium sur la pression artérielle varie selon les groupes de personnes. En général, limitez le sodium à 2 300 milligrammes (mg) par jour ou moins. Cependant, une consommation de sodium plus faible - de 1 500 mg par jour ou moins - est idéale pour la plupart des adultes.\n\nPour réduire le sodium dans l\'alimentation:\n\n<b>Lisez les étiquettes alimentaires.</b> Recherchez des versions faibles en sodium des aliments et des boissons.\n<b>Mangez moins d\'aliments transformés</b>. Seule une petite quantité de sodium se trouve naturellement dans les aliments. La plupart du sodium est ajouté pendant le traitement.\n<b>Ne pas ajouter de sel</b>. Utilisez des herbes ou des épices pour ajouter de la saveur aux aliments.\n<b>Cuisinez</b>. La cuisson vous permet de contrôler la quantité de sodium dans les aliments.\n<font size="16"><b>5. Faites de l\'exercice régulièrement</b></font>\nUne activité physique régulière peut abaisser la pression artérielle élevée à des niveaux plus sûrs. Quelques exemples d\'exercices aérobiques qui peuvent aider à réduire la pression artérielle sont la marche, la course à pied, le vélo, la natation ou la danse. Une autre possibilité est l\'entraînement en intervalles à haute intensité. Ce type d\'entraînement consiste en l\'alternance de courtes périodes d\'activité intense avec des périodes d\'activité plus légère. Les exercices de renforcement musculaire peuvent également aider à réduire la pression artérielle. Visez à inclure des exercices de renforcement musculaire au moins deux jours par semaine. Parlez à un professionnel de la santé pour élaborer un programme d\'exercices adapté à vos besoins. <font size="16"><b>Limitez votre consommation d\'alcool</b></font>\nLimiter l\'alcool à moins d\'un verre par jour pour les femmes ou deux verres par jour pour les hommes peut aider à abaisser la tension artérielle d\'environ 4 mm Hg. Un verre équivaut à 12 onces de bière, 5 onces de vin ou 1,5 onces d\'alcool à 80 degrés.\n\nCependant, boire trop d\'alcool peut augmenter la tension artérielle de plusieurs points. Cela peut également réduire l\'efficacité des médicaments contre l\'hypertension artérielle.\n\n<font size="16"><b>6. Arrêtez de fumer</b></font>\nLe tabagisme augmente la tension artérielle. Arrêter de fumer aide à abaisser la tension artérielle. Cela peut également réduire le risque de maladies cardiaques et améliorer la santé globale, ce qui peut mener à une vie plus longue.\n\n
+    <font size="16"><b>7. Avoir une bonne nuit de sommeil</b></font>\nUne mauvaise qualité de sommeil - dormir moins de six heures par nuit pendant plusieurs semaines - peut contribuer à l\'hypertension. Un certain nombre de problèmes peuvent perturber le sommeil, notamment l\'apnée du sommeil, le syndrome des jambes sans repos et l\'insomnie.\n\nInformez votre fournisseur de soins de santé si vous avez souvent des problèmes de sommeil. Trouver et traiter la cause peut aider à améliorer le sommeil. Cependant, si vous n\'avez pas d\'apnée du sommeil ou de syndrome des jambes sans repos, suivez ces simples conseils pour avoir un sommeil plus reposant.\n\nRespectez un horaire de sommeil. Allez vous coucher et réveillez-vous à la même heure chaque jour. Essayez de garder le même horaire les nuits de semaine et les week-ends.\nCréez un espace de repos. Cela signifie garder l\'espace de sommeil frais, calme et sombre. Faites quelque chose de relaxant une heure avant le coucher. Cela peut inclure prendre un bain chaud ou faire des exercices de relaxation. Évitez la lumière vive, comme celle d\'une télévision ou d\'un écran d\'ordinateur.\nSurveillez ce que vous mangez et buvez. Ne vous couchez pas affamé ou trop plein. Évitez les gros repas avant de dormir. Limitez ou évitez également la nicotine, la caféine et l\'alcool avant de dormir.\nLimitez les siestes. Pour ceux qui trouvent que faire une sieste pendant la journée est utile, limiter les siestes à 30 minutes plus tôt dans la journée pourrait aider à mieux dormir la nuit.\n\n
+    <font size="16"><b>8. Réduire le stress</b></font>\nLe stress émotionnel à long terme (chronique) peut contribuer à l\'hypertension artérielle. Des recherches supplémentaires sont nécessaires sur les effets des techniques de réduction du stress pour savoir si elles peuvent réduire la tension artérielle.\n\nCependant, cela ne peut pas faire de mal de déterminer ce qui cause le stress, comme le travail, la famille, les finances ou la maladie, et de trouver façons de réduire le stress. Essayez ce qui suit :\n\nÉvitez d\'en faire trop. Planifiez votre journée et concentrez-vous sur vos priorités. Apprenez à dire non. Prévoyez suffisamment de temps pour faire ce qui doit être fait.\nConcentrez-vous sur les problèmes que vous pouvez contrôler et faites des plans pour les résoudre. Pour un problème au travail, parlez à un superviseur. En cas de conflit avec des enfants ou votre conjoint, trouvez des moyens de le résoudre.\nÉvitez les déclencheurs de stress. Par exemple, si la circulation aux heures de pointe cause du stress, voyagez à une heure différente ou prenez les transports en commun. Si possible, évitez les personnes stressantes.\nPrenez le temps de vous détendre. Prenez le temps chaque jour de vous asseoir tranquillement et de respirer profondément. Réservez du temps pour des activités ou des passe-temps agréables, comme faire une promenade, cuisiner ou faire du bénévolat.\nPratiquez la gratitude. Exprimer sa gratitude aux autres peut aider à réduire le stress.\n\n
+         <font size="16"><b>9. Surveillez votre tension artérielle à domicile et effectuez des contrôles réguliers</b></font>\nLa surveillance à domicile peut vous aider à surveiller votre tension artérielle. Cela peut vous assurer que vos médicaments et vos changements de mode de vie fonctionnent.\n\nLes tensiomètres à domicile sont largement disponibles et sans ordonnance. Parlez à un fournisseur de soins de santé de la surveillance à domicile avant de commencer.\n\nDes visites régulières avec un fournisseur sont également essentielles pour contrôler la tension artérielle. Si votre tension artérielle est bien contrôlée, demandez à votre médecin à quelle fréquence vous devez la vérifier. Vous ne pourrez peut-être le consulter qu\'une fois par jour ou moins souvent.\n\n
+         <font size="16"><b>10. Obtenez de l\'aide</b></font>\nLe soutien de la famille et des amis est important pour une bonne santé. Ils peuvent vous encourager à prendre soin de vous, vous conduire au bureau du fournisseur de soins ou commencer un programme d\'exercices avec vous pour maintenir votre tension artérielle basse.\n\nSi vous pensez avoir besoin d\'un soutien autre que votre famille et vos amis, envisagez rejoindre un groupe de soutien. Cela peut vous mettre en contact avec des personnes qui peuvent vous donner un coup de pouce émotionnel ou moral et qui peuvent vous offrir des conseils pratiques pour faire face à votre condition.\n\nSource : https://www.mayoclinic.org/</string>
+    <string name="post_03_title">Médicaments contre l\'hypertension</string>
+    <string name="post_03_content">De nombreuses personnes doivent prendre des médicaments en plus de modifier leur mode de vie pour aider à maintenir leur tension artérielle à des niveaux sains. En savoir plus sur les médicaments contre l\'hypertension.
+
+     \n\n<font size="16"><b>Comment fonctionnent les médicaments contre l\'hypertension?</b></font>\n
+     Les médicaments contre l\'hypertension peuvent agir de plusieurs manières différentes. Les médicaments contre l’hypertension peuvent maintenir la tension artérielle à un niveau sain en1 :
+
+     \n• Aide votre corps à se débarrasser de l\'eau, ce qui réduit la quantité d\'eau et de sel dans votre corps à un niveau sain
+     \n• Détendez vos vaisseaux sanguins
+     \n• Faire battre votre cœur avec moins de force
+     \n• Bloquer l\'activité nerveuse qui peut restreindre vos vaisseaux sanguins
+     \n• Discutez avec votre équipe soignante du meilleur type de traitement pour vous. Vous devrez peut-être prendre plus d\'un type de médicament pour contrôler votre tension artérielle. Vous pouvez également discuter avec votre équipe de soins de santé du temps qu\'il faut à votre médicament contre l\'hypertension pour agir.
+     Il est important de prendre votre médicament contre l\'hypertension exactement comme votre médecin vous l\'a indiqué. N\'arrêtez pas de prendre votre médicament actuel sans en parler d\'abord avec votre médecin ou votre pharmacien. L\'arrêt de votre médicament contre l\'hypertension sans en parler d\'abord à votre équipe de soins de santé pourrait entraîner de graves conséquences pour la santé.
+
+     \n\n<font size="16"><b>Quels sont les avantages et les risques des médicaments contre l\'hypertension ?</b></font>\n
+     Les avantages des médicaments contre l\'hypertension sont clairs : les médicaments contre l\'hypertension peuvent vous aider à maintenir votre tension artérielle à des niveaux sains et ainsi réduire considérablement votre risque de maladie cardiaque, de crise cardiaque et d\'accident vasculaire cérébral.
+
+     En général, les risques liés à la prise de médicaments contre l\'hypertension sont faibles. Cependant, tous les médicaments comportent des risques. Discutez avec votre médecin ou professionnel de la santé des risques des médicaments contre l\'hypertension.
+
+     N\'arrêtez pas de prendre votre médicament actuel sans en parler d\'abord à votre médecin ou professionnel de la santé.
+     \n\n<font size="16"><b>Quels sont les effets secondaires des médicaments contre l\'hypertension ?</b></font>\n
+     La plupart du temps, les médicaments contre l\'hypertension ne provoquent pas d\'effets secondaires. Certaines personnes ont des effets secondaires légers, notamment des étourdissements, des maux de tête, un gonflement des jambes ou des pieds ou des problèmes d\'estomac.2
+
+     Certains médicaments en vente libre, tels que les décongestionnants nasaux, peuvent également augmenter la tension artérielle et interagir avec les médicaments contre l\'hypertension.3 Informez votre médecin de tout médicament ou supplément que vous prenez déjà.
+
+     Tous les médicaments comportent des risques. Discutez avec votre médecin des meilleurs médicaments contre l\'hypertension pour vous, de leurs avantages, risques et effets secondaires, ainsi que de tout autre problème de santé que vous pourriez avoir.
+
+     \n\n<font size="16"><b>Comment puis-je savoir si j\'ai besoin de médicaments pour l\'hypertension ?</b></font>\n
+     Votre équipe de soins de santé vous dira si vous avez besoin de médicaments pour l\'hypertension artérielle, en fonction de vos lectures de tension artérielle sur une période donnée. Si vous utilisez un tensiomètre à domicile, enregistrez ou notez vos lectures.
+
+     Partagez vos lectures avec votre équipe de soins de santé afin que vous puissiez prendre la meilleure décision pour gérer votre tension artérielle ensemble.
+
+\n\n<font size="16"><b>Comment puis-je abaisser ma tension artérielle ?</b></font>\n
+     En plus de prendre des médicaments pour contrôler votre tension artérielle, vous pouvez prendre d\'autres mesures pour aider à maintenir une tension artérielle saine.\n
+
+     \n• <b>Faites régulièrement de l\'activité physique</b>. Rester actif physiquement est l\'une des meilleures choses que vous puissiez faire pour votre santé. L\'activité physique aide à garder votre cœur et vos vaisseaux sanguins solides. Il peut également vous aider à maintenir un poids santé.
+     \n• <b>Ne fumez pas</b>. Fumer endommage vos vaisseaux sanguins et augmente considérablement votre risque non seulement d\'hypertension artérielle, mais également de maladie cardiaque, de crise cardiaque et d\'accident vasculaire cérébral.
+     \n• <b>Mangez des aliments sains</b>. Choisir des options de repas et de collations saines peut vous aider à éviter l\'hypertension artérielle et ses complications. Assurez-vous de manger beaucoup de fruits et légumes frais.
+     \n• <b>Gardez un poids santé</b>. Le surpoids ou l\'obésité signifie que votre cœur doit travailler plus fort pour pomper le sang et l\'oxygène dans tout le corps. Le maintien d\'un poids santé réduit le stress sur votre cœur et réduit votre risque de maladie cardiaque, de crise cardiaque et d\'accident vasculaire cérébral.
+
+         \n\nSource : https://www.cdc.gov/
+     </string>
+    <string name="post_04_title">Symptômes et causes de l\'hypertension artérielle</string>
+    <string name="post_04_content">
+         \n\n<font size="16"><b>Comment savoir si j\'ai une pression artérielle élevée ?</b></font>\n
+         Il n\'y a qu\'une seule façon de savoir si vous souffrez d\'hypertension artérielle : demandez à un médecin ou à un autre professionnel de la santé de la mesurer. La mesure de votre tension artérielle est rapide et indolore.
+
+         Discutez avec votre équipe de soins de santé de la mesure régulière de votre tension artérielle à domicile, également appelée surveillance de la pression artérielle automesurée (SMBP).
+
+         L\'hypertension artérielle est appelée le « tueur silencieux » car elle ne présente généralement aucun signe avant-coureur ou symptôme, et de nombreuses personnes ne savent pas qu\'elles en sont atteintes.
+
+         Symptômes
+         La plupart des personnes souffrant d\'hypertension artérielle ne présentent aucun symptôme, même si les lectures de tension artérielle atteignent des niveaux dangereusement élevés. Vous pouvez avoir une pression artérielle élevée pendant des années sans aucun symptôme.
+
+         Quelques personnes souffrant d\'hypertension artérielle peuvent avoir :
+         \n• Maux de tête
+         \n• Essoufflement
+         \n• Saignements de nez
+         \n• Cependant, ces symptômes ne sont pas spécifiques. Ils ne se produisent généralement pas tant que l\'hypertension n\'a pas atteint un stade grave ou potentiellement mortel.
+
+         \n\n<font size="16"><b>Quand consulter un médecin</b></font>\n
+         Le dépistage de la pression artérielle est une partie importante des soins de santé généraux. La fréquence à laquelle vous devriez faire vérifier votre tension artérielle dépend de votre âge et de votre état de santé général.
+
+         Demandez à votre fournisseur de mesurer votre tension artérielle au moins tous les deux ans à partir de 18 ans. Si vous avez 40 ans ou plus, ou si vous avez entre 18 et 39 ans et que vous présentez un risque élevé d\'hypertension artérielle, demandez une mesure de votre tension artérielle. vérifier chaque année.
+
+         Votre fournisseur de soins recommandera probablement des lectures plus fréquentes si vous souffrez d\'hypertension artérielle ou d\'autres facteurs de risque de maladie cardiaque.
+
+         Les enfants âgés de 3 ans et plus peuvent faire mesurer leur tension artérielle dans le cadre de leurs examens annuels.
+
+         Si vous ne consultez pas régulièrement un fournisseur de soins, vous pourrez peut-être obtenir un dépistage gratuit de la pression artérielle lors d\'une foire aux ressources en santé ou à d\'autres endroits de votre communauté. Des tensiomètres gratuits sont également disponibles dans certains magasins et pharmacies. La précision de ces machines dépend de plusieurs choses, comme une taille de brassard correcte et une bonne utilisation des machines. Demandez à votre fournisseur de soins de santé des conseils sur l\'utilisation des tensiomètres publics.
+
+         \n\n<font size="16"><b>Causes</b></font>\n
+         La tension artérielle est déterminée par deux choses : la quantité de sang que le cœur pompe et la difficulté avec laquelle le sang se déplace dans les artères. Plus le cœur pompe de sang et plus les artères sont étroites, plus la tension artérielle est élevée.
+Il existe deux principaux types d\'hypertension artérielle.
+
+         L\'hypertension primaire, aussi appelée hypertension essentielle
+         Pour la plupart des adultes, il n\'y a pas de cause identifiable d\'hypertension artérielle. Ce type d\'hypertension artérielle est appelé hypertension primaire ou hypertension essentielle. Il a tendance à se développer progressivement sur de nombreuses années. L\'accumulation de plaque dans les artères, appelée athérosclérose, augmente le risque d\'hypertension artérielle.
+
+         HTA secondaire
+         Ce type d\'hypertension artérielle est causé par une affection sous-jacente. Elle a tendance à apparaître soudainement et à provoquer une tension artérielle plus élevée que l\'hypertension primaire. Les conditions et les médicaments qui peuvent entraîner une hypertension secondaire comprennent :
+
+         \n• Tumeurs de la glande surrénale
+         \n• Problèmes des vaisseaux sanguins présents à la naissance, également appelés malformations cardiaques congénitales
+         \n• Médicaments contre la toux et le rhume, certains analgésiques, pilules contraceptives et autres médicaments sur ordonnance
+         \n• Drogues illégales, comme la cocaïne et les amphétamines
+         \n• Maladie rénale
+         \n• Apnée obstructive du sommeil
+         \n• Problèmes de thyroïde
+         Parfois, le simple fait de passer un bilan de santé entraîne une augmentation de la tension artérielle. C\'est ce qu\'on appelle l\'hypertension de la blouse blanche.
+
+         \n\nSource : https://www.mayoclinic.org/
+     </string>
+    <string name="low">Faible</string>
+    <string name="systole_range_low"><![CDATA[(<90)]]></string>
+    <string name="diastole_range_low"><![CDATA[(<60)]]></string>
+    <string name="you_need_to_measure_blood_pressure_at_8_pm_everyday">Vous devez mesurer votre tension artérielle à 20 heures tous les jours</string>
+    <string name="you_need_to_measure_weight_and_bmi_to_manage_weight_better">Vous devez mesurer votre poids et votre IMC pour mieux gérer votre poids.</string>\
+    <string name="term_of_service">Termes du contrat de service</string>
+    <string name="no_data_chart">Pas de données de graphique</string>
+    <string name="this_action_can_contain_ads">(Cette action peut contenir des publicités)</string>
+    <string name="ads">Publicité</string>
+    <string name="enter_your_name">Entrez votre nom</string>
+    <string name="hint_input_height">Ex : 170</string>
+    <string name="hint_input_weight">Ex : 60</string>
+    <string name="create">Créer</string>
+    <string name="soon">Bientôt</string>
+    <string name="coming_soon">Prochainement</string>
+    <string name="title_no_data">Il n\'y a pas de données ici !</string>
+    <string name="content_no_data">Mesurons votre fréquence cardiaque dès maintenant !</string>
+    <string name="dashboard_tip">Le type de médicament utilisé pour traiter l\'hypertension dépend de votre état de santé global et de la gravité de votre hypertension. Deux médicaments ou plus contre l\'hypertension artérielle fonctionnent souvent mieux qu\'un seul.</string>
+    <string name="delete_result">Supprimer le résultat</string>
+    <string name="missing_required_information">Information requise manquante !</string>
+    <string name="disclaimer_content">Notre application de santé offre exclusivement des fonctionnalités de saisie et de suivi. Nous fournissons des résultats et des recommandations basés sur des sources fiables et dignes de confiance qui sont clairement sourcées sur notre plateforme. Notre objectif est d\'offrir à nos utilisateurs une expérience fiable et conviviale. Cependant, veuillez noter que nous ne sommes pas un service de soins de santé et, pour obtenir les résultats les plus précis, nous vous conseillons vivement de contacter votre hôpital, votre infirmerie ou votre médecin le plus proche. Merci encore d\'utiliser notre application et nous vous souhaitons sincèrement une bonne santé.
+    </string>
+    <string name="diastole_warning">Il devrait être compris entre 30 et 120, ce qui correspond à la plage diastolique utilisée par cet outil.</string>
+    <string name="systole_warning">Il devrait être compris entre 70 et 250, ce qui correspond à la plage systolique utilisée par cet outil.</string>
+    <string name="systole_lower_diastole">Vérifiez vos deux chiffres. La valeur systolique doit être supérieure à la valeur diastolique.</string>
+    <string name="disclaimer">Clause de non-responsabilité</string>
+    <string name="disclaimer_italic"><u>Clause de non-responsabilité</u></string>
+    <string name="click_here_for_reference"><u>Cliquez ici pour référence</u></string>
+</resources>

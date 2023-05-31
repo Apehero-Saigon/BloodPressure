@@ -1,0 +1,440 @@
+<resources>
+    <string name="app_name">Huyết áp</string>
+    <string name="heart_rate_blood_pressure_monitor"><![CDATA[Đo Nhịp Tim &amp; Huyết Áp]]></string>
+    <string name="settings">Cài đặt</string>
+    <string name="home">Trang chủ</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Tiếp theo</string>
+    <string name="create_new_profile">Tạo hồ sơ mới</string>
+    <string name="image">Hình ảnh</string>
+    <string name="info">Thông tin</string>
+    <string name="insights">Nhận định</string>
+    <string name="enter_your_weight_kg">Nhập cân nặng của bạn (kg)</string>
+    <string name="enter_your_height_cm">Nhập chiều cao của bạn (cm)</string>
+    <string name="not_known">Không biết</string>
+    <string name="female">Nữ</string>
+    <string name="male">Nam</string>
+    <string name="save">Lưu</string>
+    <string name="update_profile">Cập nhật hồ sơ</string>
+    <string name="greeting">Xin chào, Phong</string>
+    <string name="icon">Biểu tượng</string>
+    <string name="heart_rate">Nhịp tim</string>
+    <string name="manually">Thủ công</string>
+    <string name="create_a_user">Tạo một người dùng</string>
+    <string name="let_create_first_user">Hãy tạo người dùng đầu tiên để khám phá một số chức năng tuyệt vời trên ứng dụng này</string>
+    <string name="heart_rate_content">Đo nhịp tim của bạn với thông tin thời gian thực về hiệu suất tim của bạn.</string>
+    <string name="heart_rate_button_content">Đo ngay</string>
+    <string name="default_height">170</string>
+    <string name="default_weight">60</string>
+    <string name="name">Tên</string>
+    <string name="year_of_birth">Năm sinh</string>
+    <string name="year_of_birth_2">Năm sinh: </string>
+    <string name="weight_kg">Cân nặng (kg)</string>
+    <string name="height_cm">Chiều cao (cm)</string>
+    <string name="gender">Giới tính</string>
+    <string name="photo">Ảnh</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="intro_title_1">Đo nhịp tim của bạn</string>
+    <string name="intro_title_2">Theo dõi huyết áp của bạn</string>
+    <string name="intro_title_3">Tính toán cân nặng và BMI của bạn</string>
+    <string name="intro_content_1">Đo nhịp tim của bạn và cung cấp thông tin thời gian thực về hiệu suất tim của bạn.</string>
+    <string name="intro_content_2">Theo dõi các đọc số huyết áp của bạn theo thời gian và cung cấp thông tin chi tiết cho bạn.</string>
+    <string name="intro_content_3">Giúp bạn theo dõi cân nặng của mình và giám sát tiến trình của bạn trong việc đạt được mục tiêu.</string>
+    <string name="start">Bắt đầu</string>
+    <string name="welcome">Chào mừng!</string>
+    <string name="measure_your_pulse_rate_with_real_time_information_about_your_heart_s_performance">Đo nhịp tim của bạn với thông tin thời gian thực về hiệu suất tim của bạn.</string>
+    <string name="measure_now">Đo ngay</string>
+    <string name="blood_pressure">Huyết áp</string>
+    <string name="blood_pressure_content">Theo dõi các đọc số huyết áp của bạn theo thời gian và cung cấp thông tin chi tiết cho bạn.</string>
+    <string name="blood_pressure_button_content">Theo dõi ngay</string>
+    <string name="weight_and_bmi">Cân nặng và BMI</string>
+    <string name="weight_and_bmi_content">Giúp bạn theo dõi cân nặng của mình và giám sát tiến trình của bạn trong việc đạt được mục tiêu.</string>
+    <string name="weight_and_bmi_button_content">Tính toán ngay</string>
+    <string name="button">Nút</string>
+    <string name="systole">SYS</string>
+    <string name="ex_170">Ex: 170</string>
+    <string name="ex_60">Ex: 60</string>
+    <string name="ex_85">Ex: 85</string>
+    <string name="diastole">DIA</string>
+    <string name="pulse">PULSE</string>
+    <string name="measure">Đo</string>
+    <string name="result">Kết quả</string>
+    <string name="_120_80">120/80</string>
+    <string name="_80">80</string>
+    <string name="measured_at_17_00pm_21_04_2023">Đã đo lúc 17:00 21.04.2023</string>
+    <string name="year_of_birth_2000">Năm sinh: 2000</string>
+    <string name="height_170">Chiều cao: 170cm\n</string>
+    <string name="weight_75">Cân nặng: 75kg</string>
+    <string name="hypertension_stage_1">Bệnh tăng huyết áp giai đoạn 1</string>
+    <string name="systole_range_elevated">(120 – 129)</string>
+    <string name="systole_range_normal">(&lt; 120)</string>
+    <string name="systole_range_hypertension_stage_1">(120 – 139)</string>
+    <string name="systole_range_hypertension_stage_2">(140 – 179)</string>
+    <string name="systole_range_emergency_care_needed">(>180)</string>
+    <string name="diastole_range_normal_and_elevated">(&lt; 80)</string>
+    <string name="diastole_range_hypertension_stage_1">(80 – 89)</string>
+    <string name="diastole_range_hypertension_stage_2">(90 – 100)</string>
+    <string name="diastole_range_emergency_care_needed">(>100)</string>
+    <string name="recommendations">ĐỀ XUẤT</string>
+    <string name="weight">"Cân nặng: "</string>
+    <string name="kg">kg</string>
+    <string name="height">"Chiều cao: "</string>
+    <string name="cm">cm</string>
+    <string name="normal">Bình thường</string>
+    <string name="elevated">Tăng cao</string>
+    <string name="hypertension_stage_2">Tăng huyết áp giai đoạn 2</string>
+    <string name="emergency_care_needed">Cần chăm sóc khẩn cấp</string>
+    <string name="recommendations_hypertension_stage_1">Nhiều người có huyết áp cao có thể hạ huyết áp về mức bình thường hoặc duy trì giữa khoảng số đo huyết áp bình thường bằng cách thay đổi lối sống. Dưới đây là một số đề xuất: \n• Tập thể dục ít nhất 150 phút mỗi tuần (khoảng 30 phút mỗi ngày, 5 ngày một tuần) \n• Không hút thuốc \n• Ăn một chế độ ăn uống lành mạnh, bao gồm giới hạn natri (muối) và cồn \n• Giữ cân nặng lành mạnh \n• Quản lý căng thẳng \n
+    </string>
+    <string name="recommendations_normal">Đây là một số lời khuyên để cải thiện huyết áp của bạn. \n • Uống nhiều nước. Điều hạn chế cung cấp nước có thể gây ra sự giảm tạm thời trong huyết áp. \n• Theo một chế độ ăn uống lành mạnh. Tăng hàm lượng muối trong thực phẩm nếu bạn có huyết áp thấp. \n• Nếu áp lực quá thấp và bạn đang dùng bất kỳ loại thuốc nào - hãy kiểm tra tác dụng phụ của chúng. \n• Ăn những bữa ăn nhỏ ít carbohydrate. \n• Tránh tiêu thụ rượu hoặc chỉ uống ở mức độ vừa phải. \n• Bao gồm một số hình thức tập thể dục trong thói quen hàng ngày của bạn. Những bài tập như đi bộ nhanh và bơi lội có thể giúp lưu thông máu. Ngoài ra, nó giữ cho bạn trẻ trong tâm trí và thân thể và là một cách giảm căng thẳng tuyệt vời.</string>
+    <string name="recommendations_hypertension_stage_2">Đây là một số lời khuyên để giảm huyết áp của bạn. \n • Từ bỏ thuốc lá. Ngoài việc gây hại cho phổi, việc hút thuốc lá thu hẹp các mạch máu và làm tăng huyết áp của bạn, khiến cho trái tim khó đập. \n• Tránh tiêu thụ rượu hoặc chỉ uống ở mức độ vừa phải. Rượu tăng huyết áp của bạn lên mức không lành mạnh. \n• Theo một chế độ ăn uống lành mạnh. Tránh ăn quá nhiều muối trong thực phẩm. \n• Giảm cân. Những người béo phì có nguy cơ cao hơn để mắc bệnh huyết áp cao. \n• Tập thể dục thường xuyên. Nó giúp ngăn ngừa bệnh huyết áp cao và tiểu đường. Ngoài ra, nó giữ cho bạn trẻ trong tâm trí và thân thể và là một cách giảm căng thẳng tuyệt vời. \n• Uống đủ nước hàng ngày. \n• Tránh căng thẳng.</string>
+    <string name="recommendations_emergency_care_needed">Đây là một số lời khuyên để giảm huyết áp của bạn.\n • Từ bỏ thuốc lá. Ngoài việc gây hại cho phổi, việc hút thuốc lá thu hẹp các mạch máu và làm tăng huyết áp của bạn, khiến cho trái tim khó đập. \n• Tránh tiêu thụ rượu hoặc chỉ uống ở mức độ vừa phải. Rượu tăng huyết áp của bạn lên mức không lành mạnh. \n• Theo một chế độ ăn uống lành mạnh. Tránh ăn quá nhiều muối trong thực phẩm. \n• Giảm cân. Những người béo phì có nguy cơ cao hơn để mắc bệnh huyết áp cao. \n• Tập thể dục thường xuyên. Nó giúp ngăn ngừa bệnh huyết áp cao và tiểu đường. Ngoài ra, nó giữ cho bạn trẻ trong tâm trí và thân thể và là một cách giảm căng thẳng tuyệt vời. \n• Uống đủ nước hàng ngày. \n• Tránh căng thẳng.</string>
+    <string name="measured_at">Đã đo lúc</string>
+    <string name="good_morning">Chào buổi sáng!</string>
+    <string name="good_afternoon">Chào buổi chiều!</string>
+    <string name="good_evening">Chào buổi tối!</string>
+    <string name="dashboard_intro_fragment">Trang chủ</string>
+    <string name="your_recently_action">Các hoạt động gần đây của bạn</string>
+    <string name="more_detail">Chi tiết</string>
+    <string name="suggestion">Gợi ý</string>
+    <string name="default_suggestion">Mr.Phong cần ghi lại huyết áp ngay bây giờ!</string>
+    <string name="action">Hành động</string>
+    <string name="profile_select">Chọn hồ sơ</string>
+    <string name="user_management">Quản lý người dùng</string>
+    <string name="insights_blood_pressure_fragment">Thông tin chi tiết về huyết áp</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="your_health_condition">Tình trạng sức khỏe của bạn</string>
+    <string name="your_heart_rate_is_so_hight">Nhịp tim của bạn quá cao. Bạn nên ngồi xuống để giữ bình tĩnh. Tập thể dục đều đặn, như đi bộ nhanh, chạy bộ, đạp xe đạp hoặc bơi lội, có thể giúp cải thiện sức khỏe tim mạch của bạn.</string>
+    <string name="totals">Tổng số</string>
+    <string name="view_result">Xem kết quả</string>
+    <string name="information_knowledge"><![CDATA[Thông tin & Kiến thức]]></string>
+    <string name="edit">Chỉnh sửa</string>
+    <string name="delete">Xóa</string>
+    <string name="edit_your_information">Chỉnh sửa thông tin của bạn</string>
+    <string name="update">Cập nhật</string>
+    <string name="blood_pressure_edit_fragment">Chỉnh sửa huyết áp</string>
+    <string name="oops_there_is_an_error_try_again">Xin lỗi, đã xảy ra lỗi. Vui lòng thử lại sau!</string>
+    <string name="this_result_will_be_deleted_forever_are_you_sure">Kết quả này sẽ bị xóa vĩnh viễn. Bạn có chắc chắn?</string>
+    <string name="a_normal_blood_pressure">Mức huyết áp bình thường là ít hơn 120/80 mmHg. Bất kể tuổi tác của bạn, bạn có thể thực hiện các bước mỗi ngày để duy trì huyết áp ở mức khỏe mạnh.</string>
+    <string name="blood_pressure_advice">Lời khuyên về huyết áp</string>
+    <string name="how_to_improve_weight_better">Làm thế nào để cải thiện cân nặng tốt hơn</string>
+    <string name="example_info_detail">Tập thể dục là một phần quan trọng của phòng ngừa bệnh - và điều này bao gồm cả phòng ngừa ung thư. Nhưng không phải tất cả các bài tập được tạo ra bằng nhau. Điều quan trọng là một số bài tập của bạn khiến trái tim của bạn đập nhanh hơn so với khi bạn nghỉ ngơi. \n\n Làm cho trái tim của bạn đập nhanh hơn sẽ đào tạo cơ thể của bạn để di chuyển oxy và máu đến cơ bắp của bạn hiệu quả hơn, giúp bạn đốt cháy nhiều calo hơn và giảm cholesterol. Tất cả điều này có thể giúp bạn duy trì sức khỏe và giảm nguy cơ ung thư.\n\n Làm cho trái tim của bạn đập nhanh hơn sẽ đào tạo cơ thể của bạn để di chuyển oxy và máu đến cơ bắp của bạn hiệu quả hơn, giúp bạn đốt cháy nhiều calo hơn và giảm cholesterol. Tất cả điều này có thể giúp bạn duy trì sức khỏe và giảm nguy cơ ung thư.\n
+    </string>
+    <string name="related_posts">Bài viết liên quan</string>
+    <string name="info_detail_fragment">Chi tiết thông tin</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="privacy">Chính sách riêng tư</string>
+    <string name="rate_us">Đánh giá chúng tôi</string>
+    <string-array name="gender">
+        <item>@string/male</item>
+        <item>@string/female</item>
+        <item>@string/not_known</item>
+    </string-array>
+    <string name="japanese">Nhật Bản</string>
+    <string name="korean">Hàn Quốc</string>
+    <string name="vietnamese">Việt Nam</string>
+    <string name="setting_language_fragment">Thiết lập ngôn ngữ</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="german">Tiếng Đức</string>
+    <string name="spanish">Tiếng Tây Ban Nha</string>
+    <string name="french">Tiếng Pháp</string>
+    <string name="portugal">Tiếng Bồ Đào Nha</string>
+    <string name="change_default_language_successfully">Thay đổi ngôn ngữ mặc định thành công!</string>
+    <string name="post_01_title">10 cách kiểm soát huyết áp cao mà không cần thuốc</string>
+    <string name="post_01_content">Bằng cách thực hiện 10 thay đổi lối sống này, bạn có thể hạ huyết áp và giảm nguy cơ mắc bệnh tim.\n\nNếu bạn có huyết áp cao, bạn có thể tự hỏi liệu liệu cần thiết phải sử dụng thuốc để điều chỉnh số liệu. Tuy nhiên, lối sống chơi trò quan trọng trong việc điều trị huyết áp cao. Kiểm soát huyết áp bằng một lối sống lành mạnh có thể ngăn ngừa, trì hoãn hoặc giảm thiểu nhu cầu sử dụng thuốc.\n\nDưới đây là 10 thay đổi lối sống có thể giảm huyết áp và giữ cho nó ở mức thấp.
+        \n\n<font size="16"><b>1. Giảm cân và giữ dáng</b></font>\nHuyết áp thường tăng lên khi cân nặng tăng. Bị thừa cân cũng có thể gây ra tình trạng ngừng thở trong khi ngủ (ngủ mơ) và tăng huyết áp thêm nữa.\n\nGiảm cân là một trong những thay đổi lối sống hiệu quả nhất để kiểm soát huyết áp. Nếu bạn thừa cân hoặc béo phì, thậm chí việc giảm một lượng cân nhỏ cũng có thể giúp giảm huyết áp. Nói chung, huyết áp có thể giảm khoảng 1 milimet thủy ngân (mm Hg)
+        Mỗi kilogram (khoảng 2,2 pound) cân nặng giảm được coi là giảm nguy cơ mắc bệnh cao huyết áp. \n\nNgoài ra, kích cỡ vòng eo cũng rất quan trọng. Mang quá nhiều cân nặng quanh vùng bụng có thể làm tăng nguy cơ mắc bệnh cao huyết áp.
+        \n\nNói chung:
+        \n\n• Nam giới có nguy cơ nếu vòng eo của họ lớn hơn 40 inch (102 centimet)
+        \n• Nữ giới có nguy cơ nếu vòng eo của họ lớn hơn 35 inch (89 centimet)
+        \nCác con số này khác nhau giữa các nhóm dân tộc. Hãy hỏi bác sĩ của bạn về kích thước vòng eo lành mạnh cho bạn.\n\n<font size="16"><b>2.Tập thể dục thường xuyên</b></font>\nHoạt động thể chất thường xuyên có thể giảm huyết áp cao khoảng 5 đến 8 mmHg. Quan trọng là tiếp tục tập luyện để ngăn ngừa huyết áp tăng cao trở lại. Như một mục tiêu chung, hãy tập luyện ít nhất 30 phút một ngày.
+        \n\nTập thể dục cũng có thể giúp ngăn ngừa huyết áp cao (tăng huyết áp). Đối với những người có huyết áp cao, hoạt động thể chất thường xuyên có thể đưa huyết áp xuống mức an toàn hơn.\n\nMột số ví dụ về tập thể dục hỗ trợ giảm huyết áp bao gồm đi bộ, chạy bộ, đạp xe, bơi hoặc nhảy múa. Một lựa chọn khác là tập luyện hiệu quả cao theo chu kỳ. Loại tập luyện này bao gồm thay phiên giữa các đợt hoạt động mạnh và các đợt hoạt động nhẹ.\n\nTập luyện sức mạnh cũng có thể giúp giảm huyết áp. Hãy đặt mục tiêu bao gồm các bài tập tăng cường sức mạnh ít nhất hai ngày một tuần. Hãy nói chuyện với bác sĩ về việc phát triển chương trình tập thể dục.
+        \n\n<font size="16"><b>3. Ăn một chế độ ăn uống lành mạnh</b></font>\nĂn một chế độ ăn uống giàu chất xơ, trái cây, rau củ và các sản phẩm sữa ít béo và ít cholesterol có thể giảm huyết áp cao đến 11 mmHg. Các ví dụ về kế hoạch ăn uống có thể giúp kiểm soát huyết áp là chế độ ăn kiêng DASH (Dietary Approaches to Stop Hypertension) và chế độ ăn kiêng Địa Trung Hải.\n\nKali trong chế độ ăn uống có thể làm giảm tác động của muối (natri) đến huyết áp. Nguồn kali tốt nhất là thực phẩm như trái cây và rau củ, chứ không phải các loại bổ sung. Hãy mục tiêu đạt 3.500 đến 5.000 mg mỗi ngày, có thể làm giảm huyết áp 4 đến 5 mmHg. Hỏi nhà cung cấp chăm sóc sức khỏe của bạn về lượng kali bạn nên có.
+        \n\n<font size="16"><b>4. Giảm muối (natri) trong chế độ ăn uống</b></font>\nThậm chí việc giảm muối nhỏ trong chế độ ăn uống cũng có thể cải thiện sức khỏe tim và giảm huyết áp cao khoảng 5 đến 6 mmHg.\n\nTác động của lượng natri vào huyết áp khác nhau giữa các nhóm người. Nói chung, hạn chế natri từ 2.300 miligam (mg) mỗi ngày hoặc ít hơn là tốt nhất. Tuy nhiên, lượng natri thấp hơn - 1.500 mg mỗi ngày hoặc ít hơn - là lý tưởng cho hầu hết các người lớn.\n\nĐể giảm muối trong chế độ ăn uống:\n\n<b>Đọc nhãn hàng hóa.</b> Tìm kiếm phiên bản ít muối của thực phẩm và đồ uống.\n<b>Ăn ít thực phẩm chế biến.</b> Chỉ một lượng nhỏ natri tự nhiên có trong thực phẩm. Hầu hết natri được thêm vào trong quá trình chế biến.\n<b>Không thêm muối.</b> Sử dụng các loại thảo mộc hoặc gia vị để tạo hương vị cho thực phẩm.\n<b>Nấu ăn.</b> Nấu ăn giúp bạn kiểm soát lượng muối trong thực phẩm.\n<font size="16"><b>\n5. Giới hạn uống rượu</b></font>\nGiới hạn uống rượu dưới một ly mỗi ngày đối với phụ nữ hoặc hai ly mỗi ngày đối với nam giới có thể giúp giảm huyết áp khoảng 4 mm Hg. Một ly rượu tương đương với 12 ounce bia, 5 ounce rượu vang hoặc 1,5 ounce rượu có độ cồn 80-proof.\n\nTuy nhiên, uống quá nhiều rượu có thể làm tăng huyết áp và làm giảm hiệu quả của thuốc điều trị huyết áp.\n\n<font size="16"><b>6. Bỏ thuốc lá</b></font>\nHút thuốc lá tăng huyết áp. Ngừng hút thuốc lá giúp giảm huyết áp. Nó cũng giảm nguy cơ mắc bệnh tim và cải thiện sức khỏe tổng thể, có thể kéo dài tuổi thọ.\n\n
+        <font size="16"><b>7. Có một giấc ngủ ngon</b></font>\nChất lượng giấc ngủ kém - chỉ ngủ dưới 6 giờ mỗi đêm trong vài tuần - có thể góp phần vào tình trạng tăng huyết áp. Nhiều vấn đề có thể làm gián đoạn giấc ngủ, bao gồm chứng ngưng thở khi ngủ, hội chứng chân giựt và chứng mất ngủ chung.\n\nHãy cho bác sĩ chăm sóc sức khỏe của bạn biết nếu bạn thường xuyên gặp vấn đề về giấc ngủ. Tìm ra và điều trị nguyên nhân có thể giúp cải thiện giấc ngủ. Tuy nhiên, nếu bạn không bị chứng ngưng thở khi ngủ hoặc hội chứng chân giựt, hãy tuân theo những lời khuyên đơn giản sau đây để có một giấc ngủ ngon hơn.\n\nGiữ thời gian ngủ đều. Đi ngủ và thức dậy cùng một thời điểm mỗi ngày. Cố gắng giữ cùng lịch trình vào các ngày trong tuần và cuối tuần.\nTạo không gian nghỉ ngơi. Điều đó có nghĩa là giữ cho không gian ngủ mát mẻ, yên tĩnh và tối tăm. Làm điều gì đó thư giãn trong một giờ trước khi đi ngủ. Điều đó có thể bao gồm tắm nước ấm hoặc thực hiện các bài tập thư giãn. Tránh ánh sáng sáng, chẳng hạn như từ TV hoặc màn hình máy tính.\nXem xét thức ăn và đồ uống. Đừng đi ngủ khi đói hoặc no căng. Tránh ăn những bữa ăn lớn gần giờ đi ngủ. Hạn chế hoặc tránh nicotine, caffeine và alcohol trước giờ đi ngủ.\nHạn chế việc ngủ trưa. Đối với những người thấy việc ngủ trưa trong ngày có ích, hạn chế ngủ chỉ 30 phút vào sáng sớm có thể giúp cải thiện giấc ngủ vào ban đêm.\n\n
+        <font size="16"><b>8. Giảm căng thẳng</b></font>\nCăng thẳng tâm lý dài hạn (mạn tính) có thể góp phần vào tình trạng huyết áp cao. Cần thêm nghiên cứu về tác động của các kỹ thuật giảm căng thẳng để tìm hiểu liệu chúng có thể giảm huyết áp hay không.\n\nTuy nhiên, không có hại gì khi xác định nguyên nhân gây ra căng thẳng, như công việc, gia đình, tài chính hoặc bệnh tật, và tìm cách giảm căng thẳng. Hãy thử các cách sau đây:\n\nTránh cố gắng làm quá nhiều. Lập kế hoạch cho ngày của bạn và tập trung vào những ưu tiên của bạn. Học cách từ chối. Dành đủ thời gian để hoàn thành những việc cần phải làm.\nTập trung vào các vấn đề bạn có thể kiểm soát và lên kế hoạch để giải quyết chúng. Đối với một vấn đề ở nơi làm việc, hãy nói chuyện với cấp trên của bạn. Đối với mâu thuẫn với con cái hoặc vợ/chồng, hãy tìm cách giải quyết nó.\nTránh kích hoạt căng thẳng. Ví dụ, nếu giao thông giờ cao điểm gây ra căng thẳng, hãy đi lại vào thời gian khác hoặc sử dụng phương tiện giao thông công cộng. Tránh tiếp xúc với những người gây căng thẳng nếu có thể.\nDành thời gian để thư giãn. Dành thời gian mỗi ngày để ngồi im lặng và thở sâu. Dành thời gian cho các hoạt động hoặc sở thích thú vị, chẳng hạn như đi dạo, nấu ăn hoặc tình nguyện.\nThực hành biết ơn. Bày tỏ lòng biết ơn với người khác có thể giúp giảm căng thẳng.\n\n
+        <font size="16"><b>9. Tự đo huyết áp tại nhà và thường xuyên kiểm tra sức khỏe</b></font>
+        \nViệc theo dõi huyết áp tại nhà có thể giúp bạn kiểm soát tình trạng huyết áp của mình. Nó có thể đảm bảo rằng thuốc và thay đổi lối sống của bạn đang có tác dụng.\n\nMáy đo huyết áp tại nhà có sẵn rộng rãi và không cần toa thuốc. Trước khi bắt đầu, hãy nói chuyện với bác sĩ của bạn về việc theo dõi tại nhà.\n\nViệc thường xuyên đến gặp bác sĩ cũng rất quan trọng để kiểm soát huyết áp. Nếu huyết áp của bạn được kiểm soát tốt, hãy hỏi bác sĩ của bạn cách thức kiểm tra huyết áp định kỳ. Bạn có thể chỉ cần kiểm tra một lần mỗi ngày hoặc ít hơn.\n\n<font size="16"><b>10. Nhận sự hỗ trợ</b></font>\nBạn bè và gia đình đều quan trọng đối với sức khỏe tốt. Họ có thể khuyến khích bạn chăm sóc bản thân, đưa bạn đến văn phòng chăm sóc sức khỏe hoặc cùng bạn bắt đầu một chương trình tập thể dục để giữ huyết áp ổn định.\n\nNếu bạn cần sự hỗ trợ ngoài gia đình và bạn bè, hãy xem xét tham gia một nhóm hỗ trợ. Điều này có thể giúp bạn kết nối với những người có thể đưa cho bạn sự khích lệ và đưa ra các mẹo thực tiễn để ứng phó với tình trạng của bạn.
+        \n\nNguồn: https://www.mayoclinic.org/
+    </string>
+    <string name="post_03_title">Thuốc hạ huyết áp</string>
+    <string name="post_03_content">Nhiều người cần dùng thuốc bổ sung đồng thời với việc thay đổi lối sống để giúp duy trì mức huyết áp ở mức khỏe mạnh. Đọc thêm về các loại thuốc hạ huyết áp.
+
+    \n\n<font size="16"><b>Thuốc hạ huyết áp hoạt động như thế nào?</b></font>\n
+Thuốc hạ huyết áp có thể hoạt động theo nhiều cách khác nhau. Thuốc hạ huyết áp có thể giữ mức huyết áp ở mức khỏe mạnh bằng cách:
+
+    \n• Làm cho cơ thể bạn loại bỏ nước, giảm lượng nước và muối trong cơ thể xuống mức khỏe mạnh
+    \n• Thư giãn mạch máu của bạn
+    \n• Làm cho tim của bạn đập nhẹ hơn
+    \n• Ngăn chặn hoạt động của dây thần kinh có thể hạn chế các mạch máu của bạn
+    \n• Nói chuyện với đội ngũ chăm sóc sức khỏe của bạn về loại điều trị tốt nhất cho bạn. Bạn có thể cần phải dùng nhiều loại thuốc hơn để kiểm soát huyết áp của mình. Bạn cũng có thể nói chuyện với đội ngũ chăm sóc sức khỏe của mình về thời gian mà thuốc hạ huyết áp của bạn cần để có hiệu quả.
+
+Rất quan trọng để uống thuốc hạ huyết áp đúng cách theo hướng dẫn của bác sĩ. Đừng ngừng uống thuốc hiện tại của bạn mà không nói chuyện với bác sĩ hoặc nhà dược trước. Ngừng dùng thuốc hạ huyết áp mà không trước tiên nói chuyện với đội ngũ chăm sóc sức khỏe của bạn có thể dẫn đến hậu quả nghiêm trọng.
+
+    \n\n<font size="16"><b>Lợi ích và rủi ro của thuốc hạ huyết áp là gì?</b></font>\n"
+
+    Các lợi ích của thuốc hạ huyết áp rõ ràng: Thuốc hạ huyết áp có thể giúp bạn duy trì mức huyết áp ở mức độ khỏe mạnh và giảm nguy cơ mắc bệnh tim, đột quỵ và bệnh tim.
+
+    Nói chung, các rủi ro của việc dùng thuốc hạ huyết áp là thấp. Tuy nhiên, tất cả các loại thuốc đều có rủi ro. Hãy nói chuyện với bác sĩ hoặc chuyên gia y tế của bạn về các rủi ro của thuốc hạ huyết áp.
+
+    Không ngừng sử dụng thuốc hiện tại của bạn mà không nói chuyện với bác sĩ hoặc chuyên gia y tế của bạn trước.
+    \n\n<font size="16"><b>Tác dụng phụ của thuốc huyết áp là gì?</b></font>\n
+    Các tác dụng phụ của thuốc hạ huyết áp thường không gây ra tác dụng phụ. Một số người có tác dụng phụ nhẹ, bao gồm chóng mặt, đau đầu, sưng ở chân hoặc đau dạ dày.
+
+    Một số loại thuốc mua không cần đơn, chẳng hạn như thuốc thông mũi, cũng có thể làm tăng huyết áp và tương tác với thuốc hạ huyết áp. Hãy nói với bác sĩ của bạn về bất kỳ loại thuốc hoặc bổ sung nào bạn đã sử dụng.
+
+    Tất cả các loại thuốc đều có rủi ro. Hãy nói chuyện với bác sĩ của bạn về các loại thuốc hạ huyết áp tốt nhất cho bạn, các lợi ích, rủi ro và tác dụng phụ của chúng, và bất kỳ vấn đề sức khỏe nào khác bạn có thể gặp phải.
+
+    \n\n<font size="16"><b>Làm sao để biết tôi cần dùng thuốc cho huyết áp cao?</b></font>\n
+    Đội ngũ chăm sóc sức khỏe của bạn sẽ cho bạn biết nếu bạn cần dùng thuốc cho huyết áp cao, dựa trên các đọc kết quả huyết áp của bạn trong một khoảng thời gian. Nếu bạn sử dụng máy đo huyết áp tại nhà, hãy ghi lại hoặc viết xuống các kết quả của bạn.
+
+    Hãy chia sẻ các kết quả của bạn với đội ngũ chăm sóc sức khỏe của bạn để bạn có thể đưa ra quyết định tốt nhất để quản lý huyết áp.
+    \n\n<font size="16"><b>Làm thế nào để biết tôi cần thuốc hạ huyết áp?</b></font>\n
+Đội ngũ chăm sóc sức khỏe của bạn sẽ cho bạn biết liệu bạn có cần thuốc hạ huyết áp hay không, dựa trên các chỉ số huyết áp của bạn trong một khoảng thời gian. Nếu bạn sử dụng máy đo huyết áp tại nhà, hãy ghi lại hoặc viết lại các chỉ số của bạn.
+    Chia sẻ các chỉ số của bạn với đội ngũ chăm sóc sức khỏe của bạn để bạn có thể đưa ra quyết định tốt nhất để quản lý huyết áp cùng nhau.
+
+    \n\n<font size="16"><b>Các cách khác để hạ huyết áp của tôi là gì?</b></font>\n
+    Ngoài việc sử dụng thuốc để điều chỉnh huyết áp của bạn, bạn có thể thực hiện các bước khác để giúp giữ cho mức độ huyết áp của bạn ở mức ổn định.\n
+
+    \n• <b>Vận động thể chất thường xuyên</b>. Giữ sự vận động thể chất là một trong những điều tốt nhất bạn có thể làm cho sức khỏe của mình. Hoạt động thể chất giúp giữ cho trái tim và mạch máu của bạn khỏe mạnh. Nó cũng có thể giúp bạn duy trì trọng lượng khỏe mạnh.
+    \n• <b>Không hút thuốc</b>. Hút thuốc làm hỏng các mạch máu của bạn và tăng đáng kể nguy cơ mắc huyết áp cao và các bệnh về tim mạch, cơn đau tim và đột quỵ.
+    \n• <b>Ăn thực phẩm lành mạnh</b>. Lựa chọn các tùy chọn bữa ăn và snack lành mạnh có thể giúp bạn tránh được các biến chứng của huyết áp cao. Hãy chắc chắn ăn đủ rau quả tươi.
+    \n• <b>Giữ trọng lượng khỏe mạnh</b>. Bị thừa cân hoặc béo phì có nghĩa là trái tim của bạn phải làm việc chăm chỉ hơn để bơm máu và oxy đi khắp cơ thể. Giữ một trọng lượng khỏe mạnh giảm áp lực trên trái tim của bạn và giảm nguy cơ mắc bệnh tim mạch, đau
+
+    \n\nNguồn: https://www.cdc.gov/
+
+    </string>
+<string name="post_04_title">Triệu chứng và nguyên nhân của tăng huyết áp</string>
+<string name="post_04_content">
+        \n\n<font size="16"><b>Làm thế nào để biết tôi có tăng huyết áp?</b></font>\n
+        Chỉ có một cách để biết bạn có tăng huyết áp: hãy để bác sĩ hoặc nhân viên y tế khác đo nó. Đo huyết áp của bạn nhanh chóng và không đau.
+    Nói chuyện với đội ngũ chăm sóc sức khỏe của bạn về việc đo huyết áp thường xuyên tại nhà, còn được gọi là giám sát huyết áp tự đo (SMBP).
+
+    Tăng huyết áp được gọi là "kẻ giết người im lặng" vì nó thường không có dấu hiệu hoặc triệu chứng cảnh báo, và nhiều người không biết họ mắc bệnh.
+
+    Triệu chứng
+    Hầu hết mọi người mắc tăng huyết áp không có triệu chứng, ngay cả khi các chỉ số huyết áp đạt đến mức nguy hiểm. Bạn có thể mắc tăng huyết áp trong nhiều năm mà không có triệu chứng.
+
+    Một số ít người mắc tăng huyết áp có thể gặp:
+
+    \n• Đau đầu
+    \n• Khó thở
+    \n• Chảy máu cam
+    \n• Tuy nhiên, những triệu chứng này không cụ thể. Chúng thường không xảy ra cho đến khi tăng huyết áp đạt đến giai đoạn nghiêm trọng hoặc nguy hiểm đến tính mạng.
+
+    \n\n<font size="16"><b>Khi nào cần đến bác sĩ?</b></font>\n
+    Kiểm tra huyết áp là một phần quan trọng của chăm sóc sức khỏe tổng quát. Tần suất bạn nên kiểm tra huyết áp phụ thuộc vào tuổi và sức khỏe tổng thể của bạn.
+
+    Hỏi nhà cung cấp chăm sóc sức khỏe của bạn để đọc chỉ số huyết áp ít nhất hai năm một lần bắt đầu từ 18 tuổi. Nếu bạn từ 40 tuổi trở lên hoặc bạn từ 18 đến 39 tuổi và có nguy cơ cao về huyết áp cao, hỏi để đo huyết áp mỗi năm.
+
+    Nhà cung cấp chăm sóc sức khỏe của bạn sẽ khuyến nghị các đọc số huyết áp thường xuyên hơn nếu bạn có huyết áp cao hoặc các yếu tố nguy cơ khác về bệnh tim mạch.
+
+    Trẻ em từ 3 tuổi trở lên có thể đo huyết áp như một phần của cuộc khám sức khỏe hàng năm của họ.
+
+    Nếu bạn không thường xuyên gặp nhà cung cấp chăm sóc sức khỏe, bạn có thể được đo huyết áp miễn phí tại hội chợ tài nguyên sức khỏe hoặc các địa điểm khác trong cộng đồng của bạn. Các máy đo huyết áp miễn phí cũng có sẵn trong một số cửa hàng và nhà thuốc. Độ chính xác của các máy này phụ thuộc vào một số yếu tố, chẳng hạn như kích cỡ bít tất chính xác và sử dụng đúng cách của các máy này. Hãy hỏi nhà cung cấp chăm sóc sức khỏe của bạn để được tư vấn về cách sử dụng các máy đo huyết áp công cộng.
+
+     \n\n<font size="16"><b>Nguyên nhân</b></font>\n
+Huyết áp được xác định bởi hai yếu tố: lượng máu tim bơm và khó khăn để máu di chuyển qua các động mạch. Càng nhiều máu tim bơm ra và động mạch càng hẹp, thì huyết áp càng cao.
+
+     Có hai loại chính của tăng huyết áp.
+    Tăng huyết áp chủ yếu, còn gọi là tăng huyết áp cơ bản
+    Đối với hầu hết người lớn, không có nguyên nhân cụ thể nào của tăng huyết áp. Loại tăng huyết áp này được gọi là tăng huyết áp chủ yếu hoặc tăng huyết áp cơ bản. Nó có xu hướng phát triển chậm dần qua nhiều năm. Sự tích tụ của các cặn bám trong động mạch, gọi là xơ vữa động mạch, tăng nguy cơ mắc bệnh tăng huyết áp.
+
+    Tăng huyết áp thứ cấp
+    Loại tăng huyết áp này do các tình trạng nền tảng gây ra. Nó có xu hướng xuất hiện đột ngột và gây tăng huyết áp cao hơn so với tăng huyết áp cơ bản. Các tình trạng và thuốc có thể dẫn đến tăng huyết áp thứ cấp bao gồm:
+
+    \n• U xơ tuyến thượng thận
+    \n• Vấn đề về mạch máu có sẵn từ khi sinh ra, còn gọi là khuyết tật tim bẩm sinh
+    \n• Thuốc ho kháng cảm, một số thuốc giảm đau, thuốc tránh thai và các loại thuốc kê đơn khác
+    \n• Ma túy bất hợp pháp, chẳng hạn như cocaine và amphetamines
+    \n• Bệnh thận
+    \n• Ngưng thở khi ngủ do tắc nghẽn
+    \n• Vấn đề về tuyến giáp
+    Đôi khi chỉ việc kiểm tra sức khỏe đôi khi cũng gây tăng huyết áp. Điều này được gọi là tăng huyết áp áp-xanh.
+
+    \n\nNguồn: https://www.mayoclinic.org/"
+         </string>
+<string name="post_06_title">Cách điều trị các giai đoạn khác nhau của tăng huyết áp như thế nào?</string>
+<string name="post_06_content">
+    Hiệp hội Tim Mỹ đã phát hành một hướng dẫn về tăng huyết áp cập nhật vào năm 2017, đưa ra các mục tiêu và khuyến nghị điều trị mới cho bệnh nhân mắc tăng huyết áp.
+    Trong hướng dẫn tăng huyết áp mới, định nghĩa về tăng huyết áp đã được thay đổi để phản ánh các mục tiêu mới cho đo huyết áp tâm thu và tâm trương. Các mục tiêu huyết áp này giúp hướng dẫn quyết định lâm sàng bằng cách phân loại tăng huyết áp: huyết áp bình thường, huyết áp tăng cao, giai đoạn 1 và giai đoạn 2.1
+    Trước đó, tăng huyết áp được định nghĩa là đo huyết áp tâm thu bằng 140 mmHg trở lên hoặc đo huyết áp tâm trương bằng 90 mmHg trở lên.1 Hướng dẫn cập nhật đã định nghĩa lại tăng huyết áp là đo huyết áp tâm thu bằng 130 mmHg trở lên hoặc đo huyết áp tâm trương bằng 80 mmHg trở lên.1 Do đó, bệnh nhân có đo huyết áp tâm thu từ 140/90 mmHg trở lên được xem là mắc tăng huyết áp giai đoạn 2.1
+    Có nhiều bệnh nhân tăng huyết áp hơn bao giờ hết - tình trạng phổ biến này được dự đoán tăng 8% trong giai đoạn từ 2013 đến 2030.2 Do đó, hướng dẫn tăng huyết áp đã đưa ra các khuyến nghị điều trị mới bao gồm cả thay đổi lối sống và chiến lược dược lý để giúp quản lý bệnh.1 Điều quan trọng là các nhà cung cấp chăm sóc sức khỏe cần hiểu rõ cách điều trị hiệu quả các giai đoạn của tăng huyết áp để giúp ngăn ngừa những tác động nguy hiểm của nó.
+
+    \n\n<font size="16"><b>Huyết áp bình thường</b></font>\n
+    Huyết áp bình thường được xác định là đo huyết áp tâm thu &lt;120 mmHg và huyết áp tâm trương &lt;80 mmHg.1 Bệnh nhân có mức huyết áp bình thường được khuyến khích tiếp tục duy trì lối sống lành mạnh để duy trì mức huyết áp bình thường và ngăn ngừa sự phát triển của tăng huyết áp. Bệnh nhân có mức đo huyết áp bình thường có thể được đánh giá mức độ huyết áp hàng năm.
+
+    \n\n<font size="16"><b>Huyết Áp Tăng CaO</b></font>\n
+    Huyết áp tăng cao trước đây được gọi là "tiền tăng huyết áp". Nó được phân loại là đo huyết áp tâm thu từ 120-129 mmHg và đo huyết áp tâm trương nhỏ hơn 80 mmHg.1 Để ngăn ngừa sự tiến triển của tăng huyết áp, được khuyến khích bệnh nhân áp dụng các thay đổi lối sống và đo lại mức huyết áp của họ trong vòng 3-6 tháng.1 Những thay đổi lối sống lành mạnh bao gồm:1
+
+    Theo chế độ ăn DASH, chứa nhiều trái cây, rau quả, ngũ cốc và sản phẩm sữa ít béo
+    Tập thể dục thường xuyên
+    Giảm lượng muối
+    Duy trì cân nặng lành mạnh
+    Quản lý mức độ căng thẳng
+    Hạn chế uống rượu
+    Tránh hút thuốc
+    Có giấc ngủ chất lượng
+    Trị liệu phi dược độc lập là một chiến lược điều trị hiệu quả ở người lớn có mức huyết áp tăng cao3,4 vì nó có thể làm giảm huyết áp tâm thu khoảng 4-11 mmHg.1
+
+    \n\n<font size="16"><b>Tăng Huyết Áp Giai Đoạn 1</b></font>\n
+    Áp huyết giai đoạn 1 được xác định là áp huyết tâm thu từ 130-139 và áp huyết tâm trương từ 80-89 mmHg.1 Ước tính nguy cơ mắc bệnh tim và đột quỵ trong 10 năm của bệnh nhân được đánh giá bằng công cụ tính toán nguy cơ bệnh mạch vành (ASCVD) để xác định liệu trình điều trị và lịch hẹn tái khám.1
+    Nguy cơ ASCVD dưới 10%:
+    Nếu nguy cơ ASCVD dưới 10%, bệnh nhân nên áp dụng các thay đổi lối sống lành mạnh một mình. Mức áp huyết của bệnh nhân sẽ được đánh giá lại sau 3-6 tháng.1
+
+    Nguy cơ ASCVD lớn hơn 10%:
+    Điều trị kết hợp thay đổi lối sống lành mạnh và thuốc hạ áp huyết (một loại thuốc) được khuyến nghị nếu nguy cơ ASCVD của bệnh nhân lớn hơn 10% hoặc nếu bệnh nhân có bệnh tim mạch lâm sàng, tiểu đường hoặc bệnh thận mãn tính. Sau khi bắt đầu điều trị, mức áp huyết của bệnh nhân sẽ được đánh giá lại sau một tháng.1 Nếu mục tiêu áp huyết của bệnh nhân đạt được sau một tháng, bệnh nhân có thể được đánh giá lại sau 3-6 tháng.1 Nếu mục tiêu áp huyết không đạt được sau một tháng, cần xem xét sử dụng một loại thuốc khác hoặc điều chỉnh liều lượng.1 Bệnh nhân nên tiếp tục khám theo lịch hẹn với bác sĩ của mình hàng tháng cho đến khi mức áp huyết được kiểm soát.1
+
+    \n\n<font size="16"><b>Áp Huyết Giai Đoạn 2</b></font>\n"
+    Stage 2 tăng huyết áp được định nghĩa là huyết áp tâm thu ≥140 mmHg và huyết áp tâm trương ≥90 mmHg.1 Kế hoạch chăm sóc khuyến khích sự kết hợp giữa các thay đổi lối sống lành mạnh và thuốc giảm huyết áp (hai thuốc đầu tiên của hai nhóm khác nhau) cho bệnh nhân mắc bệnh tăng huyết áp giai đoạn 2.1 Nếu mục tiêu huyết áp của bệnh nhân đạt được sau một tháng điều trị, họ có thể được đánh giá lại trong 3-6 tháng.1 Nếu mục tiêu huyết áp không được đạt sau một tháng điều trị, cần xem xét sử dụng thuốc khác hoặc tăng liều thuốc kèm theo theo dõi hàng tháng với bác sĩ của họ cho đến khi huyết áp được kiểm soát.1
+    \n\n<font size="16"><b>Tình trạng Khẩn cấp và Cấp cứu của tăng huyết áp</b></font>\n
+    Nếu bệnh nhân có tăng huyết áp nặng (huyết áp tâm thu lớn hơn 180 mmHg hoặc huyết áp tâm trương lớn hơn 120 mmHg) và không có dấu hiệu hoặc triệu chứng cho thấy tổn thương hoặc chức năng của các cơ quan mục tiêu, họ được coi là tình trạng Khẩn cấp tăng huyết áp.1 Thông thường, liều thuốc giảm huyết áp sẽ được tăng cao hơn ở những bệnh nhân này.1
+
+    Nếu tình trạng tăng huyết áp nặng của bệnh nhân được kèm theo tổn thương mới hoặc trầm trọng hơn của các cơ quan mục tiêu, thì được coi là tình trạng Cấp cứu tăng huyết áp.1 Những bệnh nhân này nên được nhập viện vào đơn vị chăm sóc đặc biệt. Thuốc giảm huyết áp nên được sử dụng để giảm mức huyết áp, và mức huyết áp của bệnh nhân nên được theo dõi liên tục.1 Nếu không được điều trị, tỉ lệ sống trung vị là 10,4 tháng.5
+
+    \n\n<font size="16"><b>Kết luận</b></font>\n"
+    Mối liên quan giữa mức huyết áp và nguy cơ mắc bệnh tim mạch rất lớn - càng cao huyết áp thì nguy cơ mắc bệnh tim mạch càng cao.1 Do đó, việc điều trị các giai đoạn khác nhau của tăng huyết áp là rất quan trọng. Kết hợp cả chiến lược điều trị phi dược lý và dược lý có thể giúp quản lý nguy cơ của bệnh nhân gặp những tác động nguy hiểm của tăng huyết áp bao gồm mất thị lực, nhồi máu cơ tim hoặc suy tim, đột quỵ và tổn thương thận.6
+    Hãy tải xuống eBook của chúng tôi để tìm hiểu thêm về cách điều trị các giai đoạn khác nhau của tăng huyết áp và lợi ích mà các giải pháp tự động có thể cung cấp trong việc phát hiện, chẩn đoán và quản lý tình trạng này trong và ngoài phòng khám.
+
+    \n\nNguồn: hillrom.com
+    </string>
+<string name="post_07_title">Kế hoạch ăn uống DASH là gì?</string>
+<string name="post_07_content">Mức huyết áp có thể không lành mạnh ngay cả khi chỉ cao hơn mức bình thường dưới 120/80 mmHg. Càng cao huyết áp so với mức bình thường, nguy cơ mắc bệnh càng cao. Nghiên cứu cho thấy áp lực máu giảm khi ăn một kế hoạch ăn uống ít chất béo bão hòa, cholesterol và chất béo tổng hợp, tập trung vào các loại trái cây, rau quả, sữa không chất béo hoặc ít chất béo và các sản phẩm sữa. Kế hoạch ăn uống này - được biết đến với tên gọi là kế hoạch ăn uống DASH - cũng bao gồm các sản phẩm nguyên cám, cá, thịt gia cầm và hạt. Nó ít chất béo đỏ, đường, đường được thêm vào và thức uống chứa đường so với chế độ ăn của người Mỹ thông thường. Nó giàu kali, magiê và canxi, cũng như protein và chất xơ. (Xem hộp 2 để biết các mục tiêu dinh dưỡng hàng ngày của các nghiên cứu DASH)."
+
+    \n\nKế hoạch ăn uống DASH tuân thủ các hướng dẫn làm cho tim khỏe mạnh để giới hạn chất béo bão hòa và cholesterol. Nó tập trung vào tăng cường lượng thực phẩm giàu dinh dưỡng có dự kiến ​​giảm huyết áp, chủ yếu là khoáng chất (như kali, canxi và magiê), protein và chất xơ. Nó bao gồm các thực phẩm giàu dinh dưỡng để đáp ứng các yêu cầu dinh dưỡng khác như được khuyến nghị bởi Viện Y học. Nghiên cứu DASH đầu tiên bao gồm 459 người lớn có huyết áp tâm thu dưới 160 mmHg và huyết áp tâm trương từ 80-95 mmHg. Khoảng 27% số người tham gia có huyết áp cao. Khoảng 50% là phụ nữ và 60% là người Mỹ gốc Phi. Nó so sánh ba kế hoạch ăn uống: kế hoạch bao gồm thực phẩm tương tự như những gì nhiều người Mỹ thường ăn; một kế hoạch bao gồm thực phẩm tương tự như những gì nhiều người Mỹ thường ăn cộng với nhiều hoa quả và rau củ hơn; và kế hoạch ăn uống DASH. Cả ba kế hoạch đều bao gồm khoảng 3.000 miligam muối mỗi ngày. Không có kế hoạch ăn chay hay sử dụng các loại thực phẩm đặc biệt. Kết quả đạt được rất ấn tượng. Những người tham gia tuân thủ cả kế hoạch bao gồm nhiều hoa quả và rau củ hơn và kế hoạch ăn uống DASH đều có tác dụng làm giảm huyết áp. Nhưng kế hoạch ăn uống DASH có tác dụng lớn nhất, đặc biệt là đối với những người có huyết áp cao. Hơn nữa, sự giảm huyết áp đến rất nhanh - trong vòng 2 tuần kể từ khi bắt đầu kế hoạch.
+
+    \n\nNghiên cứu DASH thứ hai tập trung vào tác động của lượng natri trong chế độ ăn vào huyết áp của người tham gia khi họ tuân thủ chế độ ăn DASH hoặc chế độ ăn phổ biến của nhiều người Mỹ. Nghiên cứu thứ hai này bao gồm 412 người tham gia. Người tham gia được phân ngẫu nhiên vào một trong hai chế độ ăn và được theo dõi trong một tháng ở mỗi mức độ natri. Ba mức độ natri là mức tiêu thụ cao hơn khoảng 3.300 miligam mỗi ngày (mức tiêu thụ của nhiều người Mỹ), mức tiêu thụ trung bình khoảng 2.300 miligam mỗi ngày và mức tiêu thụ thấp hơn khoảng 1.500 miligam mỗi ngày. Kết quả cho thấy giảm lượng natri trong chế độ ăn giảm huyết áp cho cả hai chế độ ăn. Ở mỗi mức độ natri, huyết áp thấp hơn trên chế độ ăn DASH hơn là trên chế độ ăn khác. Sự giảm huyết áp lớn nhất là cho chế độ ăn DASH ở mức tiêu thụ natri là 1.500 miligam mỗi ngày. Những người có huyết áp cao đã thấy sự giảm nhẹ nhàng nhất, nhưng những người có huyết áp bình thường cũng có sự giảm nhẹ. Cả hai nghiên cứu này cho thấy tầm quan trọng của việc giảm lượng natri trong chế độ ăn - bất kể chế độ ăn của bạn là gì. Để có kết quả tốt nhất, hãy tuân thủ chế độ ăn DASH và giảm lượng muối và natri trong chế độ ăn của bạn.
+
+    \n\nNguồn: HƯỚNG DẪN CỦA BẠN ĐỂ GIẢM HUYẾT ÁP VỚI DASH - Viện tim, phổi và máu Quốc gia của Viện Sức khỏe Quốc gia.
+    </string>
+<string name="post_09_title">Hiểu đọc kết quả huyết áp</string>
+<string name="post_09_content">
+   \n\n<font size="16"><b>Số đo huyết áp của bạn có nghĩa gì?</b></font>\n
+   \nCách duy nhất để biết bạn có huyết áp cao (HBP, hoặc tăng huyết áp) hay không là đo huyết áp. Hiểu kết quả của bạn là chìa khóa để kiểm soát tình trạng tăng huyết áp.
+   \n\nPhạm vi huyết áp lành mạnh và bất lợi
+   \nTìm hiểu điều gì được coi là bình thường, như được khuyến nghị bởi Hiệp hội Tim Mỹ.
+Các loại huyết áp
+Năm phạm vi huyết áp (BP) được công nhận bởi Hiệp hội Tim Mỹ là:
+
+    \n\n<font size="16"><b>Bình thường</b></font>\n
+    Số đo huyết áp dưới 120/80 mm Hg được coi là trong phạm vi bình thường. Nếu kết quả của bạn thuộc vào loại này, hãy duy trì thói quen ăn uống lành mạnh và tập thể dục thường xuyên để chăm sóc tim của bạn.
+
+    \n\n<font size="16"><b>Tăng huyết áp</b></font>\n
+    Huyết áp tăng là khi số đo huyết áp luôn nằm trong phạm vi 120-129 tâm thu và dưới 80 mm Hg tâm trương. Những người có huyết áp tăng có khả năng phát triển thành tình trạng tăng huyết áp trừ khi những bước đi được thực hiện để kiểm soát tình trạng này.
+
+    \n\n<font size="16"><b>Tăng huyết áp giai đoạn 1</b></font>\n
+
+    Hypertension Stage 1 là khi huyết áp luôn dao động từ 130-139 mmHg tâm thu hoặc 80-89 mmHg tâm trương. Ở giai đoạn cao huyết áp này, bác sĩ có thể chỉ định thay đổi lối sống và có thể xem xét sử dụng thuốc hạ huyết áp dựa trên nguy cơ mắc bệnh động mạch xơ vữa động mạch tim mạch (ASCVD), chẳng hạn như đau tim hoặc đột quỵ.
+
+    \n\n<font size="16"><b>Hypertension Stage 2</b></font>\n
+    Hypertension Stage 2 là khi huyết áp luôn dao động ở mức 140/90 mmHg trở lên. Ở giai đoạn cao huyết áp này, bác sĩ có thể chỉ định sử dụng một kết hợp của thuốc hạ huyết áp và thay đổi lối sống.
+
+    \n\n<font size="16"><b>Hypertensive crisis</b></font>\n
+    Giai đoạn cao huyết áp này yêu cầu sự chú ý của bác sĩ. Nếu kết quả đo huyết áp của bạn vượt quá 180/120 mmHg, hãy đợi năm phút và đo lại huyết áp của bạn. Nếu kết quả đo vẫn cao, hãy liên hệ ngay với bác sĩ của bạn. Bạn có thể đang trải qua một cơn khủng hoảng cao huyết áp.
+
+    Nếu huyết áp của bạn cao hơn 180/120 mmHg và bạn đang gặp các dấu hiệu có thể gây tổn thương cho cơ quan như đau ngực, khó thở, đau lưng, tê/liệt, thay đổi thị lực hoặc khó nói, đừng chờ đợi để xem xét xem áp lực có tự giảm xuống hay không.
+
+    \n\n<font size="16"><b>Chỉ số huyết áp của bạn và ý nghĩa của chúng</b></font>\n
+    Kết quả huyết áp của bạn được ghi nhận dưới dạng hai số:"
+    Huyết áp tâm thu (con số đầu tiên) - cho biết áp lực máu của bạn đang đẩy chống lại tường động mạch khi tim đập.
+
+    Huyết áp tâm trương (con số thứ hai) - cho biết áp lực máu của bạn đang đẩy chống lại tường động mạch trong khi tim đang nghỉ giữa các nhịp đập.
+    \n\n<font size="16"><b>Chỉ số nào là quan trọng?</b></font>\n
+    Thường thì, sự chú ý nhiều hơn đối với huyết áp tâm thu (con số đầu tiên) là một yếu tố nguy cơ chính cho bệnh tim mạch cho những người trên 50 tuổi. Ở hầu hết mọi người, huyết áp tâm thu tăng dần theo tuổi do độ cứng ngày càng tăng của các động mạch lớn, sự tích tụ dài hạn của mảng bám và sự gia tăng về bệnh tim và mạch máu.
+
+    Tuy nhiên, cả số huyết áp tâm thu hoặc số huyết áp tâm trương có thể được sử dụng để chẩn đoán tình trạng huyết áp cao. Theo các nghiên cứu gần đây, nguy cơ tử vong do bệnh cơ tim mạch và đột quỵ tăng gấp đôi với mỗi tăng 20 mm Hg huyết áp tâm thu hoặc 10 mm Hg huyết áp tâm trương trong nhóm từ 40 đến 89 tuổi.
+        \n\n<font size="16"><b>Tại sao huyết áp được đo bằng mm Hg</b></font>\n
+        Việc đo huyết áp bằng mm Hg có nghĩa là milimét thủy ngân. Thủy ngân đã được sử dụng trong các máy đo áp suất chính xác đầu tiên và hiện vẫn được sử dụng trong y tế như là đơn vị đo áp suất tiêu chuẩn.
+
+Nguồn: https://www.heart.org/
+
+    </string>
+<string name="post_10_title">Triệu chứng và nguyên nhân huyết áp thấp</string>
+<string name="post_10_content">
+
+    Huyết áp thấp xảy ra khi máu chảy qua các mạch máu của bạn với áp suất thấp hơn bình thường. Thuật ngữ y tế cho huyết áp thấp là huyết áp thấp.\n\nHuyết áp là lực đẩy của máu đẩy vào tường động mạch khi tim bơm máu. Nó thường được mô tả là hai con số: huyết áp tâm thu và huyết áp tâm trương. Hai số này ghi lại huyết áp trong đơn vị milimét thủy ngân (mm Hg), với huyết áp tâm thu được liệt kê phía trên huyết áp tâm trương.\n\nĐối với hầu hết người lớn, huyết áp bình thường thường thấp hơn 120/80 mm Hg. Huyết áp thấp là huyết áp thấp hơn 90/60 mm Hg.\n\nMột số người có huyết áp thấp suốt cả thời gian và đó là bình thường đối với họ. Những người khác có thể gặp phải một sự giảm đột ngột trong huyết áp hoặc có huyết áp thấp có thể liên quan đến vấn đề sức khỏe. Điều này có thể nguy hiểm, vì có thể có nghĩa là tim, não hoặc các cơ quan quan trọng khác của bạn không được đủ lưu lượng máu và bạn có nguy cơ mắc bệnh đột quỵ hoặc nhồi máu cơ tim.
+
+ \n\n<font size="16"><b>Nguyên nhân gây huyết áp thấp</b></font>\n
+
+Nhiều hệ thống trong cơ thể, bao gồm các cơ quan, hormone và dây thần kinh, điều chỉnh huyết áp. Ví dụ, hệ thống thần kinh tự động gửi tín hiệu "chiến đấu hoặc chạy trốn" và tùy thuộc vào tình huống, yêu cầu tim và các hệ thống khác trong cơ thể tăng hoặc giảm huyết áp. Vấn đề với hệ thống thần kinh tự động, chẳng hạn như trong bệnh Parkinson, có thể gây huyết áp thấp.  \nNhững nguyên nhân khác của huyết áp thấp bao gồm:
+
+Mất máu do chấn thương gây giảm đột ngột huyết áp
+Mất nước
+Bệnh tiểu đường
+Vấn đề tim như rối loạn nhịp tim
+Thuốc điều trị ca
+\n\n<font size="16"><b>Triệu chứng là gì?</b></font>\n
+    Đối với nhiều người, huyết áp thấp không bị phát hiện. Những người khác có thể cảm thấy các triệu chứng như:
+
+        \n\n• Sự mơ hồ
+        \n• Chóng mặt hoặc choáng váng
+        \n• Ngất
+        \n• Cảm thấy mệt mỏi hoặc yếu
+        \n• Tầm nhìn mờ
+        \n• Đau đầu
+        \n• Đau cổ hoặc lưng
+        \n• Buồn nôn
+        \n• Nhịp tim đập nhanh, nhịp tim bị bỏ sót, rung nhịp hoặc đập quá mạnh hoặc quá nhanh
+
+        \n\n<font size="16"><b>Nếu bạn có triệu chứng, bạn nên làm gì?</b></font>\n
+
+        Ngồi xuống có thể giảm nhẹ các triệu chứng. Nếu huyết áp của bạn giảm quá thấp, các cơ quan quan trọng của cơ thể không đủ oxy và dưỡng chất. Khi điều này xảy ra, huyết áp thấp có thể dẫn đến sốc, đòi hỏi sự chú ý y tế ngay lập tức. Các dấu hiệu của sốc bao gồm da lạnh và đổ mồ hôi, thở nhanh, màu da xanh lam hoặc mạch yếu và nhanh. Đi đến bệnh viện nếu bạn nhận thấy dấu hiệu sốc ở chính bạn hoặc người khác.\n\nHãy nói chuyện với bác sĩ về các triệu chứng của bạn. Bác sĩ của bạn sẽ sử dụng xét nghiệm huyết áp để chẩn đoán huyết áp thấp. Các xét nghiệm khác có thể bao gồm xét nghiệm máu, nước tiểu hoặc hình ảnh và xét nghiệm bàn nghiêng nếu bạn ngất thường xuyên.
+
+        \n\n<font size="16"><b>Điều trị như thế nào?</b></font>\n
+
+Bạn có thể không cần điều trị cho huyết áp thấp. Tùy thuộc vào triệu chứng của bạn, điều trị có thể bao gồm uống nhiều nước để ngăn ngừa sự mất nước, sử dụng thuốc để tăng huyết áp hoặc điều chỉnh thuốc gây huyết áp thấp. \nBác sĩ của bạn có thể nói chuyện với bạn về các thay đổi lối sống, bao gồm thay đổi thực đơn, cách bạn ngồi và đứng lên. Bác sĩ của bạn cũng có thể đề xuất  bạn nên sử dụng tất chống trầy xước nếu bạn đứng lâu trong một thời gian dài.\n\nNguồn: https://www.nhlbi.nih.gov/
+         </string>
+<string name="post_11_title">Huyết áp tăng cao? Đại dịch COVID-19 có thể gây ra vấn đề này</string>
+<string name="post_11_content">
+Đó là một sự thật mà ít ai có thể bác bỏ: Đại dịch COVID-19 đã gây ra những tác động nghiêm trọng đối với người Mỹ. Nó đã gây ra tỷ lệ cao về tử vong và bệnh tật, làm đảo lộn gần như mọi khía cạnh của cuộc sống hàng ngày, và được liên kết với tăng cao về bệnh tim, bệnh phổi, béo phì và vấn đề về giấc ngủ. \n\nBây giờ, các nhà nghiên cứu được tài trợ bởi NHLBI nói rằng virus và stress liên quan cũng có thể được coi là nguyên nhân gây ra tình trạng tăng huyết áp ở người Mỹ.\n\nMột nghiên cứu quan sát lớn, được xuất bản gần đây trong tạp chí Circulation, đã đánh giá dữ liệu sức khỏe từ hơn nửa triệu người Mỹ từ 50 bang và Quận Columbia. Nó phát hiện ra sự tăng nhỏ nhưng quan trọng về áp lực máu trung bình trong giai đoạn đỉnh điểm ban đầu của đại dịch.\n\nTất cả các người tham gia nghiên cứu được đăng ký trong một chương trình chăm sóc sức khỏe do nhà tài trợ của họ tổ chức yêu cầu đo huyết áp hàng năm bởi nhân viên có đào tạo trong suốt giai đoạn ba năm được phân tích, từ 2018-2020.\n\nNghiên cứu này đã phát hiện ra rằng huyết áp tâm thu trung bình - con số trên trong kết quả đo huyết áp - tăng khoảng 2 milimet thủy ngân (mm Hg) từ tháng 4 năm 2020 đến tháng 12 năm 2020 - được xem là giai đoạn đỉnh điểm của đại dịch. Áp lực tâm trương trung bình - con số dưới - cũng tăng một chút. Huyết áp bình thường là ít hơn 120/80 mm Hg. \n\nTrái lại, không có sự thay đổi nào được báo cáo trong số đo áp huyết trung bình trong giai đoạn 15 tháng trước đại dịch COVID-19 từ tháng 1 năm 2019 đến khi đại dịch bùng phát (từ tháng 4 năm 2020 đến tháng 12 năm 2020). Giai đoạn sau có sự ra lệnh giữ ở nhà và phong tỏa rộng rãi.\n\n"Điều đó đáng lo ngại", Luke Laffin, M.D., tác giả chính của nghiên cứu và cộng tác viên chủ chốt của Trung tâm Rối loạn Huyết áp tại Cleveland Clinic, cho biết. "Ở cấp độ cá nhân, điều đó (tăng 2 mm Hg) dường như không nhiều. Nhưng chúng tôi biết rằng một tăng huyết áp nhỏ có thể gây ra một sự gia tăng đáng kể về đột quỵ và nhồi máu cơ tim trên toàn dân" - điều này có thể dẫn đến tử vong. Tăng huyết áp, hay tăng áp lực máu, cũng có thể tăng nguy cơ mắc các biến chứng nghiêm trọng hơn từ bệnh COVID-19.\n\nỞ Mỹ, khoảng một nửa người lớn có tăng huyết áp, nhưng chỉ có khoảng một trong bốn (24%) được kiểm soát.
+        \n\n\n\nLaffin cho biết có nhiều yếu tố đằng sau sự tăng trưởng trên toàn quốc, bắt đầu bằng việc giảm chăm sóc y tế đang diễn ra trong đại dịch. Theo Laffin, những người mắc tăng huyết áp không đến gặp bác sĩ thường xuyên, điều này có nghĩa là nhiều người không dùng thuốc chống tăng huyết áp của mình. Trong đại dịch, ước tính khoảng 40% người lớn ở Hoa Kỳ báo cáo tránh chăm sóc y tế do lo ngại liên quan đến COVID-19, theo một báo cáo năm 2020 từ Trung tâm Kiểm soát và Phòng ngừa Dịch bệnh.
+\n\n\n\nĐối với những người không mắc tăng huyết áp, Laffin nói rằng sự tăng này có thể liên quan đến sự thay đổi trong các mẫu ăn uống. Cụ thể, nghiên cứu cho thấy sự tiêu thụ natri hoặc muối quá mức. "Chúng tôi biết rằng nguyên nhân chính liên quan đến các mẫu ăn uống của huyết áp là sự thừa natri, vì vậy trong thời gian đại dịch, người ta có thể đã ăn các loại thực phẩm chứa muối nhiều hơn".\n\nCăng thẳng, mà đã được biết đến từ lâu làm tăng huyết áp, cũng có thể đóng một vai trò quan trọng trong nhóm nghiên cứu này. "Chúng ta biết rằng nếu người ta không xử lý tốt căng thẳng, điều đó ảnh hưởng đến lối sống của họ", Laffin nói. "Họ không ăn đúng, họ uống nhiều rượu hơn, họ không ngủ đủ giấc".\n\nCác kết quả này được hỗ trợ bởi ít nhất hai nghiên cứu theo dõi huyết áp trên toàn quốc khác cho thấy sự tăng đột ngột trong các đọc số huyết áp trong giai đoạn này. Laffin loại bỏ các giải thích khác cho sự tăng lên, bao gồm béo phì, tăng huyết áp do virus và chính vắc-xin. Ông nói bằng chứng trong nghiên cứu này không hỗ trợ những yếu tố đó.\n\nSự tăng đột ngột lớn nhất được trải qua bởi phụ nữ, chiếm một nửa số người tham gia nghiên cứu.
+       \n\n"Chúng ta biết từ các nghiên cứu khác rằng đại dịch thường tạo ra gánh nặng quá mức đối với phụ nữ", Laffin nói. Điều này bao gồm chăm sóc con cái, thanh toán hóa đơn và, trong trường hợp của COVID-19, phối hợp học tập trực tuyến. "Điều đó có thể dẫn đến ít thời gian hơn để thay đổi lối sống cần thiết để kiểm soát các yếu tố nguy cơ tim mạch, bao gồm huyết áp".\n\nMột yếu tố khác có thể đã đóng vai trò: các loại thuốc mà những người đang dùng để điều trị bệnh khác không cố ý tăng huyết áp. Theo một nghiên cứu được báo cáo gần đây trên JAMA Internal Medicine, một trong năm người mắc huyết áp có thể đang dùng những loại thuốc đó. Các loại thuốc phổ biến nhất bao gồm thuốc kháng trầm cảm, thuốc chống viêm phi steroid cường độ cao (NSAIDs), steroid và estrogen, nghiên cứu cho biết. Những người bệnh nên kiểm tra với bác sĩ hoặc nhà dược về khả năng này, các nhà nghiên cứu nói, để xem liệu họ có thể thay thế những loại thuốc đó bằng những lựa chọn an toàn hơn.\n\nTheo Laffin, mọi người nên tập trung vào việc chăm sóc bản thân tốt, vì điều này rất quan trọng để kiểm soát huyết áp hoặc ngăn ngừa nó trong trường hợp chưa mắc bệnh. Ăn uống lành mạnh cho tim mạch, tập luyện nhiều hơn, ngủ đủ giấc và quản lý stress tốt hơn đều có thể tạo ra sự khác biệt to lớn, ông nói.\n\nNgoài ra, "quan trọng là phải biết con số huyết áp của mình," ông nói, cho dù bạn mắc huyết áp hay không. Mọi người có thể dễ dàng tìm hiểu con số đó bằng cách đến các trạm kiểm tra huyết áp tại siêu thị hoặc nhà thuốc địa phương hoặc sử dụng máy đo huyết áp kiểu bít tay để tự kiểm tra huyết áp tại nhà, ông nói.\n\nNhững hoạt động thường ngày như vậy, Laffin lưu ý, có thể cứu sống mạng người. "Đừng chỉ tập trung vào COVID mà bỏ qua các biện pháp phòng ngừa khác hoặc các vấn đề chăm sóc sức khỏe bản thân", ông nói. "Chúng ta phải ngăn ngừa lây nhiễm và lây lan COVID, nhưng chúng ta cũng phải ngăn ngừa tai biến mạch máu não và cơn đau tim".
+
+Lawrence Fine, M.D., Dr.P.H., cố vấn cấp cao của Phân nhánh Ứng dụng Lâm sàng và Phòng ngừa của NHLBI, đồng ý. "Đảo ngược sự tăng huyết áp trong thời gian đại dịch và sau đó là rất quan trọng đối với sức khỏe tim mạch của hàng triệu người Mỹ và chưa đến một nửa số người Mỹ mắc huyết áp đã đạt được sự kiểm soát huyết áp đầy đủ. Nghiên cứu này cho thấy đại dịch có thể làm tình trạng này trở nên tồi tệ hơn một chút", ông nói.
+    \n\n“Mặc dù nghiên cứu này đóng góp cho kiến ​​thức về tác động của đại dịch đối với huyết áp và giá trị của chăm sóc bản thân, nhưng quan trọng là bạn phải thường xuyên đến bác sĩ và tuân thủ các khuyến nghị về lối sống và thuốc nếu bạn đã mắc bệnh cao huyết áp”, Fine thêm vào.
+
+Nguồn: https://www.nhlbi.nih.gov/
+    </string>
+<string name = "post_12_title"> Sống với huyết áp cao </string>
+<string name = "post_12_content"> Quan trọng là phải thường xuyên đo huyết áp và biết số của bạn, vì huyết áp cao thường không gây ra triệu chứng cho đến khi nó gây ra những vấn đề nghiêm trọng.
+
+<font size = "16"> <b> Mẹo quản lý huyết áp cao tại nhà </b> </font> \ n
+
+    Nếu bạn đã được chẩn đoán mắc bệnh cao huyết áp, thì rất quan trọng là bạn tiếp tục kế hoạch điều trị của mình. Bạn cần chăm sóc theo dõi định kỳ và nên tìm hiểu cách giám sát tình trạng của mình tại nhà. Bác sĩ của bạn có thể cần thay đổi hoặc bổ sung thuốc trong kế hoạch điều trị của bạn theo thời gian.\n\nHãy thông báo cho nhà cung cấp dịch vụ chăm sóc sức khỏe của bạn biết nếu bạn đang dự định có thai. \n\n<font size="16"><b>Quản lý tình trạng của bạn</b></font>\nHãy tiếp tục kế hoạch điều trị của bạn, bao gồm những thay đổi lối sống lành mạnh, để giúp kiểm soát huyết áp của bạn và ngăn ngừa bệnh tim. Thay đổi lối sống và nhớ uống thuốc mỗi ngày có thể khó khăn, nhưng có một số công cụ để giúp bạn.\n\nHỏi nhà cung cấp dịch vụ chăm sóc sức khỏe hoặc nhà thuốc của bạn về các ứng dụng để giám sát và theo dõi huyết áp của bạn. Họ cũng có thể biết cách nhận tin nhắn nhắc bạn nhớ uống thuốc mỗi ngày và thông báo cho bạn khi đến lúc điền đơn thuốc của mình.\nCó sự hỗ trợ từ người thân và cộng đồng của bạn. Hãy đến khám bác sĩ và kiểm tra định kỳ theo chỉ dẫn của nhà cung cấp dịch vụ chăm sóc sức khỏe. Hỏi câu hỏi và thảo luận về tiến độ của bạn. Thông báo cho nhà cung cấp dịch vụ chăm sóc sức khỏe của bạn về bất kỳ điều kiện mới nào hoặc nếu bạn đã sử dụng thuốc mới kể từ cuộc hẹn cuối cùng của mình.\nNhà cung cấp dịch vụ chăm sóc sức khỏe của bạn có thể muốn bạn kiểm tra huyết áp của mình tại nhà hoặc tại các địa điểm khác có trang thiết bị đo huyết áp. Chẩn đoán cung cấp lời nhắc nhở về cách chuẩn bị cho kiểm tra huyết áp và cách tự kiểm tra huyết áp của bạn.\n
+    \n\n<font size="16"><b>Biết khi nào gọi cấp cứu khi có biến chứng</b></font>\n
+Đo huyết áp trên 180/120 mm Hg là rất cao và cần đến cấp cứu ngay lập tức. Huyết áp cao như vậy có thể gây tổn thương cho các cơ quan trong cơ thể. Hãy gọi cấp cứu nếu bạn có các triệu chứng sau:\n\nĐau đầu sudden và nghiêm trọng\nKhó thở\nĐau bụng, ngực hoặc lưng sudden và nghiêm trọng\nHuyết áp cao cũng có thể dẫn đến nhồi máu cơ tim, đột quỵ hoặc các triệu chứng và bệnh lý nguy hiểm khác.
+    \n\n<font size="16"><b>ĐỘT QUỴ</b></font>\n
+    Nếu bạn nghĩ ai đó có thể bị đột quỵ, hãy hành động nhanh chóng theo F.A.S.T.
+    \n\n<b>F — Face</b>: Hỏi người đó cười. Có một bên của mặt họ chảy nước mắt xuống không?
+    \n<b>A — Arms</b>: Hỏi người đó giơ cả hai tay lên. Một tay có tụt xuống không?
+    \n<b>S — Speech</b>: Hỏi người đó nói lại một cụm từ đơn giản. Giọng nói của họ có lời nói lắp không bình thường không?
+    \n<b>T — Time</b>: Nếu bạn quan sát thấy bất kỳ dấu hiệu nào này, hãy gọi cấp cứu ngay lập tức. Điều trị sớm rất quan trọng.
+    \n\nNguồn: https://www.nhlbi.nih.gov/</string>
+    <string name="low">Thấp</string>
+    <string name="systole_range_low"><![CDATA[(<90)]]></string>
+    <string name="diastole_range_low"><![CDATA[(<60)]]></string>
+    <string name="you_need_to_measure_blood_pressure_at_8_pm_everyday">Bạn cần đo huyết áp vào lúc 8 giờ tối hàng ngày</string>
+    <string name="you_need_to_measure_weight_and_bmi_to_manage_weight_better">Bạn cần đo cân nặng và BMI để quản lý cân nặng tốt hơn.</string>
+    <string name="term_of_service">Điều khoản dịch vụ</string>
+    <string name="no_data_chart">Không có biểu đồ dữ liệu</string>
+    <string name="this_action_can_contain_ads">(Hành động này có thể chứa quảng cáo)</string>
+    <string name="ads">Quảng cáo</string>
+    <string name="enter_your_name">Nhập tên của bạn</string>
+    <string name="hint_input_height">Ví dụ: 170</string>
+    <string name="hint_input_weight">Ví dụ: 60</string>
+    <string name="create">Tạo mới</string>
+    <string name="soon">Sắp tới</string>
+    <string name="coming_soon">Sắp có</string>
+    <string name="title_no_data">Không có dữ liệu ở đây!</string>
+    <string name="content_no_data">Hãy đo nhịp tim của bạn ngay bây giờ!</string>
+    <string name="dashboard_tip">Loại thuốc được sử dụng để điều trị cao huyết áp phụ thuộc vào tình trạng sức khỏe tổng thể của bạn và mức độ huyết áp của bạn. Thường thì hai loại thuốc huyết áp hoặc nhiều hơn có hiệu quả tốt hơn khi được kết hợp với nhau.</string>
+    <string name="delete_result">Xóa kết quả</string>
+    <string name="missing_required_information">Thiếu thông tin bắt buộc!</string>
+    <string name="disclaimer">Miễn trừ trách nhiệm</string>
+    <string name="disclaimer_italic"><u>Miễn trừ trách nhiệm</u></string>
+    <string name="click_here_for_reference"><u>Nhấp vào đây để tham khảo</u></string>
+    <string name="disclaimer_content">Ứng dụng chăm sóc sức khỏe của chúng tôi cung cấp chức năng nhập và theo dõi duy nhất. Chúng tôi cung cấp kết quả và đề xuất dựa trên các nguồn tin đáng tin cậy và đáng tin cậy, được trích dẫn rõ ràng trên nền tảng của chúng tôi. Mục tiêu của chúng tôi là mang đến cho người dùng trải nghiệm đáng tin cậy và dễ sử dụng. Tuy nhiên, xin lưu ý rằng chúng tôi không phải là một dịch vụ chăm sóc sức khỏe, và để có kết quả chính xác nhất, chúng tôi khuyến nghị mạnh mẽ liên hệ với bệnh viện, phòng khám hoặc bác sĩ gần nhất. Cảm ơn bạn đã sử dụng ứng dụng của chúng tôi, và chúng tôi chân thành chúc bạn sức khỏe tốt.
+    </string>
+</resources>

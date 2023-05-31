@@ -1,0 +1,396 @@
+<resources>
+    <string name="app_name">Blutdruck</string>
+    <string name="heart_rate_blood_pressure_monitor"><![CDATA[Herzfrequenz & Blutdruckmessgerät]]></string>
+    <string name="settings">Einstellungen</string>
+    <string name="home">Startseite</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Weiter</string>
+    <string name="create_new_profile">Neues Profil erstellen</string>
+    <string name="image">Bild</string>
+    <string name="info">Info</string>
+    <string name="insights">Einblicke</string>
+    <string name="enter_your_weight_kg">Gewicht (kg) eingeben</string>
+    <string name="enter_your_height_cm">Größe (cm) eingeben</string>
+    <string name="not_known">Nicht bekannt</string>
+    <string name="female">Weiblich</string>
+    <string name="male">Männlich</string>
+    <string name="save">Speichern</string>
+    <string name="update_profile">Profil aktualisieren</string>
+    <string name="greeting">Hallo Phong,</string>
+    <string name="icon">Symbol</string>
+    <string name="heart_rate">Herzfrequenz</string>
+    <string name="manually">Manuell</string>
+    <string name="create_a_user">Benutzer erstellen</string>
+    <string name="let_create_first_user">Lass uns den ersten Benutzer erstellen, um einige erstaunliche Funktionen in dieser Anwendung zu erkunden.</string>
+    <string name="heart_rate_content">Messen Sie Ihre Pulsfrequenz mit Echtzeitinformationen über die Leistung Ihres Herzens.</string>
+    <string name="heart_rate_button_content">Jetzt messen</string>
+    <string name="default_height">170</string>
+    <string name="default_weight">60</string>
+    <string name="name">Name</string>
+    <string name="year_of_birth">Geburtsjahr</string>
+    <string name="year_of_birth_2">Geburtsjahr: </string>
+    <string name="weight_kg">Gewicht (kg)</string>
+    <string name="height_cm">Größe (cm)</string>
+    <string name="gender">Geschlecht</string>
+    <string name="photo">Foto</string>
+    <string name="dashboard">Armaturenbrett</string>
+    <string name="intro_title_1">Messen Sie Ihre \n Herzfrequenz</string>
+    <string name="intro_title_2">Verfolgen Sie Ihren \n Blutdruck</string>
+    <string name="intro_title_3">Berechnen Sie Ihr \n Gewicht und BMI</string>
+    <string name="intro_content_1">Messen Sie Ihre Pulsfrequenz und erhalten Sie Echtzeitinformationen über die Leistung Ihres Herzens.</string>
+    <string name="intro_content_2">Behalten Sie im Laufe der Zeit Ihre Blutdruckwerte im Auge und erhalten Sie Einblicke.</string>
+    <string name="intro_content_3">Ermöglicht es Ihnen, Ihr Gewicht im Auge zu behalten und Ihren Fortschritt bei der Erreichung Ihrer Ziele zu überwachen.</string>
+    <string name="start">Start</string>
+    <string name="welcome">Willkommen!</string>
+    <string name="measure_your_pulse_rate_with_real_time_information_about_your_heart_s_performance">Messen Sie Ihre Pulsfrequenz mit Echtzeitinformationen über die Leistung Ihres Herzens.</string>
+    <string name="measure_now">Jetzt messen</string>
+    <string name="blood_pressure">Blutdruck</string>
+    <string name="blood_pressure_content">Behalten Sie im Laufe der Zeit Ihre Blutdruckwerte im Auge und erhalten Sie Einblicke.</string>
+    <string name="blood_pressure_button_content">Jetzt verfolgen</string>
+    <string name="weight_and_bmi">Gewicht &amp; BMI</string>
+    <string name="weight_and_bmi_content">Verfolgen Sie Ihr Gewicht und überwachen Sie Ihren Fortschritt bei der Erreichung Ihrer Ziele.</string>
+    <string name="weight_and_bmi_button_content">Jetzt berechnen</string>
+    <string name="button">Schaltfläche</string>
+    <string name="systole">SYS</string>
+    <string name="ex_170">Ex: 170</string>
+    <string name="ex_60">Ex: 60</string>
+    <string name="ex_85">Ex: 85</string>
+    <string name="diastole">DIA</string>
+    <string name="pulse">PULSE</string>
+    <string name="measure">Messen</string>
+    <string name="result">Ergebnis</string>
+    <string name="_120_80">120/80</string>
+    <string name="_80">80</string>
+    <string name="measured_at_17_00pm_21_04_2023">Gemessen um 17:00 Uhr am 21.04.2023</string>
+    <string name="year_of_birth_2000">Geburtsjahr: 2000</string>
+    <string name="height_170">Größe: 170 cm\n</string>
+    <string name="weight_75">Gewicht: 75 kg</string>
+    <string name="hypertension_stage_1">Hypertonie Stadium 1</string>
+    <string name="systole_range_elevated">(120 – 129)</string>
+    <string name="systole_range_normal">(&lt; 120)</string>
+    <string name="systole_range_hypertension_stage_1">(120 – 139)</string>
+    <string name="systole_range_hypertension_stage_2">(140 – 179)</string>
+    <string name="systole_range_emergency_care_needed">(>180)</string>
+    <string name="diastole_range_normal_and_elevated">(&lt; 80)</string>
+    <string name="diastole_range_hypertension_stage_1">(80 – 89)</string>
+    <string name="diastole_range_hypertension_stage_2">(90 – 100)</string>
+    <string name="diastole_range_emergency_care_needed">(>100)</string>
+    <string name="recommendations">EMPFEHLUNGEN</string>
+    <string name="weight">"Gewicht: "</string>
+    <string name="kg">kg</string>
+    <string name="height">"Größe: "</string>
+    <string name="cm">cm</string>
+    <string name="normal">Normal</string>
+    <string name="elevated">Erhöht</string>
+    <string name="hypertension_stage_2">Bluthochdruck Stadium 2</string>
+    <string name="emergency_care_needed">Notfallversorgung erforderlich</string>
+    <string name="recommendations_hypertension_stage_1">Viele Menschen mit hohem Blutdruck können ihren Blutdruck durch Lebensstiländerungen senken oder in einem gesunden Bereich halten. Hier sind einige Vorschläge: \n• Mindestens 150 Minuten körperliche Aktivität pro Woche (etwa 30 Minuten pro Tag, 5 Tage pro Woche) \n• Nichtrauchen \n• Eine gesunde Ernährung, einschließlich begrenzter Natriumaufnahme (Salz) und Alkoholkonsum \n• Ein gesundes Gewicht halten \n• Stressmanagement
+    </string>
+    <string name="recommendations_normal">Hier sind einige Tipps, um Ihren Blutdruck zu verbessern:\n • Trinken Sie mehr Wasser. Dehydrierung kann zu einem vorübergehenden Abfall des Blutdrucks führen.\n• Folgen Sie einer gesunden Ernährung. Erhöhen Sie den Salzgehalt in der Nahrung, wenn Sie einen niedrigen Blutdruck haben.\n• Wenn der Druck niedrig ist und Sie Medikamente einnehmen, überprüfen Sie deren Nebenwirkungen.\n• Essen Sie kleine kohlenhydratarme Mahlzeiten.\n• Vermeiden Sie Alkoholkonsum oder trinken Sie ihn nur in Maßen.\n• Integrieren Sie regelmäßige körperliche Aktivität in Ihre tägliche Routine. Übungen wie zügiges Gehen und Schwimmen können zur Durchblutung beitragen. Außerdem hält es Sie geistig und körperlich jung und ist ein großartiger Stressabbau.</string>
+    <string name="recommendations_hypertension_stage_2">Hier sind einige Tipps, um Ihren Blutdruck zu senken:\n• Hören Sie auf zu rauchen. Neben der Schädigung Ihrer Lungen verengt das Rauchen die Blutgefäße und erhöht Ihren Blutdruck, was es Ihrem Herzen schwer macht zu schlagen.\n• Vermeiden Sie Alkoholkonsum oder trinken Sie ihn nur in Maßen. Alkohol erhöht Ihren Blutdruck auf ungesunde Werte.\n• Folgen Sie einer gesunden Ernährung. Vermeiden Sie zu viel Salz in der Nahrung.\n• Nehmen Sie ab. Übergewichtige Menschen sind eher von hohem Blutdruck betroffen.\n• Bewegen Sie sich regelmäßig. Es hilft, hohen Blutdruck und Diabetes zu verhindern. Außerdem hält es Sie geistig und körperlich jung und ist ein großartiger Stressabbau.\n• Trinken Sie ausreichend Wasser täglich.\n• Vermeiden Sie Stress.</string>
+    <string name="recommendations_emergency_care_needed">Hier sind einige Tipps, um Ihren Blutdruck zu senken:\n• Hören Sie auf zu rauchen. Neben der Schädigung Ihrer Lungen verengt das Rauchen die Blutgefäße und erhöht Ihren Blutdruck, was es Ihrem Herzen schwer macht zu schlagen.\n• Vermeiden Sie Alkoholkonsum oder trinken Sie ihn nur in Maßen. Alkohol erhöht Ihren Blutdruck auf ungesunde Werte.\n• Folgen Sie einer gesunden Ernährung. Vermeiden Sie zu viel Salz in der Nahrung.\n• Nehmen Sie ab. Übergewichtige Menschen sind eher von hohem Blutdruck betroffen.\n• Bewegen Sie sich regelmäßig. Es hilft, hohen Blutdruck und Diabetes zu verhindern. Außerdem hält es Sie geistig und körperlich jung und ist ein großartiger Stressabbau.\n• Trinken Sie ausreichend Wasser täglich.\n• Vermeiden Sie Stress.</string>
+    <string name="measured_at">Gemessen am</string>
+    <string name="good_morning">Guten Morgen!</string>
+    <string name="good_afternoon">Guten Tag!</string>
+    <string name="good_evening">Guten Abend!</string>
+    <string name="dashboard_intro_fragment">Dashboard Einführungsfragment</string>
+    <string name="your_recently_action">Ihre zuletzt durchgeführte Aktion</string>
+    <string name="more_detail">Mehr Details</string>
+    <string name="suggestion">Vorschlag</string>
+    <string name="default_suggestion">Herr Phong muss jetzt einen Blutdruck aufzeichnen!</string>
+    <string name="action">Aktion</string>
+    <string name="profile_select">Profil auswählen</string>
+    <string name="user_management">Benutzerverwaltung</string>
+    <string name="insights_blood_pressure_fragment">Einblicke Blutdruckfragment</string>
+    <string name="search">Suche</string>
+    <string name="your_health_condition">Ihr Gesundheitszustand</string>
+    <string name="your_heart_rate_is_so_hight">Ihr Herzschlag ist so hoch. Sie sollten sich hinsetzen, um sich zu beruhigen. Regelmäßige körperliche Aktivitäten wie schnelles Gehen, Joggen, Radfahren oder Schwimmen können dazu beitragen, Ihre Herz-Kreislauf-Gesundheit zu verbessern.</string>
+    <string name="totals">Summen</string>
+    <string name="view_result">Ergebnis anzeigen</string>
+    <string name="information_knowledge">Information &amp; Wissen</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="delete">Löschen</string>
+    <string name="edit_your_information">Ihre Informationen bearbeiten</string>
+    <string name="update">Aktualisieren</string>
+    <string name="blood_pressure_edit_fragment">Blutdruck Bearbeitungsfragment</string>
+    <string name="oops_there_is_an_error_try_again">Hoppla, es ist ein Fehler aufgetreten. Versuchen Sie es später erneut!</string>
+    <string name="this_result_will_be_deleted_forever_are_you_sure">Dieses Ergebnis wird für immer gelöscht. Sind Sie sicher?</string>
+    <string name="a_normal_blood_pressure">Ein normaler Blutdruckwert liegt unter 120/80 mmHg. Unabhängig von Ihrem Alter können Sie täglich Maßnahmen ergreifen, um Ihren Blutdruck im gesunden Bereich zu halten.</string>
+    <string name="blood_pressure_advice">Blutdruckberatung</string>
+    <string name="how_to_improve_weight_better">Wie man das Gewicht besser verbessern kann</string>
+    <string name="example_info_detail">Bewegung ist ein wichtiger Bestandteil der Krankheitsprävention - und das gilt auch für die Krebsprävention. Aber nicht alle Bewegung ist gleich. Es ist wichtig, dass ein Teil Ihrer Bewegung dazu führt, dass Ihr Herz schneller schlägt als in Ruhezustand. Durch das schneller schlagende Herz trainieren Sie Ihren Körper, Sauerstoff und Blut effizienter zu den Muskeln zu transportieren, verbrennen mehr Kalorien und senken den Cholesterinspiegel. All dies kann Ihnen helfen, gesund zu bleiben und das Krebsrisiko zu senken.\n
+	</string>
+    <string name="related_posts">Ähnliche Beiträge</string>
+    <string name="info_detail_fragment">Info-Detailfragment</string>
+    <string name="language">Sprache</string>
+    <string name="privacy">Datenschutz</string>
+    <string name="rate_us">Bewerten Sie uns</string>
+    <string-array name="gender">
+        <item>Männlich</item>
+        <item>Weiblich</item>
+        <item>Unbekannt</item>
+    </string-array>
+    <string name="japanese">Japanisch</string>
+    <string name="korean">Koreanisch</string>
+    <string name="vietnamese">Vietnamesisch</string>
+    <string name="setting_language_fragment">Einstellungen Sprache Fragment</string>
+    <string name="english">Englisch</string>
+    <string name="german">Deutsch</string>
+    <string name="spanish">Spanisch</string>
+    <string name="french">Französisch</string>
+    <string name="portugal">Portugiesisch</string>
+    <string name="change_default_language_successfully">Standard-Sprache erfolgreich geändert!</string>
+    <string name="post_01_title">10 Wege, um Bluthochdruck ohne Medikamente zu kontrollieren</string>
+    <string name="post_01_content">Durch die Umsetzung dieser 10 Lebensstil-Änderungen kannst du deinen Blutdruck senken und das Risiko für Herzkrankheiten reduzieren.\n\nWenn du unter Bluthochdruck leidest, fragst du dich vielleicht, ob Medikamente notwendig sind, um die Zahlen zu senken. Doch der Lebensstil spielt eine wichtige Rolle bei der Behandlung von Bluthochdruck. Die Kontrolle des Blutdrucks mit einem gesunden Lebensstil kann eine Medikamenteneinnahme verhindern, verzögern oder reduzieren.\n\nHier sind 10 Lebensstil-Änderungen, die den Blutdruck senken und auf einem niedrigen Niveau halten können.
+        \n\n<font size="16"><b>1. Überschüssige Pfunde verlieren und auf deine Taille achten</b></font>\nBlutdruck steigt oft mit zunehmendem Gewicht an. Übergewicht kann auch zu gestörtem Atmen während des Schlafs (Schlafapnoe) führen, was den Blutdruck weiter erhöht.\n\nGewichtsverlust ist eine der effektivsten Lebensstil-Änderungen zur Kontrolle des Blutdrucks. Wenn du übergewichtig bist oder Adipositas hast, kann schon eine kleine Gewichtsabnahme helfen, den Blutdruck zu reduzieren. Im Allgemeinen kann der Blutdruck um etwa 1 Millimeter Quecksilbersäule (mm Hg)
+        Mit jedem verlorenen Kilogramm (ungefähr 2,2 Pfund) kann der Blutdruck um etwa 1 mmHg gesenkt werden.\n\nAuch die Größe des Taillenumfangs ist wichtig. Zu viel Gewicht um die Taille herum kann das Risiko von Bluthochdruck erhöhen.\n\nIm Allgemeinen sind Männer gefährdet, wenn ihr Taillenumfang größer als 102 Zentimeter (40 Zoll) ist, Frauen, wenn ihr Taillenumfang größer als 89 Zentimeter (35 Zoll) ist. Diese Zahlen variieren jedoch zwischen verschiedenen ethnischen Gruppen. Fragen Sie Ihren Gesundheitsdienstleister nach einem gesunden Taillenumfang für Sie.\n\n<font size="16"><b>2. Regelmäßige Bewegung</b></font>
+        \nRegelmäßige körperliche Aktivität kann den Blutdruck um etwa 5 bis 8 mmHg senken. Es ist wichtig, weiterhin körperlich aktiv zu bleiben, um zu verhindern, dass der Blutdruck erneut steigt. Als allgemeines Ziel sollten Sie täglich mindestens 30 Minuten moderate körperliche Aktivität anstreben.\n\nBewegung kann auch helfen, erhöhten Blutdruck daran zu hindern, in hohen Blutdruck (Hypertonie) überzugehen. Für Menschen mit Hypertonie kann regelmäßige körperliche Aktivität den Blutdruck auf sicherere Werte senken.\n\nEinige Beispiele für aerobe Übungen, die den Blutdruck senken können, sind Gehen, Joggen, Radfahren, Schwimmen oder Tanzen. Eine weitere Möglichkeit ist das hochintensive Intervalltraining. Diese Art des Trainings umfasst kurze Phasen intensiver Aktivität, die mit Phasen leichterer Aktivität abwechseln.\n\nAuch Krafttraining kann helfen, den Blutdruck zu senken. Versuchen Sie, mindestens zwei Mal pro Woche Krafttraining-Übungen durchzuführen. Sprechen Sie mit einem Gesundheitsdienstleister über die Entwicklung eines Trainingsprogramms.\n\n<font size="16"><b>3.Essen Sie eine gesunde Ernährung</b></font>\nEine Ernährung, die reich an Vollkornprodukten, Obst, Gemüse und fettarmen Milchprodukten ist und wenig gesättigte Fettsäuren und Cholesterin enthält, kann den Blutdruck um bis zu 11 mm Hg senken. Beispiele für Ernährungspläne, die den Blutdruck kontrollieren können, sind die Dietary Approaches to Stop Hypertension (DASH) Diät und die mediterrane Diät.\n\nKalium in der Ernährung kann die Auswirkungen von Salz (Natrium) auf den Blutdruck verringern. Die besten Quellen für Kalium sind Lebensmittel wie Obst und Gemüse, nicht Nahrungsergänzungsmittel. Streben Sie nach 3.500 bis 5.000 mg pro Tag, was den Blutdruck um 4 bis 5 mm Hg senken könnte. Fragen Sie Ihren Arzt, wie viel Kalium Sie zu sich nehmen sollten.\n\n<font size="16"><b>4. Reduzieren Sie Salz (Natrium) in Ihrer Ernährung</b></font>\nBereits eine geringe Reduktion von Natrium in der Ernährung kann die Herzgesundheit verbessern und den Blutdruck um etwa 5 bis 6 mm Hg senken.\n\nDie Auswirkungen der Natriumaufnahme auf den Blutdruck variieren jedoch bei verschiedenen Gruppen von Menschen. Im Allgemeinen sollte die Natriumaufnahme auf 2.300 Milligramm (mg) pro Tag oder weniger begrenzt werden. Eine noch geringere Natriumaufnahme - 1.500 mg pro Tag oder weniger - ist jedoch ideal für die meisten Erwachsenen.\n\nUm Natrium in der Ernährung zu reduzieren:\n\n<b>Lesen Sie Lebensmittelkennzeichnungen</b>. Suchen Sie nach Lebensmitteln und Getränken mit wenig Natrium.\n<b>Essen Sie weniger verarbeitete Lebensmittel</b>. Nur eine geringe Menge an Natrium kommt natürlicherweise in Lebensmitteln vor. Der Großteil des Natriums wird während der Verarbeitung hinzugefügt.\n<b>Fügen Sie kein Salz hinzu</b>. Verwenden Sie Kräuter oder Gewürze, um Lebensmittel zu würzen.\n<b>Kochen Sie selbst</b>. Beim Kochen können Sie die Menge an Natrium im Essen kontrollieren.\n<font size="16"><b>\n5. Alkoholkonsum begrenzen</b></font>\nEine Begrenzung des Alkoholkonsums auf weniger als ein Getränk pro Tag für Frauen oder zwei Getränke pro Tag für Männer kann den Blutdruck um etwa 4 mm Hg senken. Ein Getränk entspricht 12 Unzen Bier, 5 Unzen Wein oder 1,5 Unzen 80-Beweis-Spirituosen.\n\nAber übermäßiger Alkoholkonsum kann den Blutdruck um mehrere Punkte erhöhen. Es kann auch die Wirksamkeit von Blutdruckmedikamenten reduzieren. <font size="16"><b>6. Hör auf zu rauchen</b></font> Rauchen erhöht den Blutdruck. Das Aufhören des Rauchens hilft, den Blutdruck zu senken. Es kann auch das Risiko von Herzkrankheiten reduzieren und die Gesamtgesundheit verbessern, was möglicherweise zu einem längeren Leben führt.\n\n
+        <font size="16"><b>7. Erhalten Sie ausreichend Schlaf</b></font>\nEine schlechte Schlafqualität - weniger als sechs Stunden Schlaf pro Nacht für mehrere Wochen - kann zu Bluthochdruck beitragen. Eine Reihe von Problemen kann den Schlaf stören, darunter Schlafapnoe, das Restless-Legs-Syndrom und Schlaflosigkeit.\n\nInformieren Sie Ihren Arzt, wenn Sie oft Schlafprobleme haben. Das Finden und Behandeln der Ursache kann helfen, den Schlaf zu verbessern. Wenn Sie jedoch keine Schlafapnoe oder Restless-Legs-Syndrom haben, befolgen Sie diese einfachen Tipps für einen erholsameren Schlaf.\n\nHalten Sie sich an einen Schlafrhythmus. Gehen Sie jeden Tag zur gleichen Zeit ins Bett und stehen Sie zur gleichen Zeit auf. Versuchen Sie, denselben Zeitplan an Wochentagen und am Wochenende einzuhalten.\nSchaffen Sie einen erholsamen Raum. Das bedeutet, den Schlafbereich kühl, ruhig und dunkel zu halten. Tun Sie etwas Entspannendes in der Stunde vor dem Schlafengehen. Dazu könnte ein warmes Bad oder Entspannungsübungen gehören. Vermeiden Sie helles Licht, wie es von einem Fernseher oder Computerbildschirm ausgeht.\nAchten Sie darauf, was Sie essen und trinken. Gehen Sie nicht hungrig oder voll ins Bett. Vermeiden Sie große Mahlzeiten kurz vor dem Schlafengehen. Begrenzen oder vermeiden Sie auch Nikotin, Koffein und Alkohol kurz vor dem Schlafengehen.\nBegrenzen Sie Nickerchen. Für diejenigen, die tagsüber Nickerchen als hilfreich empfinden, kann das Begrenzen von Nickerchen auf 30 Minuten früher am Tag dazu beitragen, den Nachtschlaf zu verbessern.\n\n
+        <font size="16"><b>8. Stress reduzieren</b></font>\nLanganhaltender (chronischer) emotionaler Stress kann zu hohem Blutdruck beitragen. Es sind weitere Untersuchungen zu den Auswirkungen von Stressreduktionstechniken erforderlich, um herauszufinden, ob sie den Blutdruck senken können.\n\nEs schadet jedoch nicht, herauszufinden, was Stress verursacht, wie Arbeit, Familie, Finanzen oder Krankheit, und Möglichkeiten zu finden, den Stress zu reduzieren. Versuchen Sie Folgendes:\n\nVermeiden Sie es, zu viel zu tun. Planen Sie Ihren Tag und konzentrieren Sie sich auf Ihre Prioritäten. Lernen Sie, Nein zu sagen. Nehmen Sie sich genug Zeit, um zu erledigen, was erledigt werden muss.\nKonzentrieren Sie sich auf Dinge, die Sie kontrollieren können, und machen Sie Pläne, um sie zu lösen. Wenn es am Arbeitsplatz ein Problem gibt, sprechen Sie mit einem Vorgesetzten. Bei Konflikten mit Kindern oder Ehepartnern finden Sie Wege, um diese zu lösen.\nVermeiden Sie Stressauslöser. Wenn beispielsweise der Berufsverkehr Stress verursacht, reisen Sie zu einer anderen Zeit oder nehmen Sie öffentliche Verkehrsmittel. Vermeiden Sie Menschen, die Stress verursachen, wenn möglich.\nNehmen Sie sich Zeit zum Entspannen. Nehmen Sie sich jeden Tag Zeit, um ruhig zu sitzen und tief zu atmen. Schaffen Sie Zeit für angenehme Aktivitäten oder Hobbys wie Spazierengehen, Kochen oder Freiwilligenarbeit.\nPraktizieren Sie Dankbarkeit. Die Äußerung von Dankbarkeit gegenüber anderen kann dazu beitragen, den Stress zu reduzieren.\n\n
+        <font size="16"><b>9. Überwachen Sie Ihren Blutdruck zu Hause und lassen Sie regelmäßig Untersuchungen durchführen</b></font>\nDie Überwachung zu Hause kann Ihnen helfen, Ihren Blutdruck im Auge zu behalten. Sie kann sicherstellen, dass Ihre Medikamente und Änderungen im Lebensstil wirken.\n\nBlutdruckmessgeräte für zu Hause sind weit verbreitet und ohne Rezept erhältlich. Sprechen Sie mit einem Gesundheitsdienstleister über die Überwachung zu Hause, bevor Sie beginnen.\n\nRegelmäßige Besuche bei einem Anbieter sind auch entscheidend für die Kontrolle des Blutdrucks. Wenn Ihr Blutdruck gut kontrolliert wird, fragen Sie Ihren Anbieter, wie oft Sie ihn überprüfen müssen. Möglicherweise müssen Sie ihn nur einmal täglich oder seltener überprüfen.\n\n
+        <font size="16"><b>10. Holen Sie sich Unterstützung</b></font>\nUnterstützende Familie und Freunde sind wichtig für die Gesundheit. Sie können Sie ermutigen, auf sich selbst aufzupassen, Sie zum Büro des Gesundheitsdienstleisters fahren oder mit Ihnen ein Übungsprogramm starten, um Ihren Blutdruck niedrig zu halten.\n\nWenn Sie feststellen, dass Sie über die Unterstützung Ihrer Familie und Freunde hinaus Unterstützung benötigen, erwägen Sie den Beitritt zu einer Support-Gruppe. Dies kann Sie mit Menschen in Kontakt bringen, die Ihnen einen emotionalen oder moralischen Auftrieb geben und praktische Tipps zum Umgang mit Ihrer Erkrankung bieten können.\n\nQuelle: https://www.mayoclinic.org/
+    </string>
+    <string name="post_03_title">Blutdruckmedikamente</string>
+    <string name="post_03_content">Viele Menschen müssen zusätzlich zu Lebensstiländerungen auch Medikamente einnehmen, um ihren Blutdruck auf gesunde Werte zu halten. Erfahren Sie mehr über Blutdruckmedikamente.
+        \n\n<font size="16"><b>Wie wirken Blutdruckmedikamente?</b></font>\n
+        Blutdruckmedikamente können auf verschiedene Weise wirken. Blutdruckmedikamente können den Blutdruck auf gesunde Werte halten, indem sie1:
+
+        \n• Ihren Körper dazu bringen, Wasser auszuscheiden, wodurch die Menge an Wasser und Salz in Ihrem Körper auf ein gesundes Niveau reduziert wird
+        \n• Ihre Blutgefäße entspannen
+        \n• Ihr Herz mit weniger Kraft schlagen lassen
+        \n• Die Nervenaktivität blockieren, die Ihre Blutgefäße einschränken kann
+        \n• Sprechen Sie mit Ihrem Gesundheitsteam über die beste Art der Behandlung für Sie. Sie müssen möglicherweise mehr als eine Art von Medikamenten einnehmen, um Ihren Blutdruck zu kontrollieren. Sie können auch mit Ihrem Gesundheitsteam darüber sprechen, wie lange es dauern sollte, bis Ihr Blutdruckmedikament wirkt.
+        Es ist wichtig, Ihr Blutdruckmedikament genau so einzunehmen, wie es Ihnen von Ihrem Arzt verschrieben wurde. Beenden Sie nicht Ihre derzeitige Medikamenteneinnahme, ohne zuerst mit Ihrem Arzt oder Apotheker zu sprechen. Das Beenden Ihrer Blutdruckmedikation ohne vorherige Rücksprache mit Ihrem Gesundheitsteam kann zu schwerwiegenden gesundheitlichen Folgen führen.
+        \n\n<font size="16"><b>Was sind die Vorteile und Risiken von Blutdruckmedikamenten?</b></font>\n
+        Die Vorteile von Blutdruckmedikamenten sind klar: Blutdruckmedikamente können dazu beitragen, Ihren Blutdruck auf gesunde Werte zu halten und somit das Risiko von Herzkrankheiten, Herzinfarkt und Schlaganfall erheblich reduzieren.
+        Im Allgemeinen sind die Risiken der Einnahme von Blutdruckmedikamenten gering. Jedoch haben alle Medikamente Risiken. Sprechen Sie mit Ihrem Arzt oder Ihrem Gesundheitsfachpersonal über die Risiken von Blutdruckmedikamenten.
+        Beenden Sie nicht Ihre derzeitige Medikamenteneinnahme, ohne zuerst mit Ihrem Arzt oder Gesundheitsfachpersonal zu sprechen.
+        \n\n<font size="16"><b>Was sind die Nebenwirkungen von Blutdruckmedikamenten?</b></font>\n
+        In den meisten Fällen verursachen Blutdruckmedikamente keine Nebenwirkungen. Einige Menschen haben jedoch leichte Nebenwirkungen wie Schwindel, Kopfschmerzen, Schwellungen in den Beinen oder Füßen oder Magenprobleme.2
+        Einige rezeptfreie Medikamente wie Nasensprays können auch den Blutdruck erhöhen und mit blutdrucksenkenden Medikamenten interagieren.3 Informieren Sie Ihren Arzt über alle Medikamente oder Nahrungsergänzungsmittel, die Sie bereits einnehmen.
+
+        Alle Medikamente haben Risiken. Sprechen Sie mit Ihrem Arzt über die besten blutdrucksenkenden Medikamente für Sie, ihre Vorteile, Risiken und Nebenwirkungen sowie über andere Gesundheitsprobleme, die Sie haben.
+
+        <font size="16"><b>Wie weiß ich, ob ich Medikamente gegen hohen Blutdruck benötige?</b></font>
+        Ihr Gesundheitsteam wird Ihnen sagen, ob Sie Medikamente gegen hohen Blutdruck benötigen, basierend auf Ihren Blutdruckmessungen über einen bestimmten Zeitraum. Wenn Sie einen Blutdruckmonitor zu Hause verwenden, notieren oder schreiben Sie Ihre Messwerte auf.
+
+        Teilen Sie Ihre Messwerte mit Ihrem Gesundheitsteam, damit Sie gemeinsam die beste Entscheidung zur Kontrolle Ihres Blutdrucks treffen können.
+
+        <font size="16"><b>Welche anderen Möglichkeiten gibt es, um meinen Blutdruck zu senken?</b></font>
+        Neben der Einnahme von Medikamenten zur Kontrolle Ihres Blutdrucks können Sie auch andere Maßnahmen ergreifen, um Ihre Blutdruckwerte gesund zu halten.\n
+        \n• <b>Betreiben Sie regelmäßig körperliche Aktivität</b>. Körperliche Aktivität ist eine der besten Maßnahmen für Ihre Gesundheit. Es hilft, Ihr Herz und Ihre Blutgefäße stark zu halten. Es kann auch helfen, ein gesundes Gewicht zu halten.
+        \n• <b>Rauchen Sie nicht</b>. Rauchen schädigt Ihre Blutgefäße und erhöht das Risiko nicht nur für Bluthochdruck, sondern auch für Herzkrankheiten, Herzinfarkt und Schlaganfall erheblich.
+        \n• <b>Essen Sie gesunde Lebensmittel</b>. Die Wahl gesunder Mahlzeiten und Snacks kann Ihnen helfen, Bluthochdruck und dessen Komplikationen zu vermeiden. Achten Sie darauf, reichlich frisches Obst und Gemüse zu essen.
+        \n• <b>Halten Sie ein gesundes Gewicht</b>. Übergewicht oder Fettleibigkeit bedeutet, dass Ihr Herz härter arbeiten muss, um Blut und Sauerstoff im Körper zu pumpen. Ein gesundes Gewicht zu halten, reduziert den Stress für Ihr Herz und verringert das Risiko für Herzkrankheiten, Herzinfarkt und Schlaganfall.
+        \n\nQuelle: https://www.cdc.gov/"
+    </string>
+    <string name="post_04_title">Symptome und Ursachen von hohem Blutdruck</string>
+    <string name="post_04_content">
+        \n\n<font size="16"><b>Wie weiß ich, ob ich hohen Blutdruck habe?</b></font>\n
+Es gibt nur eine Möglichkeit zu wissen, ob Sie hohen Blutdruck haben: Lassen Sie ihn von einem Arzt oder einem anderen Gesundheitsfachmann messen. Die Messung des Blutdrucks ist schnell und schmerzlos.
+    Sprechen Sie mit Ihrem Gesundheitsteam über regelmäßige Blutdruckmessungen zu Hause, auch als Selbstmessung des Blutdrucks (SMBP) bezeichnet.
+
+    Hoher Blutdruck wird als "stillen Killer" bezeichnet, da er in der Regel keine Warnzeichen oder Symptome hat und viele Menschen nicht wissen, dass sie ihn haben.
+
+    Symptome
+    Die meisten Menschen mit hohem Blutdruck haben keine Symptome, selbst wenn die Blutdruckwerte gefährlich hoch sind. Sie können jahrelang hohen Blutdruck haben, ohne Symptome zu bemerken.
+
+    Einige wenige Menschen mit hohem Blutdruck können haben:
+
+    \n• Kopfschmerzen
+    \n• Kurzatmigkeit
+    \n• Nasenbluten
+    \n• Diese Symptome sind jedoch unspezifisch. Sie treten in der Regel erst auf, wenn der hohe Blutdruck einen schweren oder lebensbedrohlichen Zustand erreicht hat.
+    \n\n<font size="16"><b>Wann einen Arzt aufsuchen?</b></font>\n
+    Die Messung des Blutdrucks ist ein wichtiger Bestandteil der allgemeinen Gesundheitsvorsorge. Wie oft Sie Ihren Blutdruck messen lassen sollten, hängt von Ihrem Alter und Ihrem Gesundheitszustand ab.
+
+    Bitten Sie Ihren Arzt um eine Blutdruckmessung mindestens alle zwei Jahre ab dem 18. Lebensjahr. Wenn Sie 40 Jahre oder älter sind oder zwischen 18 und 39 Jahren mit einem hohen Risiko für hohen Blutdruck, lassen Sie jedes Jahr Ihren Blutdruck überprüfen.
+
+    Ihr Arzt wird wahrscheinlich häufigere Messungen empfehlen, wenn Sie hohen Blutdruck oder andere Risikofaktoren für Herzkrankheiten haben.
+
+    Kinder ab 3 Jahren können im Rahmen ihrer jährlichen Untersuchungen den Blutdruck messen lassen.
+    Wenn Sie nicht regelmäßig einen Arzt aufsuchen, können Sie möglicherweise bei einer Gesundheitsmesse oder anderen Orten in Ihrer Gemeinde eine kostenlose Blutdruckmessung erhalten. Kostenlose Blutdruckmessgeräte sind auch in einigen Geschäften und Apotheken erhältlich. Die Genauigkeit dieser Geräte hängt von mehreren Faktoren ab, wie der richtigen Größe des Manschetten und der korrekten Verwendung der Geräte. Fragen Sie Ihren Gesundheitsdienstleister um Rat zur Verwendung öffentlicher Blutdruckmessgeräte.
+    \n\n<font size="16"><b>Ursachen</b></font>\n
+    Der Blutdruck wird von zwei Dingen bestimmt: der Menge an Blut, die das Herz pumpt, und wie schwer es für das Blut ist, durch die Arterien zu fließen. Je mehr Blut das Herz pumpt und je enger die Arterien sind, desto höher ist der Blutdruck.
+
+    Es gibt zwei Haupttypen von hohem Blutdruck.
+    Primäre Hypertonie, auch essentielle Hypertonie genannt
+    Für die meisten Erwachsenen gibt es keine erkennbare Ursache für hohen Blutdruck. Diese Art von hohem Blutdruck wird als primäre Hypertonie oder essentielle Hypertonie bezeichnet. Sie neigt dazu, sich allmählich über viele Jahre hinweg zu entwickeln. Plaque-Aufbau in den Arterien, genannt Atherosklerose, erhöht das Risiko für hohen Blutdruck.
+
+    Sekundäre Hypertonie
+    Diese Art von hohem Blutdruck wird durch eine zugrunde liegende Erkrankung verursacht. Sie tritt tendenziell plötzlich auf und verursacht einen höheren Blutdruck als die primäre Hypertonie. Bedingungen und Medikamente, die zu sekundärer Hypertonie führen können, sind:
+
+    \n• Tumoren der Nebennieren
+    \n• Blutgefäßprobleme, die bei der Geburt vorhanden sind, auch als angeborene Herzfehler bezeichnet
+    \n• Husten- und Erkältungsmittel, einige Schmerzmittel, Antibabypillen und andere verschreibungspflichtige Medikamente
+    \n• Illegale Drogen wie Kokain und Amphetamine
+    \n• Nierenerkrankungen
+    \n• Obstruktive Schlafapnoe
+    \n• Schilddrüsenprobleme"
+    Manchmal führt allein ein Gesundheitscheck dazu, dass der Blutdruck ansteigt. Dies wird als Weißkittelhypertonie bezeichnet.
+    \n\nQuelle: https://www.mayoclinic.org/"
+    </string>
+    <string name="post_06_title">Wie behandelt man die verschiedenen Stadien der Hypertonie?</string>
+    <string name="post_06_content">
+    Die American Heart Association veröffentlichte im Jahr 2017 eine aktualisierte Hypertonie-Richtlinie, die neue Blutdruckziele und Behandlungsempfehlungen für Patienten mit hohem Blutdruck diskutierte.
+    In der neuen Hypertonie-Richtlinie wurde die Definition der Hypertonie geändert, um neue Ziele für systolische und diastolische Blutdruckmessungen widerzuspiegeln. Diese Blutdruckziele helfen bei der klinischen Entscheidungsfindung, indem sie die Hypertonie in Kategorien einteilen: normaler Blutdruck, erhöhter Blutdruck, Stadium 1 und Stadium 2.1
+    Zuvor wurde hoher Blutdruck definiert als systolischer Blutdruckmesswert von 140 mmHg oder höher oder diastolischer Blutdruckmesswert von 90 mmHg oder höher.1 Die aktualisierte Richtlinie definiert Bluthochdruck als systolischen Blutdruckmesswert von 130 mmHg oder höher oder diastolischen Blutdruckmesswert von 80 mmHg oder höher.1 Als Folge werden Patienten mit systolischem Blutdruckmesswert von 140/90 mmHg oder höher jetzt als Stufe-2-Hypertonie angesehen.1
+    Es gibt mehr hypertensive Patienten als je zuvor - diese weit verbreitete Erkrankung soll zwischen 2013 und 2030 um 8% zunehmen.2 Aus diesem Grund gab die Hypertonie-Richtlinie neue Behandlungsempfehlungen, die sowohl Änderungen des Lebensstils als auch pharmakologische Strategien zur Hilfe bei der Behandlung dieser Erkrankung beinhalteten.1 Es ist wichtig, dass Gesundheitsdienstleister ein umfassendes Verständnis davon haben, wie man die verschiedenen Stadien der Hypertonie effektiv behandelt, um deren gefährlichen Auswirkungen zu verhindern.
+
+    \n\n<font size="16"><b>Normaler Blutdruck</b></font>\n
+    Ein normaler Blutdruck wird definiert als systolischer Blutdruckwert von &lt; 120 mmHg und diastolischer Blutdruckwert von &lt; 80 mmHg.1 Patienten mit normalen Blutdruckwerten werden ermutigt, weiterhin einen gesunden Lebensstil beizubehalten, um ihre normalen Blutdruckwerte aufrechtzuerhalten und die Entwicklung von Hypertonie zu verhindern. Patienten mit normalen BP-Messungen können ihre Werte jährlich bewerten lassen.
+    \n\n<font size="16"><b>Erhöhter Blutdruck</b></font>\n
+    Erhöhter Blutdruck wurde früher als "Prähypertonie" bezeichnet. Er wird als systolischer BP-Wert von 120-129 mmHg und diastolischer BP-Wert von weniger als 80 mmHg klassifiziert.1 Um zu verhindern, dass sich die Hypertonie verschlimmert, wird empfohlen, dass der Patient Lebensstiländerungen durchführt und seine Blutdruckwerte in 3-6 Monaten erneut überprüfen lässt.1 Gesunde Lebensstiländerungen umfassen:
+    Folgen Sie der DASH-Diät, die reich an Obst, Gemüse, Vollkornprodukten und fettarmen Milchprodukten ist.
+    Regelmäßiges Training
+    Reduzierung der Natriumaufnahme
+    Ein gesundes Gewicht halten
+    Stresslevel managen
+    Alkoholkonsum begrenzen
+    Nichtrauchen
+    Qualitäts-Schlaf bekommen
+    Alleinige nicht-pharmakologische Therapie ist eine wirksame Behandlungsstrategie bei Erwachsenen mit erhöhten BP-Werten, da sie den systolischen Blutdruck um etwa 4-11 mmHg senken kann.
+    \n\n<font size="16"><b>Stufe 1 Hypertonie</b></font>\n
+    Stufe 1 Hypertonie wird definiert als systolischer BP von 130-139 und diastolischer BP von 80-89 mmHg.1 Das 10-Jahres-Risiko des Patienten für Herzkrankheiten und Schlaganfall sollte mithilfe des atherosklerotischen kardiovaskulären Erkrankungsrisiko-Rechners (ASCVD) bewertet werden, um die geeignete Behandlung und Nachsorge zu bestimmen.1"
+    ASCVD-Risiko unter 10%:
+Wenn das ASCVD-Risiko des Patienten unter 10% liegt, wird empfohlen, nur gesunde Lebensstiländerungen durchzuführen. Der Blutdruck des Patienten sollte in 3-6 Monaten bewertet werden.
+    ASCVD größer als 10%:
+    Gesunde Lebensstiländerungen in Kombination mit einem blutdrucksenkenden Medikament (Einzelmittel) sind die empfohlene Behandlung, wenn das ASCVD-Risiko des Patienten größer als 10% ist oder wenn der Patient eine klinische Herz-Kreislauf-Erkrankung, Diabetes mellitus oder eine chronische Nierenerkrankung hat. Nach Beginn der Behandlung sollte der Blutdruck des Patienten nach einem Monat erneut bewertet werden.1 Wenn das Blutdruckziel des Patienten nach einem Monat erreicht wird, kann der Patient nach weiteren 3-6 Monaten erneut bewertet werden.1 Wenn das Blutdruckziel nach einem Monat nicht erreicht wird, sollte eine andere Medikation oder eine Dosiserhöhung in Betracht gezogen werden.1 Der Patient sollte weiterhin monatlich seinen Arzt aufsuchen, bis der Blutdruck kontrolliert ist.
+    \n\n<font size="16"><b>Stufe 2 Hypertonie</b></font>\n
+    Stufe 2 Hypertonie wird definiert als systolischer Blutdruck von ≥140 mmHg und diastolischer Blutdruck von ≥90 mmHg.1 Eine Kombination aus gesunder Lebensweise und blutdrucksenkender Medikation (zwei First-Line-Arzneimittel unterschiedlicher Klassen) wird für Patienten mit Stufe 2 Hypertonie empfohlen.1 Wenn das Blutdruckziel des Patienten nach einem Monat Behandlung erreicht wird, kann eine erneute Bewertung in 3-6 Monaten erfolgen.1 Wenn das Blutdruckziel nach einem Monat Behandlung nicht erreicht wurde, sollte eine andere Medikation oder Dosisanpassung in Erwägung gezogen werden, zusammen mit monatlichen Follow-ups beim Arzt, bis der Blutdruck kontrolliert ist.
+    \n\n<font size="16"><b>Hypertensive Dringlichkeit vs. Notfall</b></font>\n
+    Wenn der Patient einen schweren Blutdruckanstieg aufweist (systolischer Blutdruck größer als 180 mmHg oder diastolischer Blutdruck größer als 120 mmHg) und keine Anzeichen oder Symptome für Zielorganschäden oder -dysfunktionen aufweist, handelt es sich um eine hypertensive Dringlichkeit.1 Die antihypertensive medikamentöse Therapie sollte bei diesen Patienten erhöht werden.1"
+    Wenn der Patient eine schwere Blutdruckerhöhung hat, die von neuen oder sich verschlechternden Schäden an den Zielorganen begleitet wird, wird dies als hypertensive Notfall angesehen.1 Patienten mit hypertensivem Notfall sollten in eine Intensivstation aufgenommen werden. Es sollte ein Medikament verabreicht werden, um den Blutdruck zu senken, und der Blutdruck des Patienten sollte kontinuierlich überwacht werden.1 Wenn dies unbehandelt bleibt, beträgt die mittlere Überlebensrate 10,4 Monate.
+    \n\n<font size="16"><b>Wichtige Erkenntnisse</b></font>\n
+    Es besteht ein starker Zusammenhang zwischen Blutdruckwerten und dem Risiko für kardiovaskuläre Erkrankungen - je höher der Blutdruck, desto größer das Risiko für kardiovaskuläre Erkrankungen.1 Es ist daher wichtig, dass Gesundheitsdienstleister wissen, wie sie die verschiedenen Stadien der Hypertonie behandeln können. Die Integration von nichtpharmakologischen und pharmakologischen Behandlungsstrategien kann dazu beitragen, das Risiko des Patienten zu reduzieren, die gefährlichen Auswirkungen von Hypertonie zu erleben, einschließlich Sehverlust, Herzinfarkt oder -versagen, Schlaganfall und Nierenschäden.
+    Stellen Sie sicher, dass Sie unser eBook herunterladen, um mehr darüber zu erfahren, wie die verschiedenen Stadien der Hypertonie behandelt werden können und welche Vorteile automatisierte Lösungen bei der Erkennung, Diagnose und Behandlung dieser Erkrankung innerhalb und außerhalb der Klinik bieten können.
+    \n\nQuelle: hillrom.com
+    </string>
+    <string name="post_07_title">Was ist der DASH-Ernährungsplan?</string>
+    <string name="post_07_content">
+    Bluthochdruck kann ungesund sein, selbst wenn er nur geringfügig über dem normalen Wert von weniger als 120/80 mmHg bleibt. Je höher der Blutdruck über dem Normalwert steigt, desto größer ist das Gesundheitsrisiko. Die Ergebnisse zeigten, dass Blutdrücke mit einem Ernährungsplan gesenkt wurden, der wenig gesättigtes Fett, Cholesterin und Gesamtfett enthält und Obst, Gemüse sowie fettarme Milch und Milchprodukte betont. Dieser Ernährungsplan - bekannt als DASH-Ernährungsplan - umfasst auch Vollkornprodukte, Fisch, Geflügel und Nüsse. Er ist im Vergleich zur typisch amerikanischen Ernährung arm an magerem rotem Fleisch, Süßigkeiten, zugesetztem Zucker und zuckerhaltigen Getränken. Er ist reich an Kalium, Magnesium und Calcium sowie an Protein und Ballaststoffen. (Siehe Kasten 2 für die täglichen Nährstoffziele der DASH-Studien.)
+    \n\nDer DASH-Ernährungsplan folgt herzgesunden Richtlinien, um gesättigte Fette und Cholesterin zu begrenzen. Er konzentriert sich darauf, die Aufnahme von Nährstoffen zu erhöhen, die den Blutdruck senken sollen, hauptsächlich Mineralien (wie Kalium, Calcium und Magnesium), Protein und Ballaststoffe. Er enthält nährstoffreiche Lebensmittel, damit er auch andere Nährstoffanforderungen erfüllt, wie vom Institute of Medicine empfohlen. Die erste DASH-Studie umfasste 459 Erwachsene mit systolischem Blutdruck von weniger als 160 mmHg und diastolischem Druck von 80-95 mmHg. Etwa 27 Prozent der Teilnehmer hatten hohen Blutdruck. Ungefähr 50 Prozent waren Frauen und 60 Prozent Afroamerikaner. Es wurden drei Ernährungspläne verglichen: ein Plan, der Lebensmittel enthält, die denen ähnlich sind, die viele Amerikaner regelmäßig essen; ein Plan, der Lebensmittel enthält, die denen ähnlich sind, die viele Amerikaner regelmäßig essen, plus mehr Obst und Gemüse; und der DASH-Ernährungsplan. Alle drei Pläne enthielten täglich etwa 3000 Milligramm Natrium. Keiner der Pläne war vegetarisch oder verwendete Speziallebensmittel. Die Ergebnisse waren dramatisch. Teilnehmer, die sowohl den Plan, der mehr Obst und Gemüse enthielt, als auch den DASH-Ernährungsplan befolgten, hatten einen niedrigeren Blutdruck. Aber der DASH-Ernährungsplan hatte den größten Effekt, insbesondere für Menschen mit hohem Blutdruck. Darüber hinaus kamen die Blutdrucksenkungen schnell - innerhalb von 2 Wochen nach Beginn des Plans.
+    \n\nDie zweite DASH-Studie untersuchte die Auswirkungen einer reduzierten Natriumaufnahme in der Ernährung auf den Blutdruck bei Teilnehmern, die entweder dem DASH-Ernährungsplan oder einem Ernährungsplan folgten, der typisch für das ist, was viele Amerikaner konsumieren. An der zweiten Studie nahmen 412 Teilnehmer teil. Die Teilnehmer wurden zufällig einem der beiden Ernährungspläne zugewiesen und anschließend einen Monat lang auf jedem der drei Natriumspiegel beobachtet. Die drei Natriumspiegel waren eine höhere Aufnahme von etwa 3.300 Milligramm pro Tag (dem von vielen Amerikanern konsumierten Niveau), eine mittlere Aufnahme von etwa 2.300 Milligramm pro Tag und eine niedrigere Aufnahme von etwa 1.500 Milligramm pro Tag. Die Ergebnisse zeigten, dass eine Reduktion des Natriumgehalts in der Ernährung den Blutdruck für beide Ernährungspläne senkte. Bei jedem Natriumspiegel war der Blutdruck auf dem DASH-Ernährungsplan niedriger als auf dem anderen Ernährungsplan. Die größten Blutdrucksenkungen wurden für den DASH-Ernährungsplan bei einer Natriumaufnahme von 1.500 Milligramm pro Tag festgestellt. Diejenigen mit hohem Blutdruck hatten die größten Reduktionen, aber auch diejenigen mit Prähypertonie hatten große Abnahmen. Zusammen zeigen diese Studien die Bedeutung einer Reduzierung der Natriumaufnahme - unabhängig von Ihrem Ernährungsplan. Für eine wirklich erfolgreiche Kombination folgen Sie dem DASH-Ernährungsplan und reduzieren Sie Ihren Salz- und Natriumkonsum.
+    \n\nQuelle: IHR LEITFADEN ZUR Senkung Ihres Blutdrucks mit DASH - National Institutes of Health National Heart, Lung, and Blood Institute.
+    </string>
+
+
+    <string name="post_09_title">Verständnis der Blutdruckwerte</string>
+    <string name="post_09_content">
+    \n\n<font size="16"><b>Was bedeuten Ihre Blutdruckzahlen?</b></font>\n
+    \nDie einzige Möglichkeit, festzustellen, ob Sie einen hohen Blutdruck (HBP oder Hypertonie) haben, besteht darin, Ihren Blutdruck messen zu lassen. Das Verständnis Ihrer Ergebnisse ist entscheidend für die Kontrolle des hohen Blutdrucks.
+    \n\nGesunde und ungesunde Blutdruckbereiche
+    \nErfahren Sie, was von der American Heart Association als normal empfohlen wird.
+    Blutdruckkategorien
+    Die fünf Blutdruckbereiche (BP), die von der American Heart Association anerkannt werden, sind:
+    \n\n<font size="16"><b>Normal</b></font>\n
+    Blutdruckwerte von weniger als 120/80 mm Hg gelten als normal. Wenn Ihre Ergebnisse in diese Kategorie fallen, sollten Sie sich an herzgesunde Gewohnheiten wie eine ausgewogene Ernährung und regelmäßige Bewegung halten.
+
+    \n\n<font size="16"><b>Erhöht</b></font>\n"
+    Erhöhter Blutdruck tritt auf, wenn die Werte kontinuierlich zwischen 120-129 systolisch und weniger als 80 mm Hg diastolisch liegen. Menschen mit erhöhtem Blutdruck neigen dazu, Bluthochdruck zu entwickeln, es sei denn, es werden Maßnahmen ergriffen, um den Zustand zu kontrollieren.
+    \n\n<font size="16"><b>Bluthochdruck Stufe 1</b></font>\n
+    Bluthochdruck Stufe 1 tritt auf, wenn der Blutdruck kontinuierlich zwischen 130-139 systolisch oder 80-89 mm Hg diastolisch liegt. In diesem Stadium von Bluthochdruck sind Ärzte wahrscheinlich daran interessiert, Lebensstiländerungen vorzuschlagen und können je nach Ihrem Risiko für atherosklerotische Herz-Kreislauf-Erkrankungen (ASCVD) wie Herzinfarkt oder Schlaganfall Blutdruckmedikamente in Betracht ziehen.
+
+    \n\n<font size="16"><b>Bluthochdruck Stufe 2</b></font>\n
+    Bluthochdruck Stufe 2 tritt auf, wenn der Blutdruck kontinuierlich bei 140/90 mm Hg oder höher liegt. In diesem Stadium von Bluthochdruck sind Ärzte wahrscheinlich daran interessiert, eine Kombination aus Blutdruckmedikamenten und Lebensstiländerungen vorzuschlagen.
+
+    \n\n<font size="16"><b>Hypertensive Krise</b></font>\n"
+    Diese Stufe des hohen Blutdrucks erfordert ärztliche Aufmerksamkeit. Wenn Ihre Blutdruckmesswerte plötzlich 180/120 mm Hg überschreiten, warten Sie fünf Minuten und messen Sie dann Ihren Blutdruck erneut. Wenn Ihre Messwerte immer noch ungewöhnlich hoch sind, kontaktieren Sie sofort Ihren Arzt. Sie könnten eine hypertensive Krise erleben.
+    Wenn Ihr Blutdruck höher als 180/120 mm Hg ist und Sie Anzeichen möglicher Organschäden wie Brustschmerzen, Atemnot, Rückenschmerzen, Taubheit/Schwäche, Veränderungen des Sehvermögens oder Schwierigkeiten beim Sprechen bemerken, warten Sie nicht ab, ob Ihr Blutdruck von alleine sinkt.
+
+    \n\n<font size="16"><b>Ihre Blutdruckwerte und was sie bedeuten</b></font>\n
+    Ihr Blutdruck wird als zwei Zahlen aufgezeichnet:"
+    Systolischer Blutdruck (die erste Zahl) - gibt an, wie viel Druck Ihr Blut gegen Ihre Arterienwände ausübt, wenn das Herz schlägt.
+    Diastolischer Blutdruck (die zweite Zahl) - gibt an, wie viel Druck Ihr Blut gegen Ihre Arterienwände ausübt, wenn das Herz zwischen den Schlägen ruht.
+
+    \n\n<font size="16"><b>Welche Zahl ist wichtiger?</b></font>\n
+    In der Regel wird dem systolischen Blutdruck (der ersten Zahl) mehr Aufmerksamkeit als einem wichtigen Risikofaktor für Herz-Kreislauf-Erkrankungen bei Menschen über 50 Jahren geschenkt. Bei den meisten Menschen steigt der systolische Blutdruck aufgrund der zunehmenden Steifheit großer Arterien, des langfristigen Aufbaus von Plaque und einer erhöhten Inzidenz von kardiovaskulären Erkrankungen im Laufe der Zeit kontinuierlich an.
+
+    Eine erhöhte systolische oder eine erhöhte diastolische Blutdruckmessung kann jedoch zur Diagnose von Bluthochdruck verwendet werden. Nach neuesten Studien verdoppelt sich das Risiko für einen Tod durch ischämische Herzerkrankungen und Schlaganfälle bei jedem Anstieg um 20 mm Hg systolisch oder 10 mm Hg diastolisch bei Menschen zwischen 40 und 89 Jahren.
+    \n\n<font size="16"><b>Warum wird Blutdruck in mm Hg gemessen?</b></font>\n
+Die Abkürzung mm Hg steht für Millimeter Quecksilber. Quecksilber wurde in den ersten genauen Druckmessgeräten verwendet und wird heute noch in der Medizin als Standardmaßeinheit für Druck verwendet.
+    \n\nQuelle: https://www.heart.org/
+    </string>
+
+
+    <string name="post_10_title">Symptome und Ursachen von niedrigem Blutdruck</string>
+    <string name="post_10_content">
+    Niedriger Blutdruck tritt auf, wenn das Blut durch Ihre Blutgefäße mit niedrigerem als normalem Druck fließt. Der medizinische Begriff für niedrigen Blutdruck lautet Hypotonie.\n\nBlutdruck ist die Kraft, mit der das Blut gegen die Wände Ihrer Arterien drückt, wenn das Herz Blut pumpt. Er wird normalerweise als zwei Zahlen beschrieben: systolischer und diastolischer Druck. Die Zahlen geben den Blutdruck in Millimeter Quecksilbersäule (mmHg) an, wobei der systolische Druck über dem diastolischen Druck steht.\n\nFür die meisten Erwachsenen liegt ein normaler Blutdruck normalerweise unter 120/80 mm Hg. Niedriger Blutdruck ist Blutdruck, der niedriger als 90/60 mm Hg ist.\n\nEinige Menschen haben die ganze Zeit einen niedrigen Blutdruck und das ist normal für sie. Andere Menschen erleben einen plötzlichen Blutdruckabfall oder haben einen niedrigen Blutdruck, der mit einem Gesundheitsproblem zusammenhängen kann. Dies kann gefährlich sein, da es bedeuten könnte, dass Ihr Herz, Ihr Gehirn oder andere lebenswichtige Organe nicht genug Blutfluss erhalten und Sie ein höheres Risiko für einen Herzinfarkt oder Schlaganfall haben.
+    \n\n<font size="16"><b>Was verursacht niedrigen Blutdruck?</b></font>\n
+    Viele Systeme im Körper, einschließlich Organe, Hormone und Nerven, regulieren den Blutdruck. Zum Beispiel sendet das autonome Nervensystem das "Kampf- oder Flucht"-Signal, das je nach Situation das Herz und andere Systeme im Körper anweist, den Blutdruck zu erhöhen oder zu senken. Probleme mit dem autonomen Nervensystem, wie bei Parkinson-Krankheit, können zu niedrigem Blutdruck führen.\n\nAndere Ursachen für niedrigen Blutdruck sind:\n\nBlutverlust durch eine Verletzung, die zu einem plötzlichen Blutdruckabfall führt\nDehydration\nDiabetes\nHerzprobleme wie Arrhythmien (unregelmäßiger Herzschlag)\nMedikamente zur Behandlung von hohem Blutdruck, Depressionen oder Parkinson-Krankheit\nSchwangerschaft\nÄltere Erwachsene haben auch ein höheres Risiko für Symptome von niedrigem Blutdruck wie Stürze, Ohnmacht oder Schwindel beim Aufstehen oder nach einer Mahlzeit. Ältere Erwachsene sind eher gefährdet, einen niedrigen Blutdruck als Nebenwirkung von Medikamenten zu entwickeln, die zur Kontrolle von hohem Blutdruck eingenommen werden.
+    \n\n<font size="16"><b>Was sind die Symptome?</b></font>\n
+Für viele Menschen bleibt niedriger Blutdruck unbemerkt. Andere können Symptome wie folgt verspüren:
+
+    \n\n• Verwirrung
+    \n• Schwindel oder Benommenheit
+    \n• Ohnmacht
+    \n• Müdigkeit oder Schwächegefühl
+    \n• Verschwommenes Sehen
+    \n• Kopfschmerzen
+    \n• Nacken- oder Rückenschmerzen
+    \n• Übelkeit
+    \n• Herzklopfen oder das Gefühl, dass Ihr Herz einen Schlag aussetzt, flattert oder zu hart oder zu schnell schlägt
+    \n\n<font size="16"><b>Was sollten Sie tun, wenn Sie Symptome haben?</b></font>\n
+    Das Hinsetzen kann die Symptome lindern. Wenn Ihr Blutdruck zu stark abfällt, bekommen die lebenswichtigen Organe Ihres Körpers nicht genug Sauerstoff und Nährstoffe. In diesem Fall kann niedriger Blutdruck zu Schock führen, der sofortige medizinische Aufmerksamkeit erfordert. Anzeichen für Schock sind kalte und schweißige Haut, schnelle Atmung, eine blaue Hautfarbe oder ein schwacher und schneller Puls. Gehen Sie ins Krankenhaus, wenn Sie Anzeichen von Schock bei sich selbst oder jemand anderem bemerken.\n\nSprechen Sie mit Ihrem Arzt über Ihre Symptome. Ihr Arzt wird einen Blutdrucktest durchführen, um niedrigen Blutdruck zu diagnostizieren. Weitere Tests können Blut-, Urin- oder Bildgebungstests sowie ein Kipptischtest sein, wenn Sie häufig ohnmächtig werden.
+
+    \n\n<font size="16"><b>Wie wird es behandelt?</b></font>\nSie benötigen möglicherweise keine Behandlung für niedrigen Blutdruck. Je nach Ihren Symptomen kann die Behandlung das Trinken von mehr Flüssigkeiten zur Vermeidung von Dehydration, die Einnahme von Medikamenten zur Erhöhung des Blutdrucks oder die Anpassung von Medikamenten, die zu niedrigem Blutdruck führen, umfassen.\n\nIhr Arzt kann mit Ihnen über Änderungen des Lebensstils sprechen, einschließlich Änderungen dessen, was und wie Sie essen und wie Sie sitzen und aufstehen. Ihr Arzt kann auch Kompressionsstrümpfe empfehlen, wenn Sie lange stehen müssen.\n\nQuelle: https://www.nhlbi.nih.gov/
+    </string>
+
+
+    <string name="post_11_title">Blutdruck erhöht? Die COVID-19-Pandemie könnte dafür verantwortlich sein</string>
+    <string name="post_11_content">Es ist eine Tatsache, die nur wenige bestreiten können: Die COVID-19-Pandemie hat für die Amerikaner verheerende Auswirkungen gehabt. Sie hat zu hohen Raten von Todesfällen und Krankheiten geführt, nahezu alle Bereiche des täglichen Lebens gestört und wurde mit einem Anstieg von Herzkrankheiten, Lungenerkrankungen, Fettleibigkeit und Schlafproblemen in Verbindung gebracht.\n\nJetzt sagen NHLBI-geförderte Forscher, dass das Virus und der damit verbundene Stress auch für einen Anstieg des Blutdrucks unter Amerikanern verantwortlich gemacht werden können.\n\nEine große Beobachtungsstudie, die kürzlich in der Zeitschrift Circulation veröffentlicht wurde, überprüfte Gesundheitsdaten von mehr als einer halben Million Amerikanern aus 50 Bundesstaaten und dem District of Columbia. Die Studie ergab einen geringen, aber bedeutsamen Anstieg des durchschnittlichen Blutdrucks während des frühen Höhepunkts der Pandemie. Alle Teilnehmer der Studie waren in ein betriebliches Wellness-Programm eingeschrieben, das sie verpflichtete, ihren Blutdruck jedes Jahr während des analysierten Dreijahreszeitraums 2018-2020 von geschultem Personal messen zu lassen. Die Studie ergab, dass der durchschnittliche systolische Blutdruck - die obere Zahl im Blutdruck - von April 2020 bis Dezember 2020, dem Höhepunkt der Pandemie, um etwa 2 Millimeter Quecksilbersäule (mmHg) gestiegen ist. Der durchschnittliche diastolische Druck - die untere Zahl - stieg ebenfalls leicht an. Ein normaler Blutdruck beträgt weniger als 120/80 mmHg. Im Gegensatz dazu wurden in den 15 Monaten vor der Pandemie zwischen Januar 2019 und dem Beginn des Höhepunkts der Pandemie (von April 2020 bis Dezember 2020) keine Veränderungen im durchschnittlichen Blutdruck festgestellt. In der späteren Zeit gab es weit verbreitete Aufenthaltsbeschränkungen und Lockdowns.\n\n„Das ist besorgniserregend“, sagte Luke Laffin, M.D., der leitende Autor der Studie und Mitdirektor des Centers for Blood Pressure Disorders am Cleveland Clinic. „Auf individueller Ebene scheint diese [Erhöhung um 2 mm Hg] nicht viel auszumachen. Aber wir wissen, dass eine geringe Erhöhung des Blutdrucks eine signifikante Zunahme von Schlaganfällen und Herzinfarkten in der Bevölkerung verursachen kann“ - was wiederum zum Tod führen kann, fügte er hinzu. Hoher Blutdruck oder Hypertonie kann auch das Risiko von schwereren Komplikationen durch COVID-19-Erkrankungen erhöhen.\n\nIn den USA haben bereits etwa die Hälfte der Erwachsenen Bluthochdruck, aber nur etwa jeder Vierte (24%) hat ihn unter Kontrolle.
+    \n\n\n\nLaffin sagte, dass mehrere Faktoren für den landesweiten Anstieg verantwortlich seien, angefangen mit einer Verringerung der fortlaufenden medizinischen Versorgung während der Pandemie. Menschen mit Bluthochdruck sahen ihre Ärzte nicht regelmäßig, erklärte Laffin, und das bedeutete, dass viele ihre Rezepte für antihypertensive Medikamente nicht einlösten. Während der Pandemie vermieden schätzungsweise 40 Prozent der US-amerikanischen Erwachsenen aus Gründen im Zusammenhang mit COVID-19 medizinische Versorgung, so ein Bericht von 2020 der Centers for Disease Control and Prevention.\n\nBei Menschen ohne Bluthochdruck hängt der Anstieg laut Laffin möglicherweise mit Veränderungen in den Ernährungsgewohnheiten zusammen. Konkret verweist der Forscher auf den übermäßigen Konsum von Natrium oder Salz. "Wir wissen, dass der größte Treiber im Hinblick auf Ernährungsmuster von Bluthochdruck der übermäßige Konsum von Natrium ist, also haben die Menschen während der Pandemie wahrscheinlich salziger gegessen", sagte er.\n\nStress, der schon lange bekannt ist, dass er den Blutdruck erhöht, spielte in dieser Studienpopulation ebenfalls eine wichtige Rolle. "Wir wissen, dass sich eine schlechte Stressbewältigung auf die Lebensstilentscheidungen auswirkt", sagte Laffin."Sie essen nicht richtig, trinken mehr Alkohol und schlafen nicht ausreichend.“ Die Ergebnisse werden von mindestens zwei anderen landesweiten Studien zur Blutdrucküberwachung gestützt, die Sprünge in den Druckwerten während dieses Zeitraums zeigen. Laffin schloss andere Erklärungen für den Anstieg aus, einschließlich Fettleibigkeit, virusbedingter Hypertonie und Impfstoffen selbst. Die Beweise in dieser Studie unterstützten diese Faktoren nicht, sagte er. \n\nDen größten Anstieg erlebten Frauen, die Hälfte der Teilnehmer der Studie ausmachten.
+    \n\n"Wir wissen aus anderen Studien, dass Pandemien dazu neigen, Frauen eine unverhältnismäßige Belastung aufzuerlegen", sagte Laffin. Das umfasst die Betreuung von Kindern, das Bezahlen von Rechnungen und in Bezug auf COVID-19 die Koordination des virtuellen Lernens. "Das kann dazu führen, dass sie weniger Zeit haben, die notwendigen Änderungen im Lebensstil vorzunehmen, um kardiovaskuläre Risikofaktoren wie Bluthochdruck zu kontrollieren". Ein weiterer Faktor könnte auch eine Rolle gespielt haben: Medikamente, die Menschen für andere Erkrankungen einnehmen und die unbeabsichtigt den Blutdruck erhöhen. Laut einer kürzlich in JAMA Internal Medicineexternen Link veröffentlichten Studie nehmen ein Fünftel der Menschen mit Bluthochdruck solche Medikamente ein. Die häufigsten davon sind Antidepressiva, nichtsteroidale Antirheumatika (NSAR) in verschreibungspflichtiger Stärke, Steroide und Östrogene, so die Studie. Die Patienten sollten diese Möglichkeit mit ihrem Arzt oder Apotheker besprechen, sagten die Forscher, um herauszufinden, ob sie diese Medikamente durch sicherere Alternativen ersetzen können.\n\nUnd jeder sollte sich auf eine gute Selbstpflege konzentrieren, sagte Laffin, da dies entscheidend sei, um Bluthochdruck unter Kontrolle zu halten oder im ersten Schritt zu verhindern. Herzgesunde Lebensmittel essen, sich mehr bewegen, ausreichend schlafen und besser mit Stress umgehen können alle einen großen Unterschied machen, sagte er.\n\nEs ist auch wichtig, "seine Blutdruckwerte zu kennen", sagte er, unabhängig davon, ob man an Bluthochdruck leidet oder nicht. Die Menschen können diese einfach herausfinden, indem sie eine Blutdruckmessstation in ihrem örtlichen Supermarkt oder ihrer Drogerie besuchen oder arm-cuff-förmige Monitore verwenden, um ihren Druck zu Hause zu überprüfen, sagte er. Regelmäßige Aktivitäten wie diese, betonte Laffin, retten Leben. "Konzentrieren Sie sich nicht nur auf COVID und vernachlässigen Sie andere vorbeugende Maßnahmen oder Selbstpflegefragen", sagte er. "Wir müssen COVID-Infektionen und -Ausbreitung verhindern, aber wir müssen auch Schlaganfälle und Herzinfarkte verhindern."\n\nLawrence Fine, M.D., Dr.P.H., leitender Berater der Clinical Applications and Prevention Branch des NHLBI, stimmte zu. "Die Umkehrung der Blutdruckerhöhungen während der Pandemie und darüber hinaus ist wichtig für die zukünftige kardiovaskuläre Gesundheit von Millionen Amerikanern, und weniger als die Hälfte der Amerikaner mit Bluthochdruck hat eine angemessene Kontrolle ihres Bluthochdrucks erreicht. Diese Studie legt nahe, dass die Pandemie dieses Problem möglicherweise etwas verschlimmert hat", sagte er.
+    \n\nDiese Studie trägt zum Verständnis bei, wie sich die Pandemie auf den Blutdruck auswirkt und wie wichtig Selbstfürsorge ist", sagte Lawrence Fine, MD, Dr.P.H., leitender Berater der Clinical Applications and Prevention Branch des NHLBI. "Wenn Sie bereits an Bluthochdruck leiden, ist es wichtig, Ihren Gesundheitsdienstleister aufzusuchen und Empfehlungen zu Lebensstil und Medikamenten zu befolgen."
+    \n\nQuelle: https://www.nhlbi.nih.gov/
+    </string>
+
+
+    <string name="post_12_title">Leben mit hohem Blutdruck</string>
+    <string name="post_12_content">Es ist wichtig, regelmäßig den Blutdruck messen zu lassen und die Werte zu kennen, da hoher Blutdruck in der Regel keine Symptome verursacht, bis er ernste Probleme verursacht hat.
+    \n\n<font size="16"><b>Tipps zur Behandlung von hohem Blutdruck zu Hause</b></font>\n
+    Wenn bei Ihnen ein hoher Blutdruck diagnostiziert wurde, ist es wichtig, dass Sie Ihren Behandlungsplan fortsetzen. Sie benötigen regelmäßige Nachsorge und sollten lernen, wie Sie Ihren Zustand zu Hause überwachen können. Ihr Arzt kann im Laufe der Zeit Ihre Behandlung ändern oder Medikamente hinzufügen.\n\nLassen Sie Ihren Gesundheitsdienstleister wissen, wenn Sie planen, schwanger zu werden.
+    \n\n<font size="16"><b>Verwalten Sie Ihre Erkrankung</b></font>\n
+    Behalten Sie Ihren Behandlungsplan einschließlich gesunder Lebensstiländerungen bei, um Ihren Blutdruck zu kontrollieren und Herzerkrankungen vorzubeugen. Gesundheitsveränderungen vorzunehmen und sich täglich an Ihre Medikamente zu erinnern, kann schwer sein, aber es gibt einige Tools, die Ihnen helfen können.\n\nFragen Sie Ihren Anbieter oder Apotheker nach Apps zur Überwachung und Verfolgung Ihres Blutdrucks. Sie wissen möglicherweise auch, wie Sie Texte erhalten können, um Sie daran zu erinnern, Ihre Medikamente jeden Tag einzunehmen, und Sie benachrichtigen, wenn es Zeit ist, Ihr Rezept aufzufüllen.\nHolen Sie sich Unterstützung von Ihren Lieben und anderen in Ihrer Gemeinde.\nFühren Sie regelmäßige medizinische Untersuchungen und Tests gemäß den Anweisungen Ihres Anbieters durch. Stellen Sie Fragen und besprechen Sie Ihren Fortschritt. Informieren Sie Ihren Anbieter über alle neuen Erkrankungen oder Medikamente, die Sie seit Ihrem letzten Termin eingenommen haben.\n
+    Ihr Gesundheitsdienstleister möchte möglicherweise, dass Sie Ihren Blutdruck zu Hause oder an anderen Orten, an denen Blutdruckgeräte vorhanden sind, überprüfen. Diagnosis bietet Erinnerungen, wie Sie sich auf die Blutdruckmessung vorbereiten und wie Sie selbst Ihren Blutdruck messen können.\n\nDie Blutdruck-Wallet-Karte kann ausgedruckt und zur Führung einer schriftlichen Protokollaufzeichnung aller Ihrer Ergebnisse verwendet werden. Bringen Sie das Protokoll zu Ihren Terminen mit dem Gesundheitsdienstleister. Möglicherweise können Sie die Messwerte elektronisch an das Büro Ihres Anbieters senden.
+    \n\n<font size="16"><b>Wissen, wann Sie bei Komplikationen Hilfe suchen müssen</b></font>\n
+    Werte über 180/120 mm HG sind gefährlich hoch und erfordern sofortige ärztliche Aufmerksamkeit. Ein derart hoher Blutdruck kann Ihre Organe schädigen. Rufen Sie den Notarzt, wenn Sie Folgendes erleben:\n\nEin plötzlicher, schwerwiegender Kopfschmerz\nAtemschwierigkeiten\nPlötzliche, starke Schmerzen im Bauch, der Brust oder dem Rücken\nEin hoher Blutdruck kann auch zu einem Herzinfarkt, Schlaganfall oder anderen gefährlichen Symptomen und Zuständen führen.
+    \n\n<font size="16"><b>HERZINFARKT</b></font>\n
+    Übelkeit, Erbrechen, Schwindel oder Ohnmacht oder das Ausbrechen in kaltem Schweiß sind Symptome eines Herzinfarkts, die bei Frauen häufiger auftreten.\nLang anhaltende oder starke Schmerzen oder Beschwerden in der Brust, die nicht durch Ruhe oder Nitroglycerin gelindert werden, können ein weiteres Symptom für einen Herzinfarkt sein. Unbequemer Druck, Quetschen, Fülle oder Schmerzen in der Mitte oder auf der linken Seite der Brust können mild oder stark sein. Diese Schmerzen oder Beschwerden dauern oft länger als einige Minuten an oder kommen und gehen.\nAtemnot kann zusammen mit Brustbeschwerden auftreten oder davor auftreten.\nBeschwerden im oberen Körperbereich können in einem oder beiden Armen, dem Rücken, Nacken, Kiefer oder dem oberen Teil des Magens spürbar sein.
+    \n\n<font size="16"><b>SCHLAGANFALL</b></font>\n
+    Wenn Sie denken, dass jemand einen Schlaganfall haben könnte, handeln Sie schnell:
+    \n\n<b>F - Face</b>: Bitten Sie die Person, zu lächeln. Hängt eine Seite des Gesichts herunter?
+    \n<b>S - Speech</b>: Bitten Sie die Person, einen einfachen Satz zu wiederholen. Ist ihre Sprache verworren oder seltsam?
+    \n<b>T - Time</b>: Wenn Sie eines dieser Anzeichen bemerken, rufen Sie sofort Hilfe. Eine frühzeitige Behandlung ist entscheidend.
+    \n\nQuelle: https://www.nhlbi.nih.gov/
+    </string>
+    <string name="low">Niedrig</string>
+    <string name="systole_range_low"><![CDATA[(<90)]]></string>
+    <string name="diastole_range_low"><![CDATA[(<60)]]></string>
+    <string name="you_need_to_measure_blood_pressure_at_8_pm_everyday">Sie müssen jeden Tag um 20 Uhr den Blutdruck messen</string>
+    <string name="you_need_to_measure_weight_and_bmi_to_manage_weight_better">Sie müssen Gewicht und BMI messen, um das Gewicht besser zu kontrollieren.</string>
+    <string name="term_of_service">Länge der Dienstzeit</string>
+    <string name="no_data_chart">Keine Daten vorhanden</string>
+    <string name="this_action_can_contain_ads">(Diese Aktion kann Werbung enthalten)</string>
+    <string name="ads">Anzeige</string>
+    <string name="enter_your_name">Geben Sie Ihren Namen ein</string>
+    <string name="hint_input_height">z.B.: 170</string>
+    <string name="hint_input_weight">z.B.: 60</string>
+    <string name="create">Erstellen</string>
+    <string name="soon">Bald</string>
+    <string name="coming_soon">Demnächst verfügbar</string>
+    <string name="title_no_data">Hier gibt es keine Daten!</string>
+    <string name="content_no_data">Lassen Sie uns Ihren Herzschlag jetzt messen!</string>
+    <string name="dashboard_tip">Die Art des Medikaments, das zur Behandlung von Bluthochdruck verwendet wird, hängt von Ihrem allgemeinen Gesundheitszustand und Ihrem Blutdruck ab. Zwei oder mehr Blutdruckmedikamente wirken oft besser als eines.</string>
+    <string name="delete_result">Ergebnis löschen</string>
+    <string name="missing_required_information">Fehlende erforderliche Informationen!</string>
+    <string name="disclaimer_content">Unsere Gesundheitsanwendung bietet ausschließlich Eingabe- und Nachverfolgungsfunktionen an. Wir liefern Ergebnisse und Empfehlungen auf der Grundlage zuverlässiger und vertrauenswürdiger Quellen, die deutlich auf unserer Plattform angegeben sind. Unser Ziel ist es, unseren Benutzern eine verlässliche und benutzerfreundliche Erfahrung zu bieten. Bitte beachten Sie jedoch, dass wir keinen medizinischen Service anbieten und für die genauesten Ergebnisse dringend empfehlen, sich an Ihr nächstgelegenes Krankenhaus, Ihre Krankenstation oder Ihren Arzt zu wenden. Vielen Dank, dass Sie unsere Anwendung nutzen, und wir wünschen Ihnen von Herzen gute Gesundheit.
+    </string>
+    <string name="diastole_warning">Es sollte zwischen 30 und 120 liegen, was der diastolische Bereich ist, der von diesem Tool verwendet wird.</string>
+    <string name="systole_warning">Es sollte zwischen 70 und 250 liegen, was der systolische Bereich ist, der von diesem Tool verwendet wird.</string>
+    <string name="systole_lower_diastole">Überprüfen Sie beide Zahlen. Der systolische Wert muss höher sein als der diastolische Wert.</string>
+    <string name="disclaimer">Haftungsausschluss</string>
+    <string name="disclaimer_italic"><u>Haftungsausschluss</u></string>
+    <string name="click_here_for_reference"><u>Hier klicken für Referenz</u></string>
+</resources>

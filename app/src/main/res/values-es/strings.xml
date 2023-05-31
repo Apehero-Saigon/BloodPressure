@@ -1,0 +1,377 @@
+<resources>
+    <string name="app_name">Presión arterial</string>
+    <string name="heart_rate_blood_pressure_monitor"><![CDATA[Monitor de Frecuencia Cardíaca y Presión Arterial]]></string>
+    <string name="settings">Configuraciones</string>
+    <string name="home">Hogar</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Próximo</string>
+    <string name="create_new_profile">Crear un nuevo perfil</string>
+    <string name="image">Image</string>
+    <string name="info">Info</string>
+    <string name="insights">Informes</string>
+    <string name="enter_your_weight_kg">Ingrese su peso (kg)</string>
+    <string name="enter_your_height_cm">Ingrese su altura (cm)</string>
+    <string name="not_known">No se conoce</string>
+    <string name="female">Mujer</string>
+    <string name="male">Hombre</string>
+    <string name="save">Guardar</string>
+    <string name="update_profile">Actualizar perfil</string>
+    <string name="greeting">Hola, Phong</string>
+    <string name="icon">Icono</string>
+    <string name="heart_rate">Ritmo cardíaco</string>
+    <string name="manually">Manualmente</string>
+    <string name="create_a_user">Crear un usuario</string>
+    <string name="let_create_first_user">Creemos el primer usuario para \n explorar algunas funciones sorprendentes \n en esta aplicación</string>
+    <string name="heart_rate_content">Mida su ritmo cardíaco con información en tiempo real sobre el rendimiento de su corazón.</string>
+    <string name="heart_rate_button_content">Medir ahora</string>
+    <string name="default_height">170</string>
+    <string name="default_weight">60</string>
+    <string name="name">Nombre</string>
+    <string name="year_of_birth">Año de nacimiento</string>
+    <string name="year_of_birth_2">Año de nacimiento: </string>
+    <string name="weight_kg">Peso (kg)</string>
+    <string name="height_cm">Altura (cm)</string>
+    <string name="gender">Género</string>
+    <string name="photo">Foto</string>
+    <string name="dashboard">Tablero de control</string>
+    <string name="intro_title_1">Mida su \n ritmo cardíaco</string>
+    <string name="intro_title_2">Haga seguimiento \n de su presión arterial</string>
+    <string name="intro_title_3">Calcule su peso y IMC</string>
+    <string name="intro_content_1">Mida su frecuencia cardíaca y proporcione información en tiempo real sobre el rendimiento de su corazón\'s performance.</string>
+    <string name="intro_content_2">KHaga seguimiento de sus lecturas de presión arterial a lo largo del tiempo y proporcione información relevante.</string>
+    <string name="intro_content_3">Le permite hacer seguimiento a su peso y monitorear su progreso hacia el logro de sus objetivos.</string>
+    <string name="start">Empezar</string>
+    <string name="welcome">Bienvenido!</string>
+    <string name="measure_your_pulse_rate_with_real_time_information_about_your_heart_s_performance">Mida su ritmo cardíaco con información en tiempo real sobre el rendimiento de su corazón\'s performance.</string>
+    <string name="measure_now">Medir ahora</string>
+    <string name="blood_pressure">Presión arterial</string>
+    <string name="blood_pressure_content">Haga seguimiento de sus lecturas de presión arterial a lo largo del tiempo y proporcione información relevante.</string>
+    <string name="blood_pressure_button_content">Seguir ahora</string>
+    <string name="weight_and_bmi">Peso e IMC</string>
+    <string name="weight_and_bmi_content">Le permite hacer seguimiento a su peso y monitorear su progreso hacia el logro de sus objetivos.</string>
+    <string name="weight_and_bmi_button_content">Calcular ahora</string>
+    <string name="button">Botón</string>
+    <string name="systole">SYS</string>
+    <string name="ex_170">Ex: 170</string>
+    <string name="ex_60">Ex: 60</string>
+    <string name="ex_85">Ex: 85</string>
+    <string name="diastole">DIA</string>
+    <string name="pulse">PULSE</string>
+    <string name="measure">Medir</string>
+    <string name="result">Resultado</string>
+    <string name="_120_80">120/80</string>
+    <string name="_80">80</string>
+    <string name="measured_at_17_00pm_21_04_2023">Medido a las 17:00 horas 21.04.2023</string>
+    <string name="year_of_birth_2000">Año de nacimiento: 2000</string>
+    <string name="height_170">Altura: 170cm\n</string>
+    <string name="weight_75">Peso: 75kg</string>
+    <string name="hypertension_stage_1">Hipertensión etapa 1</string>
+    <string name="systole_range_elevated">(120 – 129)</string>
+    <string name="systole_range_normal">(&lt; 120)</string>
+    <string name="systole_range_hypertension_stage_1">(120 – 139)</string>
+    <string name="systole_range_hypertension_stage_2">(140 – 179)</string>
+    <string name="systole_range_emergency_care_needed">(>180)</string>
+    <string name="diastole_range_normal_and_elevated">(&lt; 80)</string>
+    <string name="diastole_range_hypertension_stage_1">(80 – 89)</string>
+    <string name="diastole_range_hypertension_stage_2">(90 – 100)</string>
+    <string name="diastole_range_emergency_care_needed">(>100)</string>
+    <string name="recommendations">Recommendaciones</string>
+    <string name="weight">"Peso: "</string>
+    <string name="kg">kg</string>
+    <string name="height">"Altura: "</string>
+    <string name="cm">cm</string>
+    <string name="normal">Normal</string>
+    <string name="elevated">Elevado</string>
+    <string name="hypertension_stage_2">Hipertensión etapa 2</string>
+    <string name="emergency_care_needed">Emergencia médica necesaria</string>
+    <string name="recommendations_hypertension_stage_1">MMuchas personas con presión arterial alta pueden reducir su presión arterial a un rango saludable o mantener sus números en un rango saludable haciendo cambios en su estilo de vida. Aquí hay algunas sugerencias: \n• Hacer al menos 150 minutos de actividad física cada semana (unos 30 minutos al día, 5 días a la semana) \n• No fumar \n• Seguir una dieta saludable, incluyendo limitar el sodio (sal) y el alcohol \n• Mantener un peso saludable \n• Manejar el estrés \n
+    </string>
+    <string name="recommendations_normal">Aquí hay algunos consejos para mejorar su presión arterial. \n• Beba más agua. La deshidratación puede causar una caída temporal en la presión arterial. \n• Siga una dieta saludable. Aumente el contenido de sal en los alimentos si tiene presión arterial baja. \n• Si la presión es baja y está tomando algún medicamento, verifique sus efectos secundarios. \n• Coma comidas pequeñas y bajas en carbohidratos. \n• Evite el consumo de alcohol o tómelo solo con moderación. \n• Incluya algún tipo de ejercicio en su rutina diaria. Ejercicios como caminar rápido y nadar pueden ayudar en la circulación de la sangre. Además, lo mantiene joven tanto en su mente como en su cuerpo y es un gran desestresante.</string>
+    <string name="recommendations_hypertension_stage_2">Aquí hay algunos consejos para reducir su presión arterial. \n• Dejar de fumar. Además de dañar sus pulmones, fumar estrecha los vasos sanguíneos y aumenta su presión arterial, lo que dificulta que su corazón lata. \n• Evite el consumo de alcohol o tómelo solo con moderación. El alcohol aumenta su presión arterial a niveles poco saludables. \n• Siga una dieta saludable. Evite demasiada sal en los alimentos. \n• Pierda peso. Las personas obesas tienen más probabilidades de sufrir de presión arterial alta. \n• Haga ejercicio regularmente. Ayuda a prevenir la presión arterial alta y la diabetes. Además, lo mantiene joven tanto en su mente como en su cuerpo y es un gran desestresante. \n• Beba suficiente agua diariamente. \n• Evite el estrés.</string>
+    <string name="recommendations_emergency_care_needed">Aquí hay algunos consejos para reducir su presión arterial. \n• Dejar de fumar. Además de dañar sus pulmones, fumar estrecha los vasos sanguíneos y aumenta su presión arterial, lo que dificulta que su corazón lata. \n• Evite el consumo de alcohol o tómelo solo con moderación. El alcohol aumenta su presión arterial a niveles poco saludables. \n• Siga una dieta saludable. Evite demasiada sal en los alimentos. \n• Pierda peso. Las personas obesas tienen más probabilidades de sufrir de presión arterial alta. \n• Haga ejercicio regularmente. Ayuda a prevenir la presión arterial alta y la diabetes. Además, lo mantiene joven tanto en su mente como en su cuerpo y es un gran desestresante. \n• Beba suficiente agua diariamente. \n• Evite el estrés.</string>
+    <string name="measured_at">Medido a</string>
+    <string name="good_morning">Buenos días !</string>
+    <string name="good_afternoon">Buenas tardes !</string>
+    <string name="good_evening">Buenas noches !</string>
+    <string name="dashboard_intro_fragment">Fragmento de introducción del panel de control</string>
+    <string name="your_recently_action">Su acción reciente</string>
+    <string name="more_detail">Más detalle</string>
+    <string name="suggestion">Sugerencia</string>
+    <string name="default_suggestion">El señor Phong necesita registrar su presión arterial en este momento!</string>
+    <string name="action">Acción</string>
+    <string name="profile_select">Seleccionar perfil</string>
+    <string name="user_management">Gestión de usuarios</string>
+    <string name="insights_blood_pressure_fragment">Fragmento de la presión arterial de Insights</string>
+    <string name="search">Búsqueda</string>
+    <string name="your_health_condition">Su condición de salud</string>
+    <string name="your_heart_rate_is_so_hight">Su frecuencia cardíaca es demasiado alta. Debe sentarse para mantener la calma. El ejercicio regular, como caminar rápido, correr, andar en bicicleta o nadar, puede ayudar a mejorar su salud cardiovascular.</string>
+    <string name="totals">Totales</string>
+    <string name="view_result">Ver resultado</string>
+    <string name="information_knowledge"><![CDATA[Información y conocimiento]]></string>
+    <string name="edit">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="edit_your_information">Editar su información</string>
+    <string name="update">Actualizar</string>
+    <string name="blood_pressure_edit_fragment">Fragmento de edición de la presión arterial</string>
+    <string name="oops_there_is_an_error_try_again">Oops, ha ocurrido un error. Inténtelo de nuevo más tarde!</string>
+    <string name="this_result_will_be_deleted_forever_are_you_sure">Este resultado se eliminará para siempre. ¿Está se</string>
+    <string name="a_normal_blood_pressure">Un nivel normal de presión arterial es menos de 120/80 mmHg. No importa la edad que tenga, puede tomar medidas cada día para mantener su presión arterial en un rango saludable.</string>
+    <string name="blood_pressure_advice">Consejos para la presión arterial.</string>
+    <string name="how_to_improve_weight_better">Cómo mejorar mejor el peso</string>
+    <string name="example_info_detail">El ejercicio es una parte importante de la prevención de enfermedades, y esto incluye la prevención del cáncer también. Pero no todo el ejercicio es igual. Es esencial que parte de su ejercicio haga que su corazón lata más rápido de lo que lo hace cuando está en reposo.\n\n Hacer que su corazón lata más rápido entrena a su cuerpo para mover el oxígeno y la sangre hacia sus músculos de manera más eficiente, lo ayuda a quemar más calorías y reduce su colesterol. Todo esto puede ayudarlo a mantenerse saludable y reducir su riesgo de cáncer.\n</string>
+    <string name="related_posts">Publicaciones relacionadas</string>
+    <string name="info_detail_fragment">Fragmento de Detalle de Información</string>
+    <string name="language">Idioma</string>
+    <string name="privacy">Privacidad</string>
+    <string name="rate_us">Calificarnos</string>
+    <string-array name="gender">
+        <item>@string/male</item>
+        <item>@string/female</item>
+        <item>@string/not_known</item>
+    </string-array>
+    <string name="japanese">Japonés</string>
+    <string name="korean">Coreano</string>
+    <string name="vietnamese">Vietnamita</string>
+    <string name="setting_language_fragment">Fragmento de configuración de idioma</string>
+    <string name="english">Inglés</string>
+    <string name="german">Alemán</string>
+    <string name="spanish">Español</string>
+    <string name="french">Francés</string>
+    <string name="portugal">Portugués</string>
+    <string name="change_default_language_successfully">¡Cambio de idioma predeterminado con éxito!</string>
+    <string name="post_01_title">10 maneras de controlar la presión arterial alta sin medicación</string>
+    <string name="post_01_content">Al hacer estos 10 cambios de estilo de vida, puede reducir su presión arterial y disminuir su riesgo de enfermedades cardíacas.\n\nSi tiene presión arterial alta, es posible que se pregunte si es necesario medicarse para reducir los números. Pero el estilo de vida desempeña un papel fundamental en el tratamiento de la presión arterial alta. Controlar la presión arterial con un estilo de vida saludable podría prevenir, retrasar o reducir la necesidad de medicación.\n\nAquí hay 10 cambios de estilo de vida que pueden reducir la presión arterial y mantenerla baja.\n\n<font size="16"><b>1. Pierda peso adicional y vigile su circunferencia abdominal</b></font>\nLa presión arterial a menudo aumenta a medida que aumenta el peso. El sobrepeso también puede causar interrupciones en la respiración mientras duerme (apnea del sueño), lo que aumenta aún más la presión arterial.\n\nLa pérdida de peso es uno de los cambios de estilo de vida más efectivos para controlar la presión arterial. Si tiene sobrepeso u obesidad, perder incluso una pequeña cantidad de peso puede ayudar a reducir la presión arterial. En general, la presión arterial podría disminuir alrededor de 1 milímetro de mercurio (mm Hg)
+        con cada kilogramo (aproximadamente 2.2 libras) de peso perdido.\n\nTambién, el tamaño de la cintura es importante. Llevar demasiado peso alrededor de la cintura puede aumentar el riesgo de hipertensión.\n\nEn general:\n\n• Los hombres están en riesgo si su medida de cintura es mayor a 40 pulgadas (102 centímetros).\n• Las mujeres están en riesgo si su medida de cintura es mayor a 35 pulgadas (89 centímetros).\nEstas cifras varían entre los grupos étnicos. Pregunte a su proveedor de atención médica acerca de una medida de cintura saludable para usted.\n\n<font size="16"><b>2. Ejercite regularmente</b></font>\nLa actividad física regular puede reducir la presión arterial alta en aproximadamente 5 a 8 mm Hg. Es importante seguir haciendo ejercicio para evitar que la presión arterial vuelva a aumentar. Como meta general, apunte al menos a 30 minutos de actividad física moderada todos los días.\n\nEl ejercicio también puede ayudar a evitar que la presión arterial elevada se convierta en hipertensión. Para aquellos que tienen hipertensión, la actividad física regular puede reducir la presión arterial a niveles más seguros.\n\nAlgunos ejemplos de ejercicio aeróbico que pueden ayudar a reducir la presión arterial incluyen caminar, trotar, andar en bicicleta, nadar o bailar. Otra posibilidad es el entrenamiento de intervalos de alta intensidad. Este tipo de entrenamiento implica alternar breves explosiones de actividad intensa con períodos de actividad más liviana.\n\nEl entrenamiento de fuerza también puede ayudar a reducir la presión arterial. Apunte a incluir ejercicios de entrenamiento de fuerza al menos dos días a la semana. Hable con un proveedor de atención médica acerca de desarrollar un programa de ejercicio.\n\n<font size="16"><b>3. Coma una dieta saludable</b></font>\nComer una dieta rica en granos enteros, frutas, verduras y productos lácteos bajos en grasas y colesterol puede reducir la presión arterial alta hasta 11 mm Hg. Ejemplos de planes de alimentación que pueden ayudar a controlar la presión arterial son la dieta de Enfoques Dietéticos para Detener la Hipertensión (DASH) y la dieta Mediterránea.\n\nEl potasio en la dieta puede disminuir los efectos del sodio (sal) sobre la presión arterial. Las mejores fuentes de potasio son los alimentos, como frutas y verduras, en lugar de los suplementos. Apunte a 3,500 a 5,000 mg al día, lo que podría reducir la presión arterial en 4 a 5 mm Hg. Pregunte a su proveedor de atención médica cuánto potasio debe tener.\n\n<font size="16"><b>4. Reduzca la sal (sodio) en su dieta</b></font>\nIncluso una pequeña reducción de sodio en la dieta puede mejorar la salud del corazón y reducir la presión arterial alta en alrededor de 5 a 6 mm Hg.\n\nEl efecto del consumo de sodio en la presión arterial varía entre los grupos de personas. En general, se debe limitar el consumo de sodio a 2.300 miligramos (mg) al día o menos. Sin embargo, un consumo de sodio más bajo - 1.500 mg al día o menos - es lo ideal para la mayoría de los adultos.\n\nPara reducir el sodio en la dieta:\n\n<b>Lea las etiquetas de los alimentos.</b> Busque versiones de alimentos y bebidas con bajo contenido de sodio.\n<b>Coma menos alimentos procesados</b>. Solo una pequeña cantidad de sodio ocurre naturalmente en los alimentos. La mayoría del sodio se agrega durante el procesamiento.\n<b>No agregue sal</b>. Use hierbas o especias para dar sabor a los alimentos.\n<b>Cocine</b>. Cocinar le permite controlar la cantidad de sodio en los alimentos.\n<font size="16"><b>\n5. Limite el alcohol</b></font>\nLimitar el consumo de alcohol a menos de una bebida al día para las mujeres o dos bebidas al día para los hombres puede ayudar a reducir la presión arterial en aproximadamente 4 mm Hg. Una bebida equivale a 12 onzas de cerveza, 5 onzas de vino o 1,5 onzas de licor con 80 grados de prueba.\n\nPero consumir demasiado alcohol puede aumentar la presión arterial en varios puntos. También puede reducir la efectividad de los medicamentos para la presión arterial.\n\n<font size="16"><b>6. Deje de fumar</b></font>\nFumar aumenta la presión arterial. Dejar de fumar ayuda a reducir la presión arterial. También puede reducir el riesgo de enfermedades del corazón y mejorar la salud en general, lo que posiblemente conduzca a una vida más larga.\n\n
+        <font size="16"><b>7. Dormir bien durante la noche</b></font>\nLa mala calidad del sueño - dormir menos de seis horas cada noche durante varias semanas - puede contribuir a la hipertensión. Varios problemas pueden perturbar el sueño, incluyendo apnea del sueño, síndrome de piernas inquietas e insomnio en general.\n\nInforma a tu proveedor de atención médica si a menudo tienes problemas para dormir. Encontrar y tratar la causa puede ayudar a mejorar el sueño. Sin embargo, si no tienes apnea del sueño ni síndrome de piernas inquietas, sigue estos consejos sencillos para tener un sueño más reparador.\n\nMantén un horario de sueño. Acuéstate y levántate a la misma hora cada día. Trata de mantener el mismo horario tanto los días de semana como los fines de semana.\nCrea un espacio relajante. Eso significa mantener el lugar donde duermes fresco, silencioso y oscuro. Haz algo relajante una hora antes de acostarte. Eso podría incluir tomar un baño caliente o hacer ejercicios de relajación. Evita la luz brillante, como la de un televisor o una pantalla de computadora.\nVigila lo que comes y bebes. No vayas a la cama con hambre o lleno. Evita las comidas grandes cerca de la hora de acostarte. También limita o evita la nicotina, la cafeína y el alcohol cerca de la hora de acostarte.\nLimita las siestas. Para aquellos que encuentran útiles las siestas durante el día, limitar las siestas a 30 minutos temprano en el día puede ayudar a dormir mejor en la noche.\n\n
+        <font size="16"><b>8. Reduzca el estrés</b></font>\nEl estrés emocional a largo plazo puede contribuir a la hipertensión arterial. Se necesita más investigación sobre los efectos de las técnicas de reducción del estrés para determinar si pueden reducir la presión arterial.\n\nSin embargo, no está de más determinar qué causa el estrés, como el trabajo, la familia, las finanzas o la enfermedad, y encontrar formas de reducirlo. Intente lo siguiente:\n\nEvite tratar de hacer demasiado. Planifique su día y concéntrese en sus prioridades. Aprenda a decir que no. Deje suficiente tiempo para hacer lo que necesita hacer.\nEnfóquese en los problemas que puede controlar y haga planes para resolverlos. Si tiene un problema en el trabajo, hable con un supervisor. Si tiene conflictos con sus hijos o cónyuge, encuentre formas de resolverlos.\nEvite los desencadenantes de estrés. Por ejemplo, si el tráfico de la hora pico le causa estrés, viaje a una hora diferente o tome transporte público. Evite a las personas que causan estrés si es posible.\nTómese tiempo para relajarse. Tómese un tiempo cada día para sentarse en silencio y respirar profundamente. Dedique tiempo a actividades o pasatiempos placenteros, como caminar, cocinar o hacer trabajo voluntario.\nPractique la gratitud. Expresar gratitud a los demás puede ayudar a reducir el estrés.\n\n
+        <font size="16"><b>9. Monitoree su presión arterial en casa y hágase revisiones regulares</b></font>\nEl monitoreo en casa puede ayudarlo a vigilar su presión arterial. Puede asegurarse de que sus medicamentos y cambios en el estilo de vida estén funcionando.\n\nLos monitores de presión arterial para uso en el hogar están ampliamente disponibles y no requieren receta médica. Hable con un proveedor de atención médica sobre el monitoreo en casa antes de comenzar.\n\nLas visitas regulares con un proveedor también son clave para controlar la presión arterial. Si su presión arterial está bien controlada, pregúntele a su proveedor con qué frecuencia necesita verificarla. Es posible que pueda hacerlo solo una vez al día o con menos frecuencia.\n\n
+        <font size="16"><b>10. Obtén apoyo</b></font>\nLa familia y los amigos que brindan apoyo son importantes para la buena salud. Pueden animarte a cuidarte a ti mismo, llevarte a la consulta médica o comenzar un programa de ejercicio contigo para mantener tu presión arterial baja.\n\nSi descubres que necesitas apoyo más allá de tu familia y amigos, considera unirte a un grupo de apoyo. Esto puede ponerte en contacto con personas que pueden brindarte un impulso emocional o moral y que pueden ofrecerte consejos prácticos para enfrentar tu condición.\n\nFuente: https:https://www.mayoclinic.org/</string>
+
+    <string name="post_03_title">Medicamentos para la Presión Arterial</string>
+    <string name="post_03_content">Muchas personas necesitan tomar medicamentos además de hacer cambios en su estilo de vida para ayudar a mantener su presión arterial en niveles saludables. Lee más sobre los medicamentos para la presión arterial.
+        \n\n<font size="16"><b>¿Cómo funcionan los medicamentos para la presión arterial?</b></font>\n
+        Los medicamentos para la presión arterial pueden funcionar de varias maneras diferentes. Pueden mantener la presión arterial en un nivel saludable al1:
+
+    \n• Hacer que tu cuerpo elimine agua, lo que disminuye la cantidad de agua y sal en tu cuerpo hasta alcanzar un nivel saludable
+    \n• Relajar tus vasos sanguíneos
+    \n• Hacer que tu corazón lata con menos fuerza
+    \n• Bloquear la actividad nerviosa que puede restringir tus vasos sanguíneos
+    \n• Habla con tu equipo de atención médica sobre el mejor tipo de tratamiento para ti. Es posible que necesites tomar más de un tipo de medicamento para controlar tu presión arterial. También puedes hablar con tu equipo de atención médica sobre cuánto tiempo debería tomar para que tu medicamento para la presión arterial funcione.
+    Es importante tomar tus medicamentos para la presión arterial exactamente como te indica tu médico. No dejes de tomar tu medicamento actual sin hablar primero con tu médico o farmacéutico. Dejar de tomar tu medicamento para la presión arterial sin hablar primero con tu equipo de atención médica podría tener graves consecuencias para tu salud.
+    \n\n<font size="16"><b>¿Cuáles son los beneficios y riesgos de los medicamentos para la presión arterial?</b></font>\n
+    Los beneficios de los medicamentos para la presión arterial son claros: pueden ayudarte a mantener tu presión arterial en niveles saludables y, por lo tanto, reducir en gran medida tu riesgo de enfermedad cardíaca, ataque cardíaco y accidente cerebrovascular.
+    En general, los riesgos de tomar medicamentos para la presión arterial son bajos. Sin embargo, todos los medicamentos tienen riesgos. Habla con tu médico o profesional de atención médica sobre los riesgos de los medicamentos para la presión arterial.
+    No dejes de tomar tu medicamento actual sin hablar primero con tu médico o profesional de atención médica.
+    \n\n<font size="16"><b>¿Cuáles son los efectos secundarios de los medicamentos para la presión arterial?</b></font>\n
+    La mayoría de las veces, los medicamentos para la presión arterial no causan efectos secundarios. Algunas personas experimentan efectos secundarios leves, como mareos, dolores de cabeza, hinchazón en las piernas o los pies, o problemas estomacales.2
+    Algunos medicamentos de venta libre, como los descongestionantes nasales, también pueden aumentar la presión arterial e interactuar con los medicamentos para la presión arterial.3 Informa a tu médico sobre cualquier medicamento o suplemento que ya estés tomando.
+
+    Todos los medicamentos tienen riesgos. Habla con tu médico sobre los mejores medicamentos para la presión arterial para ti, sus beneficios, riesgos y efectos secundarios, y cualquier otro problema de salud que puedas tener.
+    \n\n<font size="16"><b>¿Cómo sé si necesito medicamentos para la presión arterial alta?</b></font>\n
+    Tu equipo de atención médica te dirá si necesitas medicamentos para la presión arterial alta, en función de tus lecturas de presión arterial durante un período de tiempo. Si usas un monitor de presión arterial en casa, registra o anota tus lecturas.
+
+    Comparte tus lecturas con tu equipo de atención médica para que juntos puedan tomar la mejor decisión para controlar tu presión arterial.
+    \n\n<font size="16"><b>¿Cuáles son otras formas de reducir mi presión arterial?</b></font>\n
+    Además de tomar medicamentos para controlar tu presión arterial, puedes tomar otras medidas para mantener niveles saludables de presión arterial.\n
+
+    \n• <b>Mantente físicamente activo</b>. Mantenerse físicamente activo es una de las mejores cosas que puedes hacer por tu salud. La actividad física ayuda a mantener fuerte el corazón y los vasos sanguíneos, y también puede ayudarte a mantener un peso saludable.
+    \n• <b>No fumes</b>. Fumar daña tus vasos sanguíneos y aumenta enormemente tu riesgo no solo de presión arterial alta, sino también de enfermedades cardíacas, ataques cardíacos y accidentes cerebrovasculares.
+    \n• <b>Come alimentos saludables</b>. Elegir opciones saludables de comida y snacks puede ayudarte a evitar la presión arterial alta y sus complicaciones. Asegúrate de comer muchas frutas y verduras frescas.
+    \n• <b>Mantén un peso saludable</b>. Tener sobrepeso u obesidad significa que tu corazón debe trabajar más para bombear sangre y oxígeno por todo el cuerpo. Mantener un peso saludable reduce el estrés en el corazón y reduce tu riesgo de enfermedades cardíacas, ataques cardíacos y accidentes cerebrovasculares.
+    \n\nFuente: https://www.cdc.gov/
+    </string>
+    <string name="post_04_title">Síntomas y causas de la presión arterial alta</string>
+    <string name="post_04_content">
+    \n\n<font size="16"><b>¿Cómo sé si tengo presión arterial alta?</b></font>\n
+    Solo hay una manera de saber si tiene presión arterial alta: que un médico u otro profesional de la salud lo mida. Medir su presión arterial es rápido e indoloro.
+    Hable con su equipo de atención médica sobre medir regularmente su presión arterial en casa, también llamado monitoreo de presión arterial auto medido (SMBP).
+
+    La presión arterial alta se llama "el asesino silencioso" porque generalmente no tiene signos ni síntomas de advertencia, y muchas personas no saben que la tienen.
+    Síntomas
+    La mayoría de las personas con presión arterial alta no tienen síntomas, incluso si las lecturas de presión arterial alcanzan niveles peligrosamente altos. Puede tener presión arterial alta durante años sin ningún síntoma.
+    Algunas personas con presión arterial alta pueden tener:
+
+    \n• Dolores de cabeza
+    \n• Falta de aire
+    \n• Hemorragias nasales
+    \n• Sin embargo, estos síntomas no son específicos. Por lo general, no ocurren hasta que la presión arterial alta ha alcanzado una etapa grave o potencialmente mortal.
+
+    \n\n<font size="16"><b>Cuándo ver a un médico</b></font>\n
+    El control de la presión arterial es una parte importante del cuidado general de la salud. Con qué frecuencia debe verificar su presión arterial depende de su edad y estado de salud general.
+    Pida a su proveedor que le tome la presión arterial al menos cada dos años a partir de los 18 años. Si tiene 40 años o más, o si tiene entre 18 y 39 años y tiene un alto riesgo de presión arterial alta, pida una lectura de presión arterial cada año.
+
+    Su proveedor de atención médica probablemente le recomendará lecturas más frecuentes si tiene presión arterial alta u otros factores de riesgo de enfermedades cardíacas.
+    La medición de la presión arterial es una parte importante de la atención médica general. Con qué frecuencia se debe verificar la presión arterial depende de la edad y la salud en general.
+    Pida a su proveedor una lectura de presión arterial al menos cada dos años a partir de los 18 años. Si tiene 40 años o más, o tiene entre 18 y 39 años con un alto riesgo de presión arterial alta, pida una medición de presión arterial cada año.
+
+    Es probable que su proveedor recomiende mediciones más frecuentes si tiene presión arterial alta u otros factores de riesgo para enfermedades cardíacas.
+
+    Los niños a partir de los 3 años pueden tener la presión arterial medida como parte de sus revisiones anuales.
+
+    Si no ve a un proveedor de atención regularmente, es posible que pueda obtener una medición de presión arterial gratuita en una feria de recursos de salud u otros lugares de su comunidad. También hay máquinas de presión arterial gratuitas disponibles en algunas tiendas y farmacias. La precisión de estas máquinas depende de varias cosas, como el tamaño correcto del manguito y el uso adecuado de las máquinas. Pida consejo a su proveedor de atención médica sobre cómo usar las máquinas de presión arterial públicas.
+
+    \n\n<font size="16"><b>Causas</b></font>\n
+    La presión arterial se determina por dos cosas: la cantidad de sangre que el corazón bombea y lo difícil que es para la sangre moverse a través de las arterias. Cuanta más sangre bombea el corazón y más estrechas son las arterias, mayor es la presión arterial."
+    Hay dos tipos principales de presión arterial alta.
+    Hipertensión primaria, también llamada hipertensión esencial
+    En la mayoría de los adultos, no hay una causa identificable de la presión arterial alta. Este tipo de presión arterial alta se llama hipertensión primaria o esencial. Tiende a desarrollarse gradualmente durante muchos años. La acumulación de placa en las arterias, llamada aterosclerosis, aumenta el riesgo de presión arterial alta.
+
+    Hipertensión secundaria
+    Este tipo de presión arterial alta es causado por una afección subyacente. Tiende a aparecer repentinamente y causar una presión arterial más alta que la hipertensión primaria. Las condiciones y los medicamentos que pueden llevar a la hipertensión secundaria incluyen:
+    \n• Tumores en las glándulas suprarrenales
+    \n• Problemas en los vasos sanguíneos presentes desde el nacimiento, también llamados defectos cardíacos congénitos
+    \n• Medicamentos para la tos y el resfriado, algunos analgésicos, píldoras anticonceptivas y otros medicamentos con receta
+    \n• Drogas ilegales, como cocaína y anfetaminas
+    \n• Enfermedad renal
+    \n• Apnea obstructiva del sueño
+    \n• Problemas de tiroides
+    A veces, el simple hecho de hacerse un chequeo médico provoca un aumento en la presión arterial. A esto se le llama hipertensión de bata blanca.
+    \n\nFuente: https://www.mayoclinic.org/es-es/
+</string>
+    <string name="post_06_title">Cómo tratar las diferentes etapas de la hipertensión arterial?</string>
+    <string name="post_06_content">
+    La Asociación Americana del Corazón publicó en 2017 una guía actualizada de hipertensión arterial que discute nuevos objetivos de presión arterial y recomendaciones de tratamiento para pacientes con presión arterial alta.
+    En la nueva guía de hipertensión arterial, la definición de hipertensión se modificó para reflejar nuevos objetivos de medición de la presión arterial sistólica y diastólica. Estos objetivos de presión arterial ayudan a guiar la toma de decisiones clínicas al categorizar la hipertensión en: presión arterial normal, presión arterial elevada, etapa 1 y etapa 2.1
+    Anteriormente, la presión arterial alta se definía como una medición de la presión arterial sistólica de 140 mmHg o más o una medición de la presión arterial diastólica de 90 mmHg o más.1 La guía actualizada redefine la hipertensión como una medición de la presión arterial sistólica de 130 mmHg o más o una medición de la presión arterial diastólica de 80 mmHg o más.1 Como resultado, los pacientes con mediciones de presión arterial sistólica de 140/90 mmHg o más se consideran ahora que tienen hipertensión de etapa 2.1
+    Cada vez hay más pacientes hipertensos que nunca, se prevé que esta condición generalizada aumente un 8% entre 2013 y 2030.2 Por lo tanto, la guía de hipertensión proporcionó nuevas recomendaciones de tratamiento que incluyen cambios en el estilo de vida y estrategias farmacológicas para ayudar a controlar esta condición.1 Es fundamental que los proveedores de atención médica tengan una comprensión completa de cómo tratar efectivamente las diferentes etapas de la hipertensión para ayudar a prevenir sus efectos peligrosos.
+
+      \n\n<font size="16"><b>Presión arterial normal</b></font>\n
+    La presión arterial normal se define como una medición de la presión arterial sistólica de &lt;120 mmHg y una medición de la presión arterial diastólica de &lt;80 mmHg.1 Se recomienda a los pacientes con niveles normales de presión arterial que continúen llevando un estilo de vida saludable para mantener sus niveles normales de presión arterial y prevenir el desarrollo de hipertensión. Los pacientes con mediciones de presión arterial normales pueden evaluar sus niveles anualmente.
+      \n\n<font size="16"><b>Presión Arterial Elevada</b></font>\n
+La presión arterial elevada anteriormente se llamaba "prehipertensión". Se clasifica como una medición de la presión arterial sistólica de 120-129 mmHg y una medición de la presión arterial diastólica de menos de 80 mmHg.1 Para ayudar a prevenir que la hipertensión progrese, se recomienda que el paciente implemente cambios en el estilo de vida y que se reevalúen sus niveles de presión arterial en 3-6 meses.1 Los cambios saludables en el estilo de vida incluyen:1
+    Seguir la dieta DASH, que es rica en frutas, verduras, cereales integrales y productos lácteos bajos en grasa
+    Hacer ejercicio de forma regular
+    Reducir la ingesta de sodio
+    Mantener un peso saludable
+    Manejar los niveles de estrés
+    Limitar la ingesta de alcohol
+    Evitar fumar
+    Obtener un sueño de calidad
+    La terapia no farmacológica sola es una estrategia de tratamiento efectiva en adultos con niveles elevados de presión arterial3, 4 ya que puede reducir la presión arterial sistólica en aproximadamente 4-11 mmHg.1
+    \n\n<font size="16"><b>Hipertensión de etapa 1</b></font>\n
+La hipertensión de etapa 1 se define como una presión arterial sistólica de 130-139 y una presión arterial diastólica de 80-89 mmHg.1 El riesgo de enfermedad cardíaca y accidente cerebrovascular del paciente en los próximos 10 años debe evaluarse mediante la calculadora de riesgo cardiovascular aterosclerótico (ASCVD) para determinar el tratamiento y el programa de seguimiento apropiados.1
+    Riesgo ASCVD menor al 10%:
+    Se recomienda que el paciente adopte cambios saludables en el estilo de vida solo si su riesgo ASCVD es menor al 10%. El nivel de presión arterial del paciente debe evaluarse en 3-6 meses.1
+
+    Riesgo ASCVD mayor al 10%:
+    Se recomienda el tratamiento con cambios saludables en el estilo de vida combinados con un medicamento para reducir la presión arterial (monoterapia) si el riesgo ASCVD del paciente es mayor al 10% o si el paciente tiene enfermedad cardiovascular clínica, diabetes mellitus o enfermedad renal crónica. Después de comenzar el tratamiento, el nivel de presión arterial del paciente debe reevaluarse en un mes.1 Si se alcanza la meta de presión arterial después de un mes, se puede volver a evaluar al paciente en 3-6 meses.1 Si no se alcanza la meta de presión arterial después de un mes, se debe considerar un medicamento diferente o una titulación.1 El paciente debe continuar haciendo seguimiento mensual con su médico hasta que se controle el nivel de presión arterial.1
+    \n\n<font size="16"><b>Hipertensión de Etapa 2</b></font>\n
+    La hipertensión de etapa 2 se define como una presión arterial sistólica de ≥140 mmHg y una presión arterial diastólica de ≥90 mmHg.1 Para los pacientes con hipertensión de etapa 2, se recomienda un plan de tratamiento que incluya cambios saludables en el estilo de vida y medicamentos para disminuir la presión arterial (dos agentes de primera línea de diferentes clases).1 Si se alcanza la meta de presión arterial después de un mes de tratamiento, el paciente puede ser evaluado nuevamente en 3-6 meses.1 Si la meta de presión arterial no se ha logrado después de un mes de tratamiento, se debe considerar un medicamento diferente o una titulación junto con seguimientos mensuales con su médico hasta que se controle la presión arterial.1
+    \n\n<font size="16"><b>Urgencia e Emergencia Hipertensiva</b></font>\n
+Si el paciente tiene una elevación grave de la presión arterial (presión arterial sistólica superior a 180 mmHg o presión arterial diastólica superior a 120 mmHg) y no presenta signos o síntomas que indiquen daño o disfunción de los órganos diana, se considera una urgencia hipertensiva.1 Se debe aumentar la terapia con fármacos antihipertensivos en estos pacientes.1
+        Si la elevación grave de la presión arterial del paciente está acompañada de daño nuevo o empeoramiento de los órganos diana, se considera una emergencia hipertensiva.1 Los pacientes que presentan una emergencia hipertensiva deben ser admitidos en una unidad de cuidados intensivos. Se debe administrar un fármaco para reducir los niveles de presión arterial y la presión arterial del paciente debe ser monitoreada continuamente.1 Si no se trata, la tasa de supervivencia media es de 10,4 meses.5"
+        \n\n<font size="16"><b>Resumen clave</b></font>\n
+Existe una fuerte correlación entre los niveles de presión arterial y el riesgo de enfermedad cardiovascular; a mayor presión arterial, mayor es el riesgo de padecer enfermedades cardiovasculares.1 Por lo tanto, es importante que los proveedores de atención médica sepan cómo tratar las diferentes etapas de la hipertensión. Integrar estrategias de tratamiento no farmacológicas y farmacológicas puede ayudar a controlar el riesgo del paciente de experimentar los efectos peligrosos de la hipertensión, incluyendo la pérdida de visión, el ataque cardíaco o la insuficiencia cardíaca, el accidente cerebrovascular y el daño renal.6
+    Asegúrese de descargar nuestro eBook para obtener más información sobre cómo tratar las diferentes etapas de la hipertensión y los beneficios que las soluciones automatizadas pueden proporcionar en la detección, diagnóstico y manejo de esta afección dentro y fuera de la clínica.
+
+    \n\nFuente: hillrom.com
+    </string>
+    <string name="post_07_title">¿Qué es el plan de alimentación DASH?</string>
+    <string name="post_07_content">
+    La presión arterial puede ser perjudicial incluso si permanece ligeramente por encima del nivel normal de menos de 120/80 mmHg. Cuanto más aumenta la presión arterial por encima de lo normal, mayor es el riesgo para la salud. Los hallazgos muestran que las presiones sanguíneas se redujeron con un plan de alimentación bajo en grasas saturadas, colesterol y grasas totales que enfatiza las frutas, verduras y productos lácteos sin grasa o bajos en grasa. Este plan de alimentación, conocido como el plan de alimentación DASH, también incluye productos de granos enteros, pescado, aves de corral y nueces. Es reducido en carne roja magra, dulces, azúcares añadidos y bebidas que contienen azúcar en comparación con la dieta típica americana. Es rico en potasio, magnesio y calcio, así como en proteínas y fibra. (Ver recuadro 2 para conocer los objetivos diarios de nutrientes de los estudios DASH).
+    \n\nEl plan de alimentación DASH sigue las pautas saludables para el corazón para limitar la ingesta de grasas saturadas y colesterol. Se centra en aumentar la ingesta de alimentos ricos en nutrientes que se espera que reduzcan la presión arterial, principalmente minerales (como el potasio, el calcio y el magnesio), proteínas y fibra. Incluye alimentos ricos en nutrientes para que cumpla con otros requisitos de nutrientes recomendados por el Instituto de Medicina. El primer estudio DASH involucró a 459 adultos con presiones sanguíneas sistólicas de menos de 160 mmHg y presiones diastólicas de 80-95 mmHg. Aproximadamente el 27 por ciento de los participantes tenían presión arterial alta. Alrededor del 50 por ciento eran mujeres y el 60 por ciento eran afroamericanos. Se compararon tres planes de alimentación: un plan que incluye alimentos similares a los que muchos estadounidenses comen regularmente; un plan que incluye alimentos similares a los que muchos estadounidenses comen regularmente más frutas y verduras; y el plan de alimentación DASH. Los tres planes incluyeron alrededor de 3,000 miligramos de sodio diarios. Ninguno de los planes era vegetariano o utilizaba alimentos especializados. Los resultados fueron sorprendentes. Los participantes que siguieron tanto el plan que incluía más frutas y verduras como el plan de alimentación DASH tuvieron una reducción de la presión arterial. Pero el plan de alimentación DASH tuvo el mayor efecto, especialmente para aquellos con presión arterial alta. Además, las reducciones en la presión arterial fueron rápidas, dentro de las 2 semanas de comenzar el plan.
+    \n\nEl segundo estudio DASH examinó el efecto de la ingesta reducida de sodio en la presión arterial de los participantes al seguir el plan de alimentación DASH o un plan de alimentación típico de lo que muchos estadounidenses consumen. Este segundo estudio involucró a 412 participantes. Los participantes fueron asignados al azar a uno de los dos planes de alimentación y luego seguidos durante un mes en cada uno de los tres niveles de sodio. Los tres niveles de sodio fueron una ingesta más alta de alrededor de 3.300 miligramos por día (el nivel consumido por muchos estadounidenses), una ingesta intermedia de alrededor de 2.300 miligramos por día y una ingesta más baja de alrededor de 1.500 miligramos por día. Los resultados mostraron que la reducción del sodio en la dieta disminuyó la presión arterial para ambos planes alimenticios. En cada nivel de sodio, la presión arterial fue más baja en el plan de alimentación DASH que en el otro plan de alimentación. Las mayores reducciones de presión arterial se observaron para el plan de alimentación DASH en la ingesta de sodio de 1.500 miligramos por día. Aquellos con hipertensión vieron las mayores reducciones, pero aquellos con prehipertensión también tuvieron grandes disminuciones. Juntos, estos estudios muestran la importancia de reducir la ingesta de sodio, independientemente de su plan de alimentación. Para una verdadera combinación ganadora, siga el plan de alimentación DASH y reduzca su ingesta de sal y sodio.
+    \n\nFuente: SU GUÍA PARA REDUCIR SU PRESIÓN ARTERIAL CON EL PLAN DASH - National Institutes of Health National Heart, Lung, and Blood Institute.
+    </string>
+    <string name="post_09_title">Entendiendo las lecturas de la presión arterial</string>
+    <string name="post_09_content">
+    \n\n<font size="16"><b>¿Qué significan tus números de presión arterial?</b></font>\n
+	\nLa única forma de saber si tienes presión arterial alta (PA alta o hipertensión) es hacerse una prueba de presión arterial. Comprender los resultados es clave para controlar la presión arterial alta.
+	\n\nRangos de presión arterial saludables e insalubres
+	\nAprende lo que se considera normal, según lo recomendado por la American Heart Association.
+	Categorías de presión arterial
+	Los cinco rangos de presión arterial reconocidos por la American Heart Association son:
+	\n\n<font size="16"><b>Normal</b></font>\n
+Los números de la presión arterial inferiores a 120/80 mm Hg se consideran dentro del rango normal. Si tus resultados están dentro de esta categoría, mantén hábitos saludables para el corazón, como seguir una dieta equilibrada y hacer ejercicio regularmente.
+
+    \n\n<font size="16"><b>Elevada</b></font>\n
+    La presión arterial elevada se produce cuando las lecturas oscilan consistentemente entre 120-129 sistólica y menos de 80 mm Hg diastólica. Las personas con presión arterial elevada probablemente desarrollarán hipertensión si no toman medidas para controlar la condición.
+
+    \n\n<font size="16"><b>Hipertensión Etapa 1</b></font>\n
+    La hipertensión Etapa 1 se produce cuando la presión arterial oscila consistentemente entre 130-139 sistólica o 80-89 mm Hg diastólica. En esta etapa de la hipertensión, es probable que los médicos receten cambios en el estilo de vida y consideren agregar medicamentos para la presión arterial según tu riesgo de enfermedad cardiovascular aterosclerótica (ASCVD), como un ataque cardíaco o un accidente cerebrovascular.
+    \n\n<font size="16"><b>Etapa 2 de hipertensión</b></font>\n
+    La etapa 2 de hipertensión se produce cuando la presión arterial oscila de forma constante en 140/90 mm Hg o más alta. En esta etapa de la hipertensión, los médicos suelen recetar una combinación de medicamentos para la presión arterial y cambios en el estilo de vida.
+    \n\n<font size="16"><b>Crisis hipertensiva</b></font>\n
+    Esta etapa de la hipertensión requiere atención médica. Si su lectura de presión arterial supera repentinamente los 180/120 mm Hg, espere cinco minutos y vuelva a medir su presión arterial. Si sus lecturas siguen siendo inusualmente altas, póngase en contacto inmediatamente con su médico. Podría estar experimentando una crisis hipertensiva.
+
+    Si su presión arterial es mayor de 180/120 mm Hg y experimenta signos de posible daño en órganos como dolor en el pecho, falta de aliento, dolor de espalda, entumecimiento/ debilidad, cambios en la visión o dificultad para hablar, no espere a ver si su presión baja por sí sola.
+
+    \n\n<font size="16"><b>Sus números de presión arterial y lo que significan</b></font>\n
+    Su presión arterial se registra como dos números:
+    Presión arterial sistólica (el primer número) - indica cuánta presión ejerce su sangre contra las paredes de las arterias cuando el corazón late.
+    Presión arterial diastólica (el segundo número) - indica cuánta presión ejerce su sangre contra las paredes de las arterias mientras el corazón descansa entre latidos.
+
+    \n\n<font size="16"><b>¿Cuál de los dos números es más importante?</b></font>\n"
+    Typicamente, se presta más atención a la presión arterial sistólica (el primer número) como factor de riesgo importante para enfermedades cardiovasculares en personas mayores de 50 años. En la mayoría de las personas, la presión arterial sistólica aumenta constantemente con la edad debido al aumento de la rigidez de las arterias grandes, la acumulación a largo plazo de placa y un mayor incidencia de enfermedades cardíacas y vasculares.
+
+    Sin embargo, tanto una lectura elevada de presión arterial sistólica como una elevada presión arterial diastólica (el segundo número) pueden usarse para hacer un diagnóstico de hipertensión arterial. Según estudios recientes, el riesgo de muerte por enfermedad cardíaca isquémica y accidente cerebrovascular se duplica con cada aumento de 20 mm Hg de presión arterial sistólica o 10 mm Hg de presión arterial diastólica entre personas de 40 a 89 años.
+
+    \n\n<font size="16"><b>¿Por qué se mide la presión arterial en mm Hg?</b></font>\n
+La abreviatura mm Hg significa milímetros de mercurio. El mercurio se usó en los primeros manómetros precisos de presión y todavía se usa en medicina hoy como la unidad de medida estándar para la presión.
+
+    \n\nFuente: https://www.heart.org/
+    </string>
+    <string name="post_10_title">Síntomas y causas de la presión arterial baja</string>
+    <string name="post_10_content">
+    La presión arterial baja ocurre cuando la sangre fluye a través de los vasos sanguíneos a presiones más bajas de lo normal. El término médico para la presión arterial baja es hipotensión. \n\nLa presión arterial es la fuerza de la sangre empujando contra las paredes de las arterias mientras el corazón bombea sangre. Generalmente se describe con dos números: el sistólico y el diastólico. Los números registran la presión arterial en milímetros de mercurio (mm Hg), con el sistólico listado encima del diastólico. \n\nPara la mayoría de los adultos, una presión arterial normal suele ser inferior a 120/80 mm Hg. La presión arterial baja es aquella que es inferior a 90/60 mm Hg. \n\nAlgunas personas tienen presión arterial baja todo el tiempo, lo que es normal para ellas. Otras personas experimentan una caída repentina de la presión arterial o tienen presión arterial baja que puede estar relacionada con un problema de salud. Esto puede ser peligroso, ya que podría significar que tu corazón, cerebro u otros órganos vitales no están recibiendo suficiente flujo sanguíneo y estás en riesgo de un ataque cardíaco o un accidente cerebrovascular.
+    \n\n<font size="16"><b>¿Qué causa la presión arterial baja?</b></font>\n
+    Muchos sistemas del cuerpo, incluyendo órganos, hormonas y nervios, regulan la presión arterial. Por ejemplo, el sistema nervioso autónomo envía la señal de "luchar o huir" que, dependiendo de la situación, indica al corazón y a otros sistemas del cuerpo que aumenten o disminuyan la presión arterial. Los problemas con el sistema nervioso autónomo, como en la enfermedad de Parkinson, pueden causar baja presión arterial.\n\nOtras causas de la baja presión arterial incluyen:\n\nPérdida de sangre por una lesión que causa una caída repentina de la presión arterial \nDeshidratación\nDiabetes\nProblemas cardíacos como arritmias (latidos irregulares del corazón)\nMedicamentos para tratar la presión arterial alta, la depresión o el Parkinson\nEmbarazo\nLos adultos mayores también tienen un mayor riesgo de presentar síntomas de baja presión arterial, como caídas, desmayos o mareos al levantarse o después de una comida. Los adultos mayores son más propensos a desarrollar baja presión arterial como efecto secundario de los medicamentos tomados para controlar la presión arterial alta.
+    \n\n<font size="16"><b>¿Cuáles son los síntomas?</b></font>\n
+    Sentarse puede aliviar los síntomas. Si su presión arterial baja demasiado, los órganos vitales de su cuerpo no reciben suficiente oxígeno y nutrientes. Cuando esto sucede, la baja presión arterial puede llevar al shock, lo que requiere atención médica inmediata. Los signos de shock incluyen piel fría y sudorosa, respiración rápida, tono de piel azulado o pulso débil y rápido. Si nota signos de shock en usted mismo o en otra persona, acuda al hospital. Hable con su médico sobre sus síntomas. Su médico utilizará una prueba de presión arterial para diagnosticar la baja presión arterial. Otras pruebas pueden incluir análisis de sangre, orina o imágenes y una prueba de mesa inclinada si se desmaya con frecuencia.
+    \n\n<font size="16"><b>¿Cómo se trata?</b></font>\nEs posible que no necesite tratamiento para la baja presión arterial. Dependiendo de sus síntomas, el tratamiento puede incluir beber más líquidos para prevenir la deshidratación, tomar medicamentos para aumentar su presión arterial o ajustar los medicamentos que causan baja presión arterial.\n\nSu médico puede hablar con usted sobre cambios en el estilo de vida, incluyendo cambios en lo que come, cómo se sienta y se levanta. Su médico también puede recomendar medias de compresión si permanece de pie durante largos períodos.\n\nFuente: https://www.nhlbi.nih.gov/
+    </string>
+    <string name="post_11_title">¿Subió tu presión arterial? La pandemia de COVID-19 podría ser la culpable</string>
+    <string name="post_11_content">
+    Es un hecho que pocos pueden discutir: la pandemia de COVID-19 ha sido devastadora para los estadounidenses. Ha causado altas tasas de muerte y enfermedad, ha interrumpido casi todos los aspectos de la vida diaria y se ha relacionado con un aumento en las enfermedades cardíacas, pulmonares, la obesidad y los problemas de sueño.\n\nAhora, los investigadores financiados por NHLBI dicen que el virus y el estrés relacionado también pueden ser culpables de un aumento en la presión arterial entre los estadounidenses.\n\nUn gran estudio observacional, publicado recientemente en la revista Circulation, revisó los datos de salud de más de medio millón de estadounidenses de 50 estados y el Distrito de Columbia. Se encontró un pequeño pero consecuente aumento en la presión arterial promedio durante el pico temprano de la pandemia.\n\nTodos los participantes del estudio estaban inscritos en un programa de bienestar patrocinado por el empleador que requería que se midiera su presión arterial por personal capacitado cada año durante el período de tres años analizado, 2018-2020.El estudio encontró que la presión arterial sistólica promedio - el número superior en la lectura de presión arterial - aumentó aproximadamente 2 milímetros de mercurio (mm Hg) de abril de 2020 a diciembre de 2020 - considerado el pico de la pandemia. La presión diastólica promedio - el número inferior - también aumentó ligeramente. La presión arterial normal es menos de 120/80 mm Hg.\n\nEn contraste, no se informaron cambios en las lecturas promedio de presión arterial en el período pre-pandémico de 15 meses entre enero de 2019 y el comienzo del período de pico de la pandemia (de abril de 2020 a diciembre de 2020). El período posterior vio órdenes generalizadas de quedarse en casa y confinamientos.\n\n"Esto es preocupante", dijo Luke Laffin, M.D., autor principal del estudio y co-director del Centro de Trastornos de Presión Arterial en la Clínica Cleveland. "A nivel individual, ese [aumento de 2 mm Hg] no parece mucho. Pero sabemos que un pequeño aumento en la presión arterial puede causar un aumento significativo en los accidentes cerebrovasculares e infartos de miocardio en la población", lo que a su vez puede llevar a la muerte, agregó. La presión arterial alta o hipertensión también puede aumentar el riesgo de complicaciones más graves de la enfermedad COVID-19.\n\nYa en los Estados Unidos, alrededor de la mitad de los adultos tienen hipertensión, pero solo alrededor de uno de cada cuatro (24%) la tienen bajo control.
+    \n\n\n\nEl Dr. Laffin dijo que múltiples factores estuvieron detrás del aumento en todo el país, empezando por la reducción en la atención médica continua durante la pandemia. Las personas con hipertensión no veían regularmente a sus médicos, explicó Laffin, y eso significaba que muchos no estaban tomando sus medicamentos antihipertensivos. Durante la pandemia, aproximadamente el 40 por ciento de los adultos estadounidenses informó evitar la atención médica debido a preocupaciones relacionadas con el COVID-19, según un informe de 2020 de los Centros para el Control y la Prevención de Enfermedades.\n\n\n\nEn personas sin hipertensión, el aumento se debió "quizás a cambios en los patrones alimentarios", dijo Laffin. Específicamente, el investigador señala el exceso de sodio o sal en la dieta. "Sabemos que el mayor factor en los patrones dietéticos de la presión arterial es el exceso de sodio, por lo que es probable que las personas hayan estado comiendo alimentos más salados durante la pandemia".\n\nEl estrés, que desde hace mucho se sabe que aumenta la presión arterial, probablemente desempeñó un papel significativo en esta población estudiada. "Sabemos que si las personas no manejan bien el estrés, esto afecta sus elecciones de estilo de vida", dijo Laffin. "No comen bien, beben más alcohol, no duermen lo suficiente".\n\nLos hallazgos son respaldados por al menos otros dos estudios nacionales de seguimiento de la presión arterial que muestran aumentos en las lecturas de presión durante este período. Laffin descartó otras explicaciones para el aumento, incluida la obesidad, la hipertensión inducida por el virus y las vacunas en sí mismas. La evidencia en este estudio no respaldó esos factores, dijo.\n\nEl mayor aumento lo experimentaron las mujeres, que representaron la mitad de los participantes del estudio.
+    \n\n"Sabemos por otros estudios que las pandemias tienden a poner una carga desproporcionada en las mujeres", dijo Laffin. Esto incluye cuidar a los niños, pagar facturas y, en el caso del COVID-19, coordinar el aprendizaje virtual. "Eso puede resultar en menos tiempo para hacer los cambios de estilo de vida que necesitan para controlar los factores de riesgo cardiovascular, incluyendo la presión arterial".\n\nOtro factor también podría haber estado en juego: los medicamentos que las personas estaban tomando para otras afecciones que aumentaron su presión arterial involuntariamente. Según un estudio reportado recientemente en JAMA Internal Medicine, uno de cada cinco personas con hipertensión puede estar tomando tales medicamentos. El estudio encontró que los más comunes son los antidepresivos, los medicamentos antiinflamatorios no esteroideos (AINE) de fuerza de prescripción, los esteroides y los estrógenos. Los pacientes deben consultar con su médico o farmacéutico sobre esta posibilidad, dijeron los investigadores, para ver si pueden reemplazar estos medicamentos con alternativas más seguras.\n\nY todos, dijo Laffin, deberían centrarse en un buen autocuidado, ya que es fundamental para mantener la hipertensión bajo control o prevenirla en primer lugar. Comer alimentos saludables para el corazón, moverse más, dormir lo suficiente y manejar mejor el estrés pueden marcar una gran diferencia", dijo.\n\nTambién es importante conocer los números de su presión arterial", dijo, ya sea que tenga hipertensión o no. Las personas pueden averiguar fácilmente cuáles son sus números visitando una estación de control de presión arterial en su supermercado o farmacia local, o utilizando monitores de estilo de brazalete para controlar su presión en casa, explicó.\n\nActividades regulares como estas, señaló Laffin, salvan vidas. "No se centre tanto en el COVID que descuide otras medidas preventivas o problemas de autocuidado", dijo. "Tenemos que prevenir la infección y propagación del COVID, pero también tenemos que prevenir los accidentes cerebrovasculares y los ataques cardíacos".\n\nLawrence Fine, M.D., Dr.P.H., asesor principal de la Rama de Aplicaciones Clínicas y Prevención del NHLBI, estuvo de acuerdo. "Revertir el aumento de la presión arterial durante la pandemia y más allá es importante para la salud cardiovascular futura de millones de estadounidenses y menos de la mitad de los estadounidenses con hipertensión han logrado un control adecuado de su hipertensión. Este estudio sugiere que la pandemia posiblemente empeoró este problema", dijo.
+    \n\n“Si bien este estudio contribuye al conocimiento sobre el impacto de la pandemia en la presión arterial y el valor del autocuidado, es importante ver a su proveedor de atención médica y seguir las recomendaciones de estilo de vida y medicación si ya tiene hipertensión”, agregó Fine.
+    \n\nFuente: https://www.nhlbi.nih.gov/</string>
+    <string name="post_12_title">Vivir con presión arterial alta</string>
+    <string name="post_12_content">Es importante que se tomen lecturas regulares de la presión arterial y se conozcan sus números, ya que la presión arterial alta generalmente no causa síntomas hasta que ha causado problemas graves.
+        \n\n<font size="16"><b>Consejos para manejar la presión arterial alta en casa</b></font>\n
+        Si le han diagnosticado presión arterial alta, es importante que continúe su plan de tratamiento. Necesitará atención de seguimiento regular y debe aprender a controlar su condición en casa. Su proveedor puede necesitar cambiar o agregar medicamentos a su plan de tratamiento con el tiempo.\n\nInforme a su proveedor de atención médica si está planeando quedar embarazada.
+        \n\n<font size="16"><b>Maneje su condición</b></font>\n
+        Mantén tu plan de tratamiento, incluyendo cambios saludables en tu estilo de vida, para ayudar a controlar tu presión arterial y prevenir enfermedades cardíacas. Hacer cambios en tu estilo de vida y recordar tomar tu medicación todos los días puede ser difícil, pero hay herramientas que pueden ayudarte.\nPregunta a tu proveedor de atención médica o farmacéutico acerca de aplicaciones para monitorear y hacer seguimiento de tu presión arterial. También pueden saber cómo recibir mensajes de texto para recordarte que debes tomar tu medicina todos los días y notificarte cuando sea hora de volver a surtir tu receta.\nObtén apoyo de tus seres queridos y de otros en tu comunidad. Realiza chequeos médicos regulares y pruebas según lo recomendado por tu proveedor. Haz preguntas y discute tu progreso. Informa a tu proveedor sobre cualquier condición nueva o si has estado tomando medicamentos nuevos desde tu última cita.\nEs posible que tu proveedor de atención médica quiera que compruebes tu presión arterial en casa o en otros lugares que tengan equipos para medir la presión arterial. Diagnosis ofrece recordatorios sobre cómo prepararse para las pruebas de presión arterial y cómo tomar tu presión arterial por ti mismo.\nLa Tarjeta de Presión Arterial es una herramienta que puedes imprimir y utilizar para llevar un registro escrito de todos tus resultados. Lleva el registro a tus citas con tu proveedor de atención médica. Es posible que puedas enviar los registros a la oficina de tu proveedor electrónicamente.
+        \n\n<font size="16"><b>Conoce cuándo pedir ayuda por complicaciones</b></font>\n
+        Las lecturas por encima de 180/120 mm Hg son peligrosamente altas y requieren atención médica inmediata. La presión arterial tan alta puede dañar tus órganos. Llama a emergencias si experimentas:\n\nUn dolor de cabeza repentino y severo\nDificultad para respirar\nDolor repentino y severo en tu abdomen, pecho o espalda\nLa presión arterial alta también puede llevar a un ataque cardíaco, un derrame cerebral u otros síntomas y condiciones peligrosas.
+        \n\n<font size="16"><b>ATAQUE CARDÍACO</b></font>\n
+        Náuseas, vómitos, mareos o desmayos, o sudores fríos son síntomas de un ataque cardíaco que son más comunes en mujeres.\nUn dolor o molestia prolongado o severo en el pecho que no se alivia con el reposo o nitroglicerina puede ser otro síntoma de un ataque cardíaco. Una incómoda presión, apretón, plenitud o dolor en el centro o en el lado izquierdo del pecho puede ser leve o fuerte. Este dolor o molestia a menudo dura más de unos pocos minutos o desaparece y vuelve.\nLa falta de aire puede acompañar el malestar en el pecho o suceder antes de él.\nEl malestar en la parte superior del cuerpo puede sentirse en uno o ambos brazos, la espalda, el cuello, la mandíbula o la parte superior del estómago.
+        \n\n<font size="16"><b>DERRAME CEREBRAL</b></font>\n
+        Si crees que alguien puede estar sufriendo un derrame cerebral, actúa R.Á.P.I.D.O.
+        \n\n<b>R — Rostro</b>: Pídele a la persona que sonría. ¿Se le cae un lado de la cara?
+        \n<b>A — Brazos</b>: Pídele a la persona que levante ambos brazos. ¿Uno de los brazos se baja?
+        \n<b>P — Palabras</b>: Pídele a la persona que repita una frase sencilla. ¿Tiene dificultad para hablar o suena extraño?
+        \n<b>I — Inmediatamente</b>: Si observas alguno de estos síntomas, llama a ayuda de inmediato. El tratamiento temprano es esencial.
+        \n\nFuente: https://www.nhlbi.nih.gov/
+    </string>
+    <string name="low">Bajo</string>
+    <string name="systole_range_low"><![CDATA[(<90)]]></string>
+    <string name="diastole_range_low"><![CDATA[(<60)]]></string>
+    <string name="you_need_to_measure_blood_pressure_at_8_pm_everyday">Necesita medir su presión arterial a las 8 pm todos los días</string>
+    <string name="you_need_to_measure_weight_and_bmi_to_manage_weight_better">Necesita medir su peso y su índice de masa corporal para manejar mejor su peso.</string>
+    <string name="term_of_service">Términos de servicio</string>
+    <string name="no_data_chart">No hay datos disponibles</string>
+    <string name="this_action_can_contain_ads">(Esta acción puede contener anuncios)</string>
+    <string name="ads">Anuncio</string>
+    <string name="enter_your_name">Ingrese su nombre</string>
+    <string name="hint_input_height">Ej: 170</string>
+    <string name="hint_input_weight">Ej: 60</string>
+    <string name="create">Crear</string>
+    <string name="soon">Pronto</string>
+    <string name="coming_soon">Próximamente</string>
+    <string name="title_no_data">¡Aquí no hay datos!</string>
+    <string name="content_no_data">¡Mida su frecuencia cardíaca ahora mismo!</string>
+    <string name="dashboard_tip">El tipo de medicamento utilizado para tratar la hipertensión depende de su salud en general y de cuán alta sea su presión arterial. A menudo, dos o más medicamentos para la presión arterial funcionan mejor que uno solo.</string>
+    <string name="delete_result">Eliminar resultado</string>
+    <string name="missing_required_information">¡Faltan información requerida!</string>
+    <string name="disclaimer_content">Nuestra aplicación de salud ofrece exclusivamente funcionalidades de entrada y seguimiento. Proporcionamos resultados y recomendaciones basados en fuentes confiables y de confianza que se encuentran claramente referenciadas en nuestra plataforma. Nuestro objetivo es brindar a nuestros usuarios una experiencia confiable y fácil de usar. Sin embargo, tenga en cuenta que no somos un servicio de atención médica y para obtener los resultados más precisos, le recomendamos encarecidamente que se comunique con su hospital, dispensario o médico más cercano. Gracias una vez más por utilizar nuestra aplicación y le deseamos sinceramente buena salud.
+    </string>
+    <string name="diastole_warning">Debería estar entre 30 y 120, que es el rango diastólico utilizado por esta herramienta.</string>
+    <string name="systole_warning">Debería estar entre 70 y 250, que es el rango sistólico utilizado por esta herramienta.</string>
+    <string name="systole_lower_diastole">Verifica ambos números. El valor sistólico debe ser mayor que el valor diastólico.</string>
+    <string name="disclaimer">Descargo de responsabilidad</string>
+    <string name="disclaimer_italic"><u>Descargo de responsabilidad</u></string>
+    <string name="click_here_for_reference"><u>Haz clic aquí para referencia</u></string>
+</resources>
