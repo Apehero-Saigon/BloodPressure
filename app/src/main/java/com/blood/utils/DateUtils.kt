@@ -111,6 +111,7 @@ object DateUtils {
                 listener?.onDateSelected(dayOfMonth, monthOfYear + 1, yearSelected)
             }, year, month, day
         )
+        dpd.datePicker.maxDate = Calendar.getInstance().timeInMillis
 
         dpd.show()
     }

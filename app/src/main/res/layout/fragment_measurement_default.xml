@@ -7,6 +7,37 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_24sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center|start"
+                android:paddingTop="@dimen/_24sdp"
+                android:text="@string/guideline"
+                android:textColor="@color/color_870026"
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center|end"
+                android:paddingTop="@dimen/_24sdp"
+                android:text="@string/save"
+                android:textColor="@color/color_FE7489"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+        </LinearLayout>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -18,17 +49,17 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="@dimen/_24sdp">
+                android:paddingHorizontal="@dimen/_24sdp">
+
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_16sdp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:gravity="center"
-                    android:text="@string/which_measurement_guidelines_do_you_prefer"
-                    android:textColor="@color/color_870026"
-                    android:textSize="@dimen/text_size_24" />
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/montserrat_italic"
+                    android:gravity="center|start"
+                    android:text="@string/guideline_content"
+                    android:textColor="@color/black" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/cl2018"
@@ -121,19 +152,6 @@
                         app:layout_constraintStart_toEndOf="@id/ivLogo2017"
                         app:layout_constraintTop_toBottomOf="@id/tvName2017" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnOk"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_32sdp"
-                    android:layout_marginBottom="3dp"
-                    android:background="@drawable/bg_fe7489_radius_50"
-                    android:text="@string/tt_label_ok"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
 
             </LinearLayout>
 

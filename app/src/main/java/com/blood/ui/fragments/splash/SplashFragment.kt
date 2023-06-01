@@ -104,6 +104,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     }
 
     override fun initData() {
+        AppOpenManager.getInstance().disableAppResume()
         FirebaseUtils.eventSplashScreen()
         if (openByChangeLanguage()) {
             val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()

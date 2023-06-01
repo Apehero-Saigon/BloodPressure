@@ -353,10 +353,6 @@ class AdsUtils {
                                 lastShowInter = System.currentTimeMillis()
                                 statusHigh = Status.SHOWN
                             }
-
-                            override fun onAdClicked() {
-                                super.onAdClicked()
-                            }
                         }, false
                     )
                 } else if (!interAdsPriorityLoaded() && interAdsNormalLoaded()) {
@@ -368,24 +364,17 @@ class AdsUtils {
                                 lastShowInter = System.currentTimeMillis()
                                 statusNormal = Status.SHOWN
                             }
-
-                            override fun onAdClicked() {
-                                super.onAdClicked()
-                            }
                         }, false
                     )
                 } else {
                     AperoAd.getInstance().forceShowInterstitial(
                         context, interAdsPriority, object : AperoAdCallback() {
+
                             override fun onNextAction() {
                                 super.onNextAction()
                                 finishCallback(reloadAfterShow)
                                 lastShowInter = System.currentTimeMillis()
                                 statusHigh = Status.SHOWN
-                            }
-
-                            override fun onAdClicked() {
-                                super.onAdClicked()
                             }
 
                             override fun onAdFailedToShow(adError: ApAdError?) {
@@ -399,10 +388,6 @@ class AdsUtils {
                                             finishCallback(reloadAfterShow)
                                             lastShowInter = System.currentTimeMillis()
                                             statusNormal = Status.SHOWN
-                                        }
-
-                                        override fun onAdClicked() {
-                                            super.onAdClicked()
                                         }
                                     }, false
                                 )

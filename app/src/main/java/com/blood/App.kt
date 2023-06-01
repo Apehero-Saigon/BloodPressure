@@ -37,6 +37,7 @@ class App : AdsMultiDexApplication(), HasAndroidInjector {
         AppOpenManager.getInstance().setSplashAdId(BuildConfig.appopen_splash)
         app = this
         aperoAdConfig.idAdResume = BuildConfig.appopen_resume
+        aperoAdConfig.idAdResumeHigh = BuildConfig.appopen_splash
         aperoAdConfig.listDeviceTest = listOf(
             "577C9208AEFF7C67F9A420B37E32681F",
             "71EE5E1FE7387B101A4E97B7455C7E8D",
@@ -53,6 +54,7 @@ class App : AdsMultiDexApplication(), HasAndroidInjector {
             "74521D8D41B7B0A844EC9972E711421D",
             "13ED83446977FB9F92089E5E84B97496",
             "5671823AE351B6E019F9664AEB1F547F",
+            "5BF4DB38301AF4F36E8076F3B1D64D9D",
             "B0B07435EDB5A997C2E26B71A0AC1FB2"
         )
         listTestDevice.add("577C9208AEFF7C67F9A420B37E32681F")

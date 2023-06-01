@@ -45,7 +45,7 @@ class MeasurementGuidelineDefaultFragment :
                 updateTypeSelected(true)
             }
 
-            btnOk.clickWithDebounce {
+            tvSave.clickWithDebounce {
                 prefUtils.typeLimitValue =
                     if (cl2017.isSelected) Constant.ACC_AHA_2017 else Constant.ESC_ESH_2018
                 val action =

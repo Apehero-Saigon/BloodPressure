@@ -51,7 +51,7 @@ class PopupExit : DialogFragment() {
 
         with(binding) {
             tvExit.clickWithDebounce {
-                requireActivity().finish()
+                requireActivity().finishAffinity()
             }
 
             tvCancel.clickWithDebounce {

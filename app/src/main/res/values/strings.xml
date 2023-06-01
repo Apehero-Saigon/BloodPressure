@@ -475,4 +475,6 @@
     <string name="_2017_acc_aha_content">(American College of Cardiology,\nAmerican Heart Association)</string>
     <string name="for_more_references">For more references</string>
     <string name="exit_title">Do you really want to exit?</string>
+    <string name="guideline">Guideline</string>
+    <string name="guideline_content">Please select the appropriate measurement guidelines based on your country or region.</string>
 </resources>

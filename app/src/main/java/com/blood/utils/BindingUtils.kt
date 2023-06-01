@@ -145,21 +145,3 @@ fun View.visibleIfZero(int: Int?) {
 fun HeaderView.headerListener(listener: HeaderView.Listener?) {
     this.listener = listener
 }
-
-@BindingAdapter("bindRecommendation", "languageCode")
-fun WebView.bindRecommendation(name: String, languageCode: String) {
-    try {
-        val jsonFileString = AssetUtils.getJsonDataFromAsset(
-            this.context, "languages/recommends_${languageCode}.json"
-        )
-
-        val listPersonType = object : TypeToken<List<Recommended>>() {}.type
-        val listRecommended: List<Recommended> = Gson().fromJson(jsonFileString, listPersonType)
-        val recommended = listRecommended.findLast { it -> it.name.equals(name, true) }
-        this.loadData(
-            recommended?.content ?: listRecommended[0].content, "text/html", "UTF-8"
-        )
-    } catch (_: Exception) {
-
-    }
-}

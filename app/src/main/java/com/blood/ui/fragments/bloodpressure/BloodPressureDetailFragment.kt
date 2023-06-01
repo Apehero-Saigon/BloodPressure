@@ -8,8 +8,10 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
+import com.blood.data.Recommended
 import com.blood.ui.dialog.YesNoPopup
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
+import com.blood.utils.AssetUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.customview.HeaderView
@@ -17,6 +19,8 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentBloodPressureDetailBinding
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class BloodPressureDetailFragment :
     BaseFragment<BloodPressureViewModel, FragmentBloodPressureDetailBinding>(
@@ -40,13 +44,18 @@ class BloodPressureDetailFragment :
     override fun initData() {
         FirebaseUtils.eventDisplayBloodPressureResult()
         viewModel.getBloodPressureByID(args.id)
+
+        viewModel.bloodPressureObserver.observe(this.viewLifecycleOwner) { bloodPressure ->
+            if (bloodPressure != null) {
+                loadRecommendation()
+            }
+        }
     }
 
     override fun initListener() {
         super.initListener()
 
-        requireActivity().onBackPressedDispatcher.addCallback(
-            viewLifecycleOwner,
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
                     onBack()
@@ -130,6 +139,27 @@ class BloodPressureDetailFragment :
             e.printStackTrace()
         } finally {
             popupMenu.show()
+        }
+    }
+
+    private fun loadRecommendation() {
+        try {
+            val jsonFileString = AssetUtils.getJsonDataFromAsset(
+                requireContext(), "languages/recommends_${prefUtils.defaultLanguage}.json"
+            )
+
+            val listPersonType = object : TypeToken<List<Recommended>>() {}.type
+            val listRecommended: List<Recommended> = Gson().fromJson(jsonFileString, listPersonType)
+            val recommended = listRecommended.findLast {
+                it.name.equals(
+                    viewModel.bloodPressureObserver.value?.getStatusRecommendName() ?: "lower", true
+                )
+            }
+            binding.webView.loadData(
+                recommended?.content ?: listRecommended[0].content, "text/html", "UTF-8"
+            )
+        } catch (ex: java.lang.Exception) {
+            ex.printStackTrace()
         }
     }
 }
