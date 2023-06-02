@@ -21,3 +21,5 @@
 #-renamesourcefileattribute SourceFile
 
 -keepnames class com.blood.data.InfoKnowledge
+-keepnames class com.blood.data.BloodPressure
+-keepnames class com.blood.data.Profile

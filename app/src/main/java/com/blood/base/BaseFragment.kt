@@ -44,6 +44,7 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
         binding.lifecycleOwner = viewLifecycleOwner
         binding.setVariable(BR.viewModel, viewModel)
         binding.setVariable(BR.fragment, this)
+        binding.setVariable(BR.prefUtils, prefUtils)
     }
 
     open fun initView() {}

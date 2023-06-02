@@ -8,6 +8,7 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
+import com.blood.data.BloodPressure
 import com.blood.data.Recommended
 import com.blood.ui.dialog.YesNoPopup
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
@@ -44,12 +45,6 @@ class BloodPressureDetailFragment :
     override fun initData() {
         FirebaseUtils.eventDisplayBloodPressureResult()
         viewModel.getBloodPressureByID(args.id)
-
-        viewModel.bloodPressureObserver.observe(this.viewLifecycleOwner) { bloodPressure ->
-            if (bloodPressure != null) {
-                loadRecommendation()
-            }
-        }
     }
 
     override fun initListener() {
@@ -74,7 +69,7 @@ class BloodPressureDetailFragment :
             }
         }
 
-        viewModel.deleteBloodObserver.observe(this.viewLifecycleOwner) { isDeleted ->
+        viewModel.deleteBloodObserver.observe(this) { isDeleted ->
             if (isDeleted) {
                 toast(getString(R.string.delete_blood_success_msg))
                 onBack()
@@ -139,27 +134,6 @@ class BloodPressureDetailFragment :
             e.printStackTrace()
         } finally {
             popupMenu.show()
-        }
-    }
-
-    private fun loadRecommendation() {
-        try {
-            val jsonFileString = AssetUtils.getJsonDataFromAsset(
-                requireContext(), "languages/recommends_${prefUtils.defaultLanguage}.json"
-            )
-
-            val listPersonType = object : TypeToken<List<Recommended>>() {}.type
-            val listRecommended: List<Recommended> = Gson().fromJson(jsonFileString, listPersonType)
-            val recommended = listRecommended.findLast {
-                it.name.equals(
-                    viewModel.bloodPressureObserver.value?.getStatusRecommendName() ?: "lower", true
-                )
-            }
-            binding.webView.loadData(
-                recommended?.content ?: listRecommended[0].content, "text/html", "UTF-8"
-            )
-        } catch (ex: java.lang.Exception) {
-            ex.printStackTrace()
         }
     }
 }

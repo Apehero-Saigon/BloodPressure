@@ -30,7 +30,7 @@
             android:textColor="@android:color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/ivCountry"
-            app:layout_constraintEnd_toStartOf="@+id/ivCheckBox"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivCountry"
             app:layout_constraintTop_toTopOf="@+id/ivCountry"
             tools:text="Viet Nam" />

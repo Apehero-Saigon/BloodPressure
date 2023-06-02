@@ -18,8 +18,8 @@ android {
         applicationId "com.bloodpressure.pressuremonitor.bloodpressuretracker"
         minSdk 21
         targetSdk 33
-        versionCode 30
-        versionName "1.2.3"
+        versionCode 31
+        versionName "1.2.4"
 
         multiDexEnabled true
         renderscriptTargetApi 19
@@ -51,7 +51,6 @@ android {
     buildTypes {
         release {
             debuggable false
-            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
