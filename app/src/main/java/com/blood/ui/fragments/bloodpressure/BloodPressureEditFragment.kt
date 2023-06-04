@@ -47,12 +47,9 @@ class BloodPressureEditFragment :
         if (isNetworkConnected() && prefUtils.isShowNativeBloodPressure) {
             adsUtils.nativeBloodPressure.showAds(
                 requireActivity(),
-                BuildConfig.native_bloodpressure,
-                null,
-                null,
                 R.layout.layout_native_medium_custom,
                 binding.flAds,
-                false,
+                true,
                 reloadAfterShow = true
             )
         } else {

@@ -8,6 +8,7 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.blood.ui.fragments.splash.SplashFragment"
+        android:label="splashFragment"
         tools:layout="@layout/fragment_splash">
 
         <action
@@ -108,7 +109,7 @@
             android:name="editMode"
             android:defaultValue="false"
             app:argType="boolean" />
-        
+
         <action
             android:id="@+id/action_profileEditFragment_to_measurementGuidelineDefaultFragment"
             app:destination="@id/measurementGuidelineDefaultFragment" />

@@ -27,9 +27,6 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
         if (isNetworkConnected() && prefUtils.isShowNativeCreateUser) {
             adsUtils.nativeCreateUser.showAds(
                 requireActivity(),
-                BuildConfig.native_onboarding,
-                null,
-                null,
                 R.layout.layout_native_medium_custom,
                 binding.flAds
             )
@@ -38,13 +35,7 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
         }
 
         if (isNetworkConnected() && prefUtils.isShowNativeDefaultValue) {
-            App.adsUtils.nativeDefaultValue.loadAds(
-                requireActivity(),
-                BuildConfig.native_value_high,
-                BuildConfig.native_value,
-                null,
-                R.layout.native_medium
-            )
+            App.adsUtils.nativeDefaultValue.loadAds(requireActivity(), R.layout.native_medium)
         }
     }
 

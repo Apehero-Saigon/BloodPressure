@@ -58,14 +58,10 @@ class App : AdsMultiDexApplication(), HasAndroidInjector {
             "2518E22A9E93E1E7778F50C81A6AE058",
             "B0B07435EDB5A997C2E26B71A0AC1FB2"
         )
-        listTestDevice.add("577C9208AEFF7C67F9A420B37E32681F")
-        aperoAdConfig.listDeviceTest = listTestDevice
-
         val adjustConfig = AdjustConfig("jt22bikn5kw0")
         aperoAdConfig.adjustConfig = adjustConfig
 
         AdsMediationUtils.init(this, aperoAdConfig.listDeviceTest)
-        AperoAd.getInstance().init(this, aperoAdConfig, false)
 
         Admob.getInstance().setFan(false)
         Admob.getInstance().setAppLovin(false)
@@ -76,6 +72,7 @@ class App : AdsMultiDexApplication(), HasAndroidInjector {
         //Firebase analytics
         FirebaseUtils.init(this)
         LanguageUtils.loadLocale(this, prefUtils.defaultLanguage)
+        AperoAd.getInstance().init(this, aperoAdConfig, false)
     }
 
     @Inject

@@ -5,6 +5,7 @@ import com.blood.common.Constant
 import com.blood.utils.PrefUtils
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import java.io.Serializable
+import java.lang.Exception
 import java.util.Date
 
 data class BloodPressure(
@@ -42,12 +43,16 @@ data class BloodPressure(
     }
 
     fun getTextDiastoleMaxMin(): String {
-        return if (PrefUtils.instant.typeLimitValue == Constant.ACC_AHA_2017) {
-            LimitValue.getList2017ACCAHA().map { it.dia }.toMutableList()
-                .findLast { sys -> sys.contains(diastole) }!!.getTextMaxMin()
-        } else {
-            LimitValue.getList2018ESCESH().map { it.dia }.toMutableList()
-                .findLast { sys -> sys.contains(diastole) }!!.getTextMaxMin()
+        return try {
+            if (PrefUtils.instant.typeLimitValue == Constant.ACC_AHA_2017) {
+                LimitValue.getList2017ACCAHA().map { it.dia }.toMutableList()
+                    .findLast { sys -> sys.contains(diastole) }?.getTextMaxMin() ?: ""
+            } else {
+                LimitValue.getList2018ESCESH().map { it.dia }.toMutableList()
+                    .findLast { sys -> sys.contains(diastole) }?.getTextMaxMin() ?: ""
+            }
+        } catch (ex: Exception) {
+            ""
         }
     }
 

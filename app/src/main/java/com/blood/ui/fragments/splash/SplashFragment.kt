@@ -3,6 +3,8 @@ package com.blood.ui.fragments.splash
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavDestination
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.ads.control.admob.AppOpenManager
 import com.ads.control.ads.AperoAd
@@ -41,65 +43,25 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     override fun initAds() {
         if (openByChangeLanguage()) return
 
-        adsUtils.nativeExit.loadAds(
-            requireActivity(),
-            if (prefUtils.isShowNativeExitHigh) BuildConfig.native_exit_high else BuildConfig.native_exit,
-            if (prefUtils.isShowNativeExit) BuildConfig.native_exit else "",
-            null,
-            R.layout.native_medium
-        )
+        if (prefUtils.isShowNativeExitHigh || prefUtils.isShowNativeExit) {
+            adsUtils.nativeExit.loadAds(requireActivity(), R.layout.native_medium)
+        }
 
         if (prefUtils.isShowNativeLanguage && prefUtils.isShowLanguageFirstOpen) {
-            adsUtils.nativeLanguage.loadAds(
-                requireActivity(),
-                BuildConfig.native_language_high,
-                BuildConfig.native_language,
-                null,
-                R.layout.native_medium
-            )
+            adsUtils.nativeLanguage.loadAds(requireActivity(), R.layout.native_medium)
         }
 
 
         if (isNetworkConnected() && prefUtils.isShowOnBoardingFirstOpen && prefUtils.isShowNativeOnBoarding) {
-            App.adsUtils.nativeOnBoarding1.loadAds(
-                requireActivity(),
-                BuildConfig.native_onboarding_high,
-                BuildConfig.native_onboarding,
-                null,
-                R.layout.native_medium,
-            )
-            App.adsUtils.nativeOnBoarding2.loadAds(
-                requireActivity(),
-                BuildConfig.native_onboarding_high,
-                BuildConfig.native_onboarding,
-                null,
-                R.layout.native_medium
-            )
-            App.adsUtils.nativeOnBoarding3.loadAds(
-                requireActivity(),
-                BuildConfig.native_onboarding_high,
-                BuildConfig.native_onboarding,
-                null,
-                R.layout.native_medium
-            )
+            App.adsUtils.nativeOnBoarding1.loadAds(requireActivity(), R.layout.native_medium)
+            App.adsUtils.nativeOnBoarding2.loadAds(requireActivity(), R.layout.native_medium)
+            App.adsUtils.nativeOnBoarding3.loadAds(requireActivity(), R.layout.native_medium)
         }
 
         if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen && prefUtils.profile == null && prefUtils.isShowNativeCreateUser) {
-            App.adsUtils.nativeCreateUser.loadAds(
-                requireActivity(),
-                BuildConfig.native_create_user_high,
-                BuildConfig.native_create_user,
-                null,
-                R.layout.native_medium
-            )
+            App.adsUtils.nativeCreateUser.loadAds(requireActivity(), R.layout.native_medium)
         } else if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen && prefUtils.profile != null && prefUtils.typeLimitValue.isEmpty() && prefUtils.isShowNativeDefaultValue) {
-            App.adsUtils.nativeDefaultValue.loadAds(
-                requireActivity(),
-                BuildConfig.native_value_high,
-                BuildConfig.native_value,
-                null,
-                R.layout.native_medium
-            )
+            App.adsUtils.nativeDefaultValue.loadAds(requireActivity(), R.layout.native_medium)
         }
     }
 
@@ -108,7 +70,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         FirebaseUtils.eventSplashScreen()
         if (openByChangeLanguage()) {
             val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
-            findNavController().navigate(action)
+            safeNavigate(action)
         }
     }
 
@@ -181,30 +143,29 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private fun onShowSplashScreen() {
         if (fetchRemoteConfig == FetchRemoteConfig.DONE) {
             if (SplashType.OPEN_SPLASH == splashLoadType) {
-                AppOpenManager.getInstance().showAppOpenSplash(
-                    requireActivity() as AppCompatActivity?,
-                    object : AdCallback() {
-                        override fun onNextAction() {
-                            super.onNextAction()
-                            goToMainScreen()
-                        }
-
-                        override fun onAdFailedToShow(adError: AdError?) {
-                            super.onAdFailedToShow(adError)
-                            if ((requireActivity() as? BaseActivity<*, *>)?.isOnResume == false) {
-                                errorShowAdsInBackground = true
+                AppOpenManager.getInstance()
+                    .showAppOpenSplash(requireActivity() as AppCompatActivity?,
+                        object : AdCallback() {
+                            override fun onNextAction() {
+                                super.onNextAction()
+                                goToMainScreen()
                             }
-                            goToMainScreen()
-                        }
 
-                        override fun onAdClosed() {
-                            super.onAdClosed()
-                            goToMainScreen()
-                        }
-                    })
+                            override fun onAdFailedToShow(adError: AdError?) {
+                                super.onAdFailedToShow(adError)
+                                if ((requireActivity() as? BaseActivity<*, *>)?.isOnResume == false) {
+                                    errorShowAdsInBackground = true
+                                }
+                                goToMainScreen()
+                            }
+
+                            override fun onAdClosed() {
+                                super.onAdClosed()
+                                goToMainScreen()
+                            }
+                        })
             } else if (SplashType.INTERSTITIAL == splashLoadType) {
-                AperoAd.getInstance().onShowSplash(
-                    requireActivity() as AppCompatActivity,
+                AperoAd.getInstance().onShowSplash(requireActivity() as AppCompatActivity,
                     object : AperoAdCallback() {
                         override fun onNextAction() {
                             super.onNextAction()
@@ -231,7 +192,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     }
 
     private fun loadSplash() {
-        if (isNetworkConnected()) {
+        if (isNetworkConnected() && context != null) {
             AperoAd.getInstance().loadAppOpenSplashSameTime(requireContext(),
                 BuildConfig.inter_splash,
                 30000,
@@ -350,25 +311,31 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
             }
             if (prefUtils.isShowLanguageFirstOpen) {
                 val action = SplashFragmentDirections.actionSplashFragmentToLanguageFragment()
-                findNavController().navigate(action)
+                safeNavigate(action)
             } else {
                 if (prefUtils.isShowOnBoardingFirstOpen) {
                     val action = SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
-                    findNavController().navigate(action)
+                    safeNavigate(action)
                 } else if (prefUtils.profile == null) {
                     val action =
                         SplashFragmentDirections.actionSplashFragmentToProfileEditFragment()
                     action.editMode = false
-                    findNavController().navigate(action)
+                    safeNavigate(action)
                 } else if (prefUtils.typeLimitValue.isEmpty()) {
                     val action =
                         SplashFragmentDirections.actionSplashFragmentToMeasurementGuidelineDefaultFragment()
-                    findNavController().navigate(action)
+                    safeNavigate(action)
                 } else {
                     val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
-                    findNavController().navigate(action)
+                    safeNavigate(action)
                 }
             }
+        }
+    }
+
+    private fun safeNavigate(action: NavDirections) {
+        if ("splashFragment" == findNavController().currentDestination?.label) {
+            findNavController().navigate(action)
         }
     }
 

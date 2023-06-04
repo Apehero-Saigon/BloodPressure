@@ -20,12 +20,7 @@ class MeasurementGuidelineDefaultFragment :
     override fun initAds() {
         if (isNetworkConnected() && prefUtils.isShowNativeCreateUser) {
             adsUtils.nativeDefaultValue.showAds(
-                requireActivity(),
-                BuildConfig.native_value_high,
-                BuildConfig.native_value,
-                null,
-                R.layout.native_medium,
-                binding.flAds
+                requireActivity(), R.layout.native_medium, binding.flAds, waitForNewAds = true
             )
         } else {
             binding.flAds.gone()

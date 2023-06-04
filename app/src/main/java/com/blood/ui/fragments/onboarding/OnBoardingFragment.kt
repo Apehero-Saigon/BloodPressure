@@ -30,13 +30,7 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
         FirebaseUtils.eventDisplayOnBoarding1()
 
         if (isNetworkConnected() && prefUtils.isShowNativeCreateUser) {
-            App.adsUtils.nativeCreateUser.loadAds(
-                requireActivity(),
-                BuildConfig.native_create_user_high,
-                BuildConfig.native_create_user,
-                null,
-                R.layout.native_medium
-            )
+            App.adsUtils.nativeCreateUser.loadAds(requireActivity(), R.layout.native_medium)
         }
     }
 
@@ -104,14 +98,7 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
                 0 -> adsUtils.nativeOnBoarding1
                 1 -> adsUtils.nativeOnBoarding2
                 else -> adsUtils.nativeOnBoarding3
-            }.showAds(
-                requireActivity(),
-                BuildConfig.native_onboarding,
-                null,
-                null,
-                R.layout.native_medium,
-                binding.flAds
-            )
+            }.showAds(requireActivity(), R.layout.native_medium, binding.flAds)
         } else {
             binding.flAds.visibility = View.GONE
         }

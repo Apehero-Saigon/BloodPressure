@@ -60,14 +60,11 @@ class PopupExit : DialogFragment() {
         }
 
         if (isNetworkConnected(requireContext()) && (PrefUtils.instant.isShowNativeExitHigh || PrefUtils.instant.isShowNativeExit)) {
-            App.adsUtils.nativeLanguage.showAds(
+            App.adsUtils.nativeExit.showAds(
                 requireActivity(),
-                BuildConfig.native_language_high,
-                BuildConfig.native_language,
-                null,
                 R.layout.native_medium,
                 binding.flAds,
-                false,
+                true,
                 reloadAfterShow = true
             )
         } else {

@@ -14,6 +14,7 @@ import com.ads.control.ads.wrapper.ApAdError
 import com.ads.control.ads.wrapper.ApInterstitialAd
 import com.ads.control.ads.wrapper.ApNativeAd
 import com.ads.control.funtion.AdCallback
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.nativead.NativeAdView
@@ -22,34 +23,73 @@ import com.google.android.gms.ads.nativead.NativeAdView
 * implementation 'apero-inhouse:apero-ads:1.0.6-alpha07'
 * */
 class AdsUtils {
+    companion object {
+        val TAG = AdsUtils::class.java.simpleName
+    }
 
     // inter
     val interInsightDetail: InterPriority = InterPriority().apply {
+        idAdsPriority = BuildConfig.inter_insight_details_high
+        idAdsNormal = BuildConfig.inter_insight_details
+
         showAfterClick = 2
         countShown = -2
     }
     val interSave: InterPriority = InterPriority().apply {
+        idAdsPriority = BuildConfig.inter_save_high
+        idAdsNormal = BuildConfig.inter_save
+
         showAfterClick = 2
     }
-    val interInfo: InterPriority = InterPriority()
+    val interInfo: InterPriority = InterPriority().apply {
+        idAdsPriority = BuildConfig.inter_info_high
+        idAdsNormal = BuildConfig.inter_info
+    }
 
     // native
-    val nativeOnBoarding1 = NativeAds()
-    val nativeOnBoarding2 = NativeAds()
-    val nativeOnBoarding3 = NativeAds()
-    val nativeCreateUser = NativeAds()
-    val nativeBloodPressure = NativeAds()
-    val nativeDefaultValue = NativeAds()
-    val nativeLanguage = NativeAds()
-    val nativeExit = NativeAds()
-    val nativeRecentAction = NativeAds()
+    val nativeOnBoarding1 = NativeAds().apply {
+        idAdsNativeHigh = BuildConfig.native_onboarding_high
+        idAdsNativeNormal = BuildConfig.native_onboarding
+    }
+    val nativeOnBoarding2 = NativeAds().apply {
+        idAdsNativeHigh = BuildConfig.native_onboarding_high
+        idAdsNativeNormal = BuildConfig.native_onboarding
+    }
+    val nativeOnBoarding3 = NativeAds().apply {
+        idAdsNativeHigh = BuildConfig.native_onboarding_high
+        idAdsNativeNormal = BuildConfig.native_onboarding
+    }
+    val nativeCreateUser = NativeAds().apply {
+        idAdsNativeHigh = BuildConfig.native_create_user_high
+        idAdsNativeNormal = BuildConfig.native_create_user
+    }
+    val nativeBloodPressure = NativeAds().apply {
+        idAdsNativeHigh = BuildConfig.native_bloodpressure
+    }
+    val nativeDefaultValue = NativeAds().apply {
+        idAdsNativeHigh = BuildConfig.native_value_high
+        idAdsNativeNormal = BuildConfig.native_value
+    }
+    val nativeLanguage = NativeAds().apply {
+        idAdsNativeHigh = BuildConfig.native_language_high
+        idAdsNativeNormal = BuildConfig.native_language
+    }
+    val nativeExit = NativeAds().apply {
+        idAdsNativeHigh = BuildConfig.native_exit_high
+        idAdsNativeNormal = BuildConfig.native_exit
+    }
+    val nativeRecentAction = NativeAds().apply {
+        idAdsNativeHigh = BuildConfig.native_recent_action
+    }
 
     enum class Status {
         LOADING, NONE, FAIL, SUCCESS, SHOWN
     }
 
     class NativeAds {
-        var apNativeAd: ApNativeAd? = null
+        private val TAG = NativeAds::class.java.name
+
+        private var apNativeAd: ApNativeAd? = null
 
         var idAdsNativeHigh: String? = null
         var idAdsNativeNormal: String? = null
@@ -61,37 +101,30 @@ class AdsUtils {
 
         private var status = Status.NONE
 
-        var clearAdsAfterShow = false
-
         private var layoutCustom: Int = 0
         private var container: FrameLayout? = null
-        private var keepLayout: Boolean = false
 
 
         fun isLoadingAds() = status == Status.LOADING
 
-        fun isFailOrShownOrNoneAds() =
+        private fun isFailOrShownOrNoneAds() =
             status == Status.FAIL || status == Status.SHOWN || status == Status.NONE
 
         private fun resetShowAfterData() {
             this.layoutCustom = 0
             this.container = null
-            this.keepLayout = false
         }
 
         fun showAds(
             activity: Activity,
-            idAdsNativeHigh: String?,
-            idAdsNativeNormal: String?,
-            idAdsNativeLow: String?,
             @LayoutRes layoutCustom: Int,
             container: FrameLayout,
-            keepLayout: Boolean = false,
+            waitForNewAds: Boolean = false,
             reloadAfterShow: Boolean = false
         ) {
             if (status == Status.LOADING) {
                 resetShowAfterData()
-                if (canShowAds()) {
+                if (canShowAds() && !waitForNewAds) {
                     populateNativeAdView(activity, apNativeAd!!, layoutCustom, container)
                 } else {
                     this.layoutCustom = layoutCustom
@@ -100,62 +133,31 @@ class AdsUtils {
             } else {
                 this.layoutCustom = 0
                 this.container = null
-                this.keepLayout = false
                 if (((!idAdsNativeHigh.isNullOrEmpty() || !idAdsNativeNormal.isNullOrEmpty() || !idAdsNativeLow.isNullOrEmpty()) && !canShowAds()) || !canShowAds()) {
-                    loadAds(activity,
-                        idAdsNativeHigh,
-                        idAdsNativeNormal,
-                        idAdsNativeLow,
-                        layoutCustom,
-                        true,
-                        object : AperoAdCallback() {
-                            override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
-                                super.onNativeAdLoaded(nativeAd)
-                                this@NativeAds.apNativeAd = nativeAd
-                                populateNativeAdView(
-                                    activity, nativeAd, layoutCustom, container
-                                )
-                                if (reloadAfterShow) {
-                                    loadAds(
-                                        activity,
-                                        idAdsNativeHigh,
-                                        idAdsNativeNormal,
-                                        idAdsNativeLow,
-                                        layoutCustom
-                                    )
-                                }
-                                status = Status.SHOWN
+                    loadAds(activity, layoutCustom, true, object : AperoAdCallback() {
+                        override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
+                            super.onNativeAdLoaded(nativeAd)
+                            this@NativeAds.apNativeAd = nativeAd
+                            populateNativeAdView(activity, nativeAd, layoutCustom, container)
+                            if (reloadAfterShow) {
+                                loadAds(activity, layoutCustom, false)
                             }
+                            status = Status.SHOWN
+                        }
 
-                            override fun onAdFailedToLoad(adError: ApAdError?) {
-                                super.onAdFailedToLoad(adError)
-                                status = Status.FAIL
-                                if (keepLayout) {
-                                    container.visibility = View.INVISIBLE
-                                } else {
-                                    container.visibility = View.GONE
-                                }
-                            }
-                        })
+                        override fun onAdFailedToLoad(adError: ApAdError?) {
+                            super.onAdFailedToLoad(adError)
+                            status = Status.FAIL
+                            container.visibility = View.GONE
+                        }
+                    })
                 } else if (canShowAds()) {
-                    populateNativeAdView(
-                        activity, apNativeAd!!, layoutCustom, container
-                    )
+                    populateNativeAdView(activity, apNativeAd!!, layoutCustom, container)
                     if (reloadAfterShow) {
-                        loadAds(
-                            activity,
-                            idAdsNativeHigh,
-                            idAdsNativeNormal,
-                            idAdsNativeLow,
-                            layoutCustom
-                        )
+                        loadAds(activity, layoutCustom, false)
                     }
                 } else {
-                    if (keepLayout) {
-                        container.visibility = View.INVISIBLE
-                    } else {
-                        container.visibility = View.GONE
-                    }
+                    container.visibility = View.GONE
                 }
             }
         }
@@ -167,50 +169,38 @@ class AdsUtils {
             container: FrameLayout
         ) {
             if (activity != null) {
-                val adView =
-                    LayoutInflater.from(activity).inflate(layoutCustom, null) as NativeAdView
-                Admob.getInstance().populateUnifiedNativeAdView(nativeAd.admobNativeAd, adView)
-                container.removeAllViews()
-                container.post {
-                    container.addView(adView)
+                try {
+                    val adView =
+                        LayoutInflater.from(activity).inflate(layoutCustom, null) as NativeAdView
+                    Admob.getInstance().populateUnifiedNativeAdView(nativeAd.admobNativeAd, adView)
+                    container.removeAllViews()
+                    container.post {
+                        container.addView(adView)
+                    }
+                    Log.d(TAG, "NativeAds populateNativeAdView: Shown")
+                    resetShowAfterData()
+                } catch (ex: Exception) {
+                    Log.d(TAG, "NativeAds populateNativeAdView: Fail")
+                    status = Status.FAIL
+                    ex.printStackTrace()
+                } finally {
                 }
-                Log.d(AdsUtils::class.java.simpleName, "NativeAds populateNativeAdView: Shown")
-                resetShowAfterData()
             } else {
-                Log.d(AdsUtils::class.java.simpleName, "NativeAds populateNativeAdView: Show fail")
-            }
-            if (clearAdsAfterShow) {
-                this@NativeAds.apNativeAd?.admobNativeAd?.destroy()
-                this@NativeAds.apNativeAd = null
+                Log.d(TAG, "NativeAds populateNativeAdView: Show fail")
             }
         }
 
         fun loadAds(
             activity: Activity,
-            idAdsNativeHigh: String?,
-            idAdsNativeNormal: String?,
-            idAdsNativeLow: String?,
             @LayoutRes layoutCustom: Int,
             notReloadIfReady: Boolean = true,
             listener: AperoAdCallback? = null
         ) {
             if (notReloadIfReady && !isFailOrShownOrNoneAds()) return
-            Log.d(
-                AdsUtils::class.java.simpleName,
-                "NativeAds loadAds: idAdsNativeHigh $idAdsNativeHigh"
-            )
-            Log.d(
-                AdsUtils::class.java.simpleName,
-                "NativeAds loadAds: idAdsNativeNormal $idAdsNativeNormal"
-            )
-            Log.d(
-                AdsUtils::class.java.simpleName, "NativeAds loadAds: idAdsNativeLow $idAdsNativeLow"
-            )
+            Log.d(TAG, "NativeAds loadAds: idAdsNativeHigh $idAdsNativeHigh")
+            Log.d(TAG, "NativeAds loadAds: idAdsNativeNormal $idAdsNativeNormal")
+            Log.d(TAG, "NativeAds loadAds: idAdsNativeLow $idAdsNativeLow")
             status = Status.LOADING
-            this.idAdsNativeHigh = idAdsNativeHigh
-            this.idAdsNativeNormal = idAdsNativeNormal
-            this.idAdsNativeLow = idAdsNativeLow
-
             AperoAd.getInstance().loadNative3SameTime(activity,
                 idAdsNativeHigh,
                 idAdsNativeNormal,
@@ -222,7 +212,7 @@ class AdsUtils {
                         this@NativeAds.apNativeAd = nativeAd
                         status = Status.SUCCESS
 
-                        Log.d(AdsUtils::class.java.simpleName, "NativeAds onNativeAdLoaded")
+                        Log.d(TAG, "NativeAds onNativeAdLoaded")
                         listener?.onNativeAdLoaded(nativeAd)
 
                         if (this@NativeAds.container != null) {
@@ -235,14 +225,8 @@ class AdsUtils {
                     override fun onAdFailedToLoad(adError: ApAdError?) {
                         super.onAdFailedToLoad(adError)
                         status = Status.FAIL
-                        this@NativeAds.apNativeAd = null
-
-                        Log.d(AdsUtils::class.java.simpleName, "NativeAds onAdFailedToLoad")
+                        Log.d(TAG, "NativeAds onAdFailedToLoad")
                         listener?.onAdFailedToLoad(adError)
-                    }
-
-                    override fun onAdClicked() {
-                        super.onAdClicked()
                     }
                 })
         }
@@ -337,9 +321,7 @@ class AdsUtils {
                 { isReload ->
                     nextActionCallBack()
                     if (isReload) {
-                        loadInterPrioritySameTime(
-                            context, idAdsPriority, idAdsNormal, reloadAfterShow, false
-                        )
+                        loadInterPrioritySameTime(context, false, null)
                     }
                 }
             }
@@ -352,6 +334,15 @@ class AdsUtils {
                                 finishCallback(reloadAfterShow)
                                 lastShowInter = System.currentTimeMillis()
                                 statusHigh = Status.SHOWN
+                                Log.d(
+                                    TAG, "inter forceShowInterstitial: idAdsPriority $idAdsPriority"
+                                )
+                            }
+
+                            override fun onAdFailedToShow(adError: ApAdError?) {
+                                super.onAdFailedToShow(adError)
+                                Log.d(TAG, "inter onAdFailedToShow: idAdsPriority $idAdsPriority")
+                                countShown = 0
                             }
                         }, false
                     )
@@ -363,22 +354,31 @@ class AdsUtils {
                                 finishCallback(reloadAfterShow)
                                 lastShowInter = System.currentTimeMillis()
                                 statusNormal = Status.SHOWN
+                                Log.d(TAG, "forceShowInterstitial: idAdsNormal $idAdsNormal")
+                            }
+
+                            override fun onAdFailedToShow(adError: ApAdError?) {
+                                super.onAdFailedToShow(adError)
+                                countShown = 0
+                                Log.d(TAG, "inter onAdFailedToShow: idAdsNormal $idAdsNormal")
                             }
                         }, false
                     )
                 } else {
                     AperoAd.getInstance().forceShowInterstitial(
                         context, interAdsPriority, object : AperoAdCallback() {
-
                             override fun onNextAction() {
                                 super.onNextAction()
                                 finishCallback(reloadAfterShow)
                                 lastShowInter = System.currentTimeMillis()
                                 statusHigh = Status.SHOWN
+                                Log.d(TAG, "forceShowInterstitial: idAdsPriority $idAdsPriority")
                             }
+
 
                             override fun onAdFailedToShow(adError: ApAdError?) {
                                 super.onAdFailedToShow(adError)
+                                Log.d(TAG, "inter onAdFailedToShow: idAdsPriority $idAdsPriority")
 
                                 //show Normal Ads If fail Priority
                                 AperoAd.getInstance().forceShowInterstitial(
@@ -388,6 +388,19 @@ class AdsUtils {
                                             finishCallback(reloadAfterShow)
                                             lastShowInter = System.currentTimeMillis()
                                             statusNormal = Status.SHOWN
+                                            Log.d(
+                                                TAG,
+                                                "forceShowInterstitial: idAdsNormal $idAdsNormal"
+                                            )
+                                        }
+
+                                        override fun onAdFailedToShow(adError: ApAdError?) {
+                                            super.onAdFailedToShow(adError)
+                                            countShown = 0
+                                            Log.d(
+                                                TAG,
+                                                "inter onAdFailedToShow: idAdsNormal $idAdsNormal"
+                                            )
                                         }
                                     }, false
                                 )
@@ -396,31 +409,19 @@ class AdsUtils {
                     )
                 }
             } else {
-                finishCallback(mustReloadAds())
+                finishCallback(reloadAfterShow && mustReloadAds())
             }
         }
 
         fun loadInterPrioritySameTime(
-            context: Context,
-            idAdsPriority: String?,
-            idAdsNormal: String?,
-            isReloadFailAds: Boolean = true,
-            notLoadIfReady: Boolean = true,
-            listener: Listener? = null
+            context: Context, notLoadIfReady: Boolean = true, listener: Listener? = null
         ) {
-            if (notLoadIfReady && !mustReloadAds()) return
-            if (isReloadFailAds) {
-                if (statusHigh == Status.FAIL) {
-                    interAdsPriority = null
-                }
-                if (statusNormal == Status.FAIL) {
-                    interAdsNormal = null
-                }
-            }
-            this.idAdsPriority = idAdsPriority
-            this.idAdsNormal = idAdsNormal
+            if (notLoadIfReady && !mustReloadAds() || (statusHigh == Status.LOADING || statusNormal == Status.LOADING)) return
+
+            statusHigh = Status.NONE
             if (isShowHighAds && !idAdsPriority.isNullOrEmpty()) {
                 statusHigh = Status.LOADING
+                Log.d(TAG, "onInterstitialLoad: idAdsPriority $idAdsPriority")
                 AperoAd.getInstance()
                     .getInterstitialAds(context, idAdsPriority, object : AperoAdCallback() {
                         override fun onInterstitialLoad(interstitialAd: ApInterstitialAd?) {
@@ -441,8 +442,10 @@ class AdsUtils {
                     })
             }
 
+            statusNormal = Status.NONE
             if (isShowNormalAds && !idAdsNormal.isNullOrEmpty()) {
                 statusNormal = Status.LOADING
+                Log.d(TAG, "onInterstitialLoad: idAdsNormal $idAdsNormal")
                 AperoAd.getInstance()
                     .getInterstitialAds(context, idAdsNormal, object : AperoAdCallback() {
                         override fun onInterstitialLoad(interstitialAd: ApInterstitialAd?) {
@@ -450,7 +453,7 @@ class AdsUtils {
                             Log.d(TAG, "onInterstitialLoad: idAdsNormal SUCCESS $idAdsNormal")
                             interAdsNormal = interstitialAd
                             listener?.onAdsNormalLoaded(interstitialAd)
-                            statusHigh = Status.SUCCESS
+                            statusNormal = Status.SUCCESS
                         }
 
                         override fun onAdFailedToLoad(adError: ApAdError?) {
