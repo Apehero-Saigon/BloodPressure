@@ -3,7 +3,6 @@ package com.blood.ui.fragments.measurementguideline
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.common.Constant
@@ -20,9 +19,10 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentMeasurementGuidelineBinding
 
-class MeasurementGuidelineFragment : BaseFragment<BaseViewModel, FragmentMeasurementGuidelineBinding>(
-    R.layout.fragment_measurement_guideline, BaseViewModel::class.java
-), HeaderView.Listener {
+class MeasurementGuidelineFragment :
+    BaseFragment<BaseViewModel, FragmentMeasurementGuidelineBinding>(
+        R.layout.fragment_measurement_guideline, BaseViewModel::class.java
+    ), HeaderView.Listener {
 
     val adapter = LimitValueAdapter()
 
@@ -96,6 +96,6 @@ class MeasurementGuidelineFragment : BaseFragment<BaseViewModel, FragmentMeasure
     }
 
     override fun onHeaderBackPressed() {
-        findNavController().navigateUp()
+        safeBackNav()
     }
 }

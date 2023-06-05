@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
 import com.blood.common.Constant
@@ -19,7 +18,6 @@ import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.gone
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentBloodPressureEditBinding
 import java.util.Date
@@ -99,10 +97,10 @@ class BloodPressureEditFragment :
                                 BloodPressureEditFragmentDirections.actionBloodPressureEditFragmentToBloodPressureDetailFragment()
                             action.id = bloodPressure.id
                             action.viewDetail = false
-                            findNavController().navigate(action)
+                            safeNav(action)
                         }
                     } else {
-                        findNavController().navigateUp()
+                        safeBackNav()
                     }
                 }
             } else {
@@ -138,7 +136,7 @@ class BloodPressureEditFragment :
     }
 
     override fun onHeaderBackPressed() {
-        findNavController().navigateUp()
+        safeBackNav()
     }
 
     private fun updateBloodPressure() {

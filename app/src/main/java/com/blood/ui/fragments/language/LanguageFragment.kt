@@ -1,14 +1,12 @@
 package com.blood.ui.fragments.language
 
 import android.view.View
-import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.ui.adapters.LanguageAdapter
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.LanguageUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentLanguageBinding
 
@@ -43,7 +41,7 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
                 LanguageUtils.loadLocale(requireContext(), chooseLang.code)
 
                 val action = LanguageFragmentDirections.actionLanguageFragmentToOnBoardingFragment()
-                findNavController().navigate(action)
+                safeNav(action)
             } else {
                 requireActivity().finish()
             }

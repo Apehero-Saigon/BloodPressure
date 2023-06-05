@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.blood.ui.fragments.splash.SplashFragment"
-        android:label="splashFragment"
+        android:label="SplashFragment"
         tools:layout="@layout/fragment_splash">
 
         <action
@@ -43,6 +43,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.blood.ui.fragments.home.HomeFragment"
+        android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
 
         <action
@@ -71,6 +72,7 @@
     <fragment
         android:id="@+id/languageFragment"
         android:name="com.blood.ui.fragments.language.LanguageFragment"
+        android:label="LanguageFragment"
         tools:layout="@layout/fragment_language">
         <action
             android:id="@+id/action_languageFragment_to_onBoardingFragment"
@@ -82,6 +84,7 @@
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.blood.ui.fragments.onboarding.OnBoardingFragment"
+        android:label="OnBoardingFragment"
         tools:layout="@layout/fragment_onboarding">
         <action
             android:id="@+id/action_onBoardingFragment_to_profileEditFragment"
@@ -93,11 +96,13 @@
     <fragment
         android:id="@+id/onBoardingPageFragment"
         android:name="com.blood.ui.fragments.onboarding.OnBoardingPageFragment"
+        android:label="OnBoardingPageFragment"
         tools:layout="@layout/fragment_onboarding_page" />
 
     <fragment
         android:id="@+id/profileEditFragment"
         android:name="com.blood.ui.fragments.profile.ProfileEditFragment"
+        android:label="ProfileEditFragment"
         tools:layout="@layout/fragment_profile_edit">
 
         <argument
@@ -119,16 +124,19 @@
     <fragment
         android:id="@+id/disclaimerFragment"
         android:name="com.blood.ui.fragments.reference.DisclaimerFragment"
+        android:label="DisclaimerFragment"
         tools:layout="@layout/fragment_disclaimer" />
 
     <fragment
         android:id="@+id/languageSettingFragment"
         android:name="com.blood.ui.fragments.language.LanguageSettingFragment"
+        android:label="LanguageSettingFragment"
         tools:layout="@layout/fragment_language_setting" />
 
     <fragment
         android:id="@+id/infoDetailFragment"
         android:name="com.blood.ui.fragments.info.InfoDetailFragment"
+        android:label="InfoDetailFragment"
         tools:layout="@layout/fragment_info_detail">
 
         <argument
@@ -140,6 +148,7 @@
     <fragment
         android:id="@+id/bloodPressureDetailFragment"
         android:name="com.blood.ui.fragments.bloodpressure.BloodPressureDetailFragment"
+        android:label="BloodPressureDetailFragment"
         tools:layout="@layout/fragment_blood_pressure_detail">
 
         <argument
@@ -165,6 +174,7 @@
     <fragment
         android:id="@+id/bloodPressureEditFragment"
         android:name="com.blood.ui.fragments.bloodpressure.BloodPressureEditFragment"
+        android:label="BloodPressureEditFragment"
         tools:layout="@layout/fragment_blood_pressure_edit">
 
         <argument
@@ -191,17 +201,19 @@
     <fragment
         android:id="@+id/insightBloodPressureFragment"
         android:name="com.blood.ui.fragments.insight.InsightBloodPressureFragment"
+        android:label="InsightBloodPressureFragment"
         tools:layout="@layout/fragment_insight_blood_pressure" />
 
     <fragment
         android:id="@+id/measurementGuidelineFragment"
         android:name="com.blood.ui.fragments.measurementguideline.MeasurementGuidelineFragment"
+        android:label="MeasurementGuidelineFragment"
         tools:layout="@layout/fragment_measurement_guideline" />
-
 
     <fragment
         android:id="@+id/measurementGuidelineDefaultFragment"
         android:name="com.blood.ui.fragments.measurementguideline.MeasurementGuidelineDefaultFragment"
+        android:label="MeasurementGuidelineDefaultFragment"
         tools:layout="@layout/fragment_measurement_default">
         <action
             android:id="@+id/action_measurementGuidelineDefaultFragment_to_homeFragment"

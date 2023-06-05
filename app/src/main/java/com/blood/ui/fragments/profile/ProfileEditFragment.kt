@@ -1,17 +1,14 @@
 package com.blood.ui.fragments.profile
 
 import android.graphics.Typeface
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.App
 import com.blood.base.BaseFragment
 import com.blood.data.Profile
-import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.DateUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.gone
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentProfileEditBinding
 
@@ -79,7 +76,7 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
                 prefUtils.profile = profile
                 val action =
                     ProfileEditFragmentDirections.actionProfileEditFragmentToMeasurementGuidelineDefaultFragment()
-                findNavController().navigate(action)
+                safeNav(action)
             } else {
                 toast(getString(R.string.cannot_add_profile))
             }

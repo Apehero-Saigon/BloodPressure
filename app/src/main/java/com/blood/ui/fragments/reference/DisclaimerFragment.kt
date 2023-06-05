@@ -2,11 +2,9 @@ package com.blood.ui.fragments.reference
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
-import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
@@ -29,6 +27,6 @@ class DisclaimerFragment : BaseFragment<BaseViewModel, FragmentDisclaimerBinding
     }
 
     override fun onHeaderBackPressed() {
-        findNavController().navigateUp()
+        safeBackNav()
     }
 }

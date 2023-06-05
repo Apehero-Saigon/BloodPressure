@@ -2,7 +2,6 @@ package com.blood.ui.fragments.info
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
@@ -38,6 +37,6 @@ class InfoDetailFragment : BaseFragment<BaseViewModel, FragmentInfoDetailBinding
 
     override fun onHeaderBackPressed() {
         FirebaseUtils.eventClickBackInfoPost()
-        findNavController().navigateUp()
+        safeBackNav()
     }
 }

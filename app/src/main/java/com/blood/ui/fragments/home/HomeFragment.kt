@@ -2,13 +2,12 @@ package com.blood.ui.fragments.home
 
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentHomeBinding
 import com.blood.base.BaseFragment
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentHomeBinding
 
 class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     R.layout.fragment_home, HomeViewModel::class.java
@@ -46,6 +45,6 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     }
 
     override fun navigateTo(action: NavDirections) {
-        findNavController().navigate(action)
+        safeNav(action)
     }
 }

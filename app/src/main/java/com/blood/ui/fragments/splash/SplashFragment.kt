@@ -3,9 +3,6 @@ package com.blood.ui.fragments.splash
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.NavDestination
-import androidx.navigation.NavDirections
-import androidx.navigation.fragment.findNavController
 import com.ads.control.admob.AppOpenManager
 import com.ads.control.ads.AperoAd
 import com.ads.control.ads.AperoAdCallback
@@ -70,7 +67,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         FirebaseUtils.eventSplashScreen()
         if (openByChangeLanguage()) {
             val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
-            safeNavigate(action)
+            safeNav(action)
         }
     }
 
@@ -143,8 +140,8 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private fun onShowSplashScreen() {
         if (fetchRemoteConfig == FetchRemoteConfig.DONE) {
             if (SplashType.OPEN_SPLASH == splashLoadType) {
-                AppOpenManager.getInstance()
-                    .showAppOpenSplash(requireActivity() as AppCompatActivity?,
+                AppOpenManager.getInstance().showAppOpenSplash(
+                        requireActivity() as AppCompatActivity?,
                         object : AdCallback() {
                             override fun onNextAction() {
                                 super.onNextAction()
@@ -165,7 +162,8 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
                             }
                         })
             } else if (SplashType.INTERSTITIAL == splashLoadType) {
-                AperoAd.getInstance().onShowSplash(requireActivity() as AppCompatActivity,
+                AperoAd.getInstance().onShowSplash(
+                    requireActivity() as AppCompatActivity,
                     object : AperoAdCallback() {
                         override fun onNextAction() {
                             super.onNextAction()
@@ -311,31 +309,25 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
             }
             if (prefUtils.isShowLanguageFirstOpen) {
                 val action = SplashFragmentDirections.actionSplashFragmentToLanguageFragment()
-                safeNavigate(action)
+                safeNav(action)
             } else {
                 if (prefUtils.isShowOnBoardingFirstOpen) {
                     val action = SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
-                    safeNavigate(action)
+                    safeNav(action)
                 } else if (prefUtils.profile == null) {
                     val action =
                         SplashFragmentDirections.actionSplashFragmentToProfileEditFragment()
                     action.editMode = false
-                    safeNavigate(action)
+                    safeNav(action)
                 } else if (prefUtils.typeLimitValue.isEmpty()) {
                     val action =
                         SplashFragmentDirections.actionSplashFragmentToMeasurementGuidelineDefaultFragment()
-                    safeNavigate(action)
+                    safeNav(action)
                 } else {
                     val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
-                    safeNavigate(action)
+                    safeNav(action)
                 }
             }
-        }
-    }
-
-    private fun safeNavigate(action: NavDirections) {
-        if ("splashFragment" == findNavController().currentDestination?.label) {
-            findNavController().navigate(action)
         }
     }
 

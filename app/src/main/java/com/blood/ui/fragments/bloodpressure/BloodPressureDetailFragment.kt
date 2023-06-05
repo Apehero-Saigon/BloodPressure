@@ -5,14 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.PopupMenu
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
-import com.blood.data.BloodPressure
-import com.blood.data.Recommended
 import com.blood.ui.dialog.YesNoPopup
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
-import com.blood.utils.AssetUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.customview.HeaderView
@@ -20,8 +16,6 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentBloodPressureDetailBinding
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 class BloodPressureDetailFragment :
     BaseFragment<BloodPressureViewModel, FragmentBloodPressureDetailBinding>(
@@ -59,13 +53,13 @@ class BloodPressureDetailFragment :
 
         with(binding) {
             tvDisclaimer.clickWithDebounce {
-                findNavController().navigate(BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToDisclaimerFragment())
+                safeNav(BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToDisclaimerFragment())
             }
 
             btnHelp.clickWithDebounce {
                 val action =
                     BloodPressureDetailFragmentDirections.actionBloodPressureDetailFragmentToMeasurementGuidelineFragment()
-                findNavController().navigate(action)
+                safeNav(action)
             }
         }
 
@@ -89,7 +83,7 @@ class BloodPressureDetailFragment :
 
     private fun onBack() {
         FirebaseUtils.eventClickBloodDetailBack()
-        findNavController().popBackStack(R.id.homeFragment, inclusive = false, saveState = true)
+        safePopBackStackNav(R.id.homeFragment, inclusive = false, saveState = true)
     }
 
     private fun showOptionPopup(view: View) {
@@ -104,7 +98,7 @@ class BloodPressureDetailFragment :
                     action.modeAdd = false
                     action.mustShowBackButton = true
                     action.id = args.id
-                    findNavController().navigate(action)
+                    safeNav(action)
                     true
                 }
 

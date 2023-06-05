@@ -2,10 +2,7 @@ package com.blood.ui.fragments.info
 
 import android.content.Context
 import android.view.inputmethod.EditorInfo
-import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.recyclerview.widget.GridLayoutManager
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentInfoBinding
 import com.blood.base.BaseFragment
 import com.blood.base.recyclerview.BaseRecyclerViewListener
 import com.blood.data.InfoKnowledge
@@ -16,6 +13,8 @@ import com.blood.ui.fragments.home.HomeViewModel
 import com.blood.ui.fragments.home.IHomeUi
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.textTrim
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentInfoBinding
 
 class InfoFragment : BaseFragment<HomeViewModel, FragmentInfoBinding>(
     R.layout.fragment_info, HomeViewModel::class.java

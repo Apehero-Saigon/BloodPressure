@@ -11,7 +11,6 @@ import com.blood.ui.fragments.home.HomeFragment
 import com.blood.ui.fragments.home.HomeFragmentDirections
 import com.blood.ui.fragments.home.IHomeUi
 import com.blood.utils.FirebaseUtils
-import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentDashboardBinding

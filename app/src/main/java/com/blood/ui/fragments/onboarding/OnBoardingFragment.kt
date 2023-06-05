@@ -2,18 +2,15 @@ package com.blood.ui.fragments.onboarding
 
 import android.annotation.SuppressLint
 import android.view.View
-import android.widget.LinearLayout
-import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.blood.App
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentOnboardingBinding
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.ui.adapters.OnBoardingPageAdapter
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentOnboardingBinding
 
 class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding>(
     R.layout.fragment_onboarding, BaseViewModel::class.java
@@ -80,7 +77,7 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
                     OnBoardingFragmentDirections.actionOnBoardingFragmentToProfileEditFragment()
                 action.allowBack = false
                 action.editMode = false
-                findNavController().navigate(action)
+                safeNav(action)
             } else {
                 binding.viewPager.currentItem++
             }

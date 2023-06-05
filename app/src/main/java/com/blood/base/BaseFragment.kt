@@ -11,17 +11,19 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import com.blood.App
-import com.blood.base.recyclerview.BaseRecyclerViewListener
 import com.blood.ui.dialog.PopupExit
 import com.blood.utils.LanguageUtils
+import com.blood.utils.NavigationUtils.safeNavigateAction
+import com.blood.utils.NavigationUtils.safeNavigationUp
+import com.blood.utils.NavigationUtils.safePopBackStack
 import com.blood.utils.PrefUtils
-import dagger.android.AndroidInjection
-import dagger.android.support.DaggerFragment
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
+import dagger.android.AndroidInjection
+import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
 open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constructor(
@@ -96,8 +98,7 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
         initListener()
 
         if (backPressedWithExitPopup()) {
-            requireActivity().onBackPressedDispatcher.addCallback(
-                viewLifecycleOwner,
+            requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
                 object : OnBackPressedCallback(true) {
                     override fun handleOnBackPressed() {
                         showPopupExit()
@@ -111,6 +112,18 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
         if (context is BaseActivity<*, *>) {
             iBase = context
         }
+    }
+
+    fun safeNav(action: NavDirections) {
+        safeNavigateAction(action)
+    }
+
+    fun safeBackNav() {
+        safeNavigationUp()
+    }
+
+    fun safePopBackStackNav(id: Int, inclusive: Boolean, saveState: Boolean) {
+        safePopBackStack(id, inclusive, saveState)
     }
 
     override fun onStop() {
@@ -131,7 +144,7 @@ open class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding> @Inject constr
     }
 
     open fun goBack() {
-        findNavController().popBackStack()
+        safeBackNav()
     }
 
     override fun showLoading(content: String) {

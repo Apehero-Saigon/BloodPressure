@@ -7,7 +7,6 @@ import com.blood.ui.fragments.home.HomeFragmentDirections
 import com.blood.ui.fragments.home.IHomeUi
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentInsightBinding
 

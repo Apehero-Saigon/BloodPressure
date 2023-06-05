@@ -3,7 +3,6 @@ package com.blood.ui.fragments.language
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.base.recyclerview.BaseRecyclerViewListener
@@ -26,7 +25,7 @@ class LanguageSettingFragment : BaseFragment<BaseViewModel, FragmentLanguageSett
     }
 
     override fun onHeaderBackPressed() {
-        findNavController().navigateUp()
+        safeBackNav()
     }
 
     override fun onClick(data: Language, position: Int) {
