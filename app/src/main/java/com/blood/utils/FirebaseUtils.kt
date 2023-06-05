@@ -67,6 +67,21 @@ object FirebaseUtils {
     private const val POP_UP_CONFIRM = "pop_up_confirm"
     private const val CLICK_SAVE_POP_UP_CONFIRM = "click_save_pop_up_confirm"
     private const val CLICK_CANCEL_POP_UP_CONFIRM = "click_cancel_pop_up_confirm"
+    private const val SCR_CHOOSE_GUIDE = "scr_choose_guide"
+    private const val SRC_GUIDELINE = "src_guideline"
+    private const val CLICK_OK_SCR_CHOOSE_GUIDE = "click_ok_scr_choose_guide"
+
+    fun eventDisplayGuidelineScreen() {
+        fbAnalytics?.logEvent(SCR_CHOOSE_GUIDE, null)
+    }
+
+    fun eventDisplayGuidelineSettingScreen() {
+        fbAnalytics?.logEvent(SRC_GUIDELINE, null)
+    }
+
+    fun eventClickGuidelineChoose() {
+        fbAnalytics?.logEvent(CLICK_OK_SCR_CHOOSE_GUIDE, null)
+    }
 
     fun eventSplashScreen() {
         fbAnalytics?.logEvent(SPLASH_SCREEN, null)

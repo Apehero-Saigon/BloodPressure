@@ -11,6 +11,7 @@ import com.blood.data.LimitValue
 import com.blood.ui.adapters.LimitValueAdapter
 import com.blood.utils.AdsUtils.BannerUtils.loadBanner
 import com.blood.utils.AppUtils
+import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.textTrim
 import com.blood.utils.customview.HeaderView
@@ -42,6 +43,7 @@ class MeasurementGuidelineFragment : BaseFragment<BaseViewModel, FragmentMeasure
     }
 
     override fun initData() {
+        FirebaseUtils.eventDisplayGuidelineSettingScreen()
         updateTypeValue(prefUtils.typeLimitValue)
     }
 
