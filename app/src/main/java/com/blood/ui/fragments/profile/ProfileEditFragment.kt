@@ -8,7 +8,6 @@ import com.blood.data.Profile
 import com.blood.utils.DateUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
-import com.blood.utils.ViewUtils.gone
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentProfileEditBinding
 
@@ -21,19 +20,11 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
     override fun backPressedWithExitPopup() = args.editMode == false
 
     override fun initAds() {
-        if (isNetworkConnected() && prefUtils.isShowNativeCreateUser) {
-            adsUtils.nativeCreateUser.showAds(
-                requireActivity(),
-                R.layout.layout_native_medium_custom,
-                binding.flAds
-            )
-        } else {
-            binding.flAds.gone()
-        }
+        adsUtils.nativeCreateUser.showAds(
+            requireActivity(), binding.flAds, waitForNewAds = false, reloadAfterShow = false
+        )
 
-        if (isNetworkConnected() && prefUtils.isShowNativeDefaultValue) {
-            App.adsUtils.nativeDefaultValue.loadAds(requireActivity(), R.layout.native_medium)
-        }
+        App.adsUtils.nativeDefaultValue.loadAds(requireActivity())
     }
 
     override fun initView() {

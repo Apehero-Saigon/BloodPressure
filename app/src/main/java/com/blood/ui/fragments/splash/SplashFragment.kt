@@ -38,29 +38,19 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private var finishedSplash = false
 
     override fun initAds() {
-        if (prefUtils.isShowNativeExitHigh || prefUtils.isShowNativeExit) {
-            adsUtils.nativeExit.loadAds(requireActivity(), R.layout.native_medium)
+        adsUtils.nativeExit.loadAds(requireActivity())
+
+        if (prefUtils.isShowLanguageFirstOpen) {
+            adsUtils.nativeLanguage.loadAds(requireActivity())
         }
 
-        if (prefUtils.isShowNativeLanguage && prefUtils.isShowLanguageFirstOpen) {
-            adsUtils.nativeLanguage.loadAds(requireActivity(), R.layout.native_medium)
+
+        if (!prefUtils.isShowLanguageFirstOpen && prefUtils.isShowOnBoardingFirstOpen) {
+            App.adsUtils.nativeOnBoarding.loadAds(requireActivity())
         }
 
-
-        if (isNetworkConnected()
-            && !prefUtils.isShowLanguageFirstOpen
-            && prefUtils.isShowOnBoardingFirstOpen
-            && prefUtils.isShowNativeOnBoarding
-        ) {
-            App.adsUtils.nativeOnBoarding.loadAds(requireActivity(), R.layout.native_medium)
-        }
-
-        if (isNetworkConnected()
-            && !prefUtils.isShowLanguageFirstOpen
-            && !prefUtils.isShowOnBoardingFirstOpen
-            && prefUtils.isShowNativeBloodPressure
-        ) {
-            App.adsUtils.nativeBloodPressure.loadAds(requireActivity(), R.layout.native_medium)
+        if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen) {
+            App.adsUtils.nativeBloodPressure.loadAds(requireActivity())
         }
     }
 

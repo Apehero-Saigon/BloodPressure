@@ -9,13 +9,9 @@ import android.view.Window
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import com.blood.App
-import com.blood.utils.PrefUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.DialogExitBinding
-import com.ironsource.mediationsdk.utils.IronSourceUtils.isNetworkConnected
-import javax.inject.Inject
 
 class PopupExit : DialogFragment() {
 
@@ -59,16 +55,8 @@ class PopupExit : DialogFragment() {
             }
         }
 
-        if (isNetworkConnected(requireContext()) && (PrefUtils.instant.isShowNativeExitHigh || PrefUtils.instant.isShowNativeExit)) {
-            App.adsUtils.nativeExit.showAds(
-                requireActivity(),
-                R.layout.native_medium,
-                binding.flAds,
-                true,
-                reloadAfterShow = true
-            )
-        } else {
-            binding.flAds.visibility = View.GONE
-        }
+        App.adsUtils.nativeExit.showAds(
+            requireActivity(), binding.flAds, waitForNewAds = true, reloadAfterShow = true
+        )
     }
 }

@@ -1,6 +1,5 @@
 package com.blood.ui.fragments.onboarding
 
-import android.view.View
 import com.blood.App
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
@@ -22,17 +21,10 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
 
     override fun initAds() {
         FirebaseUtils.eventDisplayOnBoarding()
-        if (isNetworkConnected() && prefUtils.isShowNativeOnBoarding) {
-            adsUtils.nativeOnBoarding.showAds(
-                requireActivity(), R.layout.native_medium, binding.flAds
-            )
-        } else {
-            binding.flAds.visibility = View.GONE
-        }
-
-        if (isNetworkConnected() && prefUtils.isShowNativeBloodPressure) {
-            App.adsUtils.nativeBloodPressure.loadAds(requireActivity(), R.layout.native_medium)
-        }
+        adsUtils.nativeOnBoarding.showAds(
+            requireActivity(), binding.flAds, waitForNewAds = true, reloadAfterShow = false
+        )
+        App.adsUtils.nativeBloodPressure.loadAds(requireActivity())
     }
 
     override fun initView() {
