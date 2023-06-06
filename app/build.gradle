@@ -208,7 +208,7 @@ android {
 
         // for apero ads
         implementation 'com.facebook.shimmer:shimmer:0.5.0'
-        implementation 'apero-inhouse:apero-ads:1.0.6-alpha07'
+        implementation 'apero-inhouse:apero-ads:1.0.6-alpha09'
 
         //ads
         implementation 'com.google.android.gms:play-services-ads:22.1.0'

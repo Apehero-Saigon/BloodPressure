@@ -201,44 +201,53 @@ class AdsUtils {
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if (nativeLoaderNormal?.isLoadSuccess() == false && nativeLoaderLow?.isLoadSuccess() == false) {
+                    if ((nativeLoaderNormal == null || !nativeLoaderNormal.isLoadSuccess()) && (nativeLoaderLow == null || !nativeLoaderLow.isLoadSuccess())) {
                         listener?.onAdFailedToLoad(adError)
+                        if (container != null) {
+                            container!!.visibility = View.GONE
+                        }
                     }
                 }
             })
             nativeLoaderNormal?.loadAds(activity, object : AperoAdCallback() {
                 override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
                     super.onNativeAdLoaded(nativeAd)
-                    if (nativeLoaderHigh?.isLoadSuccess() == false) {
+                    if (nativeLoaderHigh == null || !nativeLoaderHigh.isLoadSuccess()) {
                         listener?.onNativeFloorLoaded(nativeLoaderNormal)
                         if (container != null) {
-                            nativeLoaderHigh.showAds(activity, container!!, isReadLoadAfterShow)
+                            nativeLoaderNormal.showAds(activity, container!!, isReadLoadAfterShow)
                         }
                     }
                 }
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if (nativeLoaderHigh?.isLoadSuccess() == false && nativeLoaderLow?.isLoadSuccess() == false) {
+                    if ((nativeLoaderHigh == null || !nativeLoaderHigh.isLoadSuccess()) && (nativeLoaderLow == null || !nativeLoaderLow.isLoadSuccess())) {
                         listener?.onAdFailedToLoad(adError)
+                        if (container != null) {
+                            container!!.visibility = View.GONE
+                        }
                     }
                 }
             })
             nativeLoaderLow?.loadAds(activity, object : AperoAdCallback() {
                 override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
                     super.onNativeAdLoaded(nativeAd)
-                    if (nativeLoaderHigh?.isLoadSuccess() == false && nativeLoaderNormal?.isLoadSuccess() == false) {
+                    if ((nativeLoaderHigh == null || !nativeLoaderHigh.isLoadSuccess()) && (nativeLoaderNormal == null || !nativeLoaderNormal.isLoadSuccess())) {
                         listener?.onNativeFloorLoaded(nativeLoaderLow)
                         if (container != null) {
-                            nativeLoaderHigh.showAds(activity, container!!, isReadLoadAfterShow)
+                            nativeLoaderLow.showAds(activity, container!!, isReadLoadAfterShow)
                         }
                     }
                 }
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if (nativeLoaderHigh?.isLoadSuccess() == false && nativeLoaderNormal?.isLoadSuccess() == false) {
+                    if ((nativeLoaderHigh == null || !nativeLoaderHigh.isLoadSuccess()) && (nativeLoaderNormal == null || !nativeLoaderNormal.isLoadSuccess())) {
                         listener?.onAdFailedToLoad(adError)
+                        if (container != null) {
+                            container!!.visibility = View.GONE
+                        }
                     }
                 }
             })
@@ -300,8 +309,12 @@ class AdsUtils {
             }
 
             fun loadAds(activity: Activity?, listener: AperoAdCallback? = null) {
-                if (condition && isFailOrShownOrNoneAds() && App.app.isNetworkConnected() && !isLoading()) {
-                    loadNativeReloadIfFail(activity, reloadTime, listener)
+                if (App.app.isNetworkConnected()) {
+                    if (condition && isFailOrShownOrNoneAds() && !isLoading()) {
+                        loadNativeReloadIfFail(activity, reloadTime, listener)
+                    }
+                } else {
+                    listener?.onAdFailedToLoad(ApAdError("network"))
                 }
             }
 
@@ -469,7 +482,7 @@ class AdsUtils {
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if (interLoaderNormal?.isLoadSuccess() == false && interLoaderLow?.isLoadSuccess() == false) {
+                    if ((interLoaderNormal == null || !interLoaderNormal.isLoadSuccess()) && (interLoaderLow == null || !interLoaderLow.isLoadSuccess())) {
                         listener?.onAdFailedToLoad(adError)
                     }
                 }
@@ -478,14 +491,14 @@ class AdsUtils {
                 override fun onInterstitialLoad(interstitialAd: ApInterstitialAd?) {
                     super.onInterstitialLoad(interstitialAd)
                     Log.d(TAG, "inter:load success normal ${interLoaderNormal.idAds}")
-                    if (interLoaderHigh?.isLoadSuccess() == false) {
+                    if (interLoaderHigh == null || !interLoaderHigh.isLoadSuccess()) {
                         listener?.onInterstitialLoad(interstitialAd)
                     }
                 }
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if (interLoaderHigh?.isLoadSuccess() == false && interLoaderLow?.isLoadSuccess() == false) {
+                    if ((interLoaderHigh == null || !interLoaderHigh.isLoadSuccess()) && (interLoaderLow == null || !interLoaderLow.isLoadSuccess())) {
                         listener?.onAdFailedToLoad(adError)
                     }
                 }
@@ -494,7 +507,7 @@ class AdsUtils {
                 override fun onInterstitialLoad(interstitialAd: ApInterstitialAd?) {
                     super.onInterstitialLoad(interstitialAd)
                     Log.d(TAG, "inter:load success low ${interLoaderLow.idAds}")
-                    if (interLoaderHigh?.isLoadSuccess() == false && interLoaderNormal?.isLoadSuccess() == false) {
+                    if ((interLoaderHigh == null || !interLoaderHigh.isLoadSuccess()) && (interLoaderNormal == null || !interLoaderNormal.isLoadSuccess())) {
                         listener?.onInterstitialLoad(interstitialAd)
                     }
                 }
