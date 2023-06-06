@@ -16,6 +16,10 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     override fun backPressedWithExitPopup() = true
 
     override fun initAds() {
+        binding.flBanner.loadBanner(
+            requireActivity(), BuildConfig.banner_home, prefUtils.isShowBannerHome
+        )
+
         adsUtils.interSave.isShowHighAds = prefUtils.isShowInterSaveHigh
         adsUtils.interSave.isShowNormalAds = prefUtils.isShowInterSave
         adsUtils.interSave.loadInterPrioritySameTime(requireContext())
