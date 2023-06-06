@@ -1,14 +1,14 @@
 package com.blood.ui.fragments.onboarding
 
-import android.annotation.SuppressLint
 import android.view.View
-import androidx.viewpager.widget.ViewPager
 import com.blood.App
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.ui.adapters.OnBoardingPageAdapter
 import com.blood.utils.FirebaseUtils
+import com.blood.utils.ViewUtils.autoScroll
 import com.blood.utils.ViewUtils.clickWithDebounce
+import com.blood.utils.customview.transformers.ZoomOutSlideTransformer
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentOnboardingBinding
 
@@ -17,87 +17,45 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
 ) {
 
     var adapter: OnBoardingPageAdapter? = null
-    private val displayedPage = HashSet<Int>()
 
     override fun backPressedWithExitPopup() = true
 
     override fun initAds() {
-        displayedPage.add(OnBoardingPageAdapter.PAGE_INDEX_1)
-        showNativeOnBoarding(OnBoardingPageAdapter.PAGE_INDEX_1)
-        FirebaseUtils.eventDisplayOnBoarding1()
+        FirebaseUtils.eventDisplayOnBoarding()
+        if (isNetworkConnected() && prefUtils.isShowNativeOnBoarding) {
+            adsUtils.nativeOnBoarding.showAds(
+                requireActivity(), R.layout.native_medium, binding.flAds
+            )
+        } else {
+            binding.flAds.visibility = View.GONE
+        }
 
-        if (isNetworkConnected() && prefUtils.isShowNativeCreateUser) {
-            App.adsUtils.nativeCreateUser.loadAds(requireActivity(), R.layout.native_medium)
+        if (isNetworkConnected() && prefUtils.isShowNativeBloodPressure) {
+            App.adsUtils.nativeBloodPressure.loadAds(requireActivity(), R.layout.native_medium)
         }
     }
 
-    @SuppressLint("ClickableViewAccessibility")
     override fun initView() {
         adapter = OnBoardingPageAdapter(requireContext(), childFragmentManager)
+        binding.viewPager.autoScroll(1500)
+        binding.viewPager.setPageTransformer(true, ZoomOutSlideTransformer())
         binding.viewPager.adapter = adapter
         binding.tabLayout.setupWithViewPager(binding.viewPager)
     }
 
     override fun initListener() {
         super.initListener()
-        binding.viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
-            override fun onPageScrolled(
-                position: Int, positionOffset: Float, positionOffsetPixels: Int
-            ) {
-            }
+        binding.tvStart.clickWithDebounce {
+            prefUtils.isShowOnBoardingFirstOpen = false
+            FirebaseUtils.eventClickStartNowOnBoard()
 
-            override fun onPageSelected(position: Int) {
-                if (position == OnBoardingPageAdapter.NUMBER_PAGE - 1) {
-                    binding.tvNext.text = getString(R.string.start)
-                } else {
-                    binding.tvNext.text = getString(R.string.next)
-                }
-
-                if (position == 1 && !displayedPage.contains(1)) {
-                    displayedPage.add(1)
-                    showNativeOnBoarding(position)
-                    FirebaseUtils.eventDisplayOnBoarding2()
-                } else if (position == 2 && !displayedPage.contains(2)) {
-                    displayedPage.add(2)
-                    showNativeOnBoarding(position)
-                    FirebaseUtils.eventDisplayOnBoarding3()
-                }
-            }
-
-            override fun onPageScrollStateChanged(state: Int) {
-            }
-        })
-
-        binding.tvNext.clickWithDebounce {
-            if (binding.viewPager.currentItem == OnBoardingPageAdapter.NUMBER_PAGE - 1) {
-                prefUtils.isShowOnBoardingFirstOpen = false
-                FirebaseUtils.eventClickStartNowOnBoard()
-
-                val action =
-                    OnBoardingFragmentDirections.actionOnBoardingFragmentToProfileEditFragment()
-                action.allowBack = false
-                action.editMode = false
-                safeNav(action)
-            } else {
-                binding.viewPager.currentItem++
-            }
+            val action = OnBoardingFragmentDirections.actionOnBoardingFragmentToHomeFragment()
+            safeNav(action)
         }
     }
 
     override fun onDestroyView() {
         binding.viewPager.adapter = null
         super.onDestroyView()
-    }
-
-    private fun showNativeOnBoarding(page: Int) {
-        if (isNetworkConnected() && prefUtils.isShowNativeOnBoarding) {
-            when (page) {
-                0 -> adsUtils.nativeOnBoarding1
-                1 -> adsUtils.nativeOnBoarding2
-                else -> adsUtils.nativeOnBoarding3
-            }.showAds(requireActivity(), R.layout.native_medium, binding.flAds)
-        } else {
-            binding.flAds.visibility = View.GONE
-        }
     }
 }

@@ -2,6 +2,7 @@ package com.blood.ui.fragments.bloodpressure
 
 import androidx.lifecycle.MutableLiveData
 import com.blood.base.BaseViewModel
+import com.blood.common.Constant
 import com.blood.data.BloodPressure
 import com.blood.data.repository.BloodPressureRepository
 import com.blood.utils.FirebaseUtils
@@ -30,7 +31,7 @@ class BloodPressureViewModel @Inject constructor() : BaseViewModel() {
     fun getTopBloodPressureByID(top: Int = 0) {
         launchOnUITryCatch({
             val listData = withContext(Dispatchers.IO) {
-                bloodPressureRepository.getTopBloodPressureByID(prefUtils.profile!!.id, top)
+                bloodPressureRepository.getTopBloodPressureByID(Constant.PROFILE_ID_DEFAULT, top)
             }
             listBloodPressureObserver.postValue(listData)
         }, {

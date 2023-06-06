@@ -21,7 +21,8 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         const val KEY_LANGUAGE_FIRST_OPEN = "KEY_LANGUAGE_FIRST_OPEN"
         const val KEY_ONBOARDING_FIRST_OPEN = "KEY_ONBOARDING_FIRST_OPEN"
         const val KE_DEFAULT_LANGUAGE = "KE_DEFAULT_LANGUAGE"
-        const val KE_CURRENT_PROFILE = "KE_CURRENT_PROFILE"
+
+        //        const val KE_CURRENT_PROFILE = "KE_CURRENT_PROFILE"
         const val KE_MUST_SHOW_INTER_INFO = "KE_MUST_SHOW_INTER_INFO"
         const val KE_MUST_SHOW_INTER_DETAIL = "KE_MUST_SHOW_INTER_DETAIL"
         const val KEY_LIMIT_VALUE_TYPE = "KEY_LIMIT_VALUE_TYPE"
@@ -51,19 +52,19 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         const val REMOTE_SHOW_NATIVE_EXIT_HIGH = "native_exit_high"
     }
 
-    var profile: Profile?
-        get() {
-            val profileStr = preferenceHelper.getString(KE_CURRENT_PROFILE, null)
-            return if (profileStr != null) {
-                Gson().fromJson(profileStr, Profile::class.java)
-            } else {
-                null
-            }
-        }
-        set(value) {
-            val profileStr = if (value != null) Gson().toJson(value) else null
-            preferenceHelper.edit().putString(KE_CURRENT_PROFILE, profileStr).apply()
-        }
+//    var profile: Profile?
+//        get() {
+//            val profileStr = preferenceHelper.getString(KE_CURRENT_PROFILE, null)
+//            return if (profileStr != null) {
+//                Gson().fromJson(profileStr, Profile::class.java)
+//            } else {
+//                null
+//            }
+//        }
+//        set(value) {
+//            val profileStr = if (value != null) Gson().toJson(value) else null
+//            preferenceHelper.edit().putString(KE_CURRENT_PROFILE, profileStr).apply()
+//        }
 
     var defaultLanguage: String
         get() = preferenceHelper.getString(KE_DEFAULT_LANGUAGE, Constant.LANGUAGE_EN)
@@ -173,7 +174,8 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
     var isShowInterInsightDetailHigh: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH, true)
         set(value) {
-            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH, value).apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH, value)
+                .apply()
         }
 
     var isShowInterInsightDetail: Boolean
@@ -231,7 +233,8 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         }
 
     var typeLimitValue: String
-        get() = preferenceHelper.getString(KEY_LIMIT_VALUE_TYPE, "") ?: Constant.ACC_AHA_2017
+        get() = preferenceHelper.getString(KEY_LIMIT_VALUE_TYPE, Constant.ACC_AHA_2017)
+            ?: Constant.ACC_AHA_2017
         set(value) {
             preferenceHelper.edit().putString(KEY_LIMIT_VALUE_TYPE, value).apply()
         }

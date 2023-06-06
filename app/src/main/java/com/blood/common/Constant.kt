@@ -29,4 +29,7 @@ object Constant {
 
     // key
     const val KEY_START_SPLASH_FROM = "KEY_START_SPLASH_FROM"
+
+    // default value
+    const val PROFILE_ID_DEFAULT = 1L
 }

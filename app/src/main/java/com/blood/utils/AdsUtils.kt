@@ -47,15 +47,7 @@ class AdsUtils {
     }
 
     // native
-    val nativeOnBoarding1 = NativeAds().apply {
-        idAdsNativeHigh = BuildConfig.native_onboarding_high
-        idAdsNativeNormal = BuildConfig.native_onboarding
-    }
-    val nativeOnBoarding2 = NativeAds().apply {
-        idAdsNativeHigh = BuildConfig.native_onboarding_high
-        idAdsNativeNormal = BuildConfig.native_onboarding
-    }
-    val nativeOnBoarding3 = NativeAds().apply {
+    val nativeOnBoarding = NativeAds().apply {
         idAdsNativeHigh = BuildConfig.native_onboarding_high
         idAdsNativeNormal = BuildConfig.native_onboarding
     }
@@ -175,6 +167,7 @@ class AdsUtils {
                     Admob.getInstance().populateUnifiedNativeAdView(nativeAd.admobNativeAd, adView)
                     container.removeAllViews()
                     container.post {
+                        container.requestFocus()
                         container.addView(adView)
                     }
                     Log.d(TAG, "NativeAds populateNativeAdView: Shown")
@@ -485,18 +478,22 @@ class AdsUtils {
         ) {
             if (condition) {
                 this.visibility = View.VISIBLE
-                AperoAd.getInstance()
-                    .loadBannerFragment(activity, idAdsBanner, this, object : AdCallback() {
-                        override fun onAdFailedToLoad(i: LoadAdError?) {
-                            super.onAdFailedToLoad(i)
-                            this@loadBanner.visibility = View.INVISIBLE
-                        }
+                try {
+                    AperoAd.getInstance()
+                        .loadBannerFragment(activity, idAdsBanner, this, object : AdCallback() {
+                            override fun onAdFailedToLoad(i: LoadAdError?) {
+                                super.onAdFailedToLoad(i)
+                                this@loadBanner.visibility = View.GONE
+                            }
 
-                        override fun onAdFailedToShow(adError: AdError?) {
-                            super.onAdFailedToShow(adError)
-                            this@loadBanner.visibility = View.INVISIBLE
-                        }
-                    })
+                            override fun onAdFailedToShow(adError: AdError?) {
+                                super.onAdFailedToShow(adError)
+                                this@loadBanner.visibility = View.GONE
+                            }
+                        })
+                } catch (ex: java.lang.Exception) {
+                    this@loadBanner.visibility = View.GONE
+                }
             } else {
                 this.visibility = View.GONE
             }

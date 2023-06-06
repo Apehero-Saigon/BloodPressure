@@ -3,6 +3,8 @@ package com.blood.utils
 import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
+import android.os.Handler
+import android.os.Looper
 import android.os.SystemClock
 import android.text.Editable
 import android.text.TextPaint
@@ -11,6 +13,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
+import androidx.viewpager.widget.ViewPager
 
 object ViewUtils {
     fun TextView.setGradiantText(start: String, end: String) {
@@ -100,4 +103,44 @@ object ViewUtils {
     fun EditText.isBlank() = this.text.toString().trim().isBlank()
 
     fun TextView.textTrim() = this.text.toString().trim()
+
+    fun ViewPager.autoScroll(interval: Long) {
+
+        val handler = Handler(Looper.getMainLooper())
+        var scrollPosition = 0
+
+        val runnable = object : Runnable {
+
+            override fun run() {
+                try {
+                    val count = adapter?.count ?: 0
+                    setCurrentItem(scrollPosition++ % count, true)
+
+                    handler.postDelayed(this, interval)
+                } catch (_: java.lang.Exception) {
+
+                }
+            }
+        }
+
+        addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageSelected(position: Int) {
+                scrollPosition = position + 1
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+                // Not necessary
+            }
+
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+                // Not necessary
+            }
+        })
+
+        handler.post(runnable)
+    }
 }

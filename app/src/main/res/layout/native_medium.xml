@@ -91,7 +91,9 @@
                     android:id="@+id/ad_media"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/ad_call_to_action"

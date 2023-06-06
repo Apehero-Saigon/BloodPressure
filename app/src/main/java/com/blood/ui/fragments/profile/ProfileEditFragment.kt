@@ -73,7 +73,7 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
 
         viewModel.insertProfileObserver.observe(this.viewLifecycleOwner) { profile ->
             if (profile != null) {
-                prefUtils.profile = profile
+//                prefUtils.profile = profile
                 val action =
                     ProfileEditFragmentDirections.actionProfileEditFragmentToMeasurementGuidelineDefaultFragment()
                 safeNav(action)

@@ -12,9 +12,7 @@ object FirebaseUtils {
     }
 
     private const val SPLASH_SCREEN = "splash_screen"
-    private const val SCR_ONBOARD_1 = "scr_onboard_1"
-    private const val SCR_ONBOARD_2 = "scr_onboard_2"
-    private const val SCR_ONBOARD_3 = "scr_onboard_3"
+    private const val SCR_ONBOARD = "scr_onboard"
     private const val CLICK_START_NOW_SCR_ONBOARD = "click_start_now_scr_onboard"
     private const val SCR_LANGUAGE = "scr_language"
     private const val CLICK_CHOOSE_SCR_LANGUAGE = "click_choose_scr_language"
@@ -87,16 +85,8 @@ object FirebaseUtils {
         fbAnalytics?.logEvent(SPLASH_SCREEN, null)
     }
 
-    fun eventDisplayOnBoarding1() {
-        fbAnalytics?.logEvent(SCR_ONBOARD_1, null)
-    }
-
-    fun eventDisplayOnBoarding2() {
-        fbAnalytics?.logEvent(SCR_ONBOARD_2, null)
-    }
-
-    fun eventDisplayOnBoarding3() {
-        fbAnalytics?.logEvent(SCR_ONBOARD_3, null)
+    fun eventDisplayOnBoarding() {
+        fbAnalytics?.logEvent(SCR_ONBOARD, null)
     }
 
     fun eventClickStartNowOnBoard() {

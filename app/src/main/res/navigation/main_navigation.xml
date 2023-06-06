@@ -36,7 +36,9 @@
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_splashFragment_to_measurementGuidelineDefaultFragment"
-            app:destination="@id/measurementGuidelineDefaultFragment" />
+            app:destination="@id/measurementGuidelineDefaultFragment"
+            app:popUpTo="@+id/main_navigation"
+            app:popUpToInclusive="true" />
 
     </fragment>
 
@@ -91,6 +93,9 @@
             app:destination="@id/profileEditFragment"
             app:popUpTo="@+id/main_navigation"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onBoardingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 
     <fragment

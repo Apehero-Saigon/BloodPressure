@@ -47,7 +47,7 @@ class BloodPressureEditFragment :
                 requireActivity(),
                 R.layout.layout_native_medium_custom,
                 binding.flAds,
-                true,
+                waitForNewAds = true,
                 reloadAfterShow = true
             )
         } else {
@@ -144,7 +144,7 @@ class BloodPressureEditFragment :
         val date = DateUtils.format(dateStr, Constant.FORMAT_DATETIME) ?: Date()
 
         val bloodPressure = BloodPressure(
-            profileId = prefUtils.profile!!.id,
+            profileId = Constant.PROFILE_ID_DEFAULT,
             systole = binding.pickSys.value,
             diastole = binding.pickDia.value,
             pulse = binding.pickPurse.value,

@@ -18,8 +18,8 @@ android {
         applicationId "com.bloodpressure.pressuremonitor.bloodpressuretracker"
         minSdk 21
         targetSdk 33
-        versionCode 33
-        versionName "1.2.6"
+        versionCode 34
+        versionName "1.2.7"
 
         multiDexEnabled true
         renderscriptTargetApi 19
@@ -74,6 +74,7 @@ android {
             buildConfigField "String", "native_create_user_high", "\"ca-app-pub-3940256099942544/1044960115\""
             buildConfigField "String", "native_value", "\"ca-app-pub-3940256099942544/1044960115\""
             buildConfigField "String", "native_value_high", "\"ca-app-pub-3940256099942544/1044960115\""
+            buildConfigField "String", "appopen_resume_high", "\"ca-app-pub-3940256099942544/3419835294\""
             buildConfigField "String", "appopen_resume", "\"ca-app-pub-3940256099942544/3419835294\""
             buildConfigField "String", "banner_home", "\"ca-app-pub-3940256099942544/6300978111\""
             buildConfigField "String", "inter_save", "\"ca-app-pub-3940256099942544/1033173712\""
@@ -109,6 +110,7 @@ android {
             buildConfigField "String", "native_create_user_high", "\"ca-app-pub-4973559944609228/9841033013\""
             buildConfigField "String", "native_value", "\"ca-app-pub-4973559944609228/5187472136\""
             buildConfigField "String", "native_value_high", "\"ca-app-pub-4973559944609228/5678442635\""
+            buildConfigField "String", "appopen_resume_high", "\"ca-app-pub-4973559944609228/8574130916\""
             buildConfigField "String", "appopen_resume", "\"ca-app-pub-4973559944609228/1120057000\""
             buildConfigField "String", "banner_home", "\"ca-app-pub-4973559944609228/8160980210\""
             buildConfigField "String", "inter_save", "\"ca-app-pub-4973559944609228/8535512595\""

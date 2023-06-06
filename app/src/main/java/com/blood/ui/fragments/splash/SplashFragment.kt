@@ -38,8 +38,6 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private var finishedSplash = false
 
     override fun initAds() {
-        if (openByChangeLanguage()) return
-
         if (prefUtils.isShowNativeExitHigh || prefUtils.isShowNativeExit) {
             adsUtils.nativeExit.loadAds(requireActivity(), R.layout.native_medium)
         }
@@ -49,16 +47,20 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         }
 
 
-        if (isNetworkConnected() && prefUtils.isShowOnBoardingFirstOpen && prefUtils.isShowNativeOnBoarding) {
-            App.adsUtils.nativeOnBoarding1.loadAds(requireActivity(), R.layout.native_medium)
-            App.adsUtils.nativeOnBoarding2.loadAds(requireActivity(), R.layout.native_medium)
-            App.adsUtils.nativeOnBoarding3.loadAds(requireActivity(), R.layout.native_medium)
+        if (isNetworkConnected()
+            && !prefUtils.isShowLanguageFirstOpen
+            && prefUtils.isShowOnBoardingFirstOpen
+            && prefUtils.isShowNativeOnBoarding
+        ) {
+            App.adsUtils.nativeOnBoarding.loadAds(requireActivity(), R.layout.native_medium)
         }
 
-        if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen && prefUtils.profile == null && prefUtils.isShowNativeCreateUser) {
-            App.adsUtils.nativeCreateUser.loadAds(requireActivity(), R.layout.native_medium)
-        } else if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen && prefUtils.profile != null && prefUtils.typeLimitValue.isEmpty() && prefUtils.isShowNativeDefaultValue) {
-            App.adsUtils.nativeDefaultValue.loadAds(requireActivity(), R.layout.native_medium)
+        if (isNetworkConnected()
+            && !prefUtils.isShowLanguageFirstOpen
+            && !prefUtils.isShowOnBoardingFirstOpen
+            && prefUtils.isShowNativeBloodPressure
+        ) {
+            App.adsUtils.nativeBloodPressure.loadAds(requireActivity(), R.layout.native_medium)
         }
     }
 
@@ -83,10 +85,10 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
                 fetchDataRemote(firebaseRemoteConfig)
             }
             fetchRemoteConfig = FetchRemoteConfig.DONE
-            loadSplash()
+            loadAds()
         }.addOnFailureListener {
             fetchRemoteConfig = FetchRemoteConfig.DONE
-            loadSplash()
+            loadAds()
         }
     }
 
@@ -140,8 +142,8 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private fun onShowSplashScreen() {
         if (fetchRemoteConfig == FetchRemoteConfig.DONE) {
             if (SplashType.OPEN_SPLASH == splashLoadType) {
-                AppOpenManager.getInstance().showAppOpenSplash(
-                        requireActivity() as AppCompatActivity?,
+                AppOpenManager.getInstance()
+                    .showAppOpenSplash(requireActivity() as AppCompatActivity?,
                         object : AdCallback() {
                             override fun onNextAction() {
                                 super.onNextAction()
@@ -162,8 +164,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
                             }
                         })
             } else if (SplashType.INTERSTITIAL == splashLoadType) {
-                AperoAd.getInstance().onShowSplash(
-                    requireActivity() as AppCompatActivity,
+                AperoAd.getInstance().onShowSplash(requireActivity() as AppCompatActivity,
                     object : AperoAdCallback() {
                         override fun onNextAction() {
                             super.onNextAction()
@@ -189,7 +190,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         }
     }
 
-    private fun loadSplash() {
+    private fun loadAds() {
         if (isNetworkConnected() && context != null) {
             AperoAd.getInstance().loadAppOpenSplashSameTime(requireContext(),
                 BuildConfig.inter_splash,
@@ -314,16 +315,18 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
                 if (prefUtils.isShowOnBoardingFirstOpen) {
                     val action = SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
                     safeNav(action)
-                } else if (prefUtils.profile == null) {
-                    val action =
-                        SplashFragmentDirections.actionSplashFragmentToProfileEditFragment()
-                    action.editMode = false
-                    safeNav(action)
-                } else if (prefUtils.typeLimitValue.isEmpty()) {
-                    val action =
-                        SplashFragmentDirections.actionSplashFragmentToMeasurementGuidelineDefaultFragment()
-                    safeNav(action)
-                } else {
+                }
+//                else if (prefUtils.profile == null) {
+//                    val action =
+//                        SplashFragmentDirections.actionSplashFragmentToProfileEditFragment()
+//                    action.editMode = false
+//                    safeNav(action)
+//                } else if (prefUtils.typeLimitValue.isEmpty()) {
+//                    val action =
+//                        SplashFragmentDirections.actionSplashFragmentToMeasurementGuidelineDefaultFragment()
+//                    safeNav(action)
+//                }
+                else {
                     val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
                     safeNav(action)
                 }

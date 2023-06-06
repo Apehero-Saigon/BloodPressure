@@ -2,6 +2,7 @@ package com.blood.ui.fragments.insight
 
 import androidx.lifecycle.MutableLiveData
 import com.blood.base.BaseViewModel
+import com.blood.common.Constant
 import com.blood.common.enumdata.FilterType
 import com.blood.data.BloodPressure
 import com.blood.data.repository.BloodPressureRepository
@@ -32,12 +33,12 @@ class InsightViewModel @Inject constructor() : BaseViewModel() {
         launchOnUITryCatch({
             val listBloods = withContext(Dispatchers.IO) {
                 if (filterType == FilterType.ALL) {
-                    bloodPressureRepository.getTopBloodPressureByID(prefUtils.profile!!.id)
+                    bloodPressureRepository.getTopBloodPressureByID(1)
                 } else {
                     val startDate =
                         DateUtils.getDateBefore(if (filterType == FilterType.WEEK) 7 else 3600)
                     bloodPressureRepository.getListBloodPressureByFilterDate(
-                        prefUtils.profile!!.id, startDate, DateUtils.getCurrentDate()
+                        Constant.PROFILE_ID_DEFAULT, startDate, DateUtils.getCurrentDate()
                     )
                 }
             }
@@ -62,7 +63,7 @@ class InsightViewModel @Inject constructor() : BaseViewModel() {
     fun checkCount() {
         launchOnUITryCatch({
             val countBlood = withContext(Dispatchers.IO) {
-                bloodPressureRepository.countBloodPressureByProfileID(prefUtils.profile!!.id)
+                bloodPressureRepository.countBloodPressureByProfileID(Constant.PROFILE_ID_DEFAULT)
             }
             countBloodObserver.postValue(countBlood)
         }, {
