@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId "com.bloodpressure.pressuremonitor.bloodpressuretracker"
-        minSdk 21
+        minSdk 24
         targetSdk 33
         versionCode 34
         versionName "1.2.7"

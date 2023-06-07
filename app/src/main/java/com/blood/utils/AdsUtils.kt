@@ -2,11 +2,17 @@ package com.blood.utils
 
 import android.app.Activity
 import android.content.Context
+import android.graphics.Insets
+import android.os.Build
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.WindowInsets
 import android.widget.FrameLayout
+import android.widget.Toast
 import com.ads.control.admob.Admob
+import com.ads.control.admob.AppOpenManager
 import com.ads.control.ads.AperoAd
 import com.ads.control.ads.AperoAdCallback
 import com.ads.control.ads.wrapper.ApAdError
@@ -16,9 +22,9 @@ import com.ads.control.funtion.AdCallback
 import com.blood.App
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
-import com.google.android.gms.ads.AdError
-import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.*
 import com.google.android.gms.ads.nativead.NativeAdView
+
 
 /*
 * implementation 'apero-inhouse:apero-ads:1.0.6-alpha07'
@@ -104,6 +110,9 @@ class AdsUtils {
             BuildConfig.native_recent_action, 1, prefUtils.isShowNativeRecentAction
         )
     )
+
+    // banner
+    var banner: BannerUtils.BannerLoader? = null
 
     enum class Status {
         LOADING, NONE, FAIL, SUCCESS, SHOWN
@@ -323,7 +332,8 @@ class AdsUtils {
             ) {
                 if (timeReload > 0) {
                     status = Status.LOADING
-                    AperoAd.getInstance().loadNativeAdResultCallback(activity,
+                    AperoAd.getInstance().loadNativeAdResultCallback(
+                        activity,
                         idAds,
                         layoutCustom,
                         object : AperoAdCallback() {
@@ -609,6 +619,75 @@ class AdsUtils {
     }
 
     object BannerUtils {
+
+        class BannerLoader(private val activity: Activity, private val idAds: String) {
+            private var adView: AdView = AdView(activity)
+            private var status: Status = Status.NONE
+
+            fun isLoading() = adView.isLoading
+
+            private fun getScreenWidth(activity: Activity): Int {
+                return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                    val windowMetrics = activity.windowManager.currentWindowMetrics
+                    val insets: Insets =
+                        windowMetrics.windowInsets.getInsetsIgnoringVisibility(WindowInsets.Type.systemBars())
+                    windowMetrics.bounds.width() - insets.left - insets.right
+                } else {
+                    val displayMetrics = DisplayMetrics()
+                    activity.windowManager.defaultDisplay.getMetrics(displayMetrics)
+                    displayMetrics.widthPixels
+                }
+            }
+
+            private val adSize: AdSize
+                get() {
+                    val adWidthPixels = getScreenWidth(activity).toFloat()
+
+                    val density = activity.resources.displayMetrics.density
+                    val adWidth = (adWidthPixels / density).toInt()
+
+                    return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
+                        activity, adWidth
+                    )
+                }
+
+            fun loadAd() {
+                val adRequest = AdRequest.Builder().build()
+                adView.adListener = object : AdListener() {
+                    override fun onAdLoaded() {
+                        status = Status.SUCCESS
+                    }
+
+                    override fun onAdFailedToLoad(loadAdError: LoadAdError) {
+                        super.onAdFailedToLoad(loadAdError)
+                    }
+
+                    override fun onAdOpened() {
+                        println("### banner onAdOpened")
+                    }
+
+                    override fun onAdClosed() {
+                        println("### banner onAdClosed")
+                    }
+
+                    override fun onAdImpression() {
+                        super.onAdImpression()
+                        println("### banner onAdImpression")
+                    }
+
+                    override fun onAdClicked() {
+                        AppOpenManager.getInstance().disableAdResumeByClickAction()
+                        super.onAdClicked()
+                    }
+                }
+
+                status = Status.LOADING
+
+                adView.adUnitId = idAds
+                adView.setAdSize(adSize)
+                adView.loadAd(adRequest)
+            }
+        }
 
         fun FrameLayout.loadBanner(
             activity: Activity, idAdsBanner: String, condition: Boolean = true

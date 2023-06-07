@@ -13,6 +13,7 @@ import com.blood.App
 import com.blood.base.BaseActivity
 import com.blood.base.BaseFragment
 import com.blood.common.Constant
+import com.blood.utils.AdsUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.PrefUtils
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
@@ -52,6 +53,10 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen) {
             App.adsUtils.nativeBloodPressure.loadAds(requireActivity())
         }
+
+        adsUtils.banner =
+            AdsUtils.BannerUtils.BannerLoader(requireActivity(), BuildConfig.banner_home)
+        adsUtils.banner!!.loadAd()
     }
 
     override fun initData() {
