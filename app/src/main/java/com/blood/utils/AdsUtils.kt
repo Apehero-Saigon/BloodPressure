@@ -113,7 +113,7 @@ class AdsUtils {
     // banner
     var banner = BannerUtils(
         bannerHigh = BannerUtils.BannerLoader(
-            "BuildConfig.banner_home_high", timeReload = 3, condition = prefUtils.isShowBannerHome
+            BuildConfig.banner_home_high, timeReload = 3, condition = prefUtils.isShowBannerHome
         ), bannerNormal = BannerUtils.BannerLoader(
             BuildConfig.banner_home, timeReload = 1, condition = prefUtils.isShowBannerHome
         )
