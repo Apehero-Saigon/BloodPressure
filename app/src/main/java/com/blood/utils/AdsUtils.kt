@@ -113,7 +113,7 @@ class AdsUtils {
     // banner
     var banner = BannerUtils(
         bannerHigh = BannerUtils.BannerLoader(
-            BuildConfig.banner_home_high, timeReload = 3, condition = prefUtils.isShowBannerHome
+            "BuildConfig.banner_home_high", timeReload = 3, condition = prefUtils.isShowBannerHome
         ), bannerNormal = BannerUtils.BannerLoader(
             BuildConfig.banner_home, timeReload = 1, condition = prefUtils.isShowBannerHome
         )
@@ -780,11 +780,8 @@ class AdsUtils {
             }
 
             fun loadAd(activity: Activity, countCanReload: Int, adListener: AdListener? = null) {
-                if (adView == null) {
-                    adView = AdView(activity)
-                }
                 if (countCanReload < 1) return
-
+                adView = AdView(activity)
                 val adRequest = AdRequest.Builder().build()
                 adView!!.adListener = object : AdListener() {
                     override fun onAdLoaded() {
@@ -797,7 +794,7 @@ class AdsUtils {
                         super.onAdFailedToLoad(loadAdError)
                         Log.d(
                             TAG,
-                            "loadFail: fail times(${countCanReload - timeReload + 1}) id(${idAds})"
+                            "loadFail: fail times(${timeReload - countCanReload + 1}) id(${idAds})"
                         )
                         if (countCanReload - 1 > 0) {
                             loadAd(activity, countCanReload - 1, adListener)
