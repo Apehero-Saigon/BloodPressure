@@ -20,6 +20,8 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentSplashBinding
 import com.google.android.gms.ads.AdError
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.LoadAdError
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 
@@ -54,9 +56,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
             App.adsUtils.nativeBloodPressure.loadAds(requireActivity())
         }
 
-        adsUtils.banner =
-            AdsUtils.BannerUtils.BannerLoader(requireActivity(), BuildConfig.banner_home)
-        adsUtils.banner!!.loadAd()
+        adsUtils.banner.loadAds(requireActivity())
     }
 
     override fun initData() {

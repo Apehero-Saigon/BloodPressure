@@ -8,7 +8,7 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
 import com.blood.ui.dialog.YesNoPopup
-import com.blood.utils.AdsUtils.BannerUtils.loadBanner
+import com.blood.utils.AdsUtils.BannerUtils.Companion.loadBanner
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.customview.HeaderView
@@ -44,7 +44,8 @@ class BloodPressureDetailFragment :
     override fun initListener() {
         super.initListener()
 
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
                     onBack()

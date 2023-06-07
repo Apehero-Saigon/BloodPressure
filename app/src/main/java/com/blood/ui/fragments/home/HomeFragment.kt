@@ -4,8 +4,6 @@ import androidx.navigation.NavDirections
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.blood.base.BaseFragment
-import com.blood.utils.AdsUtils.BannerUtils.loadBanner
-import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentHomeBinding
 
@@ -19,10 +17,7 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
 //        binding.flBanner.loadBanner(
 //            requireActivity(), BuildConfig.banner_home, prefUtils.isShowBannerHome
 //        )
-        if (adsUtils.banner != null) {
-            binding.flBanner.removeAllViews()
-            binding.flBanner.addView(adsUtils.banner?.adView)
-        }
+        adsUtils.banner.showAds(requireActivity(), binding.flBanner)
 
         adsUtils.interSave.isShowHighAds = prefUtils.isShowInterSaveHigh
         adsUtils.interSave.isShowNormalAds = prefUtils.isShowInterSave

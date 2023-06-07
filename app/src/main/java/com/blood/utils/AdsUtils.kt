@@ -10,7 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowInsets
 import android.widget.FrameLayout
-import android.widget.Toast
 import com.ads.control.admob.Admob
 import com.ads.control.admob.AppOpenManager
 import com.ads.control.ads.AperoAd
@@ -112,7 +111,13 @@ class AdsUtils {
     )
 
     // banner
-    var banner: BannerUtils.BannerLoader? = null
+    var banner = BannerUtils(
+        bannerHigh = BannerUtils.BannerLoader(
+            BuildConfig.banner_home_high, timeReload = 3, condition = prefUtils.isShowBannerHome
+        ), bannerNormal = BannerUtils.BannerLoader(
+            BuildConfig.banner_home, timeReload = 1, condition = prefUtils.isShowBannerHome
+        )
+    )
 
     enum class Status {
         LOADING, NONE, FAIL, SUCCESS, SHOWN
@@ -210,7 +215,7 @@ class AdsUtils {
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if ((nativeLoaderNormal == null || !nativeLoaderNormal.isLoadSuccess()) && (nativeLoaderLow == null || !nativeLoaderLow.isLoadSuccess())) {
+                    if ((nativeLoaderNormal == null || nativeLoaderNormal.isFail()) && (nativeLoaderLow == null || nativeLoaderLow.isFail())) {
                         listener?.onAdFailedToLoad(adError)
                         if (container != null) {
                             container!!.visibility = View.GONE
@@ -221,7 +226,7 @@ class AdsUtils {
             nativeLoaderNormal?.loadAds(activity, object : AperoAdCallback() {
                 override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
                     super.onNativeAdLoaded(nativeAd)
-                    if (nativeLoaderHigh == null || !nativeLoaderHigh.isLoadSuccess()) {
+                    if (nativeLoaderHigh == null || nativeLoaderHigh.isFail()) {
                         listener?.onNativeFloorLoaded(nativeLoaderNormal)
                         if (container != null) {
                             nativeLoaderNormal.showAds(activity, container!!, isReadLoadAfterShow)
@@ -231,7 +236,7 @@ class AdsUtils {
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if ((nativeLoaderHigh == null || !nativeLoaderHigh.isLoadSuccess()) && (nativeLoaderLow == null || !nativeLoaderLow.isLoadSuccess())) {
+                    if ((nativeLoaderHigh == null || nativeLoaderHigh.isFail()) && (nativeLoaderLow == null || nativeLoaderLow.isFail())) {
                         listener?.onAdFailedToLoad(adError)
                         if (container != null) {
                             container!!.visibility = View.GONE
@@ -242,7 +247,7 @@ class AdsUtils {
             nativeLoaderLow?.loadAds(activity, object : AperoAdCallback() {
                 override fun onNativeAdLoaded(nativeAd: ApNativeAd) {
                     super.onNativeAdLoaded(nativeAd)
-                    if ((nativeLoaderHigh == null || !nativeLoaderHigh.isLoadSuccess()) && (nativeLoaderNormal == null || !nativeLoaderNormal.isLoadSuccess())) {
+                    if ((nativeLoaderHigh == null || nativeLoaderHigh.isFail()) && (nativeLoaderNormal == null || nativeLoaderNormal.isFail())) {
                         listener?.onNativeFloorLoaded(nativeLoaderLow)
                         if (container != null) {
                             nativeLoaderLow.showAds(activity, container!!, isReadLoadAfterShow)
@@ -252,7 +257,7 @@ class AdsUtils {
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if ((nativeLoaderHigh == null || !nativeLoaderHigh.isLoadSuccess()) && (nativeLoaderNormal == null || !nativeLoaderNormal.isLoadSuccess())) {
+                    if ((nativeLoaderHigh == null || nativeLoaderHigh.isFail()) && (nativeLoaderNormal == null || nativeLoaderNormal.isFail())) {
                         listener?.onAdFailedToLoad(adError)
                         if (container != null) {
                             container!!.visibility = View.GONE
@@ -273,6 +278,7 @@ class AdsUtils {
                 status == Status.FAIL || status == Status.SHOWN || status == Status.NONE
 
             fun isLoadSuccess() = status == Status.SUCCESS
+            fun isFail() = status == Status.FAIL
 
             fun isLoading() = status == Status.LOADING
 
@@ -332,8 +338,7 @@ class AdsUtils {
             ) {
                 if (timeReload > 0) {
                     status = Status.LOADING
-                    AperoAd.getInstance().loadNativeAdResultCallback(
-                        activity,
+                    AperoAd.getInstance().loadNativeAdResultCallback(activity,
                         idAds,
                         layoutCustom,
                         object : AperoAdCallback() {
@@ -492,7 +497,7 @@ class AdsUtils {
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if ((interLoaderNormal == null || !interLoaderNormal.isLoadSuccess()) && (interLoaderLow == null || !interLoaderLow.isLoadSuccess())) {
+                    if ((interLoaderNormal == null || interLoaderNormal.isFail()) && (interLoaderLow == null || interLoaderLow.isFail())) {
                         listener?.onAdFailedToLoad(adError)
                     }
                 }
@@ -501,14 +506,14 @@ class AdsUtils {
                 override fun onInterstitialLoad(interstitialAd: ApInterstitialAd?) {
                     super.onInterstitialLoad(interstitialAd)
                     Log.d(TAG, "inter:load success normal ${interLoaderNormal.idAds}")
-                    if (interLoaderHigh == null || !interLoaderHigh.isLoadSuccess()) {
+                    if (interLoaderHigh == null || interLoaderHigh.isFail()) {
                         listener?.onInterstitialLoad(interstitialAd)
                     }
                 }
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if ((interLoaderHigh == null || !interLoaderHigh.isLoadSuccess()) && (interLoaderLow == null || !interLoaderLow.isLoadSuccess())) {
+                    if ((interLoaderHigh == null || interLoaderHigh.isFail()) && (interLoaderLow == null || interLoaderLow.isFail())) {
                         listener?.onAdFailedToLoad(adError)
                     }
                 }
@@ -517,14 +522,14 @@ class AdsUtils {
                 override fun onInterstitialLoad(interstitialAd: ApInterstitialAd?) {
                     super.onInterstitialLoad(interstitialAd)
                     Log.d(TAG, "inter:load success low ${interLoaderLow.idAds}")
-                    if ((interLoaderHigh == null || !interLoaderHigh.isLoadSuccess()) && (interLoaderNormal == null || !interLoaderNormal.isLoadSuccess())) {
+                    if ((interLoaderHigh == null || interLoaderHigh.isFail()) && (interLoaderNormal == null || interLoaderNormal.isFail())) {
                         listener?.onInterstitialLoad(interstitialAd)
                     }
                 }
 
                 override fun onAdFailedToLoad(adError: ApAdError?) {
                     super.onAdFailedToLoad(adError)
-                    if (interLoaderHigh?.isLoadSuccess() == false && interLoaderNormal?.isLoadSuccess() == false) {
+                    if ((interLoaderHigh == null || interLoaderHigh.isFail()) && (interLoaderNormal == null || interLoaderNormal.isFail())) {
                         listener?.onAdFailedToLoad(adError)
                     }
                 }
@@ -542,6 +547,8 @@ class AdsUtils {
                 status == Status.FAIL || status == Status.SHOWN || status == Status.NONE
 
             fun isLoadSuccess() = status == Status.SUCCESS
+
+            fun isFail() = status == Status.FAIL
 
             fun canShowAds(): Boolean {
                 if (condition && interstitialAd != null) {
@@ -618,13 +625,218 @@ class AdsUtils {
         }
     }
 
-    object BannerUtils {
+    class BannerUtils(
+        val bannerHigh: BannerLoader? = null,
+        val bannerNormal: BannerLoader? = null,
+        val bannerLow: BannerLoader? = null,
+    ) {
+        private var container: FrameLayout? = null
 
-        class BannerLoader(private val activity: Activity, private val idAds: String) {
-            private var adView: AdView = AdView(activity)
+        private fun hasAvailableAds() =
+            bannerHigh?.isSuccess() == true || bannerNormal?.isSuccess() == true || bannerLow?.isSuccess() == true
+
+        fun showAds(activity: Activity, container: FrameLayout, waitForNewAds: Boolean = true) {
+            if (bannerHigh?.isLoading() == true || bannerNormal?.isLoading() == true || bannerLow?.isLoading() == true) {
+                this@BannerUtils.container = null
+                if (waitForNewAds) {
+                    this.container = container
+                } else {
+                    if (hasAvailableAds()) {
+                        if (bannerHigh?.isSuccess() == true) {
+                            Log.d(TAG, "showAds: high id(${bannerHigh.idAds})")
+                            bannerHigh.showAds(container)
+                        } else if (bannerNormal?.isSuccess() == true) {
+                            Log.d(TAG, "showAds: normal id(${bannerNormal.idAds})")
+                            bannerNormal.showAds(container)
+                        } else if (bannerLow?.isSuccess() == true) {
+                            Log.d(TAG, "showAds: lowe id(${bannerLow.idAds})")
+                            bannerLow.showAds(container)
+                        } else {
+                            container.visibility = View.GONE
+                        }
+                    } else {
+                        container.visibility = View.GONE
+                    }
+                }
+            } else {
+                if (hasAvailableAds()) {
+                    if (bannerHigh?.isSuccess() == true) {
+                        Log.d(TAG, "showAds: high id(${bannerHigh.idAds})")
+                        bannerHigh.showAds(container)
+                    } else if (bannerNormal?.isSuccess() == true) {
+                        Log.d(TAG, "showAds: normal id(${bannerNormal.idAds})")
+                        bannerNormal.showAds(container)
+                    } else if (bannerLow?.isSuccess() == true) {
+                        Log.d(TAG, "showAds: low id(${bannerLow.idAds})")
+                        bannerLow.showAds(container)
+                    } else {
+                        container.visibility = View.GONE
+                    }
+                } else {
+                    this@BannerUtils.container = container
+                    loadAds(activity, object : BannerAdListener() {
+                        override fun onAdFailedToLoad(p0: LoadAdError) {
+                            super.onAdFailedToLoad(p0)
+                            Log.d(TAG, "showAds: Fail id(${p0.message})")
+                            container.visibility = View.GONE
+                        }
+                    })
+                }
+            }
+        }
+
+        fun loadAds(activity: Activity, listener: BannerAdListener? = null) {
+            bannerHigh?.loadAds(activity, object : BannerAdListener() {
+                override fun onAdLoaded() {
+                    super.onAdLoaded()
+                    Log.d(TAG, "bannerHigh:load success ${bannerHigh.idAds}")
+                    listener?.onBannerLoaded(bannerHigh)
+                    if (container != null) {
+                        bannerHigh.showAds(container!!)
+                        container = null
+                    }
+                }
+
+                override fun onAdFailedToLoad(p0: LoadAdError) {
+                    super.onAdFailedToLoad(p0)
+                    if ((bannerNormal == null || bannerNormal.isFail()) && (bannerLow == null || bannerLow.isFail())) {
+                        Log.d(TAG, "bannerHigh:load fail ${bannerHigh.idAds}")
+                        listener?.onAdFailedToLoad(p0)
+                    }
+                }
+            })
+
+            bannerNormal?.loadAds(activity, object : AdListener() {
+                override fun onAdLoaded() {
+                    super.onAdLoaded()
+                    if (bannerHigh == null || bannerHigh.isFail()) {
+                        Log.d(TAG, "bannerNormal:load success ${bannerNormal.idAds}")
+                        listener?.onBannerLoaded(bannerNormal)
+                        if (container != null) {
+                            bannerNormal.showAds(container!!)
+                            container = null
+                        }
+                    }
+                }
+
+                override fun onAdFailedToLoad(p0: LoadAdError) {
+                    super.onAdFailedToLoad(p0)
+                    if ((bannerHigh == null || bannerHigh.isFail()) && (bannerLow == null || bannerLow.isFail())) {
+                        Log.d(TAG, "bannerNormal:load fail ${bannerNormal.idAds}")
+                        listener?.onAdFailedToLoad(p0)
+                    }
+                }
+            })
+
+            bannerLow?.loadAds(activity, object : AdListener() {
+                override fun onAdLoaded() {
+                    super.onAdLoaded()
+                    if ((bannerHigh == null || bannerHigh.isFail()) && (bannerNormal == null || bannerNormal.isFail())) {
+                        Log.d(TAG, "bannerLow:load success ${bannerLow.idAds}")
+                        listener?.onBannerLoaded(bannerLow)
+                        if (container != null) {
+                            bannerLow.showAds(container!!)
+                            container = null
+                        }
+                    }
+                }
+
+                override fun onAdFailedToLoad(p0: LoadAdError) {
+                    super.onAdFailedToLoad(p0)
+                    if ((bannerHigh == null || bannerHigh.isFail()) && (bannerNormal == null || bannerNormal.isFail())) {
+                        Log.d(TAG, "bannerLow:load fail ${bannerLow.idAds}")
+                        listener?.onAdLoaded()
+                    }
+                }
+            })
+        }
+
+        class BannerLoader(
+            val idAds: String, val timeReload: Int = 1, val condition: Boolean = true
+        ) {
+            var adView: AdView? = null
             private var status: Status = Status.NONE
 
-            fun isLoading() = adView.isLoading
+            fun isLoading() = adView?.isLoading == true
+
+            fun isSuccess() = status == Status.SUCCESS
+
+            fun isFail() = status == Status.FAIL
+
+            private fun isFailOrShownOrNoneAds() =
+                status == Status.NONE || status == Status.SHOWN || status == Status.FAIL
+
+            fun showAds(container: FrameLayout) {
+                if (condition && isSuccess()) {
+                    container.removeAllViews()
+                    container.addView(adView)
+                }
+            }
+
+            fun loadAds(activity: Activity, listener: AdListener? = null) {
+                if (condition && isFailOrShownOrNoneAds() && App.app.isNetworkConnected()) {
+                    loadAd(activity, timeReload, listener)
+                }
+            }
+
+            fun loadAd(activity: Activity, countCanReload: Int, adListener: AdListener? = null) {
+                if (adView == null) {
+                    adView = AdView(activity)
+                }
+                if (countCanReload < 1) return
+
+                val adRequest = AdRequest.Builder().build()
+                adView!!.adListener = object : AdListener() {
+                    override fun onAdLoaded() {
+                        status = Status.SUCCESS
+                        adListener?.onAdLoaded()
+//                        Log.d(TAG, "onAdLoaded: $idAds")
+                    }
+
+                    override fun onAdFailedToLoad(loadAdError: LoadAdError) {
+                        super.onAdFailedToLoad(loadAdError)
+                        Log.d(
+                            TAG,
+                            "loadFail: fail times(${countCanReload - timeReload + 1}) id(${idAds})"
+                        )
+                        if (countCanReload - 1 > 0) {
+                            loadAd(activity, countCanReload - 1, adListener)
+                        } else {
+                            status = Status.FAIL
+                            adListener?.onAdFailedToLoad(loadAdError)
+                        }
+                    }
+
+                    override fun onAdImpression() {
+                        super.onAdImpression()
+                        status = Status.SHOWN
+                        Log.d(TAG, "onAdImpression: $idAds")
+                    }
+
+                    override fun onAdClicked() {
+                        AppOpenManager.getInstance().disableAdResumeByClickAction()
+                        super.onAdClicked()
+                    }
+
+                }
+
+                status = Status.LOADING
+
+                adView!!.adUnitId = idAds
+                adView!!.setAdSize(adSize(activity))
+                adView!!.loadAd(adRequest)
+            }
+
+            private fun adSize(activity: Activity): AdSize {
+                val adWidthPixels = getScreenWidth(activity).toFloat()
+
+                val density = activity.resources.displayMetrics.density
+                val adWidth = (adWidthPixels / density).toInt()
+
+                return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
+                    activity, adWidth
+                )
+            }
 
             private fun getScreenWidth(activity: Activity): Int {
                 return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -638,80 +850,40 @@ class AdsUtils {
                     displayMetrics.widthPixels
                 }
             }
+        }
 
-            private val adSize: AdSize
-                get() {
-                    val adWidthPixels = getScreenWidth(activity).toFloat()
+        open class BannerAdListener : AdListener() {
+            open fun onBannerLoaded(bannerLoader: BannerLoader) {
 
-                    val density = activity.resources.displayMetrics.density
-                    val adWidth = (adWidthPixels / density).toInt()
-
-                    return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
-                        activity, adWidth
-                    )
-                }
-
-            fun loadAd() {
-                val adRequest = AdRequest.Builder().build()
-                adView.adListener = object : AdListener() {
-                    override fun onAdLoaded() {
-                        status = Status.SUCCESS
-                    }
-
-                    override fun onAdFailedToLoad(loadAdError: LoadAdError) {
-                        super.onAdFailedToLoad(loadAdError)
-                    }
-
-                    override fun onAdOpened() {
-                        println("### banner onAdOpened")
-                    }
-
-                    override fun onAdClosed() {
-                        println("### banner onAdClosed")
-                    }
-
-                    override fun onAdImpression() {
-                        super.onAdImpression()
-                        println("### banner onAdImpression")
-                    }
-
-                    override fun onAdClicked() {
-                        AppOpenManager.getInstance().disableAdResumeByClickAction()
-                        super.onAdClicked()
-                    }
-                }
-
-                status = Status.LOADING
-
-                adView.adUnitId = idAds
-                adView.setAdSize(adSize)
-                adView.loadAd(adRequest)
             }
         }
 
-        fun FrameLayout.loadBanner(
-            activity: Activity, idAdsBanner: String, condition: Boolean = true
-        ) {
-            if (condition) {
-                this.visibility = View.VISIBLE
-                try {
-                    AperoAd.getInstance()
-                        .loadBannerFragment(activity, idAdsBanner, this, object : AdCallback() {
-                            override fun onAdFailedToLoad(i: LoadAdError?) {
-                                super.onAdFailedToLoad(i)
-                                this@loadBanner.visibility = View.GONE
-                            }
+        companion object {
+            private val TAG = BannerUtils::class.java.simpleName
+            fun FrameLayout.loadBanner(
+                activity: Activity, idAdsBanner: String, condition: Boolean = true
+            ) {
+                if (condition) {
+                    this.visibility = View.VISIBLE
+                    try {
+                        AperoAd.getInstance()
+                            .loadBannerFragment(activity, idAdsBanner, this, object : AdCallback() {
+                                override fun onAdFailedToLoad(i: LoadAdError?) {
+                                    super.onAdFailedToLoad(i)
+                                    this@loadBanner.visibility = View.GONE
+                                }
 
-                            override fun onAdFailedToShow(adError: AdError?) {
-                                super.onAdFailedToShow(adError)
-                                this@loadBanner.visibility = View.GONE
-                            }
-                        })
-                } catch (ex: java.lang.Exception) {
-                    this@loadBanner.visibility = View.GONE
+                                override fun onAdFailedToShow(adError: AdError?) {
+                                    super.onAdFailedToShow(adError)
+                                    this@loadBanner.visibility = View.GONE
+                                }
+                            })
+                    } catch (ex: java.lang.Exception) {
+                        this@loadBanner.visibility = View.GONE
+                    }
+                } else {
+                    this.visibility = View.GONE
                 }
-            } else {
-                this.visibility = View.GONE
             }
         }
     }

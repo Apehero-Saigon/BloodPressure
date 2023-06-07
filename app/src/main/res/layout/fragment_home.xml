@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-<!--            <include layout="@layout/layout_banner_control" />-->
+            <include layout="@layout/layout_banner_control" />
         </FrameLayout>
     </LinearLayout>
 </layout>
