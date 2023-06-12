@@ -28,7 +28,6 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
 
     override fun initAds() {
         checkShowNativeLanguage()
-        App.adsUtils.nativeOnBoarding.loadAds(requireActivity())
     }
 
     override fun initListener() {
@@ -55,6 +54,6 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
     }
 
     private fun checkShowNativeLanguage() {
-        adsUtils.nativeLanguage.showAds(requireActivity(), binding.flAds, waitForNewAds = true)
+        adsUtils.nativeLanguage.showAds(requireActivity(), binding.flAds, reloadAfterShow = false)
     }
 }

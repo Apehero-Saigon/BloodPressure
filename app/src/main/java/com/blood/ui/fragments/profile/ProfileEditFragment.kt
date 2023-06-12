@@ -17,12 +17,10 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
 
     val args: ProfileEditFragmentArgs by navArgs()
 
-    override fun backPressedWithExitPopup() = args.editMode == false
+    override fun backPressedWithExitPopup() = !args.editMode
 
     override fun initAds() {
-        adsUtils.nativeCreateUser.showAds(
-            requireActivity(), binding.flAds, waitForNewAds = false, reloadAfterShow = false
-        )
+        adsUtils.nativeCreateUser.showAds(requireActivity(), binding.flAds, reloadAfterShow = false)
 
         App.adsUtils.nativeDefaultValue.loadAds(requireActivity())
     }

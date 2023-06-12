@@ -38,10 +38,10 @@ class App : AdsMultiDexApplication(), HasAndroidInjector {
         }
         aperoAdConfig = AperoAdConfig(this, AperoAdConfig.PROVIDER_ADMOB, environment)
         aperoAdConfig.mediationProvider = AperoAdConfig.PROVIDER_ADMOB
-        AppOpenManager.getInstance().setSplashAdId(BuildConfig.appopen_splash)
         app = this
-        aperoAdConfig.idAdResume = BuildConfig.appopen_resume_high
-        aperoAdConfig.idAdResumeHigh = BuildConfig.appopen_resume
+        aperoAdConfig.idAdResume = BuildConfig.appopen_resume
+        aperoAdConfig.idAdResumeMedium = BuildConfig.appopen_resume_medium
+        aperoAdConfig.idAdResumeHigh = BuildConfig.appopen_resume_high
         aperoAdConfig.listDeviceTest = listOf(
             "577C9208AEFF7C67F9A420B37E32681F",
             "71EE5E1FE7387B101A4E97B7455C7E8D",
@@ -74,9 +74,9 @@ class App : AdsMultiDexApplication(), HasAndroidInjector {
         Admob.getInstance().setDisableAdResumeWhenClickAds(true)
 
         //Firebase analytics
-        if (!BuildConfig.DEBUG) {
-            FirebaseUtils.init(this)
-        }
+//        if (!BuildConfig.DEBUG) {
+        FirebaseUtils.init(this)
+//        }
         LanguageUtils.loadLocale(this, prefUtils.defaultLanguage)
         AperoAd.getInstance().init(this, aperoAdConfig, false)
         adsUtils = AdsUtils()

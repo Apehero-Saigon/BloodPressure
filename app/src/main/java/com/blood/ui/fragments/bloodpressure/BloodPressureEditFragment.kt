@@ -42,9 +42,7 @@ class BloodPressureEditFragment :
     }
 
     override fun initAds() {
-        adsUtils.nativeBloodPressure.showAds(
-            requireActivity(), binding.flAds, waitForNewAds = true, reloadAfterShow = true
-        )
+        adsUtils.nativeBloodPressure.showAds(requireActivity(), binding.flAds, reloadAfterShow = true)
     }
 
     override fun initView() {

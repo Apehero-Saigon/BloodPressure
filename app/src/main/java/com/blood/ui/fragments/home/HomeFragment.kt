@@ -4,6 +4,8 @@ import androidx.navigation.NavDirections
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.blood.base.BaseFragment
+import com.blood.utils.AdsUtils.BannerUtils.Companion.loadBanner
+import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentHomeBinding
 
@@ -14,21 +16,14 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>(
     override fun backPressedWithExitPopup() = true
 
     override fun initAds() {
-//        binding.flBanner.loadBanner(
-//            requireActivity(), BuildConfig.banner_home, prefUtils.isShowBannerHome
-//        )
-        adsUtils.banner.showAds(requireActivity(), binding.flBanner)
+        binding.flBanner.loadBanner(requireActivity(), BuildConfig.banner_home, prefUtils.isShowBannerHome)
 
-        adsUtils.interSave.isShowHighAds = prefUtils.isShowInterSaveHigh
-        adsUtils.interSave.isShowNormalAds = prefUtils.isShowInterSave
+//        adsUtils.banner.showAds(requireActivity(), binding.flBanner)
+
         adsUtils.interSave.loadInterPrioritySameTime(requireContext())
 
-        adsUtils.interInsightDetail.isShowHighAds = prefUtils.isShowInterInsightDetailHigh
-        adsUtils.interInsightDetail.isShowNormalAds = prefUtils.isShowInterInsightDetail
         adsUtils.interInsightDetail.loadInterPrioritySameTime(requireContext())
 
-        adsUtils.interInfo.isShowHighAds = prefUtils.isShowInterInfoHigh
-        adsUtils.interInfo.isShowNormalAds = prefUtils.isShowInterInfo
         adsUtils.interInfo.loadInterPrioritySameTime(requireContext())
     }
 

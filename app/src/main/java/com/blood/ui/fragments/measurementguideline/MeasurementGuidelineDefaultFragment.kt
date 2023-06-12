@@ -17,7 +17,7 @@ class MeasurementGuidelineDefaultFragment :
     override fun backPressedWithExitPopup() = true
 
     override fun initAds() {
-        adsUtils.nativeDefaultValue.showAds(requireActivity(), binding.flAds, waitForNewAds = true)
+        adsUtils.nativeDefaultValue.showAds(requireActivity(), binding.flAds, reloadAfterShow = true)
     }
 
     override fun initData() {

@@ -48,7 +48,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         }
 
 
-        if (!prefUtils.isShowLanguageFirstOpen && prefUtils.isShowOnBoardingFirstOpen) {
+        if (prefUtils.isShowOnBoardingFirstOpen) {
             App.adsUtils.nativeOnBoarding.loadAds(requireActivity())
         }
 
@@ -100,6 +100,8 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH)
         prefUtils.isShowInterInfo =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INFO)
+        prefUtils.isShowInterInfoMedium =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INFO_MEDIUM)
         prefUtils.isShowInterInfoHigh =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INFO_HIGH)
         prefUtils.isShowInterMeasure =
@@ -108,18 +110,30 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_MEASURE_HIGH)
         prefUtils.isShowInterSave =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SAVE)
+        prefUtils.isShowInterSaveMedium =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SAVE_MEDIUM)
         prefUtils.isShowInterSaveHigh =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SAVE_HIGH)
         prefUtils.isShowInterSplash =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SPLASH)
         prefUtils.isShowInterInsightDetailHigh =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH)
+        prefUtils.isShowInterInsightDetailMedium =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS_MEDIUM)
         prefUtils.isShowInterInsightDetail =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS)
         prefUtils.isShowNativeLanguage =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE)
+        prefUtils.isShowNativeLanguageMedium =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE_MEDIUM)
+        prefUtils.isShowNativeLanguageHigh =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE_HIGH)
         prefUtils.isShowNativeOnBoarding =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_ONBOARDING)
+        prefUtils.isShowNativeOnBoardingMedium =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_ONBOARDING_MEDIUM)
+        prefUtils.isShowNativeOnBoardingHigh =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_ONBOARDING_HIGH)
         prefUtils.isShowNativeRecentAction =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_RECENT_ACTION)
         prefUtils.isShowNativeBloodPressure =
@@ -130,6 +144,8 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_VALUE)
         prefUtils.isShowNativeExit =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT)
+        prefUtils.isShowNativeExitMedium =
+            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT_MEDIUM)
         prefUtils.isShowNativeExitHigh =
             firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT_HIGH)
     }

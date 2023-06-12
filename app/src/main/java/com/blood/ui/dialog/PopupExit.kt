@@ -55,8 +55,6 @@ class PopupExit : DialogFragment() {
             }
         }
 
-        App.adsUtils.nativeExit.showAds(
-            requireActivity(), binding.flAds, waitForNewAds = true, reloadAfterShow = true
-        )
+        App.adsUtils.nativeExit.showAds(requireActivity(), binding.flAds, reloadAfterShow = true)
     }
 }
