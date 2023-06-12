@@ -4,6 +4,7 @@ import com.blood.App
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.ui.adapters.LanguageAdapter
+import com.blood.utils.AdsUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.LanguageUtils
 import com.blood.utils.ViewUtils.clickWithDebounce

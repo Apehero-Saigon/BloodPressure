@@ -22,7 +22,6 @@ class OnBoardingFragment : BaseFragment<BaseViewModel, FragmentOnboardingBinding
     override fun initAds() {
         FirebaseUtils.eventDisplayOnBoarding()
         adsUtils.nativeOnBoarding.showAds(requireActivity(), binding.flAds, reloadAfterShow = false)
-        App.adsUtils.nativeBloodPressure.loadAds(requireActivity())
     }
 
     override fun initView() {

@@ -45,6 +45,8 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         const val REMOTE_SHOW_INTER_INSIGHT_DETAILS_MEDIUM = "inter_insight_details_medium"
         const val REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH = "inter_insight_details_high"
         const val REMOTE_SHOW_INTER_INSIGHT_DETAILS = "inter_insight_details"
+        const val REMOTE_SHOW_INTER_ALL_HIGH = "inter_all_high"
+        const val REMOTE_SHOW_INTER_ALL_MEDIUM = "inter_all_medium"
         const val REMOTE_SHOW_NATIVE_LANGUAGE = "native_language"
         const val REMOTE_SHOW_NATIVE_LANGUAGE_MEDIUM = "native_language_medium"
         const val REMOTE_SHOW_NATIVE_LANGUAGE_HIGH = "native_language_high"
@@ -60,6 +62,8 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         const val REMOTE_SHOW_NATIVE_EXIT = "native_exit"
         const val REMOTE_SHOW_NATIVE_EXIT_MEDIUM = "native_exit_medium"
         const val REMOTE_SHOW_NATIVE_EXIT_HIGH = "native_exit_high"
+        const val REMOTE_SHOW_NATIVE_ALL_HIGH = "native_all_high"
+        const val REMOTE_SHOW_NATIVE_ALL_MEDIUM = "native_all_medium"
     }
 
 //    var profile: Profile?
@@ -208,6 +212,18 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS, value).apply()
         }
 
+    var isShowInterAllHigh: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_ALL_HIGH, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_ALL_HIGH, value).apply()
+        }
+
+    var isShowInterAllMedium: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_ALL_MEDIUM, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_ALL_MEDIUM, value).apply()
+        }
+
     var isShowNativeLanguage: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_LANGUAGE, true)
         set(value) {
@@ -296,6 +312,18 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_EXIT_HIGH, true)
         set(value) {
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_EXIT_HIGH, value).apply()
+        }
+
+    var isShowNativeAllHigh: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_ALL_HIGH, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_ALL_HIGH, value).apply()
+        }
+
+    var isShowNativeAllMedium: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_ALL_MEDIUM, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_ALL_MEDIUM, value).apply()
         }
 
     var typeLimitValue: String

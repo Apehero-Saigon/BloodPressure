@@ -1,8 +1,10 @@
 package com.blood.ui.fragments.measurementguideline
 
+import com.blood.App
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
 import com.blood.common.Constant
+import com.blood.utils.AdsUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
 import com.blood.utils.ViewUtils.gone

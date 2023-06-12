@@ -41,22 +41,10 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private var finishedSplash = false
 
     override fun initAds() {
-        adsUtils.nativeExit.loadAds(requireActivity())
+        AdsUtils.interAll.loadInterPrioritySameTime(requireContext())
+        AdsUtils.nativeAll.loadAds(requireActivity())
 
-        if (prefUtils.isShowLanguageFirstOpen) {
-            adsUtils.nativeLanguage.loadAds(requireActivity())
-        }
-
-
-        if (prefUtils.isShowOnBoardingFirstOpen) {
-            App.adsUtils.nativeOnBoarding.loadAds(requireActivity())
-        }
-
-        if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen) {
-            App.adsUtils.nativeBloodPressure.loadAds(requireActivity())
-        }
-
-        adsUtils.banner.loadAds(requireActivity())
+//        adsUtils.banner.loadAds(requireActivity())
     }
 
     override fun initData() {
@@ -104,6 +92,8 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         prefUtils.isShowInterInsightDetailHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH)
         prefUtils.isShowInterInsightDetailMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS_MEDIUM)
         prefUtils.isShowInterInsightDetail = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS)
+        prefUtils.isShowInterAllHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_ALL_HIGH)
+        prefUtils.isShowInterAllMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_ALL_MEDIUM)
         prefUtils.isShowNativeLanguage = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE)
         prefUtils.isShowNativeLanguageMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE_MEDIUM)
         prefUtils.isShowNativeLanguageHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE_HIGH)
@@ -117,6 +107,8 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         prefUtils.isShowNativeExit = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT)
         prefUtils.isShowNativeExitMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT_MEDIUM)
         prefUtils.isShowNativeExitHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT_HIGH)
+        prefUtils.isShowNativeAllHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_ALL_HIGH)
+        prefUtils.isShowNativeAllMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_ALL_MEDIUM)
     }
 
     private fun onShowSplashScreen() {
@@ -147,8 +139,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
 
     private fun loadAds() {
         if (isNetworkConnected()) {
-            AperoAd.getInstance().loadSplashInterPriority3SameTime(
-                requireContext(),
+            AperoAd.getInstance().loadSplashInterPriority3SameTime(requireContext(),
                 BuildConfig.inter_splash_high,
                 BuildConfig.inter_splash_medium,
                 BuildConfig.inter_splash,
@@ -185,8 +176,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
                         super.onNextAction()
                         goToMainScreen()
                     }
-                }
-            )
+                })
         } else {
             Handler(Looper.getMainLooper()).postDelayed({
                 goToMainScreen()
@@ -251,18 +241,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
                 if (prefUtils.isShowOnBoardingFirstOpen) {
                     val action = SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
                     safeNav(action)
-                }
-//                else if (prefUtils.profile == null) {
-//                    val action =
-//                        SplashFragmentDirections.actionSplashFragmentToProfileEditFragment()
-//                    action.editMode = false
-//                    safeNav(action)
-//                } else if (prefUtils.typeLimitValue.isEmpty()) {
-//                    val action =
-//                        SplashFragmentDirections.actionSplashFragmentToMeasurementGuidelineDefaultFragment()
-//                    safeNav(action)
-//                }
-                else {
+                } else {
                     val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
                     safeNav(action)
                 }

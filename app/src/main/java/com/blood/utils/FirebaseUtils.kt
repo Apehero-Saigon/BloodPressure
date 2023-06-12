@@ -2,10 +2,13 @@ package com.blood.utils
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import com.google.firebase.analytics.FirebaseAnalytics
 import java.lang.Exception
 
 object FirebaseUtils {
+
+    private val TAG = FirebaseUtils::class.java.simpleName
 
     private var fbAnalytics: FirebaseAnalytics? = null
     fun init(context: Context?) {
@@ -73,6 +76,7 @@ object FirebaseUtils {
     private const val ADS_DISPLAY = "ads_display"
 
     fun eventMustDisplayAds(adsName: String) {
+        Log.d(TAG, adsName)
         fbAnalytics?.logEvent(adsName, null)
     }
 
@@ -82,6 +86,7 @@ object FirebaseUtils {
         } catch (ex: Exception) {
             "${adsName}_impression"
         }
+        Log.d(TAG, name)
         fbAnalytics?.logEvent(name, null)
     }
 
@@ -91,6 +96,7 @@ object FirebaseUtils {
         } catch (ex: Exception) {
             "${adsName}_display"
         }
+        Log.d(TAG, name)
         fbAnalytics?.logEvent(name, null)
     }
 

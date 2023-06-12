@@ -22,10 +22,6 @@ class InsightFragment : BaseFragment<InsightViewModel, FragmentInsightBinding>(
         }
     }
 
-    override fun initAds() {
-        adsUtils.nativeRecentAction.loadAds(requireActivity())
-    }
-
     override fun initData() {
         super.initData()
         FirebaseUtils.eventDisplayInsightScreen()

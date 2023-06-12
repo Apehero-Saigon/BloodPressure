@@ -5,6 +5,7 @@ import androidx.navigation.fragment.navArgs
 import com.blood.App
 import com.blood.base.BaseFragment
 import com.blood.data.Profile
+import com.blood.utils.AdsUtils
 import com.blood.utils.DateUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce
@@ -21,8 +22,6 @@ class ProfileEditFragment : BaseFragment<ProfileViewModel, FragmentProfileEditBi
 
     override fun initAds() {
         adsUtils.nativeCreateUser.showAds(requireActivity(), binding.flAds, reloadAfterShow = false)
-
-        App.adsUtils.nativeDefaultValue.loadAds(requireActivity())
     }
 
     override fun initView() {
