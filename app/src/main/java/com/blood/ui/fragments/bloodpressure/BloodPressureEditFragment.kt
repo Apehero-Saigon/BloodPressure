@@ -22,10 +22,9 @@ import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentBloodPressureEditBinding
 import java.util.Date
 
-class BloodPressureEditFragment :
-    BaseFragment<BloodPressureViewModel, FragmentBloodPressureEditBinding>(
-        R.layout.fragment_blood_pressure_edit, BloodPressureViewModel::class.java
-    ), HeaderView.Listener {
+class BloodPressureEditFragment : BaseFragment<BloodPressureViewModel, FragmentBloodPressureEditBinding>(
+    R.layout.fragment_blood_pressure_edit, BloodPressureViewModel::class.java
+), HeaderView.Listener {
 
     private var iHomeUi: IHomeUi? = null
 
@@ -77,14 +76,12 @@ class BloodPressureEditFragment :
                     if (args.modeAdd) {
                         resetData()
                         if (iHomeUi.isNotNull()) {
-                            val action =
-                                HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
+                            val action = HomeFragmentDirections.actionHomeFragmentToBloodPressureDetailFragment()
                             action.id = bloodPressure.id
                             action.viewDetail = false
                             iHomeUi?.navigateTo(action)
                         } else {
-                            val action =
-                                BloodPressureEditFragmentDirections.actionBloodPressureEditFragmentToBloodPressureDetailFragment()
+                            val action = BloodPressureEditFragmentDirections.actionBloodPressureEditFragmentToBloodPressureDetailFragment()
                             action.id = bloodPressure.id
                             action.viewDetail = false
                             safeNav(action)
@@ -104,7 +101,8 @@ class BloodPressureEditFragment :
             }
 
             tvDate.clickWithDebounce {
-                DateUtils.openDatePicker(requireContext(),
+                DateUtils.openDatePicker(
+                    requireContext(),
                     DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
                     object : DateUtils.SelectDatetimeListener {
                         override fun onDateSelected(day: Int, month: Int, year: Int) {
@@ -114,7 +112,8 @@ class BloodPressureEditFragment :
             }
 
             tvTime.clickWithDebounce {
-                DateUtils.openTimePicker(requireContext(),
+                DateUtils.openTimePicker(
+                    requireContext(),
                     DateUtils.format(getStringDateTime(), Constant.FORMAT_DATETIME),
                     object : DateUtils.SelectDatetimeListener {
                         override fun onTimeSelected(minute: Int, hour: Int) {
@@ -157,7 +156,9 @@ class BloodPressureEditFragment :
     private fun resetData() {
         with(binding) {
             tvDate.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_DATE)
-            tvTime.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_TIME)
+            tvTime.post {
+                tvTime.text = DateUtils.getDateStr(System.currentTimeMillis(), Constant.FORMAT_TIME)
+            }
         }
     }
 

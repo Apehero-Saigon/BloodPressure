@@ -20,7 +20,7 @@ object Constant {
     const val FORMAT_DATETIME_VN = "hh:mma dd.MM.yyyy"
     const val FORMAT_DATE = "dd/MM/yyyy"
     const val FORMAT_DM = "dd/MM"
-    const val FORMAT_TIME = "hh:mm"
+    const val FORMAT_TIME = "HH:mm"
     const val FORMAT_DATETIME_ITEM = "HH:mm dd.MM.yyyy"
 
     const val URL_PRIVACY = "https://sites.google.com/view/bloodpressurepolicy/trang-ch%E1%BB%A7"
