@@ -87,8 +87,7 @@ class AdsUtils {
         ), adsName = "native_create_user"
     )
     val nativeBloodPressure = NativeAds(
-        R.layout.layout_native_medium_custom,
-        nativeLoaderHigh = NativeAds.NativeLoader(
+        R.layout.layout_native_medium_custom, nativeLoaderHigh = NativeAds.NativeLoader(
             BuildConfig.native_bloodpressure_high, 3, prefUtils.isShowNativeBloodPressureHigh
         ), nativeLoaderNormal = NativeAds.NativeLoader(
             BuildConfig.native_bloodpressure_medium, 1, prefUtils.isShowNativeBloodPressureMedium
@@ -184,7 +183,7 @@ class AdsUtils {
                 } else {
                     container.visibility = View.GONE
                 }
-            } else {
+            } else if (App.app.isNetworkConnected()) {
                 loadAds(activity, object : NativeLoaderListener() {
                     override fun onNativeFloorLoaded(nativeLoader: NativeLoader) {
                         super.onNativeFloorLoaded(nativeLoader)
@@ -198,6 +197,8 @@ class AdsUtils {
                         container.visibility = View.GONE
                     }
                 })
+            } else {
+                container.visibility = View.GONE
             }
         }
 
@@ -858,10 +859,8 @@ class AdsUtils {
 
         companion object {
             private val TAG = BannerUtils::class.java.simpleName
-            fun FrameLayout.loadBanner(
-                activity: Activity, idAdsBanner: String, condition: Boolean = true
-            ) {
-                if (condition) {
+            fun FrameLayout.loadBanner(activity: Activity, idAdsBanner: String, condition: Boolean = true) {
+                if (condition && App.app.isNetworkConnected()) {
                     this.visibility = View.VISIBLE
                     try {
                         AperoAd.getInstance().loadBannerFragment(activity, idAdsBanner, this, object : AdCallback() {

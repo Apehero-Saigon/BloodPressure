@@ -18,8 +18,8 @@ android {
         applicationId "com.bloodpressure.pressuremonitor.bloodpressuretracker"
         minSdk 24
         targetSdk 33
-        versionCode 34
-        versionName "1.2.7"
+        versionCode 36
+        versionName "1.2.9"
 
         multiDexEnabled true
         renderscriptTargetApi 19
@@ -119,10 +119,6 @@ android {
             buildConfigField "String", "native_onboarding", "\"ca-app-pub-4973559944609228/6320412794\""
             buildConfigField "String", "native_onboarding_medium", "\"ca-app-pub-4973559944609228/6054722861\""
             buildConfigField "String", "native_onboarding_high", "\"ca-app-pub-4973559944609228/8987132259\""
-            buildConfigField "String", "native_create_user", "\"ca-app-pub-4973559944609228/5402222417\""
-            buildConfigField "String", "native_create_user_high", "\"ca-app-pub-4973559944609228/9841033013\""
-            buildConfigField "String", "native_value", "\"ca-app-pub-4973559944609228/5187472136\""
-            buildConfigField "String", "native_value_high", "\"ca-app-pub-4973559944609228/5678442635\""
             buildConfigField "String", "appopen_resume_high", "\"ca-app-pub-4973559944609228/8574130916\""
             buildConfigField "String", "appopen_resume_medium", "\"ca-app-pub-4973559944609228/6676743239\""
             buildConfigField "String", "appopen_resume", "\"ca-app-pub-4973559944609228/1120057000\""
@@ -147,6 +143,10 @@ android {
             buildConfigField "String", "inter_measure", "\"ca-app-pub-4973559944609228/4221735203\""
             buildConfigField "String", "inter_measure_high", "\"ca-app-pub-4973559944609228/6628422606\""
             buildConfigField "String", "native_recent_action", "\"ca-app-pub-4973559944609228/2329196898\""
+            buildConfigField "String", "native_create_user", "\"ca-app-pub-4973559944609228/5402222417\""
+            buildConfigField "String", "native_create_user_high", "\"ca-app-pub-4973559944609228/9841033013\""
+            buildConfigField "String", "native_value", "\"ca-app-pub-4973559944609228/5187472136\""
+            buildConfigField "String", "native_value_high", "\"ca-app-pub-4973559944609228/5678442635\""
 
 
             buildConfigField "Boolean", "build_debug", "false"

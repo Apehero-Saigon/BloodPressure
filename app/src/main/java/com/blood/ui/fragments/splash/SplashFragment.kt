@@ -55,8 +55,6 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
         if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen) {
             App.adsUtils.nativeBloodPressure.loadAds(requireActivity())
         }
-
-        adsUtils.banner.loadAds(requireActivity())
     }
 
     override fun initData() {
