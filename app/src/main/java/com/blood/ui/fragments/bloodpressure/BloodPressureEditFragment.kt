@@ -42,17 +42,7 @@ class BloodPressureEditFragment :
     }
 
     override fun initAds() {
-        if (isNetworkConnected() && prefUtils.isShowNativeBloodPressure) {
-            adsUtils.nativeBloodPressure.showAds(
-                requireActivity(),
-                R.layout.layout_native_medium_custom,
-                binding.flAds,
-                waitForNewAds = true,
-                reloadAfterShow = true
-            )
-        } else {
-            binding.flAds.gone()
-        }
+        adsUtils.nativeBloodPressure.showAds(requireActivity(), binding.flAds, reloadAfterShow = true)
     }
 
     override fun initView() {

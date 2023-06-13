@@ -13,12 +13,15 @@ import com.blood.App
 import com.blood.base.BaseActivity
 import com.blood.base.BaseFragment
 import com.blood.common.Constant
+import com.blood.utils.AdsUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.PrefUtils
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BuildConfig
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.R
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.databinding.FragmentSplashBinding
 import com.google.android.gms.ads.AdError
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.LoadAdError
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 
@@ -27,7 +30,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
 ) {
 
     companion object {
-        private enum class SplashType { OPEN_SPLASH, INTERSTITIAL, FAIL }
+        private enum class SplashType { INTERSTITIAL, FAIL }
 
         private enum class FetchRemoteConfig { FETCHING, DONE, NONE }
     }
@@ -38,29 +41,19 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private var finishedSplash = false
 
     override fun initAds() {
-        if (prefUtils.isShowNativeExitHigh || prefUtils.isShowNativeExit) {
-            adsUtils.nativeExit.loadAds(requireActivity(), R.layout.native_medium)
+        adsUtils.nativeExit.loadAds(requireActivity())
+
+        if (prefUtils.isShowLanguageFirstOpen) {
+            adsUtils.nativeLanguage.loadAds(requireActivity())
         }
 
-        if (prefUtils.isShowNativeLanguage && prefUtils.isShowLanguageFirstOpen) {
-            adsUtils.nativeLanguage.loadAds(requireActivity(), R.layout.native_medium)
+
+        if (prefUtils.isShowOnBoardingFirstOpen) {
+            App.adsUtils.nativeOnBoarding.loadAds(requireActivity())
         }
 
-
-        if (isNetworkConnected()
-            && !prefUtils.isShowLanguageFirstOpen
-            && prefUtils.isShowOnBoardingFirstOpen
-            && prefUtils.isShowNativeOnBoarding
-        ) {
-            App.adsUtils.nativeOnBoarding.loadAds(requireActivity(), R.layout.native_medium)
-        }
-
-        if (isNetworkConnected()
-            && !prefUtils.isShowLanguageFirstOpen
-            && !prefUtils.isShowOnBoardingFirstOpen
-            && prefUtils.isShowNativeBloodPressure
-        ) {
-            App.adsUtils.nativeBloodPressure.loadAds(requireActivity(), R.layout.native_medium)
+        if (!prefUtils.isShowLanguageFirstOpen && !prefUtils.isShowOnBoardingFirstOpen) {
+            App.adsUtils.nativeBloodPressure.loadAds(requireActivity())
         }
     }
 
@@ -76,8 +69,7 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     private fun setupRemoteConfig() {
         fetchRemoteConfig = FetchRemoteConfig.FETCHING
         val firebaseRemoteConfig = FirebaseRemoteConfig.getInstance()
-        val configSettings = FirebaseRemoteConfigSettings.Builder().setFetchTimeoutInSeconds(5000)
-            .setMinimumFetchIntervalInSeconds(3600).build()
+        val configSettings = FirebaseRemoteConfigSettings.Builder().setFetchTimeoutInSeconds(5000).setMinimumFetchIntervalInSeconds(3600).build()
         firebaseRemoteConfig.setConfigSettingsAsync(configSettings)
 
         firebaseRemoteConfig.fetchAndActivate().addOnCompleteListener(requireActivity()) { task ->
@@ -93,144 +85,106 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
     }
 
     private fun fetchDataRemote(firebaseRemoteConfig: FirebaseRemoteConfig) {
-        prefUtils.isShowAppOpenResume =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_APPOPEN_RESUME)
-        prefUtils.isShowAppOpenSplash =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_APPOPEN_SPLASH)
-        prefUtils.isShowBannerHome =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_BANNER_HOME)
-        prefUtils.isShowInterBloodPressureDetails =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS)
-        prefUtils.isShowInterBloodPressureDetailsHigh =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH)
-        prefUtils.isShowInterInfo =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INFO)
-        prefUtils.isShowInterInfoHigh =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INFO_HIGH)
-        prefUtils.isShowInterMeasure =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_MEASURE)
-        prefUtils.isShowInterMeasureHigh =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_MEASURE_HIGH)
-        prefUtils.isShowInterSave =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SAVE)
-        prefUtils.isShowInterSaveHigh =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SAVE_HIGH)
-        prefUtils.isShowInterSplash =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SPLASH)
-        prefUtils.isShowInterInsightDetailHigh =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH)
-        prefUtils.isShowInterInsightDetail =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS)
-        prefUtils.isShowNativeLanguage =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE)
-        prefUtils.isShowNativeOnBoarding =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_ONBOARDING)
-        prefUtils.isShowNativeRecentAction =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_RECENT_ACTION)
-        prefUtils.isShowNativeBloodPressure =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_BLOOD_PRESSURE)
-        prefUtils.isShowNativeCreateUser =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_CREATE_USER)
-        prefUtils.isShowNativeDefaultValue =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_VALUE)
-        prefUtils.isShowNativeExit =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT)
-        prefUtils.isShowNativeExitHigh =
-            firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT_HIGH)
+        prefUtils.isShowAppOpenResume = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_APPOPEN_RESUME)
+        prefUtils.isShowAppOpenSplash = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_APPOPEN_SPLASH)
+        prefUtils.isShowBannerHome = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_BANNER_HOME)
+        prefUtils.isShowInterBloodPressureDetails = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS)
+        prefUtils.isShowInterBloodPressureDetailsHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH)
+        prefUtils.isShowInterInfo = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INFO)
+        prefUtils.isShowInterInfoMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INFO_MEDIUM)
+        prefUtils.isShowInterInfoHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INFO_HIGH)
+        prefUtils.isShowInterMeasure = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_MEASURE)
+        prefUtils.isShowInterMeasureHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_MEASURE_HIGH)
+        prefUtils.isShowInterSave = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SAVE)
+        prefUtils.isShowInterSaveMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SAVE_MEDIUM)
+        prefUtils.isShowInterSaveHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SAVE_HIGH)
+        prefUtils.isShowInterSplash = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_SPLASH)
+        prefUtils.isShowInterInsightDetailHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH)
+        prefUtils.isShowInterInsightDetailMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS_MEDIUM)
+        prefUtils.isShowInterInsightDetail = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_INTER_INSIGHT_DETAILS)
+        prefUtils.isShowNativeLanguage = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE)
+        prefUtils.isShowNativeLanguageMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE_MEDIUM)
+        prefUtils.isShowNativeLanguageHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_LANGUAGE_HIGH)
+        prefUtils.isShowNativeOnBoarding = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_ONBOARDING)
+        prefUtils.isShowNativeOnBoardingMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_ONBOARDING_MEDIUM)
+        prefUtils.isShowNativeOnBoardingHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_ONBOARDING_HIGH)
+        prefUtils.isShowNativeRecentAction = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_RECENT_ACTION)
+        prefUtils.isShowNativeBloodPressure = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_BLOOD_PRESSURE)
+        prefUtils.isShowNativeCreateUser = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_CREATE_USER)
+        prefUtils.isShowNativeDefaultValue = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_VALUE)
+        prefUtils.isShowNativeExit = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT)
+        prefUtils.isShowNativeExitMedium = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT_MEDIUM)
+        prefUtils.isShowNativeExitHigh = firebaseRemoteConfig.getBoolean(PrefUtils.REMOTE_SHOW_NATIVE_EXIT_HIGH)
     }
 
     private fun onShowSplashScreen() {
         if (fetchRemoteConfig == FetchRemoteConfig.DONE) {
-            if (SplashType.OPEN_SPLASH == splashLoadType) {
-                AppOpenManager.getInstance()
-                    .showAppOpenSplash(requireActivity() as AppCompatActivity?,
-                        object : AdCallback() {
-                            override fun onNextAction() {
-                                super.onNextAction()
-                                goToMainScreen()
-                            }
+            AperoAd.getInstance().onShowSplashPriority3(requireActivity() as AppCompatActivity?, object : AperoAdCallback() {
+                override fun onNextAction() {
+                    super.onNextAction()
+                    goToMainScreen()
+                }
 
-                            override fun onAdFailedToShow(adError: AdError?) {
-                                super.onAdFailedToShow(adError)
-                                if ((requireActivity() as? BaseActivity<*, *>)?.isOnResume == false) {
-                                    errorShowAdsInBackground = true
-                                }
-                                goToMainScreen()
-                            }
+                override fun onAdFailedToShow(adError: ApAdError?) {
+                    super.onAdFailedToShow(adError)
+                    if ((requireActivity() as? BaseActivity<*, *>)?.isOnResume == false) {
+                        errorShowAdsInBackground = true
+                    }
+                    goToMainScreen()
+                }
 
-                            override fun onAdClosed() {
-                                super.onAdClosed()
-                                goToMainScreen()
-                            }
-                        })
-            } else if (SplashType.INTERSTITIAL == splashLoadType) {
-                AperoAd.getInstance().onShowSplash(requireActivity() as AppCompatActivity,
-                    object : AperoAdCallback() {
-                        override fun onNextAction() {
-                            super.onNextAction()
-                            goToMainScreen()
-                        }
-
-                        override fun onAdFailedToShow(adError: ApAdError?) {
-                            super.onAdFailedToShow(adError)
-                            if ((requireActivity() as? BaseActivity<*, *>)?.isOnResume == false) {
-                                errorShowAdsInBackground = true
-                            }
-                            goToMainScreen()
-                        }
-
-                        override fun onAdClosed() {
-                            super.onAdClosed()
-                            goToMainScreen()
-                        }
-                    })
-            } else if (SplashType.FAIL == splashLoadType) {
-                goToMainScreen()
-            }
+                override fun onAdClosed() {
+                    super.onAdClosed()
+                    goToMainScreen()
+                }
+            })
+        } else {
+            goToMainScreen()
         }
     }
 
     private fun loadAds() {
-        if (isNetworkConnected() && context != null) {
-            AperoAd.getInstance().loadAppOpenSplashSameTime(requireContext(),
+        if (isNetworkConnected()) {
+            AperoAd.getInstance().loadSplashInterPriority3SameTime(
+                requireContext(),
+                BuildConfig.inter_splash_high,
+                BuildConfig.inter_splash_medium,
                 BuildConfig.inter_splash,
                 30000,
                 5000,
                 false,
                 object : AperoAdCallback() {
+
                     override fun onAdFailedToLoad(adError: ApAdError?) {
                         super.onAdFailedToLoad(adError)
                         splashLoadType = SplashType.FAIL
-                        if (fetchRemoteConfig == FetchRemoteConfig.DONE) {
-                            goToMainScreen()
-                        }
+                        goToMainScreen()
                     }
 
                     override fun onAdSplashReady() {
                         super.onAdSplashReady()
-                        if (!isAdded) {
-                            return
-                        }
-                        splashLoadType = SplashType.OPEN_SPLASH
+                        splashLoadType = SplashType.INTERSTITIAL
                         onShowSplashScreen()
                     }
 
-                    override fun onInterstitialLoad(interstitialAd: ApInterstitialAd?) {
-                        super.onInterstitialLoad(interstitialAd)
-                        if (!isAdded) {
-                            return
-                        }
+                    override fun onAdSplashPriorityReady() {
+                        super.onAdSplashPriorityReady()
+                        splashLoadType = SplashType.INTERSTITIAL
+                        onShowSplashScreen()
+                    }
+
+                    override fun onAdSplashPriorityMediumReady() {
+                        super.onAdSplashPriorityMediumReady()
                         splashLoadType = SplashType.INTERSTITIAL
                         onShowSplashScreen()
                     }
 
                     override fun onNextAction() {
                         super.onNextAction()
-                        if (fetchRemoteConfig == FetchRemoteConfig.DONE) {
-                            goToMainScreen()
-                        }
+                        goToMainScreen()
                     }
-                })
+                }
+            )
         } else {
             Handler(Looper.getMainLooper()).postDelayed({
                 goToMainScreen()
@@ -259,28 +213,8 @@ class SplashFragment : BaseFragment<SplashViewModel, FragmentSplashBinding>(
 
         //if go onResume but not have action
         if (!finishedSplash) {
-            if (splashLoadType == SplashType.OPEN_SPLASH) {
-                AperoAd.getInstance().onCheckShowSplashPriorityWhenFail(
-                    requireActivity() as AppCompatActivity, object : AperoAdCallback() {
-                        override fun onNextAction() {
-                            super.onNextAction()
-                            goToMainScreen()
-                        }
-
-                        override fun onAdClosed() {
-                            super.onAdClosed()
-                            goToMainScreen()
-                        }
-
-                        override fun onAdFailedToShow(adError: ApAdError?) {
-                            super.onAdFailedToShow(adError)
-                            goToMainScreen()
-                        }
-
-                    }, 1000
-                )
-            } else if (splashLoadType == SplashType.INTERSTITIAL) {
-                AperoAd.getInstance().onCheckShowSplashWhenFail(
+            if (splashLoadType == SplashType.INTERSTITIAL) {
+                AperoAd.getInstance().onCheckShowSplashPriority3WhenFail(
                     requireActivity() as AppCompatActivity, object : AperoAdCallback() {
                         override fun onNextAction() {
                             super.onNextAction()

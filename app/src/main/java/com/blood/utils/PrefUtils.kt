@@ -34,21 +34,31 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         const val REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS = "inter_bloodpressure_details"
         const val REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH = "inter_bloodpressure_details_high"
         const val REMOTE_SHOW_INTER_INFO = "inter_info"
+        const val REMOTE_SHOW_INTER_INFO_MEDIUM = "inter_info_medium"
         const val REMOTE_SHOW_INTER_INFO_HIGH = "inter_info_high"
         const val REMOTE_SHOW_INTER_MEASURE = "inter_measure"
         const val REMOTE_SHOW_INTER_MEASURE_HIGH = "inter_measure_high"
         const val REMOTE_SHOW_INTER_SAVE = "inter_save"
+        const val REMOTE_SHOW_INTER_SAVE_MEDIUM = "inter_save_medium"
         const val REMOTE_SHOW_INTER_SAVE_HIGH = "inter_save_high"
         const val REMOTE_SHOW_INTER_SPLASH = "inter_splash"
+        const val REMOTE_SHOW_INTER_INSIGHT_DETAILS_MEDIUM = "inter_insight_details_medium"
         const val REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH = "inter_insight_details_high"
         const val REMOTE_SHOW_INTER_INSIGHT_DETAILS = "inter_insight_details"
         const val REMOTE_SHOW_NATIVE_LANGUAGE = "native_language"
+        const val REMOTE_SHOW_NATIVE_LANGUAGE_MEDIUM = "native_language_medium"
+        const val REMOTE_SHOW_NATIVE_LANGUAGE_HIGH = "native_language_high"
         const val REMOTE_SHOW_NATIVE_ONBOARDING = "native_onboarding"
+        const val REMOTE_SHOW_NATIVE_ONBOARDING_MEDIUM = "native_onboarding_medium"
+        const val REMOTE_SHOW_NATIVE_ONBOARDING_HIGH = "native_onboarding_high"
         const val REMOTE_SHOW_NATIVE_RECENT_ACTION = "native_recent_action"
         const val REMOTE_SHOW_NATIVE_BLOOD_PRESSURE = "native_bloodpressure"
+        const val REMOTE_SHOW_NATIVE_BLOOD_PRESSURE_MEDIUM = "native_bloodpressure_medium"
+        const val REMOTE_SHOW_NATIVE_BLOOD_PRESSURE_HIGH = "native_bloodpressure_high"
         const val REMOTE_SHOW_NATIVE_CREATE_USER = "native_create_user"
         const val REMOTE_SHOW_NATIVE_VALUE = "native_value"
         const val REMOTE_SHOW_NATIVE_EXIT = "native_exit"
+        const val REMOTE_SHOW_NATIVE_EXIT_MEDIUM = "native_exit_medium"
         const val REMOTE_SHOW_NATIVE_EXIT_HIGH = "native_exit_high"
     }
 
@@ -67,8 +77,7 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
 //        }
 
     var defaultLanguage: String
-        get() = preferenceHelper.getString(KE_DEFAULT_LANGUAGE, Constant.LANGUAGE_EN)
-            ?: Constant.LANGUAGE_EN
+        get() = preferenceHelper.getString(KE_DEFAULT_LANGUAGE, Constant.LANGUAGE_EN) ?: Constant.LANGUAGE_EN
         set(value) {
             preferenceHelper.edit().putString(KE_DEFAULT_LANGUAGE, value).apply()
         }
@@ -118,21 +127,25 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
     var isShowInterBloodPressureDetails: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS, true)
         set(value) {
-            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS, value)
-                .apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS, value).apply()
         }
 
     var isShowInterBloodPressureDetailsHigh: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH, true)
         set(value) {
-            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH, value)
-                .apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_BLOODPRESSURE_DETAILS_HIGH, value).apply()
         }
 
     var isShowInterInfo: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_INFO, true)
         set(value) {
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INFO, value).apply()
+        }
+
+    var isShowInterInfoMedium: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_INFO_MEDIUM, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INFO_MEDIUM, value).apply()
         }
 
     var isShowInterInfoHigh: Boolean
@@ -159,6 +172,12 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_SAVE, value).apply()
         }
 
+    var isShowInterSaveMedium: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_SAVE_MEDIUM, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_SAVE_MEDIUM, value).apply()
+        }
+
     var isShowInterSaveHigh: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_SAVE_HIGH, true)
         set(value) {
@@ -171,11 +190,16 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_SPLASH, value).apply()
         }
 
+    var isShowInterInsightDetailMedium: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_MEDIUM, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_MEDIUM, value).apply()
+        }
+
     var isShowInterInsightDetailHigh: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH, true)
         set(value) {
-            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH, value)
-                .apply()
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_INTER_INSIGHT_DETAILS_HIGH, value).apply()
         }
 
     var isShowInterInsightDetail: Boolean
@@ -190,10 +214,34 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_LANGUAGE, value).apply()
         }
 
+    var isShowNativeLanguageMedium: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_LANGUAGE_MEDIUM, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_LANGUAGE_MEDIUM, value).apply()
+        }
+
+    var isShowNativeLanguageHigh: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_LANGUAGE_HIGH, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_LANGUAGE_HIGH, value).apply()
+        }
+
     var isShowNativeOnBoarding: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_ONBOARDING, true)
         set(value) {
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_ONBOARDING, value).apply()
+        }
+
+    var isShowNativeOnBoardingMedium: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_ONBOARDING_MEDIUM, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_ONBOARDING_MEDIUM, value).apply()
+        }
+
+    var isShowNativeOnBoardingHigh: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_ONBOARDING_HIGH, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_ONBOARDING_HIGH, value).apply()
         }
 
     var isShowNativeRecentAction: Boolean
@@ -206,6 +254,18 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE, true)
         set(value) {
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE, value).apply()
+        }
+
+    var isShowNativeBloodPressureMedium: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE_MEDIUM, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE_MEDIUM, value).apply()
+        }
+
+    var isShowNativeBloodPressureHigh: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE_HIGH, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_BLOOD_PRESSURE_HIGH, value).apply()
         }
 
     var isShowNativeCreateUser: Boolean
@@ -226,6 +286,12 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
             preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_EXIT, value).apply()
         }
 
+    var isShowNativeExitMedium: Boolean
+        get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_EXIT_MEDIUM, true)
+        set(value) {
+            preferenceHelper.edit().putBoolean(REMOTE_SHOW_NATIVE_EXIT_MEDIUM, value).apply()
+        }
+
     var isShowNativeExitHigh: Boolean
         get() = preferenceHelper.getBoolean(REMOTE_SHOW_NATIVE_EXIT_HIGH, true)
         set(value) {
@@ -233,8 +299,7 @@ class PrefUtils @Inject constructor(private val preferenceHelper: SharedPreferen
         }
 
     var typeLimitValue: String
-        get() = preferenceHelper.getString(KEY_LIMIT_VALUE_TYPE, Constant.ACC_AHA_2017)
-            ?: Constant.ACC_AHA_2017
+        get() = preferenceHelper.getString(KEY_LIMIT_VALUE_TYPE, Constant.ACC_AHA_2017) ?: Constant.ACC_AHA_2017
         set(value) {
             preferenceHelper.edit().putString(KEY_LIMIT_VALUE_TYPE, value).apply()
         }

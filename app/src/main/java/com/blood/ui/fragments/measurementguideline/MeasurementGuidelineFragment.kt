@@ -8,7 +8,7 @@ import com.blood.base.BaseViewModel
 import com.blood.common.Constant
 import com.blood.data.LimitValue
 import com.blood.ui.adapters.LimitValueAdapter
-import com.blood.utils.AdsUtils.BannerUtils.loadBanner
+import com.blood.utils.AdsUtils.BannerUtils.Companion.loadBanner
 import com.blood.utils.AppUtils
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.ViewUtils.clickWithDebounce

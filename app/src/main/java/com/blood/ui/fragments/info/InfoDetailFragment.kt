@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
-import com.blood.utils.AdsUtils.BannerUtils.loadBanner
+import com.blood.utils.AdsUtils.BannerUtils.Companion.loadBanner
 import com.blood.utils.FirebaseUtils
 import com.blood.utils.customview.HeaderView
 import com.bloodpressure.pressuremonitor.bloodpressuretracker.BR

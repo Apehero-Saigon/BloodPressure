@@ -17,13 +17,7 @@ class MeasurementGuidelineDefaultFragment :
     override fun backPressedWithExitPopup() = true
 
     override fun initAds() {
-        if (isNetworkConnected() && prefUtils.isShowNativeCreateUser) {
-            adsUtils.nativeDefaultValue.showAds(
-                requireActivity(), R.layout.native_medium, binding.flAds, waitForNewAds = true
-            )
-        } else {
-            binding.flAds.gone()
-        }
+        adsUtils.nativeDefaultValue.showAds(requireActivity(), binding.flAds, reloadAfterShow = true)
     }
 
     override fun initData() {

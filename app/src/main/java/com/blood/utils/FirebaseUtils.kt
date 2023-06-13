@@ -3,6 +3,7 @@ package com.blood.utils
 import android.content.Context
 import android.os.Bundle
 import com.google.firebase.analytics.FirebaseAnalytics
+import java.lang.Exception
 
 object FirebaseUtils {
 
@@ -23,8 +24,7 @@ object FirebaseUtils {
     private const val CLICK_TRACK_NOW_SCR_WELCOME = "click_track_now_scr_welcome"
     private const val CLICK_CALCULATE_NOW_SCR_WELCOME = "click_calculate_now_scr_welcome"
     private const val SCR_TRACK_BLOOD_PRESSURE = "scr_track_blood_pressure"
-    private const val CLICK_MEASURE_SCR_TRACK_BLOOD_PRESSURE =
-        "click_measure_scr_track_blood_pressure"
+    private const val CLICK_MEASURE_SCR_TRACK_BLOOD_PRESSURE = "click_measure_scr_track_blood_pressure"
     private const val SCR_RESULT_BLOOD = "scr_result_blood"
     private const val CLICK_BACK_SCR_RESULT_BLOOD = "click_back_scr_result_blood"
     private const val SCR_DASHBOARD = "scr_dashboard"
@@ -46,8 +46,7 @@ object FirebaseUtils {
     private const val CHOOSE_DATE_SCR_INSIGHT_BLOOD = "choose_date_scr_insight_blood"
     private const val CLICK_RECORD_SCR_INSIGHT_BLOOD = "click_record_scr_insight_blood"
     private const val SCR_VIEW_RESULT_BLOOD = "scr_view_result_blood"
-    private const val CLICK_MORE_OPTION_SCR_VIEW_RESULT_BLOOD =
-        "click_more_option_scr_view_result_blood"
+    private const val CLICK_MORE_OPTION_SCR_VIEW_RESULT_BLOOD = "click_more_option_scr_view_result_blood"
     private const val CLICK_EDIT_SCR_VIEW_RESULT_BLOOD = "click_edit_scr_view_result_blood"
     private const val CLICK_DELETE_SCR_VIEW_RESULT_BLOOD = "click_delete_scr_view_result_blood"
     private const val CLICK_BACK_SCR_VIEW_RESULT_BLOOD = "click_back_scr_view_result_blood"
@@ -57,8 +56,7 @@ object FirebaseUtils {
     private const val ENTER_SEARCH_SCR_INFO_KNOW = "enter_search_scr_info_know"
     private const val CLICK_TITLE_SCR_INFO_KNOW = "click_title_scr_info_know"
     private const val SCR_VIEW_INFO_KNOW = "scr_view_info_know"
-    private const val CLICK_RELATED_POST_SCR_VIEW_INFO_KNOW =
-        "click_related_post_scr_view_info_know"
+    private const val CLICK_RELATED_POST_SCR_VIEW_INFO_KNOW = "click_related_post_scr_view_info_know"
     private const val CLICK_BACK_SCR_VIEW_INFO_KNOW = "click_back_scr_view_info_know"
     private const val CLICK_BACK_SCR_HOME = "scr_home"
     private const val CLICK_ADD_SCR_HOME = "click_add_scr_home"
@@ -68,6 +66,33 @@ object FirebaseUtils {
     private const val SCR_CHOOSE_GUIDE = "scr_choose_guide"
     private const val SRC_GUIDELINE = "src_guideline"
     private const val CLICK_OK_SCR_CHOOSE_GUIDE = "click_ok_scr_choose_guide"
+
+    // for ads
+    private const val ADS_MUST_DISPLAY = "ads_must_display"
+    private const val ADS_IMPRESSION = "ads_impression"
+    private const val ADS_DISPLAY = "ads_display"
+
+    fun eventMustDisplayAds(adsName: String) {
+        fbAnalytics?.logEvent(adsName, null)
+    }
+
+    fun eventImpressionAds(adsName: String, adsId: String) {
+        val name = try {
+            "${adsName}_impression_${adsId.subSequence(adsId.length - 4, adsId.length)}"
+        } catch (ex: Exception) {
+            "${adsName}_impression"
+        }
+        fbAnalytics?.logEvent(name, null)
+    }
+
+    fun eventDisplayAds(adsName: String, adsId: String) {
+        val name = try {
+            "${adsName}_display_${adsId.subSequence(adsId.length - 4, adsId.length)}"
+        } catch (ex: Exception) {
+            "${adsName}_display"
+        }
+        fbAnalytics?.logEvent(name, null)
+    }
 
     fun eventDisplayGuidelineScreen() {
         fbAnalytics?.logEvent(SCR_CHOOSE_GUIDE, null)

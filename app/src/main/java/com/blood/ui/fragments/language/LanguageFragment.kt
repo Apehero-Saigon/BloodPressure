@@ -1,6 +1,5 @@
 package com.blood.ui.fragments.language
 
-import android.view.View
 import com.blood.App
 import com.blood.base.BaseFragment
 import com.blood.base.BaseViewModel
@@ -29,10 +28,6 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
 
     override fun initAds() {
         checkShowNativeLanguage()
-
-        if (isNetworkConnected() && prefUtils.isShowNativeOnBoarding) {
-            App.adsUtils.nativeOnBoarding.loadAds(requireActivity(), R.layout.native_medium)
-        }
     }
 
     override fun initListener() {
@@ -59,12 +54,6 @@ class LanguageFragment : BaseFragment<BaseViewModel, FragmentLanguageBinding>(
     }
 
     private fun checkShowNativeLanguage() {
-        if (isNetworkConnected() && prefUtils.isShowNativeLanguage) {
-            adsUtils.nativeLanguage.showAds(
-                requireActivity(), R.layout.native_medium, binding.flAds, waitForNewAds = true
-            )
-        } else {
-            binding.flAds.visibility = View.GONE
-        }
+        adsUtils.nativeLanguage.showAds(requireActivity(), binding.flAds, reloadAfterShow = false)
     }
 }
