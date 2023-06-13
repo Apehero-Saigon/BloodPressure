@@ -18,8 +18,8 @@ android {
         applicationId "com.bloodpressure.pressuremonitor.bloodpressuretracker"
         minSdk 24
         targetSdk 33
-        versionCode 34
-        versionName "1.2.7"
+        versionCode 35
+        versionName "1.2.8"
 
         multiDexEnabled true
         renderscriptTargetApi 19
